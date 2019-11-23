@@ -1,0 +1,20 @@
+// ROUNDED ELEMENTS
+// inputs
+.rounded.v-input .v-input__slot {
+  border-radius: 30px;
+}
+
+// cards, list etc
+.rounded {
+  border-radius: 30px;
+}
+
+// inputs
+.transparent.v-input .v-input__slot {
+  background: transparent;
+}
+
+// cards, etc
+.transparent {
+  background: transparent;
+}
