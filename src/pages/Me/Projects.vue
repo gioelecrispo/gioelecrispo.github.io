@@ -120,7 +120,7 @@
             v-for="project in projects"
             cols="12"
             sm="6"
-            md="4"
+            md="6"
           >
             <v-card outlined>
               <div class="d-flex flex-no-wrap justify-space-between">
