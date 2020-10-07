@@ -1,19 +1,24 @@
 <template>
-    <v-app id="app">
-        <!-- APP: LEFT NAVIGATION DRAWER -->
-        <NavigationDrawer v-if="tabletAndDown()"
-                          :right=false
-        ></NavigationDrawer>
+  <v-app id="app">
+    <!-- APP: LEFT NAVIGATION DRAWER -->
+    <NavigationDrawer
+      v-if="tabletAndDown()"
+      :right="false"
+    />
 
-        <!-- APP: TOP TOOLBAR -->
-        <AppToolbar v-if="$route.meta.showAppToolbar" :title="$route.meta.toolbarTitle"></AppToolbar>
+    <!-- APP: TOP TOOLBAR -->
+    <AppToolbar
+      v-if="$route.meta.showAppToolbar"
+      :title="$route.meta.toolbarTitle"
+    />
 
-        <!-- APP: CONTENT -->
-        <AppContent></AppContent>
-
-        <!-- APP: FOOTER -->
-        <AppFooter v-if="$route.meta.showAppFooter"></AppFooter>
-    </v-app>
+    <!-- APP: CONTENT -->
+    <v-main>
+      <AppContent />
+    </v-main>
+    <!-- APP: FOOTER -->
+    <AppFooter v-if="$route.meta.showAppFooter" />
+  </v-app>
 </template>
 
 <script>

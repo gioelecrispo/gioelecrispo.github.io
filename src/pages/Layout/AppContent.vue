@@ -1,12 +1,12 @@
 <template>
-    <v-content id="app-content">
-        <ContentToolbar v-if="$route.meta.showContentToolbar"></ContentToolbar>
-        <v-row class="pa-0 ma-0">
-            <ContentHeader v-if="$route.meta.showContentHeader"></ContentHeader>
-            <ContentBody></ContentBody>
-        </v-row>
-        <ContentFooter v-if="$route.meta.showContentFooter"></ContentFooter>
-    </v-content>
+  <v-container id="app-content">
+    <ContentToolbar v-if="$route.meta.showContentToolbar" />
+    <v-row class="pa-0 ma-0">
+      <ContentHeader v-if="$route.meta.showContentHeader" />
+      <ContentBody />
+    </v-row>
+    <ContentFooter v-if="$route.meta.showContentFooter" />
+  </v-container>
 </template>
 
 <script>
