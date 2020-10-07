@@ -18,7 +18,6 @@
                     lg8
                     offset-lg2>
                 <!--<Topics :topics="topics"></Topics>-->
-                TODO - see other pages
             </v-flex>
         </v-layout>
     </v-container>
