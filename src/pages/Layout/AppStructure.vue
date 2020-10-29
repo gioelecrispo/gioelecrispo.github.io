@@ -9,11 +9,12 @@
     <!-- APP: TOP TOOLBAR -->
     <AppToolbar
       v-if="$route.meta.showAppToolbar"
+      id="app-toolbar"
       :title="$route.meta.toolbarTitle"
     />
-
     <!-- APP: CONTENT -->
     <v-main>
+      <!--<ContentHeader v-if="$route.meta.showContentHeader"/>-->
       <AppContent />
     </v-main>
     <!-- APP: FOOTER -->
@@ -27,6 +28,7 @@ import NavigationDrawer from "@/pages/Layout/NavigationDrawer";
 import AppContent from "@/pages/Layout/AppContent";
 import AppToolbar from "@/pages/Layout/AppToolbar";
 import AppFooter from "@/pages/Layout/AppFooter";
+import ContentHeader from "@/pages/Layout/ContentHeader";
 
 export default {
     name: "AppStructure",
@@ -34,7 +36,8 @@ export default {
         NavigationDrawer,
         AppToolbar,
         AppContent,
-        AppFooter
+        AppFooter,
+        ContentHeader
     },
     props: {},
     computed: {
@@ -46,14 +49,12 @@ export default {
         })
     },
     data() {
-        return {
-
-        };
+        return {};
     },
     methods: {
         tabletAndDown() {
             return this.$vuetify.breakpoint.name === "xs" ||
-                this.$vuetify.breakpoint.name === "sm";
+                    this.$vuetify.breakpoint.name === "sm";
         },
     }
 };
@@ -69,6 +70,7 @@ export default {
 
     .v-application {
         font-family: $body-font-family, sans-serif !important;
+
         .title { // To pin point specific classes of some components
             font-family: $title-font, sans-serif !important;
         }

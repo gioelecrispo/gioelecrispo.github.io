@@ -18,20 +18,22 @@ export default new Vuetify({
                 error: "#FF5252",
                 info: "#2196F3",
                 success: "#4CAF50",
-                warning: "#FFC107"
+                warning: "#FFC107",
+                toolbars: "#FFFFFF"
             },
             dark: {
-                primary: "#0548b5",
+                primary: "#2196F3",
                 secondary: "#e91e63",
                 accent: "#673ab7",
                 error: "#f44336",
                 warning: "#ff9800",
                 info: "#3f51b5",
-                success: "#4caf50"
+                success: "#4caf50",
+                toolbars: "#121212"
             }
         },
     },
     icons: {
-        iconfont: "fa"| "md" | "mdi",
+        iconfont: "fa" | "md" | "mdi",
     },
 });

@@ -7,7 +7,6 @@ import Vue from "vue";
 import App from "@/pages/App";                // Basic template
 import router from "@/routes/router.js";      // global router.js
 import store from "@/store";                  // global state
-import i18n from "@/plugins/i18n.js";         // internationalization
 import vuetify from "@/plugins/vuetify";      // global framework
 
 
@@ -16,7 +15,6 @@ Vue.config.productionTip = false;
 new Vue({
     store,
     router,
-    i18n,
     vuetify,
     render: h => h(App)
-}).$mount('#app');
+}).$mount("#app");

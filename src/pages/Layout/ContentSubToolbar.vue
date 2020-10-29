@@ -1,12 +1,11 @@
 <template>
-    <v-col cols="12">
-        <v-sheet
-                class="d-flex"
-                color="blue"
-                height="56"
-        >
-        </v-sheet>
-    </v-col>
+  <v-col cols="12">
+    <v-sheet
+      class="d-flex"
+      color="blue"
+      height="56"
+    />
+  </v-col>
 </template>
 
 <script>

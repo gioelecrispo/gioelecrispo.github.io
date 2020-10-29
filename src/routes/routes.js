@@ -7,7 +7,9 @@ import AboutMe from "@/pages/Me/AboutMe";
 import Works from "@/pages/Me/Works";
 import Hobbies from "@/pages/Me/Hobbies";
 import Goals from "@/pages/Me/Goals";
-import Contacts from "@/pages/Me/Contacts";
+import Articles from "@/pages/Me/Articles";
+import ArticlesList from "@/pages/Me/ArticlesList";
+import ArticleDetails from "@/pages/Me/ArticleDetails";
 import Projects from "@/pages/Me/Projects";
 
 const routes = [
@@ -28,11 +30,13 @@ const routes = [
                         name: "Home",
                         component: Home,
                         meta: {
+                            toolbarTitle: "Home",
                             showNavigationDrawer: true,
                             showContentToolbar: false,
                             showContentHeader: false,
                             showContentFooter: false,
                             showAppToolbar: true,
+                            showAppToolbarImage: false,
                             showAppFooter: true
                         }
                     },
@@ -41,11 +45,13 @@ const routes = [
                         name: "Works",
                         component: Works,
                         meta: {
+                            toolbarTitle: "Works",
                             showNavigationDrawer: true,
                             showContentToolbar: false,
                             showContentHeader: false,
                             showContentFooter: false,
                             showAppToolbar: true,
+                            showAppToolbarImage: false,
                             showAppFooter: true
                         }
                     },
@@ -54,11 +60,13 @@ const routes = [
                         name: "Hobbies",
                         component: Hobbies,
                         meta: {
+                            toolbarTitle: "Hobbies",
                             showNavigationDrawer: true,
                             showContentToolbar: false,
                             showContentHeader: false,
                             showContentFooter: false,
                             showAppToolbar: true,
+                            showAppToolbarImage: false,
                             showAppFooter: true
                         }
                     },
@@ -67,11 +75,13 @@ const routes = [
                         name: "Projects",
                         component: Projects,
                         meta: {
+                            toolbarTitle: "Projects",
                             showNavigationDrawer: true,
                             showContentToolbar: false,
                             showContentHeader: false,
                             showContentFooter: false,
                             showAppToolbar: true,
+                            showAppToolbarImage: false,
                             showAppFooter: true
                         }
                     },
@@ -80,11 +90,13 @@ const routes = [
                         name: "Goals",
                         component: Goals,
                         meta: {
+                            toolbarTitle: "Goals",
                             showNavigationDrawer: true,
                             showContentToolbar: false,
                             showContentHeader: false,
                             showContentFooter: false,
                             showAppToolbar: true,
+                            showAppToolbarImage: false,
                             showAppFooter: true
                         }
                     },
@@ -93,26 +105,63 @@ const routes = [
                         name: "AboutMe",
                         component: AboutMe,
                         meta: {
+                            toolbarTitle: "About Me",
                             showNavigationDrawer: true,
                             showContentToolbar: false,
                             showContentHeader: false,
                             showContentFooter: false,
                             showAppToolbar: true,
+                            showAppToolbarImage: false,
                             showAppFooter: true
                         }
                     },
                     {
-                        path: "contacts",
-                        name: "Contacts",
-                        component: Contacts,
+                        path: "articles",
+                        name: "Articles",
+                        component: Articles,
                         meta: {
+                            toolbarTitle: "Articles",
                             showNavigationDrawer: true,
                             showContentToolbar: false,
                             showContentHeader: false,
                             showContentFooter: false,
                             showAppToolbar: true,
+                            showAppToolbarImage: false,
                             showAppFooter: true
-                        }
+                        },
+                        children: [
+                            {
+                                path: "",
+                                name: "ArticleList",
+                                component: ArticlesList,
+                                meta: {
+                                    toolbarTitle: "Articles",
+                                    showNavigationDrawer: true,
+                                    showContentToolbar: false,
+                                    showContentHeader: false,
+                                    showContentFooter: false,
+                                    showAppToolbar: true,
+                                    showAppToolbarImage: false,
+                                    showAppFooter: true
+                                }
+                            },
+                            {
+                                path: ":articleId",
+                                name: "ArticleDetails",
+                                component: ArticleDetails,
+                                props: true,
+                                meta: {
+                                    toolbarTitle: "Article Details",
+                                    showNavigationDrawer: true,
+                                    showContentToolbar: false,
+                                    showContentHeader: false,
+                                    showContentFooter: false,
+                                    showAppToolbar: true,
+                                    showAppToolbarImage: true,
+                                    showAppFooter: true
+                                }
+                            }
+                        ]
                     }
                 ]
             }

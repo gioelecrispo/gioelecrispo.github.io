@@ -7,6 +7,20 @@ module.exports = {
     "transpileDependencies": [
         "vuetify"
     ],
+    configureWebpack: {
+        module: {
+            rules: [
+                /*{
+                    test: /\.md$/,
+                    loader: "vue-loader!vue-md-loader"
+                },*/
+                {
+                    test: /\.md$/,
+                    loader: "raw-loader"
+                },
+            ]
+        }
+    },
     /*css: {
         loaderOptions: {
             sass: {

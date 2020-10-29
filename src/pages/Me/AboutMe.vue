@@ -7,10 +7,7 @@
   >
     <!-- TOPICS -->
     <v-container fluid>
-      <v-row
-        row
-        wrap
-      >
+      <v-row>
         <v-col>
           <v-row>
             <v-col
@@ -57,54 +54,6 @@
             </v-col>
           </v-row>
         </v-col>
-      </v-row>
-      <v-row mt-5>
-        <v-card class="elevation-0 transparent mx-auto">
-          <v-list
-            two-line
-            subheader
-          >
-            <v-subheader>Contacts</v-subheader>
-            <template
-              v-for="(contact, index) in contacts"
-              @click=""
-            >
-              <v-divider
-                v-if="contact.divider"
-                :key="index"
-                :inset="contact.inset"
-              />
-              <v-list-item
-                v-else
-                :key="contact.title"
-                @click=""
-              >
-                <v-list-item-avatar tile>
-                  <v-img :src="contact.avatar" />
-                </v-list-item-avatar>
-                <!-- <v-list-item-avatar>
-                                     <v-icon
-                                             :class="[contact.iconClass]"
-                                             v-text="contact.icon"
-                                     ></v-icon>
-                                 </v-list-item-avatar>-->
-
-                <v-list-item-content>
-                  <v-list-item-title v-text="contact.title" />
-                  <v-list-item-subtitle v-text="contact.subtitle" />
-                </v-list-item-content>
-
-                <v-list-item-action>
-                  <v-btn icon>
-                    <v-icon color="grey lighten-1">
-                      mdi-information
-                    </v-icon>
-                  </v-btn>
-                </v-list-item-action>
-              </v-list-item>
-            </template>
-          </v-list>
-        </v-card>
       </v-row>
     </v-container>
   </v-container>

@@ -4,22 +4,17 @@
 
 <script>
 export default {
-    name: "App",
-    components: {
-
-    },
+    name: "Articles",
+    components: {},
     props: {},
     data() {
-        return {
-
-        };
+        return {};
     },
     computed: {
+
+    },
+    methods: {
 
     }
 };
 </script>
-
-<style lang="scss">
-
-</style>

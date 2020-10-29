@@ -1,6 +1,9 @@
 <template>
   <v-row>
-    <v-col sm="3">
+    <v-col
+      cols="12"
+      md="auto"
+    >
       <v-avatar
         :tile="avatarTile"
         :size="avatarSize"
@@ -12,7 +15,7 @@
         >
       </v-avatar>
     </v-col>
-    <v-col sm="9">
+    <v-col>
       <v-row>
         <h1 class="display-3 font-weight-medium px-3">
           Gioele Crispo

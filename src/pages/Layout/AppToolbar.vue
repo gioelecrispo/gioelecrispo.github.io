@@ -2,76 +2,59 @@
   <v-app-bar
     app
     :elevate-on-scroll="elevateOnScroll"
-    color="white"
+    color="toolbars"
     :collapse="collapse"
     :short="short"
+
+    :dark="$route.meta.showAppToolbarImage"
+    :color="$route.meta.showAppToolbarImage ? '#AAAAEE': 'toolbars'"
+    :src="$route.meta.showAppToolbarImage ? 'https://picsum.photos/1920/1080?random' : ''"
+    :fade-img-on-scroll="$route.meta.showAppToolbarImage"
+    :shrink-on-scroll="$route.meta.showAppToolbarImage"
+    :prominent="$route.meta.showAppToolbarImage"
+    :scroll-threshold="$route.meta.showAppToolbarImage ? '400': ''"
+    :height="$route.meta.showAppToolbarImage ? '350': ''"
   >
-    <v-app-bar-nav-icon
+    <template
+      v-if="$route.meta.showAppToolbarImage"
+      v-slot:img="{ props }"
+    >
+      <v-img
+        v-bind="props"
+        gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
+      />
+    </template>
+    <v-btn
       v-if="showNavigationDrawerIcon"
+      icon
       @click.stop="toggleLeftNavBar()"
-    />
+    >
+      <v-icon>mdi-menu</v-icon>
+    </v-btn>
+    <v-toolbar-title
+      v-if="tabletAndDown()"
+      class="pl-1 pr-3"
+    >
+      <h3>{{ title }}</h3>
+    </v-toolbar-title>
+    <!-- <div
+                v-if="tabletAndDown()"
+                class="d-flex align-center"
+        >
+            <h2>{{ title }}</h2>
+        </div>-->
     <v-spacer />
+    <v-btn
+      icon
+      @click="setTheme()"
+    >
+      <v-icon>{{ isDark ? 'mdi-white-balance-sunny' : 'far fa-moon' }}</v-icon>
+    </v-btn>
     <v-toolbar-items>
-      <v-menu
-        v-model="menu"
-        :close-on-content-click="false"
-        :nudge-width="200"
-        offset-x
-      >
-        <template v-slot:activator="{ on }">
-          <v-btn
-            icon
-            v-on="on"
-          >
-            <v-icon :color="settingsColor">
-              mdi-settings
-            </v-icon>
-          </v-btn>
-        </template>
-
-        <v-card>
-          <v-list>
-            <v-list-item>
-              <v-list-item-action>
-                <v-switch
-                  v-model="goDark"
-                  @change="setTheme"
-                />
-              </v-list-item-action>
-              <v-list-item-title>Enable Dark theme</v-list-item-title>
-            </v-list-item>
-            <v-list-item>
-              <v-row justify="center">
-                <v-btn
-                  icon
-                  small
-                  class="mx-2"
-                  @click="changeLocale('en')"
-                >
-                  <v-avatar size="25px">
-                    <v-img :src="require('@/assets/img/settings/flags/en.png')" />
-                  </v-avatar>
-                </v-btn>
-                <v-btn
-                  icon
-                  small
-                  class="mx-2"
-                  @click="changeLocale('it')"
-                >
-                  <v-avatar size="25px">
-                    <v-img :src="require('@/assets/img/settings/flags/it.png')" />
-                  </v-avatar>
-                </v-btn>
-              </v-row>
-            </v-list-item>
-          </v-list>
-        </v-card>
-      </v-menu>
-
-
       <v-btn
         v-for="element in appToolbarElements"
         v-if="!showNavigationDrawerIcon"
+        :key="element.id"
         text
         small
         @click="navigate(element.path)"
@@ -86,23 +69,23 @@
 </template>
 
 <script>
-import {mapGetters, mapState,} from "vuex";
+import {mapGetters} from "vuex";
 import RouterService from "@/helpers/RouterService";
 
 export default {
     name: "AppToolbar",
     components: {},
     computed: {
-        ...mapState({}),
         ...mapGetters("AppState", {
             isLeftNavDrawer: "isLeftNavDrawer",
             isLeftTempNavDrawer: "isLeftTempNavDrawer",
+            appToolbarElements: "getNavLinks",
         }),
         showNavigationDrawerIcon() {
             return this.$route.meta.showNavigationDrawer && this.tabletAndDown();
         },
         elevateOnScroll() {
-            return !this.tabletAndDown();
+            return true; //!this.tabletAndDown();
         },
         collapse() {
             return false; // this.tabletAndDown();
@@ -110,14 +93,9 @@ export default {
         short() {
             return false; // this.tabletAndDown();
         },
-        settingsColor() {
-            if (!this.goDark){
-                return "black";
-            }
-        },
         appBarColor() {
             if (this.tabletAndDown()) {
-                if (!this.goDark) {
+                if (!this.isDark) {
                     return "white";
                 } else {
                     //return "#33333390";
@@ -128,21 +106,10 @@ export default {
             }
         },
     },
-    props: [],
+    props: ["title"],
     data() {
         return {
-            goDark: false,
-            fav: true,
-            menu: false,
-            message: false,
-            hints: true,
-            appToolbarElements: [ // Application navigation drawer elements
-                {id: "home", title: "Home", icon: "mdi-home", path: "/me/home"},
-                {id: "cv", title: "Curriculum Vitae", icon: "mdi-timeline-text", path: "/me/cv"},
-                {id: "projects", title: "Projects", icon: "mdi-github-circle", path: "/me/projects"},
-                {id: "me", title: "About me", icon: "mdi-account", path: "/me/aboutme"},
-                {id: "contacts", title: "Contacts", icon: "mdi-at", path: "/me/contacts"}
-            ],
+            isDark: false
         };
     },
     methods: {
@@ -158,18 +125,12 @@ export default {
             RouterService.goTo(path);
         },
         setTheme() {
-            this.$vuetify.theme.dark = this.goDark === true;
-        },
-        changeLocale(locale) {
-            this.$i18n.locale = locale;
+            this.isDark = !this.isDark;
+            this.$vuetify.theme.dark = this.isDark === true;
         }
-
     },
 };
 </script>
 
 <style lang="scss" scoped>
-    /*.v-toolbar.v-toolbar--collapsed {*/
-    /*    max-width: 82px;*/
-    /*}*/
 </style>

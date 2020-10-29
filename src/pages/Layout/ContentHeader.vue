@@ -1,12 +1,9 @@
 <template>
-    <v-col cols="12">
-        <v-sheet
-                class="d-flex"
-                color="grey lighten-3"
-                height="300"
-        >
-        </v-sheet>
-    </v-col>
+  <v-sheet
+    class="d-flex pa-0"
+    color="grey lighten-3"
+    height="300"
+  />
 </template>
 
 <script>

@@ -1,11 +1,17 @@
 <template>
-    <v-toolbar color="transparent"
-               class="elevation-0">
-        <v-btn icon v-if="allowBack" @click="routerGoBack()">
-            <v-icon>mdi-arrow-left</v-icon>
-        </v-btn>
-        <v-toolbar-title>{{ title }}</v-toolbar-title>
-    </v-toolbar>
+  <v-toolbar
+    color="transparent"
+    class="elevation-0"
+  >
+    <v-btn
+      v-if="allowBack"
+      icon
+      @click="routerGoBack()"
+    >
+      <v-icon>mdi-arrow-left</v-icon>
+    </v-btn>
+    <v-toolbar-title>{{ title }}</v-toolbar-title>
+  </v-toolbar>
 </template>
 
 

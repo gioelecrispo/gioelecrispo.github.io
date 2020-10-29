@@ -6,6 +6,13 @@ const getDefaultState = function() {
         leftNavDrawer: false, // Left Navigation Drawer is opened (true) or not (false)
         leftTempNavDrawer: true, // Left Temporary Navigation Drawer is opened (true) or not (false)
         globalNotificationsPanel: false, // Global Notification Panel is opened (true) or not (false)
+        navLinks: [ // Application navigation drawer elements
+            {id: "home", title: "Home", icon: "mdi-home", path: "/me/home"},
+            {id: "cv", title: "Curriculum Vitae", icon: "mdi-timeline-text", path: "/me/cv"},
+            {id: "projects", title: "Projects", icon: "mdi-github-circle", path: "/me/projects"},
+            {id: "articles", title: "Articles", icon: "mdi-file-document-outline", path: "/me/articles"},
+            // {id: "me", title: "About me", icon: "mdi-account", path: "/me/aboutme"},
+        ],
         availableLocales: [
             {
                 name: "English",
@@ -36,6 +43,9 @@ const getters = {
     },
     getAvailableLocales: (state) => {
         return state.availableLocales;
+    },
+    getNavLinks: (state) => {
+        return state.navLinks;
     },
 };
 

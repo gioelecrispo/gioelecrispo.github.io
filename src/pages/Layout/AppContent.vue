@@ -2,7 +2,6 @@
   <v-container id="app-content">
     <ContentToolbar v-if="$route.meta.showContentToolbar" />
     <v-row class="pa-0 ma-0">
-      <ContentHeader v-if="$route.meta.showContentHeader" />
       <ContentBody />
     </v-row>
     <ContentFooter v-if="$route.meta.showContentFooter" />
@@ -26,7 +25,7 @@ export default {
     methods: {
         tabletAndDown() {
             return this.$vuetify.breakpoint.name === "xs" ||
-                this.$vuetify.breakpoint.name === "sm";
+                    this.$vuetify.breakpoint.name === "sm";
         },
     }
 };
