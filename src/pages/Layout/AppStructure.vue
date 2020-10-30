@@ -1,63 +1,65 @@
 <template>
-  <v-app id="app">
-    <!-- APP: LEFT NAVIGATION DRAWER -->
-    <NavigationDrawer
-      v-if="tabletAndDown()"
-      :right="false"
-    />
+    <v-app id="app">
+        <!-- APP: LEFT NAVIGATION DRAWER -->
+        <NavigationDrawer
+                v-if="tabletAndDown()"
+                :right="false"
+        />
 
-    <!-- APP: TOP TOOLBAR -->
-    <AppToolbar
-      v-if="$route.meta.showAppToolbar"
-      id="app-toolbar"
-      :title="$route.meta.toolbarTitle"
-    />
-    <!-- APP: CONTENT -->
-    <v-main>
-      <!--<ContentHeader v-if="$route.meta.showContentHeader"/>-->
-      <AppContent />
-    </v-main>
-    <!-- APP: FOOTER -->
-    <AppFooter v-if="$route.meta.showAppFooter" />
-  </v-app>
+        <!-- APP: TOP TOOLBAR -->
+        <AppToolbar
+                v-if="$route.meta.showAppToolbar"
+                id="app-toolbar"
+                :title="$route.meta.toolbarTitle"
+        />
+        <!-- APP: CONTENT -->
+        <v-main>
+            <ContentHeader v-if="$route.meta.showContentHeader"/>
+            <AppContent/>
+        </v-main>
+        <!-- APP: FOOTER -->
+        <AppFooter v-if="$route.meta.showAppFooter"/>
+    </v-app>
 </template>
 
 <script>
-import {mapGetters, mapState} from "vuex";
-import NavigationDrawer from "@/pages/Layout/NavigationDrawer";
-import AppContent from "@/pages/Layout/AppContent";
-import AppToolbar from "@/pages/Layout/AppToolbar";
-import AppFooter from "@/pages/Layout/AppFooter";
-import ContentHeader from "@/pages/Layout/ContentHeader";
+    import {mapGetters, mapState} from "vuex";
+    import NavigationDrawer from "@/pages/Layout/NavigationDrawer";
+    import AppContent from "@/pages/Layout/AppContent";
+    import AppToolbar from "@/pages/Layout/AppToolbar";
+    import AppFooter from "@/pages/Layout/AppFooter";
+    import ContentHeader from "@/pages/Layout/ContentHeader";
+    import UserIntro from "../../components/UserIntro";
 
-export default {
-    name: "AppStructure",
-    components: {
-        NavigationDrawer,
-        AppToolbar,
-        AppContent,
-        AppFooter,
-        ContentHeader
-    },
-    props: {},
-    computed: {
-        ...mapState({}),
-        ...mapGetters("AppState", {
-            hasSplashed: "hasSplashed",
-            isLeftNavDrawer: "isLeftNavDrawer",
-            isLeftTempNavDrawer: "isLeftTempNavDrawer",
-        })
-    },
-    data() {
-        return {};
-    },
-    methods: {
-        tabletAndDown() {
-            return this.$vuetify.breakpoint.name === "xs" ||
-                    this.$vuetify.breakpoint.name === "sm";
+    export default {
+        name: "AppStructure",
+        components: {
+            NavigationDrawer,
+            AppToolbar,
+            AppContent,
+            AppFooter,
+            ContentHeader,
+            UserIntro
         },
-    }
-};
+        props: {},
+        computed: {
+            ...mapState({}),
+            ...mapGetters("AppState", {
+                hasSplashed: "hasSplashed",
+                isLeftNavDrawer: "isLeftNavDrawer",
+                isLeftTempNavDrawer: "isLeftTempNavDrawer",
+            })
+        },
+        data() {
+            return {};
+        },
+        methods: {
+            tabletAndDown() {
+                return this.$vuetify.breakpoint.name === "xs" ||
+                    this.$vuetify.breakpoint.name === "sm";
+            },
+        }
+    };
 </script>
 
 <style lang="scss" scoped>
@@ -74,6 +76,23 @@ export default {
         .title { // To pin point specific classes of some components
             font-family: $title-font, sans-serif !important;
         }
+    }
+
+
+
+    .parallax1 {
+        /* The image used */
+        background-image: url("../../assets/img/img_parallax.jpg");
+        opacity: .35;
+        z-index: -1;
+        /* Set a specific height */
+        height: 100vh;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 </style>
 

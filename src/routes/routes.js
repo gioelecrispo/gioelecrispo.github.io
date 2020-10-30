@@ -33,9 +33,9 @@ const routes = [
                             toolbarTitle: "Home",
                             showNavigationDrawer: true,
                             showContentToolbar: false,
-                            showContentHeader: false,
+                            showContentHeader: true,
                             showContentFooter: false,
-                            showAppToolbar: true,
+                            showAppToolbar: false,
                             showAppToolbarImage: false,
                             showAppFooter: true
                         }
