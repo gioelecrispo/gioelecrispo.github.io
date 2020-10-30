@@ -14,8 +14,8 @@
 
             <div class="caption">
                 <v-container>
-                <v-row align="center">
-                    <v-col>
+                <v-row align="center" justify="center">
+                    <v-col cols="12" md="auto">
                         <UserIntro></UserIntro>
                     </v-col>
                     <v-col cols="auto">

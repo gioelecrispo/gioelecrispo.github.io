@@ -1,13 +1,13 @@
 <template>
   <v-card dark width="100%" elevation="0"  outlined color="transparent">
-    <v-row class="tracking-in-contract-bck">
-        <v-col
+    <v-row align="center">
+        <v-col v-if="!tabletAndDown()"
                 cols="12"
                 md="auto"
         >
             <v-avatar
-                    :tile="avatarTile"
-                    :size="avatarSize"
+                    :tile="false"
+                    :size="164"
                     color="grey lighten-4"
             >
                 <img
@@ -16,7 +16,7 @@
                 >
             </v-avatar>
         </v-col>
-        <v-col>
+        <v-col class="tracking-in-contract-bck">
             <v-row>
                 <h2 class="display-3 font-weight-medium px-3">
                     Gioele Crispo
@@ -45,11 +45,15 @@
         props: {},
         data() {
             return {
-                avatarTile: false,
-                avatarSize: 192
             };
         },
-        computed: {}
+        computed: {},
+        methods: {
+            tabletAndDown() {
+                return this.$vuetify.breakpoint.name === "xs" ||
+                    this.$vuetify.breakpoint.name === "sm";
+            },
+        }
     };
 </script>
 
