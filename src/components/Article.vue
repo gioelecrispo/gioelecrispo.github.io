@@ -1,27 +1,34 @@
 <template>
-    <v-card
-            max-width="350"
-            height="500"
-            elevation="8"
-            @click="navigate(articleId)"
-    >
-        <v-img
-                class="white--text align-end"
-                height="180px"
-                :src="article.img"
-        />
-        <v-card-title class="px-8 py-6">
-            {{ article.title }}
-        </v-card-title>
 
-        <v-card-text class="px-8 pb-3 text--primary">
-            {{ article.subTitle }}
-        </v-card-text>
+    <v-hover>
+        <template v-slot:default="{ hover }">
+            <v-card
+                    :max-width="hover ? 360 : 350"
+                    :height="hover ? 510 : 500"
+                    :elevation="hover ? 20 : 8"
+                    :class="`${hover ? 'expand' : ''}`"
+                    @click="navigate(articleId)"
+            >
+                <v-img
+                        class="white--text align-end"
+                        height="200px"
+                        :src="article.img"
+                />
+                <v-card-title class="px-8 py-6">
+                    {{ article.title }}
+                </v-card-title>
 
-        <v-card-subtitle class="px-8 py-6">
-            {{ article.date }}
-        </v-card-subtitle>
-    </v-card>
+                <v-card-text class="px-8 pb-3 text--primary">
+                    {{ article.subTitle }}
+                </v-card-text>
+
+                <v-card-subtitle class="px-8 py-6">
+                    {{ article.date }}
+                </v-card-subtitle>
+            </v-card>
+        </template>
+    </v-hover>
+
 </template>
 
 <script>
@@ -50,5 +57,7 @@
 </script>
 
 <style lang="scss" scoped>
-
+    .expand {
+        margin: -5px;
+    }
 </style>

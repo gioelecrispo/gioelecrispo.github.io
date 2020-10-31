@@ -31,17 +31,11 @@
             <v-icon>mdi-menu</v-icon>
         </v-btn>
         <v-toolbar-title
-                v-if="tabletAndDown()"
+                v-if="tabletAndDown() || $route.meta.showAppToolbarImage"
                 class="pl-1 pr-3"
         >
             <h3>{{ title }}</h3>
         </v-toolbar-title>
-        <!-- <div
-                    v-if="tabletAndDown()"
-                    class="d-flex align-center"
-            >
-                <h2>{{ title }}</h2>
-            </div>-->
         <v-spacer/>
         <v-row align="center" justify="end">
         <v-btn

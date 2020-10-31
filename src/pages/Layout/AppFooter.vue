@@ -189,7 +189,7 @@
 <style lang="scss" scoped>
     .footer-content {
         margin: -10 0 0 0;
-        background-color: #4478e3 !important;
+        background-color: #2196F3 !important;
         padding: 0px;
     }
 
@@ -200,7 +200,7 @@
     .wave {
         animation: wave 3s linear;
         animation-iteration-count: infinite;
-        fill: #4478e3;
+        fill: #2196F3;
     }
 
     #wave2 {

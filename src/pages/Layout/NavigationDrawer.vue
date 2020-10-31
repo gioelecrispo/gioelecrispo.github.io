@@ -19,11 +19,11 @@
               <v-icon>mdi-close</v-icon>
             </v-btn>
           </v-row>
-          <v-row justify="center">
+          <v-row justify="center" class="pt-6">
             <v-avatar size="104">
               <img
                 :src="require('@/assets/img/me/me.png')"
-                alt="John"
+                alt="Gioele Crispo"
               >
             </v-avatar>
           </v-row>

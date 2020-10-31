@@ -50,6 +50,22 @@
         </v-row>
 
         <v-row class="pt-6 pb-3">
+            <h2>Certifications</h2>
+        </v-row>
+        <v-row>
+            <v-alert
+                    text
+                    border="bottom"
+                    color="orange darken-2"
+            >
+                <h3 class="headline">
+                    AWS Machine Learning Specialty
+                </h3>
+                <div>Maecenas nec odio et ante tincidunt tempus. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Curabitur turpis.</div>
+            </v-alert>
+        </v-row>
+
+        <v-row class="pt-6 pb-3">
             <h2>Pubblications</h2>
         </v-row>
         <v-row>
@@ -62,19 +78,22 @@
                         align="center"
                         no-gutters
                 >
-                    <v-card-title class="py-2">
-                        Tracking the Ballistic Trajectory in Complex and Long Handwritten
-                        Signatures
-                    </v-card-title>
-                    <v-spacer/>
-                    <v-btn
-                            class="mr-3"
-                            icon
-                            target="_blank"
-                            href="https://www.researchgate.net/publication/327405064_Tracking_the_Ballistic_Trajectory_in_Complex_and_Long_Handwritten_Signatures"
-                    >
-                        <v-icon>mdi-open-in-new</v-icon>
-                    </v-btn>
+                    <v-col>
+                        <v-card-title class="py-2">
+                            Tracking the Ballistic Trajectory in Complex and Long Handwritten
+                            Signatures
+                        </v-card-title>
+                    </v-col>
+                    <v-col cols="auto">
+                        <v-btn
+                                class="mr-3"
+                                icon
+                                target="_blank"
+                                href="https://www.researchgate.net/publication/327405064_Tracking_the_Ballistic_Trajectory_in_Complex_and_Long_Handwritten_Signatures"
+                        >
+                            <v-icon>mdi-open-in-new</v-icon>
+                        </v-btn>
+                    </v-col>
                 </v-row>
                 <v-card-text class="py-1">
                     August 2018 · Conference: 16th International Conference on Frontiers in

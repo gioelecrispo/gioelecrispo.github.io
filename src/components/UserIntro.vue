@@ -1,41 +1,42 @@
 <template>
-  <v-card dark width="100%" elevation="0"  outlined color="transparent">
-    <v-row align="center">
-        <v-col v-if="!tabletAndDown()"
-                cols="12"
-                md="auto"
-        >
-            <v-avatar
-                    :tile="false"
-                    :size="164"
-                    color="grey lighten-4"
+    <v-card dark width="100%" elevation="0" outlined color="transparent">
+        <v-row align="center">
+            <v-col v-if="!tabletAndDown()"
+                   cols="12"
+                   md="auto"
             >
-                <img
-                        :src="require('@/assets/img/me/me.png')"
-                        alt="avatar"
+                <v-avatar
+                        :tile="false"
+                        :size="164"
+                        color="grey lighten-4"
                 >
-            </v-avatar>
-        </v-col>
-        <v-col class="tracking-in-contract-bck">
-            <v-row>
-                <h2 class="display-3 font-weight-medium px-3">
-                    Gioele Crispo
-                </h2>
-            </v-row>
-            <v-row>
-                <h1 class="subheading font-weight-thin mb-3 px-3">
-                    Machine Learning engineer
-                </h1>
-            </v-row>
-            <v-row>
-                <v-divider/>
-            </v-row>
-            <v-row>
-                <span class="font-weight-thin mb-3 px-3">Una breve descrizione che abbia un significato abbastanza intenso.</span>
-            </v-row>
-        </v-col>
-    </v-row>
-  </v-card>
+                    <img
+                            :src="require('@/assets/img/me/me.png')"
+                            alt="avatar"
+                    >
+                </v-avatar>
+            </v-col>
+            <v-col>
+                <v-row justify="center">
+                    <h2 class="display-3 font-weight-medium px-3 tracking-in-contract-bck">
+                        Gioele Crispo
+                    </h2>
+                </v-row>
+                <v-row justify="center">
+                    <h1 class="subheading font-weight-thin mb-3 px-3 tracking-in-contract-bck">
+                        Machine Learning engineer
+                    </h1>
+                </v-row>
+                <v-row>
+                    <v-divider/>
+                </v-row>
+                <v-row justify="center">
+                <span class="font-weight-thin mb-3 px-3 tracking-in-contract-bck">
+                    Una breve descrizione che abbia un significato abbastanza intenso.</span>
+                </v-row>
+            </v-col>
+        </v-row>
+    </v-card>
 </template>
 
 <script>
@@ -44,8 +45,7 @@
         components: {},
         props: {},
         data() {
-            return {
-            };
+            return {};
         },
         computed: {},
         methods: {

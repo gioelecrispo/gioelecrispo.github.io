@@ -24,9 +24,9 @@
                   </v-icon>
                   <span class="overline">Github</span>
                 </v-row>
-                <v-list-item-title class="headline mb-1">
+                <h2 class="mb-1">
                   {{ githubUserInfo.login }}
-                </v-list-item-title>
+                </h2>
                 <v-list-item-subtitle>
                   <span>{{ githubUserInfo.location }}</span><span class="mx-2">|</span>
                   <span class="overline">{{ githubUserInfo.company }}</span>

@@ -20,7 +20,9 @@
                         <div>
                             <h2>Contacts</h2>
                         </div>
-                        Praesent congue erat at massa. Nullam vel sem. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Curabitur at lacus ac velit ornare lobortis.
+                        Praesent congue erat at massa. Nullam vel sem. Aliquam lorem ante, dapibus in, viverra quis,
+                        feugiat a, tellus. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien,
+                        a accumsan nisi mauris ac eros. Curabitur at lacus ac velit ornare lobortis.
                         <div class="mt-3">
                             <v-btn
                                     text
@@ -34,26 +36,26 @@
                         </div>
                     </v-col>
                 </v-row>
-
             </v-alert>
         </v-row>
+
         <v-row class="pt-6 pb-3">
             <h2>Works and Experiences</h2>
         </v-row>
-
-            <v-row align="center">
-                <v-col  cols="12"
-                        sm="6" class="pa-2 pr-2">
-                    <Experience :experience="visibleExperience"></Experience>
-                </v-col>
-                <v-col  cols="12"
-                        sm="6" class="pa-2 pl-4">
-                    <v-row v-for="skill in visibleSkills" :key="skill.name">
-                        <Skill :skill="skill"></Skill>
-                    </v-row>
-                </v-col>
-            </v-row>
-
+        <v-row align="center">
+            <v-col cols="12"
+                   sm="6" class="pa-2 pr-2">
+                <Experience :experience="visibleExperience"></Experience>
+            </v-col>
+<!--            <v-col cols="12"-->
+<!--                   sm="6" class="pa-2 pl-4">-->
+<!--                <v-row v-for="skill in visibleSkills" :key="skill.name">-->
+<!--                    <v-card outlined>-->
+<!--                        <Skill :skill="skill"></Skill>-->
+<!--                    </v-card>-->
+<!--                </v-row>-->
+<!--            </v-col>-->
+        </v-row>
         <v-row>
             <v-btn
                     text
@@ -66,6 +68,7 @@
                 </v-icon>
             </v-btn>
         </v-row>
+
         <v-row class="pt-6 pb-3">
             <h2>Projects</h2>
         </v-row>

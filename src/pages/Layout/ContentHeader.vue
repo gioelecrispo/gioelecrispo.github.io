@@ -2,15 +2,7 @@
     <div class="parallax">
         <div class="bg bg-overlay "></div>
 
-            <v-row class="py-4 px-8">
-                <v-spacer></v-spacer>
-                <v-btn
-                        icon
-                        @click="setTheme()"
-                >
-                    <v-icon>{{ isDark ? "mdi-white-balance-sunny" : "far fa-moon" }}</v-icon>
-                </v-btn>
-            </v-row>
+
 
             <div class="caption">
                 <v-container>
@@ -28,7 +20,14 @@
                 </v-row>
                 </v-container>
             </div>
-
+        <v-btn fab dark
+            color="secondary"
+            absolute
+            bottom
+            right
+               @click="setTheme()">
+            <v-icon>{{ isDark ? "mdi-white-balance-sunny" : "far fa-moon" }}</v-icon>
+        </v-btn>
     </div>
 
 </template>
@@ -78,7 +77,7 @@
 <style lang="scss" scoped>
     .parallax {
         position: relative;
-        height: 100vh;
+        height: 90vh;
     }
 
     .parallax .bg {
@@ -103,7 +102,7 @@
     .caption {
         position: absolute;
         left: 0;
-        top: 35%;
+        top: 32%;
         width: 100%;
         text-align: center;
         color: #000;

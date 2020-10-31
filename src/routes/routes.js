@@ -151,7 +151,7 @@ const routes = [
                                 component: ArticleDetails,
                                 props: true,
                                 meta: {
-                                    toolbarTitle: "Article Details",
+                                    toolbarTitle: "Article",
                                     showNavigationDrawer: true,
                                     showContentToolbar: false,
                                     showContentHeader: false,
