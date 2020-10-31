@@ -171,9 +171,9 @@
 
 <script>
 
-    import Skill from "../../components/Skill";
+    import Skill from "../components/Skill";
     import {mapGetters} from "vuex";
-    import Experience from "../../components/Experience";
+    import Experience from "../components/Experience";
 
     export default {
         name: "Works",

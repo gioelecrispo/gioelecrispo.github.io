@@ -134,7 +134,7 @@
 
 <script>
 import {mapGetters} from "vuex";
-import Project from "../../components/Project";
+import Project from "../components/Project";
 
 const axios = require("axios");
 

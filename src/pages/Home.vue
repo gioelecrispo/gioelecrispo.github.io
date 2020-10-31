@@ -139,10 +139,10 @@
     import UserIntro from "@/components/UserIntro";
     import Article from "@/components/Article";
     import {mapGetters} from "vuex";
-    import Project from "../../components/Project";
-    import RouterService from "../../helpers/RouterService";
-    import Experience from "../../components/Experience";
-    import Skill from "../../components/Skill";
+    import Project from "../components/Project";
+    import RouterService from "../helpers/RouterService";
+    import Experience from "../components/Experience";
+    import Skill from "../components/Skill";
 
     export default {
         name: "Home",

@@ -5,11 +5,10 @@ const getDefaultState = function() {
         leftNavDrawer: false, // Left Navigation Drawer is opened (true) or not (false)
         isDark: false, // if the dark theme has to be used
         navLinks: [ // Application navigation drawer elements
-            {id: "home", title: "Home", icon: "mdi-home", path: "/me/home"},
-            {id: "cv", title: "Curriculum Vitae", icon: "mdi-timeline-text", path: "/me/cv"},
-            {id: "projects", title: "Projects", icon: "mdi-github-circle", path: "/me/projects"},
-            {id: "articles", title: "Articles", icon: "mdi-file-document-outline", path: "/me/articles"},
-            // {id: "me", title: "About me", icon: "mdi-account", path: "/me/aboutme"},
+            {id: "home", title: "Home", icon: "mdi-home", path: "/home"},
+            {id: "cv", title: "Curriculum Vitae", icon: "mdi-timeline-text", path: "/cv"},
+            {id: "projects", title: "Projects", icon: "mdi-github-circle", path: "/projects"},
+            {id: "articles", title: "Articles", icon: "mdi-file-document-outline", path: "/articles"},
         ]
     };
 };

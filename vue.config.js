@@ -25,11 +25,7 @@ module.exports = {
         loaderOptions: {
             sass: {
                 data: `
-                   @import "@/assets/styles/scss/app/multipanes.scss";
-                   @import "@/assets/styles/scss/app/elements.scss";
-                   @import "@/assets/styles/scss/app/decorators.scss";
-                   @import "@/assets/styles/scss/app/page-structure.scss";
-                   @import "@/assets/styles/scss/app/_commons.scss";
+                   @import "@/assets/styles/scss/commons.scss";
                     `
             }
         }

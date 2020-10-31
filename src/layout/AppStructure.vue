@@ -24,12 +24,12 @@
 
 <script>
     import {mapGetters, mapState} from "vuex";
-    import NavigationDrawer from "@/pages/Layout/NavigationDrawer";
-    import AppContent from "@/pages/Layout/AppContent";
-    import AppToolbar from "@/pages/Layout/AppToolbar";
-    import AppFooter from "@/pages/Layout/AppFooter";
-    import ContentHeader from "@/pages/Layout/ContentHeader";
-    import UserIntro from "../../components/UserIntro";
+    import NavigationDrawer from "@/layout/NavigationDrawer";
+    import AppContent from "@/layout/AppContent";
+    import AppToolbar from "@/layout/AppToolbar";
+    import AppFooter from "@/layout/AppFooter";
+    import ContentHeader from "@/layout/ContentHeader";
+    import UserIntro from "../components/UserIntro";
 
     export default {
         name: "AppStructure",
@@ -63,7 +63,7 @@
 </script>
 
 <style lang="scss">
-    @import "../../assets/styles/scss/animations";
+    @import "../assets/styles/scss/animations";
 
     @import url('https://fonts.googleapis.com/css? family=Oxygen:300,400,700&display=swap');
     @import url('https://fonts.googleapis.com/css? family=Comfortaa&display=swap');
@@ -84,7 +84,7 @@
 
     .parallax1 {
         /* The image used */
-        background-image: url("../../assets/img/img_parallax.jpg");
+        background-image: url("../assets/img/img_parallax.jpg");
         opacity: .35;
         z-index: -1;
         /* Set a specific height */

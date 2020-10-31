@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import ContentHeader from "@/pages/Layout/ContentHeader";
-import ContentToolbar from "@/pages/Layout/ContentToolbar";
-import ContentBody from "@/pages/Layout/ContentBody";
-import ContentFooter from "@/pages/Layout/ContentFooter";
+import ContentHeader from "@/layout/ContentHeader";
+import ContentToolbar from "@/layout/ContentToolbar";
+import ContentBody from "@/layout/ContentBody";
+import ContentFooter from "@/layout/ContentFooter";
 
 export default {
     name: "AppContent",

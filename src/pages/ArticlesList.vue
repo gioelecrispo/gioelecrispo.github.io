@@ -23,7 +23,7 @@
 
 <script>
     import {mapGetters} from "vuex";
-    import Article from "../../components/Article";
+    import Article from "../components/Article";
 
     export default {
         name: "ArticlesList",

@@ -3,23 +3,17 @@
 </template>
 
 <script>
+
 export default {
     name: "App",
-    components: {
-
-    },
+    components: {},
     props: {},
     data() {
-        return {
-
-        };
+        return { };
     },
-    computed: {
-
-    }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 </style>

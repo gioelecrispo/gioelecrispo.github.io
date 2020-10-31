@@ -33,9 +33,9 @@
 </template>
 
 <script>
-    import UserIntro from "../../components/UserIntro";
+    import UserIntro from "../components/UserIntro";
     import {mapGetters} from "vuex";
-    import RouterService from "../../helpers/RouterService";
+    import RouterService from "../helpers/RouterService";
 
     export default {
         name: "ContentHeader",
@@ -89,7 +89,7 @@
         background: linear-gradient(
                         rgba(0, 0, 0, 0.85),
                         rgba(0, 0, 0, 0.5)
-        ), url("../../assets/img/img_parallax.jpg");
+        ), url("../assets/img/img_parallax.jpg");
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
