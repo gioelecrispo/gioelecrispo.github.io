@@ -55,24 +55,37 @@
         <v-row>
             <v-alert
                     text
+                    class="py-2 px-4 mb-1"
+                    width="100%"
                     border="bottom"
                     color="orange darken-2"
+                    v-for="certification in certifications"
+                    :key="certification.id"
             >
-                <h3 class="headline">
-                    AWS Machine Learning Specialty
-                </h3>
-                <div>Maecenas nec odio et ante tincidunt tempus. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Curabitur turpis.</div>
-            </v-alert>
+                <v-row align="center">
+                    <v-col cols="auto">
+                        <v-icon large color="orange darken-2">mdi-medal</v-icon>
+                    </v-col>
+                    <v-col>
+                        <h3 class="headline">
+                            {{ certification.title }}
+                        </h3>
+                        <div>{{ certification.id }} · {{ certification.date }} </div>
+                    </v-col>
+                </v-row>
+               </v-alert>
         </v-row>
 
         <v-row class="pt-6 pb-3">
-            <h2>Pubblications</h2>
+            <h2>Publications</h2>
         </v-row>
         <v-row>
             <v-card
                     outlined
                     elevation="0"
                     width="100%"
+                    v-for="publication in publications"
+                    :key="publication.title"
             >
                 <v-row
                         align="center"
@@ -80,8 +93,7 @@
                 >
                     <v-col>
                         <v-card-title class="py-2">
-                            Tracking the Ballistic Trajectory in Complex and Long Handwritten
-                            Signatures
+                            {{ publication.title }}
                         </v-card-title>
                     </v-col>
                     <v-col cols="auto">
@@ -89,18 +101,17 @@
                                 class="mr-3"
                                 icon
                                 target="_blank"
-                                href="https://www.researchgate.net/publication/327405064_Tracking_the_Ballistic_Trajectory_in_Complex_and_Long_Handwritten_Signatures"
+                                href="publication.href"
                         >
                             <v-icon>mdi-open-in-new</v-icon>
                         </v-btn>
                     </v-col>
                 </v-row>
                 <v-card-text class="py-1">
-                    August 2018 · Conference: 16th International Conference on Frontiers in
-                    Handwriting Recognition (ICFHR) At: Niagara Falls, USA
+                    {{ publication.date }} · {{ publication.location }}
                 </v-card-text>
                 <v-card-text class="pt-0 pb-1">
-                    Gioele Crispo · Moises Diaz · Angelo Marcelli · Miguel A. Ferrer
+                    {{ publication.authors }}
                 </v-card-text>
             </v-card>
         </v-row>
@@ -243,6 +254,8 @@
         },
         computed: {
             ...mapGetters("DataState", {
+                certifications: "getCertifications",
+                publications: "getPublications",
                 skills: "getSkills",
                 experiences: "getExperiences",
             }),

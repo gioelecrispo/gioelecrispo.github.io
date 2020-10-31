@@ -1,9 +1,6 @@
 <template>
     <div class="parallax">
         <div class="bg bg-overlay "></div>
-
-
-
             <div class="caption">
                 <v-container>
                 <v-row align="center" justify="center">
@@ -43,16 +40,12 @@
         components: {UserIntro},
         data() {
             return {
-                isDark: "false",
-                elements: [
-                    "curriculum vitae",
-                    "works",
-                    "articles"
-                ]
+
             };
         },
         computed: {
             ...mapGetters("AppState", {
+                isDark: "isDark",
                 navLinks: "getNavLinks",
             }),
             visibleNavLinks() {
@@ -64,7 +57,7 @@
         },
         methods: {
             setTheme() {
-                this.isDark = !this.isDark;
+                this.$store.dispatch("AppState/setIsDark", !this.isDark);
                 this.$vuetify.theme.dark = this.isDark === true;
             },
             navigate(path) {

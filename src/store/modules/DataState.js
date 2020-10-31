@@ -5,6 +5,23 @@ const getDefaultState = function () {
         // Initial state
         githubUserInfo: undefined,
         projects: undefined,
+        certifications: [
+            {
+                id: "MLS-C01",
+                title: "AWS Machine Learning Specialty",
+                date: "10/12/2020",
+                color: "orange darken-2"
+            }
+        ],
+        publications: [
+            {
+                title: "Tracking the Ballistic Trajectory in Complex and Long Handwritten Signatures",
+                authors: "Gioele Crispo · Moises Diaz · Angelo Marcelli · Miguel A. Ferrer",
+                href: "https://www.researchgate.net/publication/327405064_Tracking_the_Ballistic_Trajectory_in_Complex_and_Long_Handwritten_Signatures",
+                date: " August 2018",
+                location: "Conference: 16th International Conference on Frontiers in Handwriting Recognition (ICFHR) At: Niagara Falls, USA",
+            }
+        ],
         experiences: [
             {
                 color: "blue darken-2",
@@ -262,6 +279,12 @@ const getters = {
         }
         return state.projects;
     },
+    getCertifications: (state) => {
+        return state.certifications;
+    },
+    getPublications: (state) => {
+        return state.publications;
+    },
     getSkills: (state) => {
         return state.skills;
     },
@@ -277,33 +300,12 @@ const actions = {
     resetState({commit}) {
         commit("resetState");
     },
-    /*setGithubUserInfo({commit}, githubUserInfo) {
-        commit("setGithubUserInfo", githubUserInfo);
-    },
-    setProjects({commit}, projects) {
-        commit("setProjects", projects);
-    },
-    setArticles({commit}, articles) {
-        commit("setArticles", articles);
-    },*/
 };
 
 const mutations = {
     resetState(state) {
         Object.assign(state, getDefaultState());
     },
-    /*setGithubUserInfo(state, githubUserInfo) {
-        state.githubUserInfo = githubUserInfo;
-        // console.log('DataState -> setGithubUserInfo: ' + state.githubUserInfo);
-    },
-    setProjects(state, projects) {
-        state.projects = projects;
-        // console.log('DataState -> setProjects: ' + state.projects);
-    },
-    setArticles(state, articles) {
-        state.articles = articles;
-        // console.log('DataState -> setArticles: ' + state.articles);
-    },*/
 };
 
 export default {

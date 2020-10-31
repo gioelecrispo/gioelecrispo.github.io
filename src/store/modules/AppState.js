@@ -36,7 +36,7 @@ const actions = {
         commit("setIsDark", isDark);
     },
     setLeftNavDrawer({commit}, leftNavDrawer) {
-        commit("setLefNavDrawer", leftNavDrawer);
+        commit("setLeftNavDrawer", leftNavDrawer);
     },
 };
 
@@ -44,14 +44,15 @@ const mutations = {
     resetState (state) {
         Object.assign(state, getDefaultState());
     },
-    setLeftNavDrawer(state, leftNavDrawer) {
-        state.leftNavDrawer = leftNavDrawer;
-        // console.log('AppState -> setLeftTempNavDrawer: ' + state.leftNavDrawer);
-    },
     setIsDark(state, isDark) {
         state.isDark = isDark;
         // console.log('AppState -> setIsDark: ' + state.isDark);
     },
+    setLeftNavDrawer(state, leftNavDrawer) {
+        state.leftNavDrawer = leftNavDrawer;
+        // console.log('AppState -> setLeftNavDrawer: ' + state.leftNavDrawer);
+    },
+
 };
 
 export default {

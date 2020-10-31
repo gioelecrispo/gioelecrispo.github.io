@@ -83,24 +83,11 @@
             },
             elevateOnScroll() {
                 return true;
-            },
-            appBarColor() {
-                if (this.tabletAndDown()) {
-                    if (!this.isDark) {
-                        return "white";
-                    } else {
-                        //return "#33333390";
-                        return "grey";
-                    }
-                } else {
-                    return "white";
-                }
-            },
+            }
         },
         props: ["title"],
         methods: {
             toggleLeftNavBar() {
-                let leftNavDrawer = !this.isLeftNavDrawer;
                 this.$store.dispatch("AppState/setLeftNavDrawer", true);
             },
             tabletAndDown() {
@@ -111,9 +98,8 @@
                 RouterService.goTo(path);
             },
             setTheme() {
-                this.isDark = !this.isDark;
+                this.$store.dispatch("AppState/setIsDark", !this.isDark);
                 this.$vuetify.theme.dark = this.isDark === true;
-                this.$store.dispatch("AppState/setLeftNavDrawer", this.isDark);
             },
             setToolbarColor() {
                 let color = "toolbars";

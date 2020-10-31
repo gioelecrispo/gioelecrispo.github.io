@@ -63,7 +63,7 @@
 </script>
 
 <style lang="scss">
-    @import "../assets/styles/scss/animations";
+    @import "../assets/styles/scss/commons";
 
     @import url('https://fonts.googleapis.com/css? family=Oxygen:300,400,700&display=swap');
     @import url('https://fonts.googleapis.com/css? family=Comfortaa&display=swap');
@@ -80,21 +80,5 @@
         }
     }
 
-
-
-    .parallax1 {
-        /* The image used */
-        background-image: url("../assets/img/img_parallax.jpg");
-        opacity: .35;
-        z-index: -1;
-        /* Set a specific height */
-        height: 100vh;
-
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 </style>
 
