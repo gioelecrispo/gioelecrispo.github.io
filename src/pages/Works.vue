@@ -53,67 +53,22 @@
             <h2>Certifications</h2>
         </v-row>
         <v-row>
-            <v-alert
-                    text
-                    class="py-2 px-4 mb-1"
-                    width="100%"
-                    border="bottom"
-                    color="orange darken-2"
-                    v-for="certification in certifications"
-                    :key="certification.id"
-            >
-                <v-row align="center">
-                    <v-col cols="auto">
-                        <v-icon large color="orange darken-2">mdi-medal</v-icon>
-                    </v-col>
-                    <v-col>
-                        <h3 class="headline">
-                            {{ certification.title }}
-                        </h3>
-                        <div>{{ certification.id }} · {{ certification.date }} </div>
-                    </v-col>
-                </v-row>
-               </v-alert>
+            <div v-for="certification in certifications"
+                 :key="certification.id"
+                 class="awards-container pb-2">
+                <Certification :certification="certification"></Certification>
+            </div>
         </v-row>
 
         <v-row class="pt-6 pb-3">
             <h2>Publications</h2>
         </v-row>
         <v-row>
-            <v-card
-                    outlined
-                    elevation="0"
-                    width="100%"
-                    v-for="publication in publications"
-                    :key="publication.title"
-            >
-                <v-row
-                        align="center"
-                        no-gutters
-                >
-                    <v-col>
-                        <v-card-title class="py-2">
-                            {{ publication.title }}
-                        </v-card-title>
-                    </v-col>
-                    <v-col cols="auto">
-                        <v-btn
-                                class="mr-3"
-                                icon
-                                target="_blank"
-                                href="publication.href"
-                        >
-                            <v-icon>mdi-open-in-new</v-icon>
-                        </v-btn>
-                    </v-col>
-                </v-row>
-                <v-card-text class="py-1">
-                    {{ publication.date }} · {{ publication.location }}
-                </v-card-text>
-                <v-card-text class="pt-0 pb-1">
-                    {{ publication.authors }}
-                </v-card-text>
-            </v-card>
+            <div v-for="publication in publications"
+                 :key="publication.title"
+                 class="awards-container pb-2">
+                <Publication :publication="publication"></Publication>
+            </div>
         </v-row>
 
 
@@ -181,14 +136,15 @@
 </template>
 
 <script>
-
-    import Skill from "../components/Skill";
     import {mapGetters} from "vuex";
+    import Skill from "../components/Skill";
     import Experience from "../components/Experience";
+    import Certification from "../components/Certification";
+    import Publication from "../components/Publication";
 
     export default {
         name: "Works",
-        components: {Experience, Skill},
+        components: {Experience, Skill, Certification, Publication},
         props: {},
         data() {
             return {
@@ -269,7 +225,11 @@
     };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
+    .awards-container {
+        width: 100%;
+    }
+
     .v-timeline-item__opposite {
         align-self: flex-start !important;
         margin-top: 10px !important;

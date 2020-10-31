@@ -11,7 +11,7 @@ const getDefaultState = function () {
                 title: "AWS Machine Learning Specialty",
                 date: "10/12/2020",
                 color: "orange darken-2"
-            }
+            },
         ],
         publications: [
             {
@@ -20,7 +20,7 @@ const getDefaultState = function () {
                 href: "https://www.researchgate.net/publication/327405064_Tracking_the_Ballistic_Trajectory_in_Complex_and_Long_Handwritten_Signatures",
                 date: " August 2018",
                 location: "Conference: 16th International Conference on Frontiers in Handwriting Recognition (ICFHR) At: Niagara Falls, USA",
-            }
+            },
         ],
         experiences: [
             {

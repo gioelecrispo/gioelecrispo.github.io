@@ -42,25 +42,20 @@
         <v-row class="pt-6 pb-3">
             <h2>Works and Experiences</h2>
         </v-row>
-        <v-row align="center">
+        <v-row align="top">
             <v-col cols="12"
-                   sm="6" class="pa-2 pr-2">
+                   sm="6" class="pa-2">
                 <Experience :experience="visibleExperience"></Experience>
             </v-col>
-<!--            <v-col cols="12"-->
-<!--                   sm="6" class="pa-2 pl-4">-->
-<!--                <v-row v-for="skill in visibleSkills" :key="skill.name">-->
-<!--                    <v-card outlined>-->
-<!--                        <Skill :skill="skill"></Skill>-->
-<!--                    </v-card>-->
-<!--                </v-row>-->
-<!--            </v-col>-->
+            <v-col cols="12" sm="6" class="pa-2">
+                <Certification :certification="visibleCertifications"></Certification>
+            </v-col>
         </v-row>
         <v-row>
             <v-btn
                     text
                     color="primary"
-                    @click="navigate('/me/cv')"
+                    @click="navigate('/cv')"
             >
                 View my CV
                 <v-icon class="ml-2">
@@ -94,7 +89,7 @@
             <v-btn
                     text
                     color="primary"
-                    @click="navigate('/me/projects')"
+                    @click="navigate('/projects')"
             >
                 Explore all my projects
                 <v-icon class="ml-2">
@@ -124,7 +119,7 @@
             <v-btn
                     text
                     color="primary"
-                    @click="navigate('/me/articles')"
+                    @click="navigate('/articles')"
             >
                 View all my posts
                 <v-icon class="ml-2">
@@ -136,13 +131,15 @@
 </template>
 
 <script>
-    import UserIntro from "@/components/UserIntro";
-    import Article from "@/components/Article";
     import {mapGetters} from "vuex";
+    import UserIntro from "../components/UserIntro";
+    import Article from "../components/Article";
     import Project from "../components/Project";
     import RouterService from "../helpers/RouterService";
     import Experience from "../components/Experience";
     import Skill from "../components/Skill";
+    import Certification from "../components/Certification";
+    import Publication from "../components/Publication";
 
     export default {
         name: "Home",
@@ -151,6 +148,8 @@
             Project,
             UserIntro,
             Article,
+            Certification,
+            Publication,
             Skill
         },
         props: {},
@@ -171,11 +170,23 @@
                 projects: "getProjects",
                 skills: "getSkills",
                 experiences: "getExperiences",
+                certifications: "getCertifications",
+                publications: "getPublications",
             }),
             visibleExperience() {
                 if (this.experiences)
                     return this.experiences.slice(0, 1)[0];
                 return this.experiences;
+            },
+            visiblePublications() {
+                if (this.publications)
+                    return this.publications.slice(0, 1)[0];
+                return this.publications;
+            },
+            visibleCertifications() {
+                if (this.certifications)
+                    return this.certifications.slice(0, 1)[0];
+                return this.certifications;
             },
             visibleSkills() {
                 if (this.skills)
