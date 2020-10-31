@@ -58,21 +58,6 @@
             {{ element.title }}
         </v-btn>
         </v-row>
-       <!-- <v-toolbar-items>
-            <v-btn
-                    v-for="element in appToolbarElements"
-                    v-if="!showNavigationDrawerIcon"
-                    :key="element.id"
-                    text
-                    small
-                    @click="navigate(element.path)"
-            >
-                <v-icon class="mr-1">
-                    {{ element.icon }}
-                </v-icon>
-                {{ element.title }}
-            </v-btn>
-        </v-toolbar-items>-->
     </v-app-bar>
 </template>
 
@@ -83,10 +68,14 @@
     export default {
         name: "AppToolbar",
         components: {},
+        data() {
+            return {
+            }
+        },
         computed: {
             ...mapGetters("AppState", {
                 isLeftNavDrawer: "isLeftNavDrawer",
-                isLeftTempNavDrawer: "isLeftTempNavDrawer",
+                isDark: "isDark",
                 appToolbarElements: "getNavLinks",
             }),
             showNavigationDrawerIcon() {
@@ -109,11 +98,6 @@
             },
         },
         props: ["title"],
-        data() {
-            return {
-                isDark: false
-            };
-        },
         methods: {
             toggleLeftNavBar() {
                 let leftNavDrawer = !this.isLeftNavDrawer;
@@ -129,6 +113,7 @@
             setTheme() {
                 this.isDark = !this.isDark;
                 this.$vuetify.theme.dark = this.isDark === true;
+                this.$store.dispatch("AppState/setLeftNavDrawer", this.isDark);
             },
             setToolbarColor() {
                 let color = "toolbars";

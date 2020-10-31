@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-row justify="center">
+    <v-row justify="center" class="scale-in-center">
       <v-card
         v-if="githubUserInfo"
         class="mx-auto"
@@ -14,7 +14,7 @@
               <v-list-item-content>
                 <v-row
                   align="center"
-                  class="mb-4 pl-3"
+                  class="mb-2 pl-3"
                 >
                   <v-icon
                     small

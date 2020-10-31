@@ -1,5 +1,5 @@
 <template>
-    <v-card outlined>
+    <v-card outlined class="slide-in-bottom">
         <div class="d-flex flex-no-wrap justify-space-between">
             <v-container>
                 <v-row>

@@ -2,29 +2,15 @@
 const getDefaultState = function() {
     return {
         // Initial state
-        hasSplashed: false, // SplashScreen has been executed
         leftNavDrawer: false, // Left Navigation Drawer is opened (true) or not (false)
-        leftTempNavDrawer: true, // Left Temporary Navigation Drawer is opened (true) or not (false)
-        globalNotificationsPanel: false, // Global Notification Panel is opened (true) or not (false)
+        isDark: false, // if the dark theme has to be used
         navLinks: [ // Application navigation drawer elements
             {id: "home", title: "Home", icon: "mdi-home", path: "/me/home"},
             {id: "cv", title: "Curriculum Vitae", icon: "mdi-timeline-text", path: "/me/cv"},
             {id: "projects", title: "Projects", icon: "mdi-github-circle", path: "/me/projects"},
             {id: "articles", title: "Articles", icon: "mdi-file-document-outline", path: "/me/articles"},
             // {id: "me", title: "About me", icon: "mdi-account", path: "/me/aboutme"},
-        ],
-        availableLocales: [
-            {
-                name: "English",
-                locale: "en",
-                image: require("@/assets/img/settings/flags/en.png"),
-            },
-            {
-                name: "Italiano",
-                locale: "it",
-                image: require("@/assets/img/settings/flags/it.png"),
-            }
-        ],
+        ]
     };
 };
 
@@ -32,17 +18,11 @@ const state = getDefaultState();
 
 
 const getters = {
-    hasSplashed: (state) => {
-        return state.hasSplashed;
-    },
     isLeftNavDrawer: (state) => {
         return state.leftNavDrawer;
     },
-    isLeftTempNavDrawer: (state) => {
-        return state.leftTempNavDrawer;
-    },
-    getAvailableLocales: (state) => {
-        return state.availableLocales;
+    isDark: (state) => {
+        return state.isDark;
     },
     getNavLinks: (state) => {
         return state.navLinks;
@@ -53,14 +33,11 @@ const actions = {
     resetState ({ commit }) {
         commit("resetState");
     },
-    setHasSplashed({commit}, hasSplashed) {
-        commit("setHasSplashed", hasSplashed);
+    setIsDark({commit}, isDark) {
+        commit("setIsDark", isDark);
     },
     setLeftNavDrawer({commit}, leftNavDrawer) {
-        commit("setLeftNavDrawer", leftNavDrawer);
-    },
-    setLeftTempNavDrawer({commit}, leftTempNavDrawer) {
-        commit("setLeftTempNavDrawer", leftTempNavDrawer);
+        commit("setLefNavDrawer", leftNavDrawer);
     },
 };
 
@@ -68,17 +45,13 @@ const mutations = {
     resetState (state) {
         Object.assign(state, getDefaultState());
     },
-    setHasSplashed(state, hasSplashed) {
-        state.hasSplashed = hasSplashed;
-        // console.log('AppState -> setHasSplashed: ' + state.hasSplashed);
-    },
     setLeftNavDrawer(state, leftNavDrawer) {
         state.leftNavDrawer = leftNavDrawer;
         // console.log('AppState -> setLeftTempNavDrawer: ' + state.leftNavDrawer);
     },
-    setLeftTempNavDrawer(state, leftTempNavDrawer) {
-        state.leftTempNavDrawer = leftTempNavDrawer;
-        // console.log('AppState -> setLeftTempNavDrawer: ' + state.leftTempNavDrawer);
+    setIsDark(state, isDark) {
+        state.isDark = isDark;
+        // console.log('AppState -> setIsDark: ' + state.isDark);
     },
 };
 

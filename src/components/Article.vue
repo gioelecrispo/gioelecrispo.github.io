@@ -3,6 +3,7 @@
     <v-hover>
         <template v-slot:default="{ hover }">
             <v-card
+                    class="flip-in-ver-right"
                     :max-width="hover ? 360 : 350"
                     :height="hover ? 510 : 500"
                     :elevation="hover ? 20 : 8"
@@ -29,6 +30,7 @@
         </template>
     </v-hover>
 
+
 </template>
 
 <script>
@@ -39,7 +41,9 @@
         components: {},
         props: ["articleId", "article"],
         data() {
-            return {};
+            return {
+                isActive: false
+            };
         },
         computed: {},
         methods: {

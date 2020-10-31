@@ -62,7 +62,9 @@
     };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+    @import "../../assets/styles/scss/animations";
+
     @import url('https://fonts.googleapis.com/css? family=Oxygen:300,400,700&display=swap');
     @import url('https://fonts.googleapis.com/css? family=Comfortaa&display=swap');
     @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
