@@ -234,15 +234,15 @@ const getDefaultState = function () {
         },
         articles: {
             "solid-rules": {
-                title: "The SOLID rules for a good software architecture",
-                subTitle: "aaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa FROZEN YOGURT aaaaaaaaaaaaaaaaaa",
+                title: "<span>The <strong>S.O.L.I.D.</strong> rules to build a <strong>solid</strong> software architecture</span>",
+                subTitle: "S.O.L.I.D. principles and their consequences are analyzed in depth.",
                 content: require("@/assets/articles/solid-rules.md"),
                 img: require("@/assets/img/articles/solid.png"),
                 date: "11/11/2020"
             },
             "wor-talk": {
-                title: "A Writing Order Recovery strategy to handle handwriting specimens",
-                subTitle: "aaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaa FROZEN YOGURT aaaaaaaaaaaaaaaaaa",
+                title: "<span>A novel <strong>Writing Order Recovery</strong> approach for handwriting specimens</span>",
+                subTitle: "A pattern-recognition based approach for recovering the writing order trajectory of a signature is shown.",
                 content: require("@/assets/articles/wor-talk.md"),
                 img: require("@/assets/img/articles/wor.png"),
                 date: "16/03/2019"

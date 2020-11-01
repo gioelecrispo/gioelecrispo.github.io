@@ -20,9 +20,8 @@
                         <div>
                             <h2>Contacts</h2>
                         </div>
-                        Praesent congue erat at massa. Nullam vel sem. Aliquam lorem ante, dapibus in, viverra quis,
-                        feugiat a, tellus. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien,
-                        a accumsan nisi mauris ac eros. Curabitur at lacus ac velit ornare lobortis.
+                        I am open to collaborations on interesting projects and ideas regarding artificial intelligence and related.
+                        If you want to propose a work or exchange an opinion do not hesitate to contact me.
                         <div class="mt-3">
                             <v-btn
                                     text

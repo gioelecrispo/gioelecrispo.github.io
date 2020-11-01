@@ -15,12 +15,10 @@
                         height="200px"
                         :src="article.img"
                 />
-                <v-card-title class="px-8 py-6">
-                    {{ article.title }}
+                <v-card-title class="px-8 py-6" v-html=" article.title">
                 </v-card-title>
 
-                <v-card-text class="px-8 pb-3 text--primary">
-                    {{ article.subTitle }}
+                <v-card-text class="px-8 pb-3 text--primary" v-html="article.subTitle">
                 </v-card-text>
 
                 <v-card-subtitle class="px-8 py-6">

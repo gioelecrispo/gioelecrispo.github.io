@@ -1,6 +1,6 @@
 <template>
     <v-container fluid>
-        <v-row v-if="!tabletAndDown()" class="pt-6 pb-3">
+        <v-row v-if="tabletAndDown()" class="pt-6 pb-3">
             <h2>Articles</h2>
         </v-row>
         <v-row>
