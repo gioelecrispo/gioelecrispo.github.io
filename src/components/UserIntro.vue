@@ -22,7 +22,7 @@
                         Gioele Crispo
                     </h2>
                 </v-row>
-                <v-row justify="center">
+                <v-row justify="center" class="pt-2">
                     <h1 class="subheading font-weight-thin mb-3 px-3 tracking-in-contract-bck">
                         Machine Learning engineer
                     </h1>
@@ -31,8 +31,8 @@
                     <v-divider/>
                 </v-row>
                 <v-row justify="center">
-                <span class="font-weight-thin mb-3 px-3 tracking-in-contract-bck">
-                    Una breve descrizione che abbia un significato abbastanza intenso.</span>
+                <span class="font-weight-thin pt-1 mb-3 px-3 tracking-in-contract-bck">
+                    Curious, enthusiastic and highly organized </span>
                 </v-row>
             </v-col>
         </v-row>

@@ -31,8 +31,8 @@
         </v-card-title>
         <v-card-text class="white--text">
             <v-row
-                    v-if="tabletAndDown()"
-                    class="pt-3"
+                    v-if="tabletAndDown() || forceDate"
+                    class="pt-0"
             >
                 <v-icon
                         color="white"
@@ -57,7 +57,7 @@
     export default {
         name: "Experience",
         components: {},
-        props: ["experience"],
+        props: ["experience", "forceDate"],
         data() {
             return {};
         },

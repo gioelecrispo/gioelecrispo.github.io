@@ -238,14 +238,16 @@ const getDefaultState = function () {
                 subTitle: "S.O.L.I.D. principles and their consequences are analyzed in depth.",
                 content: require("@/assets/articles/solid-rules.md"),
                 img: require("@/assets/img/articles/solid.png"),
-                date: "11/11/2020"
+                date: "11/11/2020",
+                tag: "#architectures"
             },
             "wor-talk": {
                 title: "<span>A novel <strong>Writing Order Recovery</strong> approach for handwriting specimens</span>",
                 subTitle: "A pattern-recognition based approach for recovering the writing order trajectory of a signature is shown.",
                 content: require("@/assets/articles/wor-talk.md"),
                 img: require("@/assets/img/articles/wor.png"),
-                date: "16/03/2019"
+                date: "16/03/2019",
+                tag: "#pattern-recognition"
             },
         },
     };

@@ -15,15 +15,25 @@
                         height="200px"
                         :src="article.img"
                 />
-                <v-card-title class="px-8 py-6" v-html=" article.title">
-                </v-card-title>
+                <v-container fluid>
+                    <v-row class="px-2 py-1">
+                        <v-col cols="auto" class="pa-0">
+                            <v-card-subtitle class="pl-4 pr-0 py-0 secondary--text">{{ article.tag }}</v-card-subtitle>
+                        </v-col>
+                        <v-col class="pa-0"></v-col>
+                        <v-col cols="auto" class="pa-0">
+                            <v-card-subtitle class="px-4 py-0">{{ article.date }}</v-card-subtitle>
+                        </v-col>
+                    </v-row>
+                    <v-row class="px-2 py-2">
+                        <v-card-title class="px-4 py-2" v-html=" article.title"></v-card-title>
+                    </v-row>
+                    <v-row class="px-2 py-2">
+                        <v-card-text class="px-4 py-2" v-html="article.subTitle"></v-card-text>
+                    </v-row>
+                </v-container>
 
-                <v-card-text class="px-8 pb-3 text--primary" v-html="article.subTitle">
-                </v-card-text>
 
-                <v-card-subtitle class="px-8 py-6">
-                    {{ article.date }}
-                </v-card-subtitle>
             </v-card>
         </template>
     </v-hover>

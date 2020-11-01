@@ -91,7 +91,7 @@
                     v-text="experience.date"
             />
                     </template>
-                      <Experience :experience="experience"></Experience>
+                      <Experience :experience="experience" :forceDate="false"></Experience>
                 </v-timeline-item>
             </v-timeline>
         </v-row>
