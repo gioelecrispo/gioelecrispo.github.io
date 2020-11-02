@@ -11,7 +11,7 @@
                     @click="navigate(articleId)"
             >
                 <v-img
-                        class="white--text align-end"
+                        class="white--text"
                         height="200px"
                         :src="article.img"
                 />
@@ -26,7 +26,7 @@
                         </v-col>
                     </v-row>
                     <v-row class="px-2 py-2">
-                        <v-card-title class="px-4 py-2" v-html=" article.title"></v-card-title>
+                        <v-card-title class="px-4 py-2" v-html="article.title"></v-card-title>
                     </v-row>
                     <v-row class="px-2 py-2">
                         <v-card-text class="px-4 py-2" v-html="article.subTitle"></v-card-text>
@@ -50,7 +50,7 @@
         props: ["articleId", "article"],
         data() {
             return {
-                isActive: false
+
             };
         },
         computed: {},

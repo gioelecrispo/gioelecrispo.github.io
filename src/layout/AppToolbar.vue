@@ -7,7 +7,7 @@
 
             :color="setToolbarColor()"
             :dark="$route.meta.showAppToolbarImage"
-            :src="$route.meta.showAppToolbarImage ? 'https://picsum.photos/1920/1080?random' : ''"
+            :src="$route.meta.showAppToolbarImage ? getAppToolbarImage() : ''"
             :fade-img-on-scroll="$route.meta.showAppToolbarImage"
             :shrink-on-scroll="$route.meta.showAppToolbarImage"
             :prominent="$route.meta.showAppToolbarImage"
@@ -77,6 +77,7 @@
                 isLeftNavDrawer: "isLeftNavDrawer",
                 isDark: "isDark",
                 appToolbarElements: "getNavLinks",
+                appToolbarImage: "getAppToolbarImage",
             }),
             showNavigationDrawerIcon() {
                 return this.$route.meta.showNavigationDrawer && this.tabletAndDown();
@@ -109,6 +110,12 @@
                     color = '#AAAAEE';
                 }
                 return color;
+            },
+            getAppToolbarImage() {
+                if (this.appToolbarImage) {
+                    return this.appToolbarImage;
+                }
+                return 'https://picsum.photos/1920/1080?random';
             }
         },
     };

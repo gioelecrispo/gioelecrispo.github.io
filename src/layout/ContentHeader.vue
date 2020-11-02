@@ -8,7 +8,7 @@
                         <UserIntro></UserIntro>
                     </v-col>
                     <v-col cols="auto">
-                        <v-row v-for="navLink in visibleNavLinks" class="pa-4">
+                        <v-row v-for="(navLink, idx) in visibleNavLinks" class="pa-4" :class="getAnimationClass(idx)">
                             <v-btn dark block text @click="navigate(navLink.path)">
                                 {{ navLink.title }}
                             </v-btn>
@@ -63,6 +63,12 @@
             navigate(path) {
                 RouterService.goTo(path);
             },
+            getAnimationClass(idx) {
+                let multiplier = 25;
+                let baseTiming = 75;
+                let finalTiming = idx * multiplier + baseTiming;
+                return "slide-in-top-" + finalTiming;
+            }
         }
     };
 </script>

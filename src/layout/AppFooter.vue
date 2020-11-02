@@ -188,7 +188,7 @@
 
 <style lang="scss" scoped>
     .footer-content {
-        margin: -10 0 0 0;
+        margin: calc(-5%) 0 0 0;
         background-color: #2196F3 !important;
         padding: 0px;
     }

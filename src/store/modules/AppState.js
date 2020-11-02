@@ -4,6 +4,7 @@ const getDefaultState = function() {
         // Initial state
         leftNavDrawer: false, // Left Navigation Drawer is opened (true) or not (false)
         isDark: false, // if the dark theme has to be used
+        appToolbarImage: undefined, // the app toolbar image (used for articles)
         navLinks: [ // Application navigation drawer elements
             {id: "home", title: "Home", icon: "mdi-home", path: "/home"},
             {id: "cv", title: "Curriculum Vitae", icon: "mdi-timeline-text", path: "/cv"},
@@ -23,6 +24,9 @@ const getters = {
     isDark: (state) => {
         return state.isDark;
     },
+    getAppToolbarImage: (state) => {
+        return state.appToolbarImage;
+    },
     getNavLinks: (state) => {
         return state.navLinks;
     },
@@ -34,6 +38,9 @@ const actions = {
     },
     setIsDark({commit}, isDark) {
         commit("setIsDark", isDark);
+    },
+    setAppToolbarImage({commit}, appToolbarImage) {
+        commit("setAppToolbarImage", appToolbarImage);
     },
     setLeftNavDrawer({commit}, leftNavDrawer) {
         commit("setLeftNavDrawer", leftNavDrawer);
@@ -48,11 +55,14 @@ const mutations = {
         state.isDark = isDark;
         // console.log('AppState -> setIsDark: ' + state.isDark);
     },
+    setAppToolbarImage(state, appToolbarImage) {
+        state.appToolbarImage = appToolbarImage;
+        // console.log('AppState -> setAppToolbarImage: ' + state.appToolbarImage);
+    },
     setLeftNavDrawer(state, leftNavDrawer) {
         state.leftNavDrawer = leftNavDrawer;
         // console.log('AppState -> setLeftNavDrawer: ' + state.leftNavDrawer);
     },
-
 };
 
 export default {
