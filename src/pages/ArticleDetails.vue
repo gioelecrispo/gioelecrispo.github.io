@@ -1,6 +1,5 @@
 <template>
   <v-container fluid>
-    <h2>Ciao</h2>
     <div v-html="htmlSource" />
   </v-container>
 </template>
