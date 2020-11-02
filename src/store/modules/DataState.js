@@ -86,55 +86,55 @@ const getDefaultState = function () {
                 {
                     avatar: require("@/assets/img/skills/python.png"),
                     title: "<span><strong>Python</strong></span>",
-                    subtitle: "<span class='text--primary'>Data Science</span> &mdash; with AI Frameworks, numpy, pandas, " +
+                    subtitle: "<span>Data Science</span> &mdash; with AI Frameworks, numpy, pandas, " +
                         "g-unicorn, aiohttp, Flask and others for making microservices",
                     value: 95,
                 },
                 {
                     avatar: require("@/assets/img/skills/js.png"),
                     title: "<span><strong>Javascript</strong></span>",
-                    subtitle: "<span class='text--primary'>Backend and Frontend</span> &mdash; NodeJS, VueJS; " +
+                    subtitle: "<span>Backend and Frontend</span> &mdash; NodeJS, VueJS; " +
                         " use of NodeJS to create NodeVM sandboxed microservices in javascript",
                     value: 90,
                 },
                 {
                     avatar: require("@/assets/img/skills/java.png"),
                     title: "<span><strong>Java</strong></span>",
-                    subtitle: "<span class='text--primary'>Backend</span> &mdash; Spring, Spring Boot, Javadoc, " +
+                    subtitle: "<span>Backend</span> &mdash; Spring, Spring Boot, Javadoc, " +
                         "Stream, Eureka, Swagger codegen, microservices",
                     value: 85,
                 },
                 {
                     avatar: require("@/assets/img/skills/matlab.png"),
                     title: "<span><strong>Matlab</strong></span>",
-                    subtitle: "<span class='text--primary'>Data Science</span> &mdash; Master's degree thesis " +
+                    subtitle: "<span>Data Science</span> &mdash; Master's degree thesis " +
                         "strongly focused on Pattern Recognition and Image Analysis",
                     value: 85,
                 },
                 {
                     avatar: require("@/assets/img/skills/c++.png"),
                     title: "<span><strong>C++</strong></span>",
-                    subtitle: "<span class='text--primary'>Computer Vision</span> &mdash; OpenCV based " +
+                    subtitle: "<span>Computer Vision</span> &mdash; OpenCV based " +
                         "bachelor's degree thesis",
                     value: 39,
                 },
                 {
                     avatar: require("@/assets/img/skills/c.png"),
                     title: "<span><strong>C</strong></span>",
-                    subtitle: "<span class='text--primary'>Generic use</span> &mdash; Some project focused on CV" +
+                    subtitle: "<span>Generic use</span> &mdash; Some project focused on CV" +
                         " and IoT made on Raspberry Pi 3",
                     value: 65,
                 },
                 {
                     avatar: require("@/assets/img/skills/sql.png"),
                     title: "<span><strong>SQL</strong></span>",
-                    subtitle: "<span class='text--primary'>Databases</span> &mdash; used for many projects",
+                    subtitle: "<span>Databases</span> &mdash; used for many projects",
                     value: 90,
                 },
                 {
                     avatar: require("@/assets/img/skills/html.png"),
                     title: "<span><strong>HTML, CSS</strong></span>",
-                    subtitle: "<span class='text--primary'>Frontend</span> &mdash; used with VueJS",
+                    subtitle: "<span>Frontend</span> &mdash; used with VueJS",
                     value: 80,
                 },
             ],
@@ -142,25 +142,25 @@ const getDefaultState = function () {
                 {
                     avatar: require("@/assets/img/skills/tensorflow.png"),
                     title: "<span><strong>Tensorflow, Keras</strong></span>",
-                    subtitle: "<span class='text--primary'>NLP and Audio Projects</span>",
+                    subtitle: "<span>NLP and Audio Projects</span>",
                     value: 70,
                 },
                 {
                     avatar: require("@/assets/img/skills/pytorch.png"),
                     title: "<span><strong>PyTorch, FastAI</strong></span>",
-                    subtitle: "<span class='text--primary'>NLP projects</span> &mdash; GPU optimized",
+                    subtitle: "<span>NLP projects</span> &mdash; GPU optimized",
                     value: 70,
                 },
                 {
                     avatar: require("@/assets/img/skills/neural.png"),
                     title: "<span><strong>BERT, Scikit-learn</strong></span>",
-                    subtitle: "<span class='text--primary'>NLP projects</span>",
+                    subtitle: "<span>NLP projects</span>",
                     value: 90,
                 },
                 {
                     avatar: require("@/assets/img/skills/elastic.png"),
                     title: "<span><strong>Elastic Stack</strong></span>",
-                    subtitle: "<span class='text--primary'>Big Data</span> &mdash; Elasticsearch, Kibana, " +
+                    subtitle: "<span>Big Data</span> &mdash; Elasticsearch, Kibana, " +
                         "Logstash, MetricBeat, FileBeat",
                     value: 75,
                 },
@@ -169,14 +169,14 @@ const getDefaultState = function () {
                 {
                     avatar: require("@/assets/img/skills/spring.png"),
                     title: "<span><strong>Spring 5.X, Spring Boot 2.X</strong></span>",
-                    subtitle: "<span class='text--primary'>Enterprise Java</span> &mdash; MVC and Reactor, REST, " +
+                    subtitle: "<span>Enterprise Java</span> &mdash; MVC and Reactor, REST, " +
                         "Hibernate, String Security, Spring Data",
                     value: 75,
                 },
                 {
                     avatar: require("@/assets/img/skills/nodejs.png"),
                     title: "<span><strong>NodeJS 10.X, VueJS 2.X</strong></span>",
-                    subtitle: "<span class='text--primary'>Backend and Frontend</span>",
+                    subtitle: "<span>Backend and Frontend</span>",
                     value: 85,
                 },
             ],
@@ -184,27 +184,27 @@ const getDefaultState = function () {
                 {
                     avatar: require("@/assets/img/skills/aws.png"),
                     title: "<span><strong>AWS Services</strong></span>",
-                    subtitle: "<span class='text--primary'>Lambda, S3, DynamoDB, EC2, Kinesis, SageMaker </span> &mdash; " +
+                    subtitle: "<span>Lambda, S3, DynamoDB, EC2, Kinesis, SageMaker </span> &mdash; " +
                         "and other stuff of AI projects.",
                     value: 70,
                 }, {
                     avatar: require("@/assets/img/skills/database.png"),
                     title: "<span><strong>MongoDB, MariaDB</strong></span>",
-                    subtitle: "<span class='text--primary'>Data storages</span> &mdash; for multi-clustered " +
+                    subtitle: "<span>Data storages</span> &mdash; for multi-clustered " +
                         "cloud architectures",
                     value: 80,
                 },
                 {
                     avatar: require("@/assets/img/skills/rabbitmq.png"),
                     title: "<span><strong>RabbitMQ, ZMQ, Kafka</strong></span>",
-                    subtitle: "<span class='text--primary'>Message Brokers, Data stream</span> &mdash; " +
+                    subtitle: "<span>Message Brokers, Data stream</span> &mdash; " +
                         "used in high rate cloud architectures",
                     value: 70,
                 },
                 {
                     avatar: require("@/assets/img/skills/kubernetes.png"),
                     title: "<span><strong>Docker, Kubernetes</strong></span>",
-                    subtitle: "<span class='text--primary'>Deployment</span> &mdash; Containers, PODS, " +
+                    subtitle: "<span>Deployment</span> &mdash; Containers, PODS, " +
                         "microservices",
                     value: 50,
                 },
@@ -213,28 +213,50 @@ const getDefaultState = function () {
                 {
                     avatar: require("@/assets/img/skills/git.png"),
                     title: "<span><strong>Git, SVN</strong></span>",
-                    subtitle: "<span class='text--primary'>Source version control</span>",
+                    subtitle: "<span>Source version control</span>",
                 },
                 {
                     avatar: require("@/assets/img/skills/task.png"),
                     title: "<span><strong>Jira, Redmine</strong></span>",
-                    subtitle: "<span class='text--primary'>Agile development</span> &mdash; with Issues / Bugs " +
+                    subtitle: "<span>Agile development</span> &mdash; with Issues / Bugs " +
                         "tracking",
                 },
             ],
-            "Communication capabilities": [],
-            "Organisational / managerial skills": [],
+            "Communication capabilities": [
+                {
+                    avatar: require("@/assets/img/skills/soft/teamwork.png"),
+                    title: "<span><strong>Teamwork</strong></span>",
+                    subtitle: "<span>Focused on team and cooperation</span>",
+                },
+            ],
+            "Organisational / managerial skills": [
+                {
+                    avatar: require("@/assets/img/skills/soft/punctual.png"),
+                    title: "<span><strong>Punctual</strong></span>",
+                    subtitle: "<span>Careful in meeting deadlines</span>",
+                },
+                {
+                    avatar: require("@/assets/img/skills/soft/goal.png"),
+                    title: "<span><strong>Goal oriented</strong></span>",
+                    subtitle: "<span>Projected on the goal, but also giving importance to the details</span>",
+                },
+                {
+                    avatar: require("@/assets/img/skills/soft/leadership.png"),
+                    title: "<span><strong>Leadership</strong></span>",
+                    subtitle: "<span>Team leader in several projects</span>",
+                },
+            ],
             "Driving Licence": [
                 {
                     avatar: require("@/assets/img/skills/car.png"),
                     title: "<span><strong>A1, B</strong></span>",
-                    subtitle: "Driving licence for car and scooter with 125 cc max"
+                    subtitle: "<span>Driving licence for car and scooter with 125 cc max</span>"
                 },
             ],
         },
         articles: {
             "solid-rules": {
-                title: "<span>The <strong>S.O.L.I.D.</strong> rules to build a <strong>solid</strong> software architecture</span>",
+                title: "<span><strong>S.O.L.I.D.</strong> rules to build a <strong>solid</strong> software architecture</span>",
                 subTitle: "S.O.L.I.D. principles and their consequences are analyzed in depth.",
                 content: require("@/assets/articles/solid-rules.md"),
                 img: require("@/assets/img/articles/solid.png"),

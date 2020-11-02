@@ -11,7 +11,7 @@
             :fade-img-on-scroll="$route.meta.showAppToolbarImage"
             :shrink-on-scroll="$route.meta.showAppToolbarImage"
             :prominent="$route.meta.showAppToolbarImage"
-            :scroll-threshold="$route.meta.showAppToolbarImage ? '400': ''"
+            :scroll-threshold="$route.meta.showAppToolbarImage ? '250': ''"
             :height="$route.meta.showAppToolbarImage ? '350': ''"
     >
         <template

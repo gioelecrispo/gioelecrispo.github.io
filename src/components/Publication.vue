@@ -18,7 +18,7 @@
                         class="mr-3"
                         icon
                         target="_blank"
-                        href="publication.href"
+                        :href="publication.href"
                 >
                     <v-icon>mdi-open-in-new</v-icon>
                 </v-btn>

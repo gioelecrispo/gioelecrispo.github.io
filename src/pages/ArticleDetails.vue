@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <div v-html="htmlSource" />
+    <div class="pt-12" v-html="htmlSource" />
   </v-container>
 </template>
 
@@ -27,7 +27,11 @@ export default {
     },
     created () {
         this.$store.dispatch("AppState/setAppToolbarImage", this.article.img);
-        let md = require("markdown-it")();
+        let md = require("markdown-it")({
+          html: true,
+          linkify: true,
+          typography: true
+        }).use(require('markdown-it-imsize'));
         let mdSource = this.article.content;
         this.htmlSource = md.render(mdSource.default);
     }
