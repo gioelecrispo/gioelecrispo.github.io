@@ -1,7 +1,7 @@
 <template>
     <div class="parallax">
         <div class="bg bg-overlay "></div>
-            <div class="caption">
+            <div class="caption" :class="tabletAndDown() ? 'caption-mobile' : 'caption-desktop'">
                 <v-container>
                 <v-row align="center" justify="center">
                     <v-col cols="12" md="auto">
@@ -63,6 +63,10 @@
             navigate(path) {
                 RouterService.goTo(path);
             },
+            tabletAndDown() {
+                return this.$vuetify.breakpoint.name === "xs" ||
+                    this.$vuetify.breakpoint.name === "sm";
+            },
             getAnimationClass(idx) {
                 let multiplier = 25;
                 let baseTiming = 75;
@@ -93,7 +97,6 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        //opacity: .35;
         width: 100%;
         height: 100%;
     }
@@ -101,10 +104,15 @@
     .caption {
         position: absolute;
         left: 0;
-        top: 32%;
         width: 100%;
         text-align: center;
-        color: #000;
+    }
+
+    .caption-desktop {
+        top: 32%;
+    }
+    .caption-mobile {
+        top: 10%;
     }
 </style>
 

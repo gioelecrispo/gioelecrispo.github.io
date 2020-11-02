@@ -1,13 +1,13 @@
 <template>
     <v-card dark width="100%" elevation="0" outlined color="transparent">
         <v-row align="center">
-            <v-col v-if="!tabletAndDown()"
+            <v-col
                    cols="12"
                    md="auto"
             >
                 <v-avatar class="fade-in-fwd"
                         :tile="false"
-                        :size="164"
+                        :size="!tabletAndDown() ? '164' : '124'"
                         color="grey lighten-4"
                 >
                     <img
