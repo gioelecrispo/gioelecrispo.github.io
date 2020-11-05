@@ -7,7 +7,7 @@ import routes from "@/routes/routes";
 
 const router = new VueRouter({
     routes: routes,
-    mode: 'history',
+    //mode: 'history',
     linkExactActiveClass: "nav-item active",
     scrollBehavior (to, from, savedPosition) {
         return { x: 0, y: 0 };

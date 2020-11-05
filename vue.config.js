@@ -19,14 +19,14 @@ module.exports = {
                 },
             ]
         },
-        plugins: [
+        /*plugins: [
             new PrerenderSPAPlugin({
                 // Required - The path to the webpack-outputted app to prerender.
                 staticDir: path.join(__dirname, 'dist'), // The directory where the production build files will be generated in.
                 // Required - Routes to render.
                 routes: [ '/home', '/cv', '/projects' ],
             })
-        ]
+        ]*/
     },
     /*css: {
         // global css, scss, sass import
