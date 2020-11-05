@@ -301,11 +301,11 @@ function getGithubInfo(state) {
 
 const getters = {
     getGithubUserInfo: (state) => {
-        getGithubInfo();
+        getGithubInfo(state);
         return state.githubUserInfo;
     },
     getProjects: (state) => {
-        getGithubInfo();
+        getGithubInfo(state);
         return state.projects;
     },
     getCertifications: (state) => {
