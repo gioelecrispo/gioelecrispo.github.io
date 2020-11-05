@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <div class="pt-12" v-html="htmlSource" />
+    <div class="pt-8" v-html="htmlSource" />
   </v-container>
 </template>
 

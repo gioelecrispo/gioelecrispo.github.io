@@ -1,3 +1,6 @@
+const path = require('path');
+const PrerenderSPAPlugin = require('prerender-spa-plugin');
+
 module.exports = {
     publicPath: process.env.VUE_APP_NODE_ENV === "production" ? "./" : "./",
     outputDir: "dist", // The directory where the production build files will be generated in.
@@ -10,18 +13,23 @@ module.exports = {
     configureWebpack: {
         module: {
             rules: [
-                /*{
-                    test: /\.md$/,
-                    loader: "vue-loader!vue-md-loader"
-                },*/
                 {
                     test: /\.md$/,
                     loader: "raw-loader"
                 },
             ]
-        }
+        },
+        plugins: [
+            new PrerenderSPAPlugin({
+                // Required - The path to the webpack-outputted app to prerender.
+                staticDir: path.join(__dirname, 'dist'),
+                // Required - Routes to render.
+                routes: [ '/', '/home', '/cv', '/projects', '/articles' ],
+            })
+        ]
     },
     /*css: {
+        // global css, scss, sass import
         loaderOptions: {
             sass: {
                 data: `
