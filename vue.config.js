@@ -22,7 +22,10 @@ module.exports = {
         plugins: [
             new PrerenderSPAPlugin({
                 // Required - The path to the webpack-outputted app to prerender.
-                staticDir: path.join(__dirname, 'dist'),
+                staticDir: path.join(__dirname, 'dist'), // The directory where the production build files will be generated in.
+                //outputDir: path.join(__dirname, 'prerendered'), // Optional - The path your rendered app should be output to. (default to staticDir)
+                assetsDir: path.join(__dirname, 'assets'), // A directory (relative to outputDir) to nest generated static assets (js, css, img, fonts) under.
+                indexPath: path.join(__dirname, 'index,html'), // The output path for the generated index.html (relative to outputDir).
                 // Required - Routes to render.
                 routes: [ '/', '/home', '/cv', '/projects', '/articles' ],
             })
