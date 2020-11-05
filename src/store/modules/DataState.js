@@ -278,29 +278,34 @@ const getDefaultState = function () {
 const state = getDefaultState();
 
 
+function getGithubInfo(state) {
+    if (!state.githubUserInfo) {
+        axios({
+            url: "https://api.github.com/users/gioelecrispo",
+            method: "get"
+        })
+            .then(success => {
+                state.githubUserInfo = success.data;
+            });
+    }
+    if (!state.projects) {
+        axios({
+            url: "https://api.github.com/users/gioelecrispo/repos",
+            method: "get"
+        })
+            .then(success => {
+                state.projects = success.data;
+            });
+    }
+}
+
 const getters = {
     getGithubUserInfo: (state) => {
-        if (!state.githubUserInfo) {
-            axios({
-                url: "https://api.github.com/users/gioelecrispo",
-                method: "get"
-            })
-                .then(success => {
-                    state.githubUserInfo = success.data;
-                });
-        }
+        getGithubInfo();
         return state.githubUserInfo;
     },
     getProjects: (state) => {
-        if (!state.projects) {
-            axios({
-                url: "https://api.github.com/users/gioelecrispo/repos",
-                method: "get"
-            })
-                .then(success => {
-                    state.projects = success.data;
-                });
-        }
+        getGithubInfo();
         return state.projects;
     },
     getCertifications: (state) => {
