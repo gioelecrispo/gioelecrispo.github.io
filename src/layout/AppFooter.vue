@@ -8,7 +8,7 @@
         >
             <svg
                     class="footer-svg"
-                    viewBox="0 0 120 14"
+                    viewBox="0 0 120 28"
             >
                 <defs>
                     <path
