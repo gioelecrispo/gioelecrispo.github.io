@@ -120,15 +120,14 @@
         </v-row>
         <v-row class="py-3">
             <v-col
-                    v-for="(article, articleId) in articles"
-                    :key="articleId"
+                    v-for="article in visibleArticles"
+                    :key="article.id"
                     class="pa-2"
                     cols="12"
                     sm="6"
                     md="4"
             >
                 <Article
-                        :article-id="articleId"
                         :article="article"
                 />
             </v-col>
@@ -198,11 +197,6 @@
                     return this.experiences.slice(0, 1);
                 return this.experiences;
             },
-            visiblePublications() {
-                if (this.publications)
-                    return this.publications.slice(0, 1);
-                return this.publications;
-            },
             visibleCertifications() {
                 if (this.certifications)
                     return this.certifications.slice(0, 1);
@@ -213,10 +207,20 @@
                     return this.skills["Programming Languages"].slice(0, 2);
                 return this.skills;
             },
+            visiblePublications() {
+                if (this.publications)
+                    return this.publications.slice(0, 1);
+                return this.publications;
+            },
             visibleProjects() {
                 if (this.projects)
                     return this.projects.slice(0, 2);
                 return this.projects;
+            },
+            visibleArticles() {
+                if (this.articles)
+                    return this.articles.slice(0, 3);
+                return this.articles;
             }
         },
         methods: {

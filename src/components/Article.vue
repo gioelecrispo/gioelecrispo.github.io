@@ -8,7 +8,7 @@
                     :height="hover ? 510 : 500"
                     :elevation="hover ? 20 : 8"
                     :class="`${hover ? 'expand' : ''}`"
-                    @click="navigate(articleId)"
+                    @click="navigate(article.id)"
             >
                 <v-img
                         class="white--text"
@@ -47,7 +47,7 @@
     export default {
         name: "Article",
         components: {},
-        props: ["articleId", "article"],
+        props: ["article"],
         data() {
             return {
 

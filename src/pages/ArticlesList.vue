@@ -5,15 +5,14 @@
         </v-row>
         <v-row>
             <v-col
-                    v-for="(article, articleId) in articles"
-                    :key="articleId"
+                    v-for="article in articles"
+                    :key="article.id"
                     class="pa-2"
                     cols="12"
                     sm="6"
                     md="4"
             >
                 <Article
-                        :article-id="articleId"
                         :article="article"
                 />
             </v-col>
