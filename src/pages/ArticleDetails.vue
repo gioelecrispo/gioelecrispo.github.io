@@ -22,7 +22,7 @@ export default {
         }
         ),
         article() {
-            return this.articles.find(article => article.id === this.articleId)K;
+            return this.articles.find(article => article.id === this.articleId);
         }
     },
     created () {
