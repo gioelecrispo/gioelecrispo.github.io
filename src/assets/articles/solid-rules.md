@@ -1,5 +1,7 @@
 # S.O.L.I.D. principles to build a solid software architecture
 
+<br/>
+
 + Introduction 
 + What is a "*Software Architecture*"?
 + S.O.L.I.D. principles
@@ -7,6 +9,7 @@
 + Component coupling principles
 + Conclusions
 
+<br/>
 
 ## Introduction
 
@@ -42,17 +45,23 @@ Not having a good architecture implies that the system produced will be of poor 
 + will enjoy **poor reusability**: it means having large blocks of code and duplicated functionality in the project.
 + will be **hardly testable**: having large components, not logically separate and inter-dependent on each other, makes it very difficult to produce good test suites.
 
+<br/>
+
 ## S.O.L.I.D. principles
 Following there are the principles:
 
 + **Single-responsibility Principle (SRP)**: 
 A class or a module should have one and only one reason to change, meaning that a class should have only one job. 
 
+<br/>
+
 This principle indicates that everything that the same reason or actor to change must be cohesive, put together,
  and separated from the pieces of code that can change for different reasons or actors.
 
 + **Open-closed Principle (OCP)**:
 Objects or entities should be open for extension, but closed for modification.
+
+<br/>
 
 To ensure good maintainability the system should be open to extensions rather than modifications. 
 This is important to maintain consistency with the other parts that the part of the software 
@@ -63,11 +72,15 @@ and building extensible components at the architecture level.
 Let q(x) be a property provable about objects of x of type T. 
 Then q(y) should be provable for objects y of type S where S is a subtype of T.
 
+<br/>
+
 Liskov's principle tells us how to control inheritance. But it can be transported to the architectural level by 
 indicating how components must communicate with each other, through a strong definition of interfaces.
 
 + **Interface Segregation Principle (ISP)**:
 A client should never be forced to implement an interface that it doesn’t use or clients shouldn’t be forced to depend on methods they do not use.
+
+<br/>
 
 This principle simply tells us to make classes and modules simple, avoiding unnecessary dependencies 
 and therefore difficult to maintain in the long term.
@@ -76,10 +89,14 @@ and therefore difficult to maintain in the long term.
 Entities must depend on abstractions not on concretions. 
 It states that the high level module must not depend on the low level module, but they should depend on abstractions.
 
+<br/>
+
 This principle tells us that dependencies should all refer to abstract components and not to concrete 
 components. The use of concrete classes is advisable only when they are extremely **stable**, 
 that is, little prone to changes. Think of the *String* class: you are sure that it will never or
  almost never change and you can use it with confidence.
+
+<br/>
 
 ## Component cohesion principles
 First of all, we need to establish the definition of component that we are going to use. 
@@ -89,12 +106,16 @@ such as .jar or a npm module.
 + **Reuse/Release equivalence Principle (REP)**:
 The granularity of reuse is the granularity of release. 
 
+<br/>
+
 Basically, it means that a component should be released as highly cohesive code units, so the elements of it would be releasable together.
 Classes and modules that have been bundled together in a component should be releasable together. The fact that they share the same version number and release code and are included in the same release documentation must be logically acceptable to the author of the component and should make sense to the user. 
 A user could decide whether to use the component or its new dressing based on the documentation that is provided.
 
 + **Common Closure Principle (CCP)**
 We keep together in a component all the classes that are modified for the same reason and at the same time. 
+
+<br/>
 
 It is a component version of the Single Responsibility Principle. While the latter states that a *class* should have only one 
 single reason to be modified, CCP tell us a *component* should not have more than one reason to change.
@@ -109,6 +130,8 @@ We can summarize the CCP and SRP principles in the following statement:
 + **Common Reuse Principle (CRP)**:
 We shouldn’t force our users to depend on things that they are not going to use.
 
+<br/>
+
 It helps us to choose which classes and module we have to put together into a component.
 This principle tell us also what not to do. this principle also tells us what not to do. 
 If the user component uses only one component class and not the others, you will still need to import and depend on the whole component. 
@@ -120,12 +143,16 @@ The CRP principle is the generic version of the ISP principle, which urges us no
 We can summarize the CPR and ISP principles in the following statement: 
 ***"Don't depend on the things you don't need."***
 
+<br/>
+
 ## Component coupling principles
 Once we know how create components, we have also to put the attention on how the interact each other. 
 The next principles regards the components relationship. 
 
 + **Acyclic Dependencies Principle (ADP)**:
 Do not allow loops to arise in the dependency graph between components.
+
+<br/>
 
 According to this principle, we must divide the components according to their relationships 
 avoiding that one component depends on another that depends directly or indirectly on the first. 
@@ -138,6 +165,8 @@ its code based on the changes of that module on which it depends and can use the
 + **Stable Dependencies Principle (SDP)**:
 Bet on stability.
 
+<br/>
+
 The stability of a component is measured based on its inbound and outbound dependencies. 
 If a component depends on many other components (incoming dependencies) it has many reasons to 
 change and be modified according to the changes imposed by the components it depends on.
@@ -149,10 +178,14 @@ So a component is stable if it has many dependencies on exit and few on input.
 + **Stable Abstraction Principle (SAP)**:
 A component should be as abstract as it is stable.
 
+<br/>
+
 In the stable components we must therefore insert what must change little, that is, the "political" 
 decisions to orient the system, which must not be **volatile**, however they must be **flexible**.
 The best way is to use abstract classes, because they 
 guarantee us an easy modifiability through extension (OCP principle).
+
+<br/>
 
 ## Conclusions
 Having these principles in mind is certainly an extra weapon to produce quality software, 
