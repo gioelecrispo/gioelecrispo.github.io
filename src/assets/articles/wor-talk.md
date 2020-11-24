@@ -18,8 +18,8 @@ and another journal article is in the works.
 
 A proof of my work is in the <a href="https://www.youtube.com/watch?v=BYJawbV0Y2k&t=58s">following video</a>.
 
-<div style="text-align:center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BYJawbV0Y2k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<div style="text-align:center; width: 100%">
+<iframe style="max-width:650px; height:auto;" src="https://www.youtube.com/embed/BYJawbV0Y2k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 <br><br/>
 </div>
