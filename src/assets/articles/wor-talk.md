@@ -16,7 +16,7 @@ International Conference on Frontiers in Handwriting Recognition** (ICFHR) at *N
 (<a href="https://www.researchgate.net/publication/327405064_Tracking_the_Ballistic_Trajectory_in_Complex_and_Long_Handwritten_Signatures">see here</a>), 
 and another journal article is in the works.
 
-A proof of my work is in the <a href="https://www.youtube.com/watch?v=BYJawbV0Y2k&t=58s">following video</a>.
+The following <a href="https://www.youtube.com/watch?v=BYJawbV0Y2k&t=58s">video</a> shows the results of my work.
 
 <div style="text-align:center; width: 100%">
 <iframe style="max-width:650px; height:auto;" src="https://www.youtube.com/embed/BYJawbV0Y2k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -56,7 +56,14 @@ the pen is a dirty, double trace, and reconstructing the writing order is more d
 
 The class of algorithms used to produce this thin trace is called **skeletonization**. 
 
+<div style="text-align:center">
 <img src="https://i.ibb.co/y4t7B1z/skeletonization.png" alt="skeletonization" width="100%"/> 
+
+<span style="font-size: 12px;">Fig.1. Comparison between the the Real Image (a), the binary one (b) and the skeletonized one (c). Image from <a href="https://www.researchgate.net/publication/319443706_Recovering_Western_On-line_Signatures_From_Image-Based_Specimens"><i>
+Recovering Western On-line Signatures FromImage-Based Specimens</i></a></span>
+<br></br>
+
+</div>
 
 What I noticed right away is that, whatever the method used, skeletonization produces artifacts and non-existent lines that 
 break down the performance of the algorithms of the subsequent steps. This observation is almost *trivial*: 
@@ -74,6 +81,10 @@ The Writing Order Recovery algorithm I proposed consists of 3 parts:
 
 <div style="text-align:center">
 <img src="https://i.ibb.co/SmPySCQ/algorithm.png" alt="algorithm" width="70%"/>
+
+<span style="font-size: 12px;">Fig. 2. Phases of which the algorithm is composed.</span>
+<br></br>
+
 </div>
 
 ### Point Classification
@@ -89,6 +100,8 @@ writing order recognition: however, there is a huge loss of information.
 
 <div style="text-align:center">
 <img src="https://i.imgur.com/0nTtvW8.png" alt="algorithm" width="65%"/>
+
+<span style="font-size: 12px;">Fig. 3. Point classification. It depends on the number of neighboring pixels for each pixel.</span>
 <br></br>
 </div>
 
@@ -96,7 +109,7 @@ writing order recognition: however, there is a huge loss of information.
 The **Local Examination** phase focuses on the analysis of branch point clusters. Among them there are some 
 particular points: 
 those in contact with a trace point are called *anchor branch points* and overlook an outgoing branch from the 
-cluster (see the figure below). Indeed, a cluster can be seen as the intersection point of multiple lines. 
+cluster (see the Fig. 4). Indeed, a cluster can be seen as the intersection point of multiple lines. 
 The goal is therefore to 
 understand how to match the outgoing cluster branches and correctly reconstruct the paths that the writer's 
 pen has performed.
@@ -108,6 +121,9 @@ to follow, I leave out the details you find in the paper <a href="https://www.re
 
 <div style="text-align:center">
 <img src="https://i.imgur.com/U2hzrMG.png" alt="algorithm" width="75%"/>
+
+<span style="font-size: 12px;">Fig. 4. Cluster analysis. In this phase we search for anchor branch points and we compute the angles to find the 
+cluster output branches associations.</span>
 <br></br>
 </div>
 
@@ -139,8 +155,13 @@ The heuristics I used were basically two:
 Below, an image that clarify what are the components (indicated by different color) for each signature and 
 how they were traced by our algorithm (shown by the arrows).
 
+<div style="text-align:center">
 <img src="https://i.imgur.com/u7pvRp4.png" alt="results" width="100%"/>
 
+<span style="font-size: 12px;">Fig. 5. Global reconstruction. We find all the components 
+(indicated by different colors) in the signature and then we trace them.</span>
+<br></br>
+</div>
 
 
 ## Results
@@ -158,7 +179,13 @@ Cluster Rebuilding Percentage (CRP).
 A correctly rebuilt cluster is a cluster for which all branches outgoing from it have been successfully 
 paired (i.e. traversed in the direction in which the writer traced them).
 
+<div style="text-align:center">
 <img src="https://i.ibb.co/zXxrb44/wor-result0.png" alt="results" width="100%"/>
+
+<span style="font-size: 12px;">Table. 1. Comparison with other methods. We have added also the CPR measure since
+ the core of our work is the cluster analysis.</span>
+<br></br>
+</div>
 
 Experimentally, we have noticed that some signatures are more **difficult** than others. 
 This is mainly due to the fact that the writer could cross a line several times, making overlaps. 
@@ -169,7 +196,9 @@ the more difficult it is.
 
 The good results obtained show that:
 - using an ideal skeletonization helps a lot, since there is no loss of information and a more in-depth analysis on the signature can be conducted;
-- the clusters of points give a lot of information on how a signature has been traced, allowing to correctly infer the tracing direction. We have seen that the more clusters are reconstructed correctly the more likely the signature is reconstructed correctly, so clusters are a key point for the writing order recovery task.
+- clusters of branch points give a lot of information on how a signature has been traced, allowing to correctly 
+infer the tracing direction. We have seen that the more clusters are reconstructed correctly the more likely 
+the signature is reconstructed correctly, so they are a key point for the writing order recovery task.
 - easy signatures, with few clusters and components, are almost always reconstructed in the right way.
 <br></br>
 
