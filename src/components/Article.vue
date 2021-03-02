@@ -1,5 +1,4 @@
 <template>
-
     <v-hover>
         <template v-slot:default="{ hover }">
             <v-card
@@ -71,5 +70,7 @@
 <style lang="scss" scoped>
     .expand {
         margin: -5px;
+        transition: 0.3s all ease-in-out;
+        transform: scale(1.0);
     }
 </style>

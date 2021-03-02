@@ -151,8 +151,11 @@
 </template>
 
 <script>
+    import ui from "../mixins/ui";
+
     export default {
         name: "AppFooter",
+        mixins: [ui],
         data() {
             return {
                 showInfoReference: false,
@@ -177,10 +180,6 @@
             };
         },
         methods: {
-            tabletAndDown() {
-                return this.$vuetify.breakpoint.name === "xs" ||
-                    this.$vuetify.breakpoint.name === "sm";
-            },
         }
     };
 

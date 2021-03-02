@@ -1,35 +1,33 @@
 <template>
-  <v-toolbar
-    color="transparent"
-    class="elevation-0"
-  >
-    <v-btn
-      v-if="allowBack"
-      icon
-      @click="routerGoBack()"
+    <v-toolbar
+            color="transparent"
+            class="elevation-0"
     >
-      <v-icon>mdi-arrow-left</v-icon>
-    </v-btn>
-    <v-toolbar-title>{{ title }}</v-toolbar-title>
-  </v-toolbar>
+        <v-btn
+                v-if="allowBack"
+                icon
+                @click="routerGoBack()"
+        >
+            <v-icon>mdi-arrow-left</v-icon>
+        </v-btn>
+        <v-toolbar-title>{{ title }}</v-toolbar-title>
+    </v-toolbar>
 </template>
 
 
 <script>
-export default {
-    name: "ContentToolbar",
-    props: ["title", "allowBack"],
-    data() {
-        return {
-
-        };
-    },
-    methods: {
-        routerGoBack() {
-            this.$router.go(-1);
+    export default {
+        name: "ContentToolbar",
+        props: ["title", "allowBack"],
+        data() {
+            return {};
+        },
+        methods: {
+            routerGoBack() {
+                this.$router.go(-1);
+            }
         }
-    }
-};
+    };
 </script>
 
 <style scoped>

@@ -48,7 +48,9 @@
                 v-for="element in appToolbarElements"
                 v-if="!showNavigationDrawerIcon"
                 :key="element.id"
-                text
+                :class="$route.path === element.path ? 'active-button' : ''"
+                :color="$route.path === element.path ? 'primary' : ''"
+                text tile
                 large
                 @click="navigate(element.path)"
         >
@@ -63,14 +65,18 @@
 
 <script>
     import {mapGetters} from "vuex";
-    import RouterService from "@/helpers/RouterService";
+    import ui from "../mixins/ui";
 
     export default {
         name: "AppToolbar",
         components: {},
+        mixins: [ui],
         data() {
             return {
             }
+        },
+        created() {
+            console.log(this.$route);
         },
         computed: {
             ...mapGetters("AppState", {
@@ -90,13 +96,6 @@
         methods: {
             toggleLeftNavBar() {
                 this.$store.dispatch("AppState/setLeftNavDrawer", true);
-            },
-            tabletAndDown() {
-                return this.$vuetify.breakpoint.name === "xs" ||
-                    this.$vuetify.breakpoint.name === "sm";
-            },
-            navigate(path) {
-                RouterService.goTo(path);
             },
             setTheme() {
                 this.$store.dispatch("AppState/setIsDark", !this.isDark);
@@ -122,4 +121,5 @@
 </script>
 
 <style lang="scss" scoped>
+
 </style>

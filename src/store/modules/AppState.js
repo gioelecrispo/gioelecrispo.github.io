@@ -8,6 +8,7 @@ const getDefaultState = function() {
         navLinks: [ // Application navigation drawer elements
             {id: "home", title: "Home", icon: "mdi-home", path: "/home"},
             {id: "cv", title: "Curriculum Vitae", icon: "mdi-timeline-text", path: "/cv"},
+            {id: "applications", title: "Applications", icon: "mdi-briefcase-outline", path: "/applications"},
             {id: "projects", title: "Projects", icon: "mdi-github-circle", path: "/projects"},
             {id: "articles", title: "Articles", icon: "mdi-file-document-outline", path: "/articles"},
         ]

@@ -52,21 +52,18 @@
 </template>
 
 <script>
-
+    import ui from "../mixins/ui";
 
     export default {
         name: "Experience",
         components: {},
         props: ["experience", "forceDate"],
+        mixins: [ui],
         data() {
             return {};
         },
         computed: {},
         methods: {
-            tabletAndDown() {
-                return this.$vuetify.breakpoint.name === "xs" ||
-                    this.$vuetify.breakpoint.name === "sm";
-            },
         }
     };
 </script>

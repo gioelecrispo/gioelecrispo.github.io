@@ -1,27 +1,26 @@
 <template>
     <div class="parallax">
         <div class="bg bg-overlay "></div>
-            <div class="caption" :class="tabletAndDown() ? 'caption-mobile' : 'caption-desktop'">
-                <v-container>
-                <v-row align="center" justify="center">
-                    <v-col cols="12" md="auto">
-                        <UserIntro></UserIntro>
-                    </v-col>
-                    <v-col cols="auto">
-                        <v-row v-for="(navLink, idx) in visibleNavLinks" class="pa-4" :class="getAnimationClass(idx)">
-                            <v-btn dark block text @click="navigate(navLink.path)">
-                                {{ navLink.title }}
-                            </v-btn>
-                        </v-row>
-                    </v-col>
-                </v-row>
-                </v-container>
-            </div>
+        <v-container fluid fill-height class="caption">
+            <v-row align="center" justify="center">
+                <v-col :cols="isUiLarger ? 'auto' : '12'" md="auto">
+                    <UserIntro></UserIntro>
+                </v-col>
+                <v-col cols="auto">
+                    <v-row v-for="(navLink, idx) in visibleNavLinks" class="pa-4" :class="getAnimationClass(idx)">
+                        <v-btn dark block text @click="navigate(navLink.path)">
+                            {{ navLink.title }}
+                        </v-btn>
+                    </v-row>
+                </v-col>
+            </v-row>
+        </v-container>
+
         <v-btn fab dark
-            color="secondary"
-            absolute
-            bottom
-            right
+               color="secondary"
+               absolute
+               bottom
+               right
                @click="setTheme()">
             <v-icon>{{ isDark ? "mdi-white-balance-sunny" : "far fa-moon" }}</v-icon>
         </v-btn>
@@ -33,15 +32,15 @@
     import UserIntro from "../components/UserIntro";
     import {mapGetters} from "vuex";
     import RouterService from "../helpers/RouterService";
+    import ui from "../mixins/ui";
 
     export default {
         name: "ContentHeader",
         props: [],
+        mixins: [ui],
         components: {UserIntro},
         data() {
-            return {
-
-            };
+            return {};
         },
         computed: {
             ...mapGetters("AppState", {
@@ -50,7 +49,7 @@
             }),
             visibleNavLinks() {
                 if (this.navLinks) {
-                    return this.navLinks.slice(1, this.navLinks.length)
+                    return this.navLinks.slice(1, this.navLinks.length);
                 }
                 return this.navLinks;
             }
@@ -59,13 +58,6 @@
             setTheme() {
                 this.$store.dispatch("AppState/setIsDark", !this.isDark);
                 this.$vuetify.theme.dark = this.isDark === true;
-            },
-            navigate(path) {
-                RouterService.goTo(path);
-            },
-            tabletAndDown() {
-                return this.$vuetify.breakpoint.name === "xs" ||
-                    this.$vuetify.breakpoint.name === "sm";
             },
             getAnimationClass(idx) {
                 let multiplier = 25;
@@ -106,13 +98,6 @@
         left: 0;
         width: 100%;
         text-align: center;
-    }
-
-    .caption-desktop {
-        top: 32%;
-    }
-    .caption-mobile {
-        top: 10%;
     }
 </style>
 

@@ -254,6 +254,105 @@ const getDefaultState = function () {
                 },
             ],
         },
+        applications: [
+            {
+                name: "Self Driving model car",
+                description: "Self driving model car in style Duckietown. Features a homemade lane following algorithm as well a road sign detector and classifier based on cascade detector and HOG descriptor.",
+                type: "coursework",
+                area: "Computer Vision",
+                color: 'blue',
+                group: "4 people",
+                technologies: "ROS, C++, OpenCV",
+                date: "July 2017",
+                resources: [
+                    {videoId: "nC_KHnol8jI"},
+                    {img: require("@/assets/img/applications/duckietown-1.png")},
+                    {img: require("@/assets/img/applications/duckietown-2.jpg")},
+                    {img: require("@/assets/img/applications/duckietown-3.jpg")}
+                ]
+            },
+            {
+                name: "Remake of a classic videogame",
+                description: "As a coursework, we did our own version of the classic game \"Galaga\" in Java, using the Extreme Programming methodology.",
+                type: "coursework",
+                area: "Software Engineering",
+                color: 'purple',
+                group: "8 people",
+                technologies: "Java, Extreme Programming",
+                date: "Jan 2016",
+                resources: [
+                    {videoId: "8vTdgrHNEMY"},
+                    {img: require("@/assets/img/applications/galaga.jpg")}
+                ]
+            },
+            {
+                name: "Mobile App",
+                description: "Mobile hybrid app for the attendees to a conference. The app allows to browse the attendees to the conference, to view the scientific program, to enable notifications for specific talks and to gather general information about the conference.\n" +
+                    "The app interfaces with a web service to update the information, but also features a local cache to allow offline browsing. The app interfaces with the Scopus database to automatically show blbliometrics about the many speakers. The project involved developing both the server web-service and the app (released on the Google Play Store and on the Apple Store). The app was developed using the hybrid technology Ionic 2.",
+                type: "coursework",
+                area: "Mobile App",
+                color: 'gray',
+                group: "4 people",
+                technologies: "ROS, C++, OpenCV",
+                date: "July 2017",
+                resources: [
+                    {img: require("@/assets/img/applications/gbr-app-1.jpg")},
+                    {img: require("@/assets/img/applications/gbr-app-2.jpg")}
+                ]
+            },
+            {
+                name: "Mrs. Pacman A.I. player - Evolutionary programming",
+                description: " ",
+                type: "coursework",
+                color: 'red',
+                area: "Artificial Intelligence",
+                group: "3 people",
+                technologies: "Java",
+                date: "July 2017",
+                resources: [
+                    {videoId: '8_R36Kj4Njo'},
+                    {img: require("@/assets/img/applications/mrs-pacman.png")}
+                ]
+            },
+            {
+                name: "Writing Order Recovery in complex and long static handwriting",
+                description: " ",
+                type: "coursework",
+                color: 'blue',
+                area: "Computer Vision & Pattern Recognition",
+                group: "1 person",
+                technologies: "Matlab, Python, OpenCV",
+                date: "February 2018",
+                resources: [
+                    {videoId: 'TYoZZ8CThhw'},
+                    {img: require("@/assets/img/applications/wor.png")}
+                ]
+            },
+            {
+                name: "Smart Waste Bin",
+                description: "A Smart Waste Bin made for NTT DATA Italy at AI Hackathon 2020 (24 hours).\n" +
+                    "\n" +
+                    "The system is composed of:\n" +
+                    "- An Artificial Intelligence model for the recognition of waste material (paper, plastic, cardboard, metal, glass) trained on a dataset of 2400 images\n" +
+                    "- A Raspberry pi 3 model B;\n" +
+                    "- A HC-SR04 ultrasonic sensor;\n" +
+                    "- A 1602 ° LCD display;\n" +
+                    "- A Smartphone with FullHD camera;\n" +
+                    "- A Simulated 5G connection.",
+                type: "personal",
+                color: 'green',
+                area: "Computer Vision  &  IoT",
+                group: "7 people",
+                technologies: "Java",
+                date: "February 2020",
+                resources: [
+                    {videoId: '2Zgz2MiItXI'},
+                    {img: require("@/assets/img/applications/smart-waste-bin-1.jpg")},
+                    {img: require("@/assets/img/applications/smart-waste-bin-2.jpg")}
+                ]
+            }
+
+        ],
         articles: [
             {
                 id: "solid-rules",
@@ -309,6 +408,9 @@ const getters = {
     getProjects: (state) => {
         getGithubInfo(state);
         return state.projects;
+    },
+    getApplications: (state) => {
+        return state.applications;
     },
     getCertifications: (state) => {
         return state.certifications;

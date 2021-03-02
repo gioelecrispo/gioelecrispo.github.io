@@ -165,6 +165,10 @@
   -webkit-animation: slide-in-top 1.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   animation: slide-in-top 1.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
+.slide-in-top-150 {
+  -webkit-animation: slide-in-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-in-top 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
 @-webkit-keyframes slide-in-top {
   0% {

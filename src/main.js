@@ -8,6 +8,7 @@ import App from "@/pages/App";                // Basic template
 import router from "@/routes/router.js";      // global router.js
 import store from "@/store";                  // global state
 import vuetify from "@/plugins/vuetify";      // global framework
+import "@/plugins/youtube.js";                // youtube
 
 
 Vue.config.productionTip = false;

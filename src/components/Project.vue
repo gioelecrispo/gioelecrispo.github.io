@@ -52,25 +52,6 @@
                                 </v-list-item>
                             </v-list>
                         </v-row>
-                        <!--<v-row
-                                            align="center"
-                                            class="pl-3"
-                                    >
-                                        <p class="my-1 suhbeader">
-                                            Language
-                                        </p>
-                                        <v-avatar
-                                                v-if="project.language != null"
-                                                class="ml-3"
-                                                size="25"
-                                                tile
-                                        >
-                                            <v-img
-                                                    :src="require('@/assets/img/skills/' +
-                                          project.language.toLowerCase() + '.png')"
-                                            />
-                                        </v-avatar>
-                                    </v-row>-->
                     </v-col>
                 </v-row>
             </v-container>

@@ -30,9 +30,11 @@
     import AppFooter from "@/layout/AppFooter";
     import ContentHeader from "@/layout/ContentHeader";
     import UserIntro from "../components/UserIntro";
+    import ui from "../mixins/ui";
 
     export default {
         name: "AppStructure",
+        mixins: [ui],
         components: {
             NavigationDrawer,
             AppToolbar,
@@ -54,10 +56,6 @@
             return {};
         },
         methods: {
-            tabletAndDown() {
-                return this.$vuetify.breakpoint.name === "xs" ||
-                    this.$vuetify.breakpoint.name === "sm";
-            },
         }
     };
 </script>

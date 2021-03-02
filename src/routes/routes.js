@@ -7,6 +7,8 @@ import Articles from "@/pages/Articles";
 import ArticlesList from "@/pages/ArticlesList";
 import ArticleDetails from "@/pages/ArticleDetails";
 import Projects from "@/pages/Projects";
+import Applications from "@/pages/Applications";
+
 
 const routes = [
     {
@@ -51,6 +53,21 @@ const routes = [
                 component: Projects,
                 meta: {
                     toolbarTitle: "Projects",
+                    showNavigationDrawer: true,
+                    showContentToolbar: false,
+                    showContentHeader: false,
+                    showContentFooter: false,
+                    showAppToolbar: true,
+                    showAppToolbarImage: false,
+                    showAppFooter: true
+                }
+            },
+            {
+                path: "applications",
+                name: "Applications",
+                component: Applications,
+                meta: {
+                    toolbarTitle: "Applications",
                     showNavigationDrawer: true,
                     showContentToolbar: false,
                     showContentHeader: false,

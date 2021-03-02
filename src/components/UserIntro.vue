@@ -7,7 +7,7 @@
             >
                 <v-avatar class="fade-in-fwd"
                         :tile="false"
-                        :size="!tabletAndDown() ? '164' : '124'"
+                        :size="tabletAndDown() ? '124' : '164'"
                         color="grey lighten-4"
                 >
                     <img
@@ -40,19 +40,18 @@
 </template>
 
 <script>
+    import ui from "../mixins/ui";
+
     export default {
         name: "UserIntro",
         components: {},
+        mixins: [ui],
         props: {},
         data() {
             return {};
         },
         computed: {},
         methods: {
-            tabletAndDown() {
-                return this.$vuetify.breakpoint.name === "xs" ||
-                    this.$vuetify.breakpoint.name === "sm";
-            },
         }
     };
 </script>
