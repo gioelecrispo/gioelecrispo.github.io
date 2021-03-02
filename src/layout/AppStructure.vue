@@ -53,7 +53,8 @@
             })
         },
         data() {
-            return {};
+            return {
+            };
         },
         methods: {
         }
