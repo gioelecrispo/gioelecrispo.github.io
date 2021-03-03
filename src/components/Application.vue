@@ -43,6 +43,7 @@
         </v-hover>
         <v-dialog v-model="opened"
                   :max-width="!tabletAndDown() ? '70%' : '100%'"
+                  :fullscreen="tabletAndDown()"
                   @click:outside="close()">
             <v-card>
                 <v-container fluid fill-height>

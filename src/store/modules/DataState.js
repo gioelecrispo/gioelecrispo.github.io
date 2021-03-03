@@ -302,7 +302,7 @@ const getDefaultState = function () {
             },
             {
                 name: "Mrs. Pacman A.I. player - Evolutionary programming",
-                description: " ",
+                description: "A rule-based Artificial Intelligent player. Genetic Algorithm was used to optimize the performance. Based on Pambush III.",
                 type: "coursework",
                 color: 'red',
                 area: "Artificial Intelligence",
@@ -316,7 +316,9 @@ const getDefaultState = function () {
             },
             {
                 name: "Writing Order Recovery in complex and long static handwriting",
-                description: " ",
+                description: "Algorithm for writing order recovery of long static handwriting. A pattern recognition system was made to detect all the trace intersections, " +
+                    "then a global reconstruction phase was carried out to connect all the traces. A genetic algorithm was used to optimize the hyperparameters of the pattern " +
+                    "recognition system.",
                 type: "coursework",
                 color: 'blue',
                 area: "Computer Vision & Pattern Recognition",
@@ -340,7 +342,7 @@ const getDefaultState = function () {
                     "- A Smartphone with FullHD camera;\n" +
                     "- A Simulated 5G connection.",
                 type: "personal",
-                color: 'green',
+                color: 'blue',
                 area: "Computer Vision  &  IoT",
                 group: "7 people",
                 technologies: "Java",
@@ -349,6 +351,36 @@ const getDefaultState = function () {
                     {videoId: '2Zgz2MiItXI'},
                     {img: require("@/assets/img/applications/smart-waste-bin-1.jpg")},
                     {img: require("@/assets/img/applications/smart-waste-bin-2.jpg")}
+                ]
+            },
+            {
+                name: "Control of Industrial Robot Comau SmartSix",
+                description: "Pick-and-place like application with ROS and Industrial robot Comau SmartSix",
+                type: "coursework",
+                color: 'green',
+                area: "Robotics",
+                group: "2 people",
+                technologies: "C++, Ros, Matlab, Simulink",
+                date: "July 2017",
+                resources: [
+                    {videoId: 'cZCZZ23GLLc'},
+                    {img: require("@/assets/img/applications/comau-smartsix.png")},
+                ]
+            },
+            {
+                name: "Gesture Recognition & Robot control system",
+                description: "A gesture recognition & Robot Control System made for a Bachelor's thesis work. The system was realized through OpenCV, Kinect SDK and Qt in C++.\n" +
+                    "It is composed of a Pioneer robot, a Kinect sensor and a Ad-hoc Wi-Fi connection for the PC-robot communication. \n" +
+                    "The images captured by the Kinect sensor are processed by the PC, which identifies and evaluates the gestures (up, down, left, right and stop) in a time window and passes the commands to the robot via a Wi-Fi-based protocol.",
+                type: "coursework",
+                color: 'blue',
+                area: "Computer Vision",
+                group: "2 people",
+                technologies: "C++, OpenCV, Kinect SDK",
+                date: "February 2020",
+                resources: [
+                    {videoId: 'w_z12qTZt-U'},
+                    {img: require("@/assets/img/applications/gesture-system.png")},
                 ]
             }
 
