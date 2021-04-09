@@ -24,6 +24,7 @@
             return {
                 title: 'Gioele Crispo - Article: ' + article.title,
                 meta: [
+                    { hid: 'og:title', property: "og:title", content: 'Article: ' + article.title},
                     { hid: 'og:image', property: 'og:image', content: article.img },
                     { hid: 'description', name: 'description', content: article.description }
                 ]

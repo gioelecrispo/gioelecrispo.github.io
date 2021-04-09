@@ -154,6 +154,7 @@
             return {
                 title: 'Github Projects',
                 meta: [
+                    { hid: 'og:title', property: "og:title", content: "Github Projects"},
                     {
                         hid: 'og:image',
                         property: 'og:image',

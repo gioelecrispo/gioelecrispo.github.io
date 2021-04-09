@@ -27,6 +27,7 @@
             return {
                 title: 'Articles',
                 meta: [
+                    { hid: 'og:title', property: "og:title", content: "Articles"},
                     {
                         hid: 'og:image',
                         property: 'og:image',

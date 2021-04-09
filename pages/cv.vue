@@ -118,6 +118,7 @@
             return {
                 title: 'Curriculum Vitae',
                 meta: [
+                    { hid: 'og:title', property: "og:title", content: "Curriculum Vitae"},
                     {
                         hid: 'og:image',
                         property: 'og:image',

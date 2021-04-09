@@ -44,6 +44,7 @@
             return {
                 title: 'Applications' ,
                 meta: [
+                    { hid: 'og:title', property: "og:title", content: "Applications"},
                     {
                         hid: 'og:image',
                         property: 'og:image',
