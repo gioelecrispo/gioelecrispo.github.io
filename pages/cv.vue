@@ -129,7 +129,7 @@
                         name: 'description',
                         content: "A complete Curriculum Vitae with experiences, certifications, skill and so on."
                     },
-                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/me/" + this.$route.path},
+                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/me" + this.$route.path},
                 ],
             }
         },

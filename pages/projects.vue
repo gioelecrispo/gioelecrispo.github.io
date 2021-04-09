@@ -165,7 +165,7 @@
                         name: 'description',
                         content: "A complete collection of my Github projects."
                     },
-                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/me/" + this.$route.path},
+                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/me" + this.$route.path},
                 ],
             }
         },

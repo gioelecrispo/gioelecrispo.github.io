@@ -76,7 +76,6 @@
             }
         },
         created() {
-            console.log(this.$route);
         },
         computed: {
             ...mapGetters("AppState", {

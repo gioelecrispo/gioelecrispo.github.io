@@ -22,12 +22,12 @@
     export default {
         head() {
             return {
-                title: 'Gioele Crispo - Article: ' + article.title,
+                title: 'Gioele Crispo - Article: ' + this.article.title,
                 meta: [
-                    { hid: 'og:title', property: "og:title", content: 'Article: ' + article.title},
-                    { hid: 'og:image', property: 'og:image', content: article.img },
-                    { hid: 'description', name: 'description', content: article.description },
-                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/me/" + this.$route.path},
+                    { hid: 'og:title', property: "og:title", content: 'Article: ' + this.article.title},
+                    { hid: 'og:image', property: 'og:image', content: this.article.img },
+                    { hid: 'description', name: 'description', content: this.article.description },
+                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/me" + this.$route.path},
                 ]
             }
         },
