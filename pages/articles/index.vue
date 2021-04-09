@@ -3,7 +3,7 @@
         <v-row class="pb-12">
             <v-col
                     v-for="article in articles"
-                    :key="article.id"
+                    :key="article.slug"
                     class="pa-2"
                     cols="12"
                     sm="6"
@@ -18,7 +18,6 @@
 </template>
 
 <script>
-    import {mapGetters} from "vuex";
     import Article from "../../components/Article";
     import metadata from "../../mixins/metadata";
 
@@ -26,6 +25,7 @@
         name: "ArticlesList",
         layout: 'AppStructure',
         meta: {
+            appToolbarTitle: 'Articles',
             showAppToolbar: true,
             showAppNavigationDrawer: true,
             showContentHeader: false,
@@ -33,10 +33,14 @@
         components: {Article},
         mixins: [metadata],
         props: {},
-        computed: {
-            ...mapGetters("DataState", {
-                articles: "getArticles"
-            }),
+        async asyncData({ $content, params }) {
+            const articles = await $content('articles')
+                .only(['title', 'description', 'img', 'slug', 'tags', 'createdAt', 'updatedAt'])
+                .sortBy('createdAt', 'desc')
+                .fetch()
+            return {
+                articles
+            }
         },
         data() {
             return {};

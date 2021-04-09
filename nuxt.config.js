@@ -1,8 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
-// import "roboto-fontface/css/roboto/roboto-fontface.css";
-// import "material-design-icons-iconfont/dist/material-design-icons.css"; // md: Ensure you are using css-loader
-// import "@mdi/font/css/materialdesignicons.css"; // mdi: Ensure you are using css-loader
-// import "@fortawesome/fontawesome-free/css/all.css";
+
 
 export default {
     // Target: https://go.nuxtjs.dev/config-target
@@ -34,7 +31,10 @@ export default {
     css: [],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-    plugins: [],
+    plugins: [
+        '~/plugins/youtube.js',
+        //'~/plugins/vuetify.js'
+    ],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,
@@ -61,7 +61,11 @@ export default {
 
     // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
     vuetify: {
+        treeShake: true,
         customVariables: ['~/assets/variables.scss'],
+        font: {
+            family: 'Lato'
+        },
         theme: {
             dark: false,
             themes: {

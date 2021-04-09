@@ -116,6 +116,7 @@
         name: "Works",
         layout: 'AppStructure',
         meta: {
+            appToolbarTitle: 'Curriculum Vitae',
             showAppToolbar: true,
             showAppNavigationDrawer: true,
             showContentHeader: false,

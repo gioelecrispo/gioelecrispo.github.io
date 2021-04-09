@@ -44,6 +44,7 @@
         name: "Applications",
         layout: 'AppStructure',
         meta: {
+            appToolbarTitle: 'Applications',
             showAppToolbar: true,
             showAppNavigationDrawer: true,
             showContentHeader: false,

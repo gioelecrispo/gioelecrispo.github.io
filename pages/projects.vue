@@ -152,6 +152,7 @@
         name: "Projects",
         layout: 'AppStructure',
         meta: {
+            appToolbarTitle: 'Projects',
             showAppToolbar: true,
             showAppNavigationDrawer: true,
             showContentHeader: false,

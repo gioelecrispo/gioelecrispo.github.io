@@ -3,10 +3,13 @@
         <v-row justify="center">
             <v-col lg="10" xl="9">
                 <v-card color="transparent" height="30" elevation="0" class="pa-0 py-2 mb-8">
-                  <v-card-title class="px-0 py-0 secondary--text">{{ article.tag }}</v-card-title>
-                  <v-card-text class="px-0 py-0 grey--text">Latest update: {{ article.latestUpdate }}</v-card-text>
+                  <v-card-title class="px-0 py-0 secondary--text" v-if="article.tags">{{
+                      article.tags.map(t => '#'+t).join(', ') }}</v-card-title>
+                  <v-card-text class="px-0 py-0 grey--text">Latest update: {{ formatDate(article.updatedAt) }}</v-card-text>
                 </v-card>
-                <div class="pt-12" v-html="htmlSource"/>
+                <article class="pt-12">
+                    <nuxt-content :document="article" />
+                </article>
             </v-col>
         </v-row>
 
@@ -14,8 +17,6 @@
 </template>
 
 <script>
-    import {mapGetters} from "vuex";
-
     export default {
         name: "ArticleDetails",
         layout: 'AppStructure',
@@ -25,6 +26,12 @@
             showAppToolbar: true,
             showAppNavigationDrawer: true,
             showContentHeader: false,
+        },
+
+        async asyncData({ $content, params }) {
+            // fetch our article here
+            const article = await $content('articles', params.id).fetch()
+            return { article }
         },
         metaInfo() {
             return {
@@ -51,24 +58,16 @@
             };
         },
         computed: {
-            ...mapGetters("DataState", {
-                    articles: "getArticles",
-                }
-            ),
-            article() {
-                return this.articles.find(article => article.id === this.articleId);
-            }
+
         },
         created() {
             this.$store.dispatch("AppState/setAppToolbarImage", this.article.img);
-            /*let md = require("markdown-it")({
-                html: true,
-                linkify: true,
-                typography: true
-            }).use(require("markdown-it-imsize"));
-            let mdSource = this.article.content;
-            this.htmlSource = md.render(mdSource.default);
-            document.dispatchEvent(new Event("render-event"));*/
+        },
+        methods: {
+            formatDate(date) {
+                const options = { year: 'numeric', month: 'long', day: 'numeric' }
+                return new Date(date).toLocaleDateString('en', options)
+            }
         }
     };
 </script>

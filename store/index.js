@@ -1,9 +1,9 @@
 export const state = () => ({
-    appToolbarTitle: "default",
-    showAppToolbar: true,
+    appToolbarTitle: "",
+    showAppToolbar: false,
     showAppToolbarImage: false,
-    showAppNavigationDrawer: true,
-    showAppFooter: true,
+    showAppNavigationDrawer: false,
+    showAppFooter: false,
     showContentToolbar: false,
     showContentHeader: false,
     showContentFooter: false,

@@ -37,7 +37,7 @@
                                     v-for="element in appNavDrawElements"
                                     :key="element.title"
                                     class="text-center"
-                                    @click="navigate(element.path)"
+                                    @click="$router.push(element.path)"
                             >
                                 <v-row>
                                     <v-col cols="12">
