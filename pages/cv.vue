@@ -114,12 +114,22 @@
     export default {
         name: "Works",
         layout: 'AppStructure',
-        head: {
-            title: 'Gioele Crispo - Article: ' + article.title,
-            meta: [
-                { hid: 'og:image', property: 'og:image', content: "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80" },
-                { hid: 'description', name: 'description', content: "A complete Curriculum Vitae with experiences, certifications, skill and so on." },
-            ],
+        head() {
+            return {
+                title: 'Curriculum Vitae',
+                meta: [
+                    {
+                        hid: 'og:image',
+                        property: 'og:image',
+                        content: "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80"
+                    },
+                    {
+                        hid: 'description',
+                        name: 'description',
+                        content: "A complete Curriculum Vitae with experiences, certifications, skill and so on."
+                    },
+                ],
+            }
         },
         meta: {
             appToolbarTitle: 'Curriculum Vitae',
