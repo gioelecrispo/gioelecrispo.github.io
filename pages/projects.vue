@@ -170,6 +170,7 @@
         meta: {
             appToolbarTitle: 'Projects',
             showAppToolbar: true,
+            showAppFooter: true,
             showAppNavigationDrawer: true,
             showContentHeader: false,
         },

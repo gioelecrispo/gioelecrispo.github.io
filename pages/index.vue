@@ -260,9 +260,7 @@
             showAppToolbarImage: false,
             showAppNavigationDrawer: false,
             showAppFooter: true,
-            showContentToolbar: false,
             showContentHeader: true,
-            showContentFooter: false,
         },
         computed: {
             ...mapGetters("AppState", {

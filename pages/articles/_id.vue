@@ -35,6 +35,7 @@
         props: ['articleId'],
         meta: {
             showAppToolbar: true,
+            showAppFooter: true,
             showAppNavigationDrawer: true,
             showContentHeader: false
         },

@@ -134,6 +134,7 @@
         meta: {
             appToolbarTitle: 'Curriculum Vitae',
             showAppToolbar: true,
+            showAppFooter: true,
             showAppNavigationDrawer: true,
             showContentHeader: false,
         },
