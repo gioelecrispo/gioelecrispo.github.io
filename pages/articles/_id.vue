@@ -26,7 +26,8 @@
                 meta: [
                     { hid: 'og:title', property: "og:title", content: 'Article: ' + article.title},
                     { hid: 'og:image', property: 'og:image', content: article.img },
-                    { hid: 'description', name: 'description', content: article.description }
+                    { hid: 'description', name: 'description', content: article.description },
+                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/me/" + this.$route.path},
                 ]
             }
         },

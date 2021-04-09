@@ -38,6 +38,7 @@
                         name: 'description',
                         content: "Visit my blog section to discover all my post about machine learning and similar!"
                     },
+                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/me/" + this.$route.path},
                 ],
             }
         },
