@@ -11,7 +11,6 @@ export const state = () => ({
 
 export const mutations = {
     setProperty (state, { property, value }) {
-        state[property] = value
-        console.log("STATE 2", state[property])
+        state[property] = value;
     }
 }
