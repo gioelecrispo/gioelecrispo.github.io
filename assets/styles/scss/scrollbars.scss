@@ -1,0 +1,25 @@
+// SCROLLBAR REDEFINITION
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #888; //linear-gradient(left, #fff, #e4e4e4);
+  border: 1px solid #aaa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; // #fff;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #555; //linear-gradient(left, #22ADD4, #1E98BA);
+}
