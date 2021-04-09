@@ -19,11 +19,17 @@
 
 <script>
     import Article from "../../components/Article";
-    import metadata from "../../mixins/metadata";
 
     export default {
         name: "ArticlesList",
         layout: 'AppStructure',
+        head: {
+            title: 'Articles',
+            meta: [
+                { hid: 'og:image', property: 'og:image', content: "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80" },
+                { hid: 'description', name: 'description', content: "Visit my blog section to discover all my post about machine learning and similar!" },
+            ],
+        },
         meta: {
             appToolbarTitle: 'Articles',
             showAppToolbar: true,
@@ -31,7 +37,6 @@
             showContentHeader: false,
         },
         components: {Article},
-        mixins: [metadata],
         props: {},
         async asyncData({ $content, params }) {
             const articles = await $content('articles')

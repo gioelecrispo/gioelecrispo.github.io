@@ -18,6 +18,13 @@
 
 <script>
     export default {
+        head: {
+            title: 'Gioele Crispo - Article: ' + article.title,
+            meta: [
+                { hid: 'og:image', property: 'og:image', content: article.img },
+                { hid: 'description', name: 'description', content: article.description},
+            ],
+        },
         name: "ArticleDetails",
         layout: 'AppStructure',
         components: {},
@@ -27,30 +34,10 @@
             showAppNavigationDrawer: true,
             showContentHeader: false,
         },
-
         async asyncData({ $content, params }) {
             // fetch our article here
             const article = await $content('articles', params.id).fetch()
             return { article }
-        },
-        metaInfo() {
-            return {
-                title: "Gioele Crispo",
-                titleTemplate: "%s - " + article.title,
-                htmlAttrs: {
-                    lang: "en",
-                    amp: true
-                },
-                meta: [
-                    { name: "robots", content: "index,follow" },
-                    { name: "description", content: article.subTitle },
-                    { property: "og:title", content: "Gioele Crispo - " + article.title},
-                    { property: "og:site_name", content: "Gioele Crispo" },
-                    { property: "og:type", content: "website" },
-                    { property: "og:url", content: "https://gioelecrispo.github.io" + this.$route.path},
-                    { property: "og:image", content: article.img }
-                ]
-            }
         },
         data() {
             return {

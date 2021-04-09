@@ -215,7 +215,6 @@
 <script>
     import {mapGetters} from "vuex";
     import ui from "../mixins/ui";
-    import metadata from "../mixins/metadata";
 
     import UserIntro from "@/components/UserIntro";
     import Article from "@/components/Article";
@@ -232,7 +231,7 @@
     export default {
         name: "Home",
         layout: 'AppStructure',
-        mixins: [ui, metadata],
+        mixins: [ui],
         components: {
             CVBtnDownload,
             PageNavigator,

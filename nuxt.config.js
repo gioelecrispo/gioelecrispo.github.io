@@ -16,15 +16,19 @@ export default {
 
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
-        titleTemplate: '%s - me2',
-        title: 'me2',
+        titleTemplate: 'Gioele Crispo - %s',
+        title: 'Home',
         htmlAttrs: {
-            lang: 'en'
+            lang: 'en',
+            amp: true
         },
         meta: [
             { charset: 'utf-8' },
+            { name: "robots", content: "index,follow" },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: '' }
+            { hid: 'description', name: 'description', content: 'Check out for Machine Learning blog and ideas!' },
+            { hid: 'og:type', property: 'og:type', content: 'website' },
+            { hid: "og:site_name", property: 'og:site_name', content: 'Gioele Crispo' },
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
