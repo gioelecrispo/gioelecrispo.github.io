@@ -4,7 +4,7 @@
             <v-btn height="100%" class="pa-0"
                     text large block
                     color="primary"
-                    @click="navigate(path)"
+                    @click="$router.push(path)"
             >
                {{text}}
                 <v-icon class="ml-2" large>

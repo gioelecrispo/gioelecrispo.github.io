@@ -4,6 +4,7 @@
             elevation="0"
             width="100%"
     >
+        <v-container fluid class="py-0">
         <v-row
                 align="center"
                 no-gutters
@@ -24,6 +25,7 @@
                 </v-btn>
             </v-col>
         </v-row>
+        </v-container>
         <v-card-text class="py-1">
             <b>{{ publication.date }}</b> · {{ publication.location }}
         </v-card-text>
