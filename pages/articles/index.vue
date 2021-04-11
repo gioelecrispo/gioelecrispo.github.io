@@ -9,9 +9,13 @@
                     sm="6"
                     md="4"
             >
-                <Article
-                        :article="article"
-                />
+                <NuxtLink :to="{ name: 'articles-id', params: { id: article.slug } }"
+                          style="text-decoration: none; color: inherit;">
+
+                    <Article
+                            :article="article"
+                    />
+                </NuxtLink>
             </v-col>
         </v-row>
     </v-container>

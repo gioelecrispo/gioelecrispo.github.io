@@ -19,6 +19,7 @@
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.15.3",
         "@mdi/font": "^5.9.55",
+        "@nuxtjs/sitemap": "^2.4.0",
         "@nuxtjs/vuetify": "^1.11.3",
         "eslint-config-prettier": "^8.1.0",
         "eslint-plugin-prettier": "^3.3.1",

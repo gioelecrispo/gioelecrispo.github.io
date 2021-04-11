@@ -8,7 +8,7 @@
                 :height="hover ? 510 : 500"
                 :elevation="hover ? 20 : 8"
                 :class="`${hover ? 'expand' : ''}`"
-                @click="navigate(article.slug)"
+
             >
 
                 <v-container fluid class="pt-0">
