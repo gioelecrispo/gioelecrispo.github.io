@@ -28,7 +28,7 @@ export default async ({ store, $axios, $content }) => {
         );
     }
     if (!dataState.blogArticles) {
-        $content('articles')
+        $content('blog')
             .only(['title', 'description', 'img', 'slug', 'tags', 'createdAt', 'updatedAt'])
             .sortBy('createdAt', 'desc')
             .fetch()

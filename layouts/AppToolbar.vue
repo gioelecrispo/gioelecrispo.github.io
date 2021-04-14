@@ -98,17 +98,16 @@
             },
             setToolbarColor() {
                 let color = "toolbars";
-                if (this.$route.meta.showContentHeader) {
+                if (this.$store.state.showContentHeader) {
                     color = "transparent";
-                } else if (this.$route.meta.showAppToolbarImage) {
+                } else if ( this.$store.state.showAppToolbarImage) {
                     color = '#0055DD';
                 }
                 return color;
             },
             getAppToolbarImage() {
                 if (this.appToolbarImage) {
-                    console.log("appToolbarImage", this.appToolbarImage);
-                    return require('@/assets/img/articles/mlops.jpg');
+                    return require('@/assets/img/blog/' + this.appToolbarImage);
                 }
                 return 'https://picsum.photos/1920/1080?random';
             }

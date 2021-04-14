@@ -227,7 +227,6 @@
     import PageNavigator from "@/components/PageNavigator";
     import CVBtnDownload from "@/components/CVBtnDownload";
 
-
     export default {
         name: "Home",
         layout: 'AppStructure',
@@ -307,7 +306,6 @@
             },
             visibleArticles() {
                 if (this.articles)
-                    console.log("OOOOH", this.articles)
                     return this.articles.slice(0, 2);
                 return this.articles;
             }

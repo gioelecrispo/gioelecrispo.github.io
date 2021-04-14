@@ -11,7 +11,6 @@
             >
                 <NuxtLink :to="{ name: 'blog-id', params: { id: article.slug } }"
                           style="text-decoration: none; color: inherit;">
-
                     <Article
                             :article="article"
                     />
@@ -30,9 +29,9 @@
         layout: 'AppStructure',
         head() {
             return {
-                title: 'Articles',
+                title: 'Blog',
                 meta: [
-                    { hid: 'og:title', property: "og:title", content: "Articles"},
+                    { hid: 'og:title', property: "og:title", content: "Blog"},
                     {
                         hid: 'og:image',
                         property: 'og:image',
@@ -43,7 +42,7 @@
                         name: 'description',
                         content: "Visit my blog section to discover all my post about machine learning and similar!"
                     },
-                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/me/" + this.$route.path},
+                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/" + this.$route.path},
                 ],
             }
         },
@@ -56,7 +55,6 @@
             showContentHeader: false,
         },
         components: {Article},
-
         props: {},
         data() {
             return {};

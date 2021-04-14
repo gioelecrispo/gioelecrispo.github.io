@@ -22,12 +22,12 @@
     export default {
         head() {
             return {
-                title: 'Gioele Crispo - Article: ' + this.article.title,
+                title: 'Post: ' + this.article.title,
                 meta: [
                     { hid: 'og:title', property: "og:title", content: 'Article: ' + this.article.title},
-                    { hid: 'og:image', property: 'og:image', content: this.article.img },
+                    { hid: 'og:image', property: 'og:image', content: require('@/assets/img/blog/' + this.article.img) },
                     { hid: 'description', name: 'description', content: this.article.description },
-                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/me" + this.$route.path},
+                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/" + this.$route.path},
                 ]
             }
         },
@@ -36,6 +36,7 @@
         components: {},
         props: ['articleId'],
         meta: {
+            appToolbarTitle: "Post",
             showAppToolbar: true,
             showAppFooter: true,
             showAppToolbarImage: true,
@@ -44,12 +45,10 @@
         },
         async asyncData({ store, $content, params }) {
             // fetch our article here
-            const article = await $content('articles', params.id).fetch();
-            console.log("store img", article.img);
+            const article = await $content('blog', params.id).fetch();
             store.dispatch("AppState/setAppToolbarImage", article.img);
             return { article }
         },
-
         data() {
             return {
                 article: undefined,
@@ -62,8 +61,8 @@
         },
         methods: {
             formatDate(date) {
-                const options = { year: 'numeric', month: 'long', day: 'numeric' }
-                return new Date(date).toLocaleDateString('en', options)
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                return new Date(date).toLocaleDateString('en', options);
             }
         }
     }

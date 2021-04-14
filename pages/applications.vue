@@ -55,7 +55,7 @@
                         name: 'description',
                         content: "All my applications, mainly focused on Machine Learning."
                     },
-                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/me" + this.$route.path},
+                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/" + this.$route.path},
                 ],
             }
         },

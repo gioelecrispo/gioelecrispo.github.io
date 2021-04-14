@@ -8,9 +8,8 @@
                 :height="hover ? 510 : 500"
                 :elevation="hover ? 20 : 8"
                 :class="`${hover ? 'expand' : ''}`"
-
+                @click="navigate(article.slug)"
             >
-
                 <v-container fluid class="pt-0">
                     <v-row class="pb-2">
                         <v-col cols="12" class="pa-0">
@@ -56,23 +55,22 @@
         },
         computed: {
             img() {
-
-                return require(`@/assets/img/articles/${this.article.img}`)
+                return require(`@/assets/img/blog/${this.article.img}`);
             }
         },
         methods: {
             navigate(articleId) {
                 let path = {
-                    name: 'articles-id',
+                    name: 'blog-id',
                     params: {
                         id: articleId
                     }
                 }
-                this.$router.push(path)
+                this.$router.push(path);
             },
             formatDate(date) {
-                const options = { year: 'numeric', month: 'short', day: 'numeric' }
-                return new Date(date).toLocaleDateString('en', options)
+                const options = { year: 'numeric', month: 'short', day: 'numeric' };
+                return new Date(date).toLocaleDateString('en', options);
             },
 
         }
