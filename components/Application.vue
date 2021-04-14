@@ -7,7 +7,7 @@
                     color="transparent"
                     @click="opened = !opened"
                     :elevation="hover ? 12 : 0"
-                    :class="`${hover ? 'expand' : ''}`"
+                    :class="`${hover ? 'expanded' : ''}`"
             >
                 <v-img
                         :src="topImg"
@@ -189,7 +189,7 @@
 </script>
 
 <style lang="scss" scoped>
-    .expand {
+    .expanded {
         transition: 0.3s all ease-in-out;
         transform: scale(1.02);
         z-index: 2;

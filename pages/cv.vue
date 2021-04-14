@@ -110,28 +110,16 @@
     import Certification from "../components/Certification";
     import Publication from "../components/Publication";
     import CVBtnDownload from "../components/CVBtnDownload";
+    import createSeoMeta from "../utils/seo";
 
     export default {
         name: "Works",
         layout: 'AppStructure',
         head() {
-            return {
-                title: 'Curriculum Vitae',
-                meta: [
-                    { hid: 'og:title', property: "og:title", content: "Curriculum Vitae"},
-                    {
-                        hid: 'og:image',
-                        property: 'og:image',
-                        content: "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80"
-                    },
-                    {
-                        hid: 'description',
-                        name: 'description',
-                        content: "A complete Curriculum Vitae with experiences, certifications, skill and so on."
-                    },
-                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/" + this.$route.path},
-                ],
-            }
+            return createSeoMeta('Curriculum Vitae',
+            'A complete Curriculum Vitae with experiences, certifications, skill and so on.',
+                this.$route.path,
+            'https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80');
         },
         meta: {
             appToolbarTitle: 'Curriculum Vitae',
