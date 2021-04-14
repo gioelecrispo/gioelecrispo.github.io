@@ -37,7 +37,7 @@
                                     v-for="element in appNavDrawElements"
                                     :key="element.title"
                                     class="text-center"
-                                    @click="$router.push(element.path)"
+                                    @click="navigate(element.path)"
                             >
                                 <v-row>
                                     <v-col cols="12">
@@ -84,6 +84,10 @@
             closeLeftNavBar() {
                 this.$store.dispatch("AppState/setLeftNavDrawer", false);
             },
+            navigate(path) {
+                this.$router.push(path);
+                this.closeLeftNavBar();
+            }
         },
     };
 </script>

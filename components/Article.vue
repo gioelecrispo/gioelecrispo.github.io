@@ -17,7 +17,7 @@
                             <v-img
                                 class="white--text"
                                 height="200px"
-                                :src="article.img"
+                                :src="img"
                             />
                         </v-col>
                     </v-row>
@@ -54,7 +54,12 @@
         data() {
             return {}
         },
-        computed: {},
+        computed: {
+            img() {
+
+                return require(`@/assets/img/articles/${this.article.img}`)
+            }
+        },
         methods: {
             navigate(articleId) {
                 let path = {
@@ -68,7 +73,8 @@
             formatDate(date) {
                 const options = { year: 'numeric', month: 'short', day: 'numeric' }
                 return new Date(date).toLocaleDateString('en', options)
-            }
+            },
+
         }
     }
 </script>

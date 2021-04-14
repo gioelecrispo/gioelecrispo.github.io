@@ -1,10 +1,9 @@
 <template>
     <v-app-bar
             app
-            :elevate-on-scroll="elevateOnScroll"
+            :elevate-on-scroll="true"
             :collapse="false"
             :short="false"
-
             :color="setToolbarColor()"
             :dark="$store.state.showAppToolbarImage"
             :src="$store.state.showAppToolbarImage ? getAppToolbarImage() : ''"
@@ -26,7 +25,7 @@
         <v-btn
                 v-if="showNavigationDrawerIcon"
                 icon
-                @click.stop="toggleLeftNavBar()"
+                @click.stop="toggleLeftNavBar(true)"
         >
             <v-icon>mdi-menu</v-icon>
         </v-btn>
@@ -87,14 +86,11 @@
             showNavigationDrawerIcon() {
                 return this.$store.state.showAppNavigationDrawer && this.tabletAndDown();
             },
-            elevateOnScroll() {
-                return true;
-            }
         },
         props: ["title"],
         methods: {
-            toggleLeftNavBar() {
-                this.$store.dispatch("AppState/setLeftNavDrawer", true);
+            toggleLeftNavBar(value) {
+                this.$store.dispatch("AppState/setLeftNavDrawer", value);
             },
             setTheme() {
                 this.$store.dispatch("AppState/setIsDark", !this.isDark);
@@ -111,7 +107,8 @@
             },
             getAppToolbarImage() {
                 if (this.appToolbarImage) {
-                    return this.appToolbarImage;
+                    console.log("appToolbarImage", this.appToolbarImage);
+                    return require('@/assets/img/articles/mlops.jpg');
                 }
                 return 'https://picsum.photos/1920/1080?random';
             }

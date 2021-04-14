@@ -2,14 +2,14 @@
     <v-container fluid>
         <v-row class="pb-12">
             <v-col
-                    v-for="article in articles"
+                    v-for="article in blogArticles"
                     :key="article.slug"
                     class="pa-2"
                     cols="12"
                     sm="6"
                     md="4"
             >
-                <NuxtLink :to="{ name: 'articles-id', params: { id: article.slug } }"
+                <NuxtLink :to="{ name: 'blog-id', params: { id: article.slug } }"
                           style="text-decoration: none; color: inherit;">
 
                     <Article
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+    import { mapGetters } from "vuex";
     import Article from "../../components/Article";
 
     export default {
@@ -49,23 +50,20 @@
         meta: {
             appToolbarTitle: 'Articles',
             showAppToolbar: true,
+            showAppToolbarImage: false,
             showAppFooter: true,
             showAppNavigationDrawer: true,
             showContentHeader: false,
         },
         components: {Article},
         props: {},
-        async asyncData({ $content, params }) {
-            const articles = await $content('articles')
-                .only(['title', 'description', 'img', 'slug', 'tags', 'createdAt', 'updatedAt'])
-                .sortBy('createdAt', 'desc')
-                .fetch()
-            return {
-                articles
-            }
-        },
         data() {
             return {};
+        },
+        computed: {
+            ...mapGetters("DataState", {
+                blogArticles: "getBlogArticles"
+            }),
         },
         methods: {
             tabletAndDown() {

@@ -1,7 +1,7 @@
 ---
 title: <span>A novel <strong>Writing Order Recovery</strong> approach for handwriting specimens</span>
 description: A pattern-recognition based approach for recovering the writing order trajectory of a signature is shown.
-img: https://images.unsplash.com/photo-1580752300992-559f8e0734e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80
+img: wor-talk.png
 alt: nice image
 tags: 
   - pattern-recognition

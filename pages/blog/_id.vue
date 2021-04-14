@@ -38,22 +38,27 @@
         meta: {
             showAppToolbar: true,
             showAppFooter: true,
+            showAppToolbarImage: true,
             showAppNavigationDrawer: true,
             showContentHeader: false
         },
-        async asyncData({ $content, params }) {
+        async asyncData({ store, $content, params }) {
             // fetch our article here
-            const article = await $content('articles', params.id).fetch()
+            const article = await $content('articles', params.id).fetch();
+            console.log("store img", article.img);
+            store.dispatch("AppState/setAppToolbarImage", article.img);
             return { article }
         },
+
         data() {
             return {
+                article: undefined,
                 htmlSource: ''
             }
         },
         computed: {},
         created() {
-            this.$store.dispatch('AppState/setAppToolbarImage', this.article.img)
+
         },
         methods: {
             formatDate(date) {

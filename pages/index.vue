@@ -94,7 +94,7 @@
             I also achieved the AWS Machine Learning Specialty certification, with which I also projected the solutions
             into the AWS domain.
         </v-row>
-        <v-row align="top" class="py-3">
+        <v-row align="start" class="py-3">
             <v-col cols="12" sm="6" :class="mobile() ? 'pa-0 py-1' : 'pl-0 pr-2 py-1'">
                 <h3 class="pt-3 py-1">Current job</h3>
                 <div v-for="experience in visibleExperiences">
@@ -204,7 +204,7 @@
             >
                 <v-card :height="tabletAndDown() ? '100px' : '100%'" class="pa-0" elevation="0" color="transparent">
                     <PageNavigator text="View all my posts" icon="mdi-file-document-outline"
-                                   path="/articles"></PageNavigator>
+                                   path="/blog"></PageNavigator>
                 </v-card>
 
             </v-col>
@@ -267,8 +267,8 @@
                 isDark: "isDark",
             }),
             ...mapGetters("DataState", {
-                articles: "getArticles",
-                projects: "getProjects",
+                articles: "getBlogArticles",
+                projects: "getGithubProjects",
                 applications: "getApplications",
                 skills: "getSkills",
                 experiences: "getExperiences",
@@ -307,6 +307,7 @@
             },
             visibleArticles() {
                 if (this.articles)
+                    console.log("OOOOH", this.articles)
                     return this.articles.slice(0, 2);
                 return this.articles;
             }

@@ -1,7 +1,7 @@
 ---
 title: <span><strong>S.O.L.I.D.</strong> rules to build a <strong>solid</strong> software architecture</span>
 description: S.O.L.I.D. principles and their consequences are analyzed in depth.
-img: https://images.unsplash.com/photo-1580752300992-559f8e0734e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80
+img: solid-rules.png
 alt: nice image
 tags: 
   - architectures

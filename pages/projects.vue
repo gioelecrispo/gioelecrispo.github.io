@@ -126,7 +126,7 @@
                         align="center"
                 >
                     <v-col
-                            v-for="project in projects"
+                            v-for="project in githubProjects"
                             :key="project.id"
                             cols="12"
                             sm="6"
@@ -145,7 +145,6 @@
     import Project from "@/components/Project";
     import ui from "../mixins/ui";
 
-    const axios = require("axios");
 
     export default {
         name: "Projects",
@@ -172,6 +171,7 @@
         meta: {
             appToolbarTitle: 'Projects',
             showAppToolbar: true,
+            showAppToolbarImage: false,
             showAppFooter: true,
             showAppNavigationDrawer: true,
             showContentHeader: false,
@@ -185,7 +185,7 @@
         computed: {
             ...mapGetters("DataState", {
                 githubUserInfo: "getGithubUserInfo",
-                projects: "getProjects"
+                githubProjects: "getGithubProjects"
             }),
         },
         methods: {}

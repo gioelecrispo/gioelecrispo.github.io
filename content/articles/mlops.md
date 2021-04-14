@@ -1,7 +1,8 @@
 ---
 title: <span>Mitigate risk and enhance productivity with <strong>MLOps</strong></span>
 description: MLOps is important to mitigate operational risks by using DevOps principles. MLFlow is a open-source platform for building MLOps pipelines also in the cloud.
-img: https://images.unsplash.com/photo-1580752300992-559f8e0734e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80
+imga: https://images.unsplash.com/photo-1580752300992-559f8e0734e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80
+img: mlops.jpg
 alt: nice image
 tags: 
   - mlops

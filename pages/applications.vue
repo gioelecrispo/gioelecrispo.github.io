@@ -65,6 +65,7 @@
         meta: {
             appToolbarTitle: 'Applications',
             showAppToolbar: true,
+            showAppToolbarImage: false,
             showAppFooter: true,
             showAppNavigationDrawer: true,
             showContentHeader: false,

@@ -28,7 +28,7 @@
                                         </h1>
                                     </v-row>
                                     <v-row>
-                                        <v-divider color="white" class="mx-4 mt-2"></v-divider>
+                                        <v-divider color="white" class="mx-4 my-2"></v-divider>
                                     </v-row>
                                     <v-row justify="center" align="center"
                                            class="overline subtitle-2 font-weight-light ma-2">
@@ -47,7 +47,7 @@
                   @click:outside="close()">
             <v-card>
                 <v-container fluid fill-height>
-                    <v-row justify="end" align="top">
+                    <v-row justify="end" align="start">
                         <v-col cols="auto" class="pa-0 pr-3">
                             <v-btn elevation="0" small
                                    icon
@@ -56,14 +56,14 @@
                             </v-btn>
                         </v-col>
                     </v-row>
-                    <v-row justify="center" align="top" class="px-3" style="margin-top: -30px">
+                    <v-row justify="center" align="start" class="px-3" style="margin-top: -25px!important;">
                         <v-col><h2 class="text-center">{{application.name}}</h2></v-col>
                     </v-row>
-                    <v-row :class="mobile() ? '' : 'ma-2'">
+                    <v-row :class="mobile() ? '' : 'pa-2'">
                         <v-col class="pa-0" cols="12" md="6">
                             <v-carousel
                                     :cycle="!isPlaying"
-                                    @change="pauseVideo(this.videoId)"
+                                    @change="pauseVideo(videoId)"
                                     height="400"
                                     hide-delimiter-background
                                     show-arrows-on-hover
@@ -145,6 +145,7 @@
                 if (videos.length > 0 && videos[0]["videoId"] !== undefined) {
                     return this.application.resources.filter(resource => resource.videoId !== undefined)[0]["videoId"];
                 }
+                return undefined;
             },
         },
         methods: {
@@ -163,13 +164,19 @@
                 return "background: rgba(255, 255, 255, 0.75)";
             },
             playVideo(videoId) {
-                this.$refs[videoId][0].player.playVideo();
+                if (videoId && this.$refs[videoId]) {
+                    this.$refs[videoId][0].player.playVideo();
+                }
             },
             pauseVideo(videoId) {
-                this.$refs[videoId][0].player.pauseVideo();
+                if (videoId && this.$refs[videoId]) {
+                    this.$refs[videoId][0].player.pauseVideo();
+                }
             },
             stopVideo(videoId) {
-                this.$refs[videoId][0].player.stopVideo();
+                if (videoId && this.$refs[videoId]) {
+                    this.$refs[videoId][0].player.stopVideo();
+                }
             },
             close() {
                 if (this.videoId) {
