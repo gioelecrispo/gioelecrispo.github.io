@@ -17,7 +17,7 @@ export default async () => {
 
         // ** ROUTER **
         router: {
-            base: '/me/',
+            base: '/',
             middleware: ['routeMetaParser', 'dataFetcher']
         },
 
