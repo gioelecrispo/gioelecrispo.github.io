@@ -56,6 +56,7 @@
             showContentHeader: false,
         },
         components: {Article},
+
         props: {},
         data() {
             return {};
