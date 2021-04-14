@@ -1,0 +1,192 @@
+<!doctype html>
+<html data-n-head-ssr lang="en" amp data-n-head="%7B%22lang%22:%7B%22ssr%22:%22en%22%7D,%22amp%22:%7B%22ssr%22:true%7D%7D">
+  <head>
+    <title>Gioele Crispo - Gioele Crispo - Article: &lt;span>&lt;strong>S.O.L.I.D.&lt;/strong> rules to build a &lt;strong>solid&lt;/strong> software architecture&lt;/span></title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="robots" content="index,follow"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="og:type" property="og:type" content="website"><meta data-n-head="ssr" data-hid="og:site_name" property="og:site_name" content="Gioele Crispo"><meta data-n-head="ssr" data-hid="og:title" property="og:title" content="Article: <span><strong>S.O.L.I.D.</strong> rules to build a <strong>solid</strong> software architecture</span>"><meta data-n-head="ssr" data-hid="og:image" property="og:image" content="solid-rules.png"><meta data-n-head="ssr" data-hid="description" name="description" content="S.O.L.I.D. principles and their consequences are analyzed in depth."><meta data-n-head="ssr" data-hid="og:url" property="og:url" content="https://gioelecrispo.github.io/me/blog/solid-rules"><base href="/me/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap"><link data-n-head="ssr" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"><link rel="preload" href="/me/_nuxt/fe1d73f.js" as="script"><link rel="preload" href="/me/_nuxt/b241cda.js" as="script"><link rel="preload" href="/me/_nuxt/css/43c14d1.css" as="style"><link rel="preload" href="/me/_nuxt/97c0fb9.js" as="script"><link rel="preload" href="/me/_nuxt/css/a21160b.css" as="style"><link rel="preload" href="/me/_nuxt/0c8de13.js" as="script"><link rel="preload" href="/me/_nuxt/b46fa3f.js" as="script"><link rel="stylesheet" href="/me/_nuxt/css/43c14d1.css"><link rel="stylesheet" href="/me/_nuxt/css/a21160b.css"><link rel="preload" href="/me/_nuxt/static/1618413735/blog/solid-rules/state.js" as="script"><link rel="preload" href="/me/_nuxt/static/1618413735/blog/solid-rules/payload.js" as="script"><link rel="preload" href="/me/_nuxt/static/1618413735/manifest.js" as="script">
+  </head>
+  <body>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div data-app="true" id="app" class="v-application v-application--is-ltr theme--light"><div class="v-application--wrap"><nav class="v-navigation-drawer v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height:100vh;top:0;transform:translateX(-100%);width:100%" data-v-655c5d98><div class="v-navigation-drawer__content"><div class="container container--fluid" data-v-655c5d98><div class="row" data-v-655c5d98><div class="col col-12" data-v-655c5d98><div class="row mr-3 justify-end" data-v-655c5d98><button type="button" class="v-btn v-btn--icon v-btn--round theme--light v-size--default" data-v-655c5d98><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-close theme--light" data-v-655c5d98></i></span></button></div> <div class="row pt-6 justify-center" data-v-655c5d98><div class="v-avatar" style="height:104px;min-width:104px;width:104px" data-v-655c5d98><img src="/me/_nuxt/img/735beff.png" alt="Gioele Crispo" data-v-655c5d98></div></div> <div class="v-list pt-0 mt-12 v-sheet theme--light rounded v-list--dense v-list--rounded" data-v-655c5d98><div role="listbox" class="v-item-group theme--light v-list-item-group" data-v-655c5d98><div tabindex="0" class="text-center v-list-item v-list-item--link theme--light" data-v-655c5d98><div class="row" data-v-655c5d98><div class="col col-12" data-v-655c5d98><div class="row justify-center" data-v-655c5d98><i aria-hidden="true" class="v-icon notranslate mr-4 mdi mdi-home theme--light" data-v-655c5d98></i>
+                                        Home
+                                    </div></div></div></div><div tabindex="0" class="text-center v-list-item v-item--active v-list-item--active v-list-item--link theme--light" data-v-655c5d98><div class="row" data-v-655c5d98><div class="col col-12" data-v-655c5d98><div class="row justify-center" data-v-655c5d98><i aria-hidden="true" class="v-icon notranslate mr-4 mdi mdi-timeline-text theme--light" data-v-655c5d98></i>
+                                        Curriculum Vitae
+                                    </div></div></div></div><div tabindex="0" class="text-center v-list-item v-list-item--link theme--light" data-v-655c5d98><div class="row" data-v-655c5d98><div class="col col-12" data-v-655c5d98><div class="row justify-center" data-v-655c5d98><i aria-hidden="true" class="v-icon notranslate mr-4 mdi mdi-briefcase-outline theme--light" data-v-655c5d98></i>
+                                        Applications
+                                    </div></div></div></div><div tabindex="0" class="text-center v-list-item v-list-item--link theme--light" data-v-655c5d98><div class="row" data-v-655c5d98><div class="col col-12" data-v-655c5d98><div class="row justify-center" data-v-655c5d98><i aria-hidden="true" class="v-icon notranslate mr-4 mdi mdi-github theme--light" data-v-655c5d98></i>
+                                        Projects
+                                    </div></div></div></div><div tabindex="0" class="text-center v-list-item v-list-item--link theme--light" data-v-655c5d98><div class="row" data-v-655c5d98><div class="col col-12" data-v-655c5d98><div class="row justify-center" data-v-655c5d98><i aria-hidden="true" class="v-icon notranslate mr-4 mdi mdi-file-document-outline theme--light" data-v-655c5d98></i>
+                                        Blog
+                                    </div></div></div></div></div></div></div></div></div></div><div class="v-navigation-drawer__border"></div></nav> <header id="app-toolbar" class="v-sheet theme--dark v-toolbar v-toolbar--prominent v-app-bar v-app-bar--fade-img-on-scroll v-app-bar--elevate-on-scroll v-app-bar--fixed v-app-bar--hide-shadow v-app-bar--shrink-on-scroll toolbars" style="height:350px;font-size:1.5rem;margin-top:0;transform:translateY(0);left:0;right:0" data-v-6aef0876><div class="v-toolbar__image" style="opacity:1"><div class="v-image v-responsive theme--dark" style="height:350px" data-v-6aef0876><div class="v-image__image v-image__image--preload v-image__image--cover" style="background-image:linear-gradient(to top right,rgba(0,100,205,.7),rgba(0,2,216,.7));background-position:center center"></div><div class="v-responsive__content"></div></div></div><div class="v-toolbar__content" style="height:350px"> <button type="button" class="v-btn v-btn--icon v-btn--round theme--dark v-size--default" data-v-6aef0876><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-menu theme--dark" data-v-6aef0876></i></span></button> <div class="v-toolbar__title pl-1 pr-3" data-v-6aef0876><h3 data-v-6aef0876></h3></div> <div class="spacer" data-v-6aef0876></div> <div class="row align-center justify-end" data-v-6aef0876><button type="button" class="v-btn v-btn--icon v-btn--round theme--dark v-size--default" data-v-6aef0876><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate far fa-moon theme--dark" data-v-6aef0876></i></span></button> <!----><!----><!----><!----><!----></div></div></header> <main class="v-main" style="padding-top:350px;padding-right:0;padding-bottom:0;padding-left:0"><div class="v-main__wrap"><!----> <div id="app-content" class="container" data-v-1b2cb8de data-v-1b2cb8de><div class="row pa-0 ma-0" data-v-1b2cb8de data-v-1b2cb8de><div class="container container--fluid" data-v-3e23ed36 data-v-3e23ed36 data-v-1b2cb8de><div class="row justify-center" data-v-3e23ed36 data-v-3e23ed36><div class="col-lg-10 col-xl-9 col" data-v-3e23ed36 data-v-3e23ed36><div class="pa-0 py-2 mb-8 v-card v-sheet theme--light elevation-0 transparent" style="height:30px" data-v-3e23ed36><div class="v-card__title px-0 py-0 secondary--text" data-v-3e23ed36>#architectures
+                </div> <div class="v-card__text px-0 py-0 grey--text" data-v-3e23ed36>Latest update: April 14, 2021
+                </div></div> <article class="pt-12" data-v-3e23ed36><div class="nuxt-content" data-v-3e23ed36 data-v-3e23ed36><h1 id="solid-principles-to-build-a-solid-software-architecture" data-v-3e23ed36 data-v-3e23ed36><a aria-hidden="true" href="#solid-principles-to-build-a-solid-software-architecture" tabindex="-1" data-v-3e23ed36 data-v-3e23ed36><span class="icon icon-link" data-v-3e23ed36 data-v-3e23ed36></span></a>S.O.L.I.D. principles to build a solid software architecture</h1>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36>Introduction</li>
+<li data-v-3e23ed36 data-v-3e23ed36>What is a "<em data-v-3e23ed36 data-v-3e23ed36>Software Architecture</em>"?</li>
+<li data-v-3e23ed36 data-v-3e23ed36>S.O.L.I.D. principles</li>
+<li data-v-3e23ed36 data-v-3e23ed36>Component cohesion principles</li>
+<li data-v-3e23ed36 data-v-3e23ed36>Component coupling principles</li>
+<li data-v-3e23ed36 data-v-3e23ed36>Conclusions</li>
+</ul>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<h2 id="introduction" data-v-3e23ed36 data-v-3e23ed36><a aria-hidden="true" href="#introduction" tabindex="-1" data-v-3e23ed36 data-v-3e23ed36><span class="icon icon-link" data-v-3e23ed36 data-v-3e23ed36></span></a>Introduction</h2>
+<p data-v-3e23ed36 data-v-3e23ed36>This article is highly inspired by the work of Robert C. Martin, popularly known as Uncle Bob, in its book "<em data-v-3e23ed36 data-v-3e23ed36>Clean Architecture</em>".
+S.O.L.I.D., in fact, is an acronym for the first five object-oriented design principles defined by Uncle Bob,
+together with the principles of component cohesion e component coupling.
+These principles are fundamental for building high quality software architectures.</p>
+<p data-v-3e23ed36 data-v-3e23ed36><em data-v-3e23ed36 data-v-3e23ed36>But why do we have to design good software architectures and not package software that just works?</em></p>
+<p data-v-3e23ed36 data-v-3e23ed36>It sounds like a rhetorical question, but there is much more to it. A well-designed architecture means making the system resilient to changes and benefit a lot in terms of costs.
+It might appear that this problem only affects long-running projects, but it doesn't - customers are constantly asking for software changes based on marketing choices or what they have seen so far.
+Agile methods were born to have software development processes that are less rigid, faster and better absorb the changes required by the customer, but they cannot absorb the costs in terms of development time if the architecture behind them is not of good quality.
+Before going into the details of the basic principles for the design of a good architecture we need to
+define it and understand the disadvantages of not having one.</p>
+<h2 id="what-is-a-software-architecture" data-v-3e23ed36 data-v-3e23ed36><a aria-hidden="true" href="#what-is-a-software-architecture" tabindex="-1" data-v-3e23ed36 data-v-3e23ed36><span class="icon icon-link" data-v-3e23ed36 data-v-3e23ed36></span></a>What is a "<em data-v-3e23ed36 data-v-3e23ed36>Software Architecture</em>"?</h2>
+<p data-v-3e23ed36 data-v-3e23ed36>In his book, Robert C. Martin defines software architecture like this:</p>
+<p data-v-3e23ed36 data-v-3e23ed36><em data-v-3e23ed36 data-v-3e23ed36>The architecture of a software system is the "form" given to that system by those who build it.
+By "form" we mean the division of this system into components, in the arrangement of them and
+in the ways in which these components communicate with each other.
+The purpose is to facilitate the development, distribution, operation and maintenance of the
+software system contained therein.</em></p>
+<p data-v-3e23ed36 data-v-3e23ed36>Among the various definitions, in my opinion, Uncle Bob's is the most effective.
+It clearly defines the ultimate goal of a software architecture: <strong data-v-3e23ed36 data-v-3e23ed36>to support the life cycle of
+the system, minimizing the costs of its implementation and maximizing the programmer's productivity.</strong></p>
+<p data-v-3e23ed36 data-v-3e23ed36>Not having a good architecture implies that the system produced will be of poor quality:</p>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36>will have <strong data-v-3e23ed36 data-v-3e23ed36>poor maintainability</strong>: a trivial change can impact many files and lines of code with the possibility of multiplying bugs;</li>
+<li data-v-3e23ed36 data-v-3e23ed36>it will be <strong data-v-3e23ed36 data-v-3e23ed36>difficult to understand</strong>: the understanding of the software suffers considerably; those who join the team after the project or the developer himself after months makes a lot of effort to understand the code.</li>
+<li data-v-3e23ed36 data-v-3e23ed36>will enjoy <strong data-v-3e23ed36 data-v-3e23ed36>poor reusability</strong>: it means having large blocks of code and duplicated functionality in the project.</li>
+<li data-v-3e23ed36 data-v-3e23ed36>will be <strong data-v-3e23ed36 data-v-3e23ed36>hardly testable</strong>: having large components, not logically separate and inter-dependent on each other, makes it very difficult to produce good test suites.</li>
+</ul>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<h2 id="solid-principles" data-v-3e23ed36 data-v-3e23ed36><a aria-hidden="true" href="#solid-principles" tabindex="-1" data-v-3e23ed36 data-v-3e23ed36><span class="icon icon-link" data-v-3e23ed36 data-v-3e23ed36></span></a>S.O.L.I.D. principles</h2>
+<p data-v-3e23ed36 data-v-3e23ed36>Following there are the principles:</p>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>Single-responsibility Principle (SRP)</strong>:</li>
+</ul>
+<p data-v-3e23ed36 data-v-3e23ed36>A class or a module should have one and only one reason to change, meaning that a class should have only one job.</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<p data-v-3e23ed36 data-v-3e23ed36>This principle indicates that everything that the same reason or actor to change must be cohesive, put together,
+and separated from the pieces of code that can change for different reasons or actors.</p>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>Open-closed Principle (OCP)</strong>:</li>
+</ul>
+<p data-v-3e23ed36 data-v-3e23ed36>Objects or entities should be open for extension, but closed for modification.</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<p data-v-3e23ed36 data-v-3e23ed36>To ensure good maintainability the system should be open to extensions rather than modifications.
+This is important to maintain consistency with the other parts that the part of the software
+interfaces with. Allowing extensions means taking advantage of inheritance at the class level
+and building extensible components at the architecture level.</p>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>Liskov Substitution Principle (LSP)</strong> :</li>
+</ul>
+<p data-v-3e23ed36 data-v-3e23ed36>Let q(x) be a property provable about objects of x of type T.
+Then q(y) should be provable for objects y of type S where S is a subtype of T.</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<p data-v-3e23ed36 data-v-3e23ed36>Liskov's principle tells us how to control inheritance. But it can be transported to the architectural level by
+indicating how components must communicate with each other, through a strong definition of interfaces.</p>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>Interface Segregation Principle (ISP)</strong>:</li>
+</ul>
+<p data-v-3e23ed36 data-v-3e23ed36>A client should never be forced to implement an interface that it doesn’t use or clients shouldn’t be forced to depend on methods they do not use.</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<p data-v-3e23ed36 data-v-3e23ed36>This principle simply tells us to make classes and modules simple, avoiding unnecessary dependencies
+and therefore difficult to maintain in the long term.</p>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>Dependency Inversion Principle (DIP)</strong>:</li>
+</ul>
+<p data-v-3e23ed36 data-v-3e23ed36>Entities must depend on abstractions not on concretions.
+It states that the high level module must not depend on the low level module, but they should depend on abstractions.</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<p data-v-3e23ed36 data-v-3e23ed36>This principle tells us that dependencies should all refer to abstract components and not to concrete
+components. The use of concrete classes is advisable only when they are extremely <strong data-v-3e23ed36 data-v-3e23ed36>stable</strong>,
+that is, little prone to changes. Think of the <em data-v-3e23ed36 data-v-3e23ed36>String</em> class: you are sure that it will never or
+almost never change and you can use it with confidence.</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<h2 id="component-cohesion-principles" data-v-3e23ed36 data-v-3e23ed36><a aria-hidden="true" href="#component-cohesion-principles" tabindex="-1" data-v-3e23ed36 data-v-3e23ed36><span class="icon icon-link" data-v-3e23ed36 data-v-3e23ed36></span></a>Component cohesion principles</h2>
+<p data-v-3e23ed36 data-v-3e23ed36>First of all, we need to establish the definition of component that we are going to use.
+A component is a unit of composition with a given context and that can be deployed independently
+such as .jar or a npm module.</p>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>Reuse/Release equivalence Principle (REP)</strong>:</li>
+</ul>
+<p data-v-3e23ed36 data-v-3e23ed36>The granularity of reuse is the granularity of release.</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<p data-v-3e23ed36 data-v-3e23ed36>Basically, it means that a component should be released as highly cohesive code units, so the elements of it would be releasable together.
+Classes and modules that have been bundled together in a component should be releasable together. The fact that they share the same version number and release code and are included in the same release documentation must be logically acceptable to the author of the component and should make sense to the user.
+A user could decide whether to use the component or its new dressing based on the documentation that is provided.</p>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>Common Closure Principle (CCP)</strong></li>
+</ul>
+<p data-v-3e23ed36 data-v-3e23ed36>We keep together in a component all the classes that are modified for the same reason and at the same time.</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<p data-v-3e23ed36 data-v-3e23ed36>It is a component version of the Single Responsibility Principle. While the latter states that a <em data-v-3e23ed36 data-v-3e23ed36>class</em> should have only one
+single reason to be modified, CCP tell us a <em data-v-3e23ed36 data-v-3e23ed36>component</em> should not have more than one reason to change.
+That way, we increase the maintainability of our software by having to alter just a component when the requirement specific to it changes.
+Furthermore, this principle is strongly related to the OCP principle: they refer to the same "closure" meaning. The classes
+should be closed to changes but open to the extensions. Since a perfect closure (the immutability of the code) is impossible,
+we have to reduce the changes by adopting the strategy to put all together the classes which are correlated each one.</p>
+<p data-v-3e23ed36 data-v-3e23ed36>We can summarize the CCP and SRP principles in the following statement:
+<em data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>"Gather together those things that change simultaneously and for the same reasons."</strong></em></p>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>Common Reuse Principle (CRP)</strong>:</li>
+</ul>
+<p data-v-3e23ed36 data-v-3e23ed36>We shouldn’t force our users to depend on things that they are not going to use.</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<p data-v-3e23ed36 data-v-3e23ed36>It helps us to choose which classes and module we have to put together into a component.
+This principle tell us also what not to do. this principle also tells us what not to do.
+If the user component uses only one component class and not the others, you will still need to import and depend on the whole component.
+This becomes a problem, because the user component may undergo changes (and will have to be recompiled, rebuilt and redistributed anyway)
+even if the changes affect classes that the user component does not use. We must therefore always analyze the dependencies and make sure
+that the modules to be included in a component are really inseparable.
+The CRP principle is the generic version of the ISP principle, which urges us not to depend on classes containing methods we don't use.</p>
+<p data-v-3e23ed36 data-v-3e23ed36>We can summarize the CPR and ISP principles in the following statement:
+<em data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>"Don't depend on the things you don't need."</strong></em></p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<h2 id="component-coupling-principles" data-v-3e23ed36 data-v-3e23ed36><a aria-hidden="true" href="#component-coupling-principles" tabindex="-1" data-v-3e23ed36 data-v-3e23ed36><span class="icon icon-link" data-v-3e23ed36 data-v-3e23ed36></span></a>Component coupling principles</h2>
+<p data-v-3e23ed36 data-v-3e23ed36>Once we know how create components, we have also to put the attention on how the interact each other.
+The next principles regards the components relationship.</p>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>Acyclic Dependencies Principle (ADP)</strong>:</li>
+</ul>
+<p data-v-3e23ed36 data-v-3e23ed36>Do not allow loops to arise in the dependency graph between components.</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<p data-v-3e23ed36 data-v-3e23ed36>According to this principle, we must divide the components according to their relationships
+avoiding that one component depends on another that depends directly or indirectly on the first.
+Furthermore, the components should be independently developed and released.
+This implies that a component dependent on a certain other component or module is not forced to modify
+its code based on the changes of that module on which it depends and can use the previous version
+until it is not ready to change.</p>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>Stable Dependencies Principle (SDP)</strong>:</li>
+</ul>
+<p data-v-3e23ed36 data-v-3e23ed36>Bet on stability.</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<p data-v-3e23ed36 data-v-3e23ed36>The stability of a component is measured based on its inbound and outbound dependencies.
+If a component depends on many other components (incoming dependencies) it has many reasons to
+change and be modified according to the changes imposed by the components it depends on.
+If a component is a dependency of many other components (outbound dependencies) it has many
+reasons to <strong data-v-3e23ed36 data-v-3e23ed36>NOT</strong> change and be modified in order not to impact the components that depend on it.
+So a component is stable if it has many dependencies on exit and few on input.</p>
+<ul data-v-3e23ed36 data-v-3e23ed36>
+<li data-v-3e23ed36 data-v-3e23ed36><strong data-v-3e23ed36 data-v-3e23ed36>Stable Abstraction Principle (SAP)</strong>:</li>
+</ul>
+<p data-v-3e23ed36 data-v-3e23ed36>A component should be as abstract as it is stable.</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<p data-v-3e23ed36 data-v-3e23ed36>In the stable components we must therefore insert what must change little, that is, the "political"
+decisions to orient the system, which must not be <strong data-v-3e23ed36 data-v-3e23ed36>volatile</strong>, however they must be <strong data-v-3e23ed36 data-v-3e23ed36>flexible</strong>.
+The best way is to use abstract classes, because they
+guarantee us an easy modifiability through extension (OCP principle).</p>
+<br data-v-3e23ed36 data-v-3e23ed36>
+<h2 id="conclusions" data-v-3e23ed36 data-v-3e23ed36><a aria-hidden="true" href="#conclusions" tabindex="-1" data-v-3e23ed36 data-v-3e23ed36><span class="icon icon-link" data-v-3e23ed36 data-v-3e23ed36></span></a>Conclusions</h2>
+<p data-v-3e23ed36 data-v-3e23ed36>Having these principles in mind is certainly an extra weapon to produce quality software,
+maximizing the time and effort of those who work on it. Basically, the principles all aim to isolate
+software, avoiding creating unnecessary and harmful dependencies for system maintenance. The <em data-v-3e23ed36 data-v-3e23ed36>software</em>
+is by definition changeable; therefore it is necessary to be as lean and flexible as possible.
+However, too much generalization can also be harmful if it is not used correctly or is not necessary
+in relation to the domain of the system: it is a waste of resources and time. It is important to know
+how to mix these two aspects of software development correctly: using these principles wisely requires
+practice and knowledge.</p></div></article></div></div></div></div> <!----></div></div></main> <footer id="footer" data-v-4d3ea255><footer class="v-footer v-sheet theme--dark v-footer--padless toolbars" data-v-4d3ea255><svg viewBox="0 0 120 28" class="footer-svg" data-v-4d3ea255><defs data-v-4d3ea255><path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" data-v-4d3ea255></path></defs> <use id="wave3" xlink:href="#wave" x="0" y="-2" class="wave" data-v-4d3ea255></use> <use id="wave2" xlink:href="#wave" x="0" y="0" class="wave" data-v-4d3ea255></use> <use id="wave1" xlink:href="#wave" x="0" y="1" class="wave" data-v-4d3ea255></use></svg> <div class="text-center footer-content v-card v-sheet theme--dark elevation-0 rounded-0" style="width:100%" data-v-4d3ea255><div class="container pa-2" data-v-4d3ea255><div class="row mx-2 align-center" data-v-4d3ea255><div class="col" data-v-4d3ea255><hr role="separator" aria-orientation="horizontal" class="v-divider theme--dark" data-v-4d3ea255></div> <div class="col" data-v-4d3ea255><span class="overline" style="font-size:16px!important" data-v-4d3ea255>Stay in touch</span></div> <div class="col" data-v-4d3ea255><hr role="separator" aria-orientation="horizontal" class="v-divider theme--dark" data-v-4d3ea255></div></div></div> <div class="v-card__text pt-3 pb-4" data-v-4d3ea255><blockquote class="subheader pa-0" data-v-4d3ea255>
+                    You can not discover new oceans if you do not have the courage to
+                    lose sight of the shore.
+                </blockquote></div> <div class="v-card__text py-2" data-v-4d3ea255><div class="row align-center justify-center" data-v-4d3ea255><div class="pa-2 col-md-6 col-12" data-v-4d3ea255><a href="https://www.facebook.com/gioelecrispo" target="_blank" class="mx-2 v-btn v-btn--icon v-btn--round theme--dark v-size--default" data-v-4d3ea255><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fab fa-facebook theme--dark" style="font-size:24px" data-v-4d3ea255></i></span></a><a href="https://www.linkedin.com/in/gioele-crispo/" target="_blank" class="mx-2 v-btn v-btn--icon v-btn--round theme--dark v-size--default" data-v-4d3ea255><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fab fa-linkedin theme--dark" style="font-size:24px" data-v-4d3ea255></i></span></a><a href="https://www.instagram.com/gioelecrispo" target="_blank" class="mx-2 v-btn v-btn--icon v-btn--round theme--dark v-size--default" data-v-4d3ea255><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fab fa-instagram theme--dark" style="font-size:24px" data-v-4d3ea255></i></span></a><a href="https://www.youtube.com/channel/UCX38YLmygw3cfwljiNlBBQw" target="_blank" class="mx-2 v-btn v-btn--icon v-btn--round theme--dark v-size--default" data-v-4d3ea255><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate fab fa-youtube theme--dark" style="font-size:24px" data-v-4d3ea255></i></span></a></div> <div class="pa-2 col-md-6 col-12" data-v-4d3ea255><i aria-hidden="true" class="v-icon notranslate ml-3 mr-1 mdi mdi-at theme--dark" data-v-4d3ea255></i> <span data-v-4d3ea255>crispogioele@gmail.com</span> <i aria-hidden="true" class="v-icon notranslate ml-3 mr-1 mdi mdi-skype theme--dark" data-v-4d3ea255></i> <span data-v-4d3ea255>gioele.crispo</span></div></div></div> <hr role="separator" aria-orientation="horizontal" class="v-divider theme--dark" data-v-4d3ea255> <div class="v-card__text py-3" data-v-4d3ea255>
+                2021 — <span class="subtitle-1" data-v-4d3ea255>Gioele Crispo</span> <button type="button" class="mx-2 v-btn v-btn--icon v-btn--round theme--dark v-size--small" data-v-4d3ea255><span class="v-btn__content"><i aria-hidden="true" class="v-icon notranslate mdi mdi-information-outline theme--dark" style="font-size:20px" data-v-4d3ea255></i></span></button></div></div> <div role="dialog" class="v-dialog__container" data-v-4d3ea255><!----></div></footer></footer></div></div></div></div><script defer src="/me/_nuxt/static/1618413735/blog/solid-rules/state.js"></script><script src="/me/_nuxt/fe1d73f.js" defer></script><script src="/me/_nuxt/b46fa3f.js" defer></script><script src="/me/_nuxt/b241cda.js" defer></script><script src="/me/_nuxt/97c0fb9.js" defer></script><script src="/me/_nuxt/0c8de13.js" defer></script>
+  </body>
+</html>
