@@ -43,9 +43,9 @@
     export default {
         head() {
             return createSeoMeta('Applications',
-                'All my applications, mainly focused on Machine Learning.',
+                'Some of my projects and applications, mainly focused on Machine Learning.',
                 this.$route.path,
-                'https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80');
+                require('@/assets/img/seo/applications.jpg'));
         },
         name: "Applications",
         layout: 'AppStructure',

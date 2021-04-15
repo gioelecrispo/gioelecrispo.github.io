@@ -24,7 +24,7 @@ export default async () => {
         // ** HEADER and SEO **
         // Global page headers: https://go.nuxtjs.dev/config-head
         head: {
-            titleTemplate: 'Gioele Crispo - %s',
+            titleTemplate: '%s - Gioele Crispo',
             title: 'Home',
             htmlAttrs: {
                 lang: 'en',
@@ -34,13 +34,6 @@ export default async () => {
                 { charset: 'utf-8' },
                 { name: 'robots', content: 'index,follow' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-                { hid: 'description', name: 'description', content: 'Check out for Machine Learning blog and ideas!' },
-                { hid: 'og:title', property: 'og:title', content: 'Gioele Crispo - Home' },
-                {
-                    hid: 'og:image',
-                    property: 'og:image',
-                    content: 'https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80'
-                },
                 { hid: 'og:type', property: 'og:type', content: 'website' },
                 { hid: 'og:site_name', property: 'og:site_name', content: 'Gioele Crispo' }
             ],

@@ -19,17 +19,15 @@
 </template>
 
 <script>
+    import createSeoMeta from '../../utils/seo'
+
     export default {
         head() {
-            return {
-                title: 'Post: ' + this.article.title,
-                meta: [
-                    { hid: 'og:title', property: "og:title", content: 'Article: ' + this.article.title},
-                    { hid: 'og:image', property: 'og:image', content: require('@/assets/img/blog/' + this.article.img) },
-                    { hid: 'description', name: 'description', content: this.article.description },
-                    { hid: 'og:url', property: "og:url", content: "https://gioelecrispo.github.io/" + this.$route.path},
-                ]
-            }
+            let title = this.article.title.replace(/<[^>]*>?/gm, '');  // strip HTML for compatibility
+            return createSeoMeta(title,
+                this.article.description,
+                this.$route.path,
+                require('@/assets/img/blog/' + this.article.img));
         },
         name: 'ArticleDetails',
         layout: 'AppStructure',
