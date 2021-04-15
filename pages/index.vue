@@ -1,14 +1,22 @@
 <template>
     <v-container>
+        <v-row class="mt-10 pt-12 pb-3" justify="center">
+            <h1>Know Me More</h1>
+        </v-row>
         <v-row class="py-4">
             <blockquote :class="isDark ? 'dark-theme' : 'light-theme'">
+                I was born in Salerno .
+                <br></br>
                 Enthusiastic Machine Learning Engineer with excellent analytical, design and team working skills,
                 focused on Natural Language Processing topics.
-                As a team leader on several projects, I have always demonstrated excellent leadership and coordination
+                As a team leader on several projects, I have always demonstrated discrete leadership and coordination
                 skills.
                 I consider myself attentive to details and precise in meeting deadlines.
                 Looking for stimulating activities related to artificial intelligence that allow me to expand my current
                 knowledge and soft skills.
+                <br></br>
+                I pursue a number of personal <b>projects</b>, participate to hackathons and contribute to open source software.
+                My other hobbies include electronics, photography, graphics, videogames and music.
             </blockquote>
         </v-row>
         <v-row class="pt-4" align="center">
@@ -39,12 +47,22 @@
                         <h3>19 Jun 1993</h3>
                     </v-col>
                 </v-row>
+                <v-divider></v-divider>
+                <v-row align="center" class="px-2 py-1">
+                    <v-col cols="auto" class="py-2">
+                        <span>E-mail:</span>
+                    </v-col>
+                    <v-col class="py-2">
+                        <h3>crispogioele@gmail.com</h3>
+                    </v-col>
+                </v-row>
                 <v-row align="center" justify="center" class="px-2 py-5">
                     <CVBtnDownload :isFab="false"></CVBtnDownload>
                 </v-row>
             </v-col>
             <v-col cols="12" sm="6">
                 <v-alert
+                    class="pb-6"
                         color="primary"
                         dark
                         border="left"
@@ -96,7 +114,12 @@
         </v-row>
         <v-row align="start" class="py-3">
             <v-col cols="12" sm="6" :class="mobile() ? 'pa-0 py-1' : 'pl-0 pr-2 py-1'">
-                <h3 class="pt-3 py-1">Current job</h3>
+                <v-row align="center" class="py-0">
+                    <v-col cols="auto" class="py-0"> <h3 class="pt-3 py-1">Current job</h3></v-col>
+                    <v-spacer></v-spacer>
+<!--                    <v-col cols="auto" class="py-0 mt-2">View more</v-col>-->
+                </v-row>
+
                 <div v-for="experience in visibleExperiences">
                     <Experience :experience="experience" :forceDate="true"></Experience>
                 </div>
