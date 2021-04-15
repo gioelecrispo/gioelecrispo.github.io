@@ -5,12 +5,14 @@
         </v-row>
         <v-row class="py-4">
             <blockquote :class="isDark ? 'dark-theme' : 'light-theme'">
-                I was born in Salerno .
+                I was born in 1993 in Salerno, Italy. Passionate about technology and electronics since childhood,
+                I always want to experiment and learn.
+                I graduated with honors in Computer Engineering and I am continuously learning on topics related to
+                <b>Deep Learning</b> and <b>Artificial Intelligence</b> in general.
                 <br></br>
-                Enthusiastic Machine Learning Engineer with excellent analytical, design and team working skills,
-                focused on Natural Language Processing topics.
+                Today, I work as a <b>Machine Learning Engineer</b>, focused on Natural Language Processing topics.
                 As a team leader on several projects, I have always demonstrated discrete leadership and coordination
-                skills.
+                skills and also excellent analytical, design and team working capabilities.
                 I consider myself attentive to details and precise in meeting deadlines.
                 Looking for stimulating activities related to artificial intelligence that allow me to expand my current
                 knowledge and soft skills.

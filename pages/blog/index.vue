@@ -72,7 +72,7 @@
                 require('@/assets/img/seo/blog.jpg'));
         },
         meta: {
-            appToolbarTitle: 'Articles',
+            appToolbarTitle: 'Blog',
             showAppToolbar: true,
             showAppToolbarImage: false,
             showAppFooter: true,
