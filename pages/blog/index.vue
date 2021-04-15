@@ -88,21 +88,19 @@
                     topics: "",
                 },
                 blogArticles: [],
-                allBlogTopics: [],
             };
+        },
+        async fetch() {
+            this.blogArticles = await this.filterArticles("", this.allBlogTopics);
         },
         computed: {
             ...mapGetters("DataState", {
-                allBlogArticles: "getBlogArticles"
+                allBlogArticles: "getBlogArticles",
+                allBlogTopics: "getBlogTopics",
             }),
         },
         created() {
             this.filters.query = "";
-            for (let article of this.allBlogArticles) {
-                for (let tag of article.tags) {
-                    this.allBlogTopics.push(tag)
-                }
-            }
             this.filters.topics = this.allBlogTopics;
         },
         methods: {

@@ -428,7 +428,16 @@ export const getters = {
     },
     getBlogArticles: (state) => {
         return state.blogArticles
-    }
+    },
+    getBlogTopics: (state) => {
+        let blogTopics = [];
+        for (let article of state.blogArticles) {
+            for (let tag of article.tags) {
+                blogTopics.push(tag);
+            }
+        }
+        return blogTopics;
+    },
 }
 
 export const actions = {

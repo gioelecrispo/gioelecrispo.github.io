@@ -18,14 +18,14 @@
             </v-col>
             <v-col>
                 <v-row justify="center">
-                    <h2 class="display-3 font-weight-medium px-3 text-focus-in">
+                    <p class="display-3 font-weight-medium ma-0 px-3 text-focus-in">
                         Gioele Crispo
-                    </h2>
+                    </p>
                 </v-row>
                 <v-row justify="center" class="pt-2">
-                    <h1 class="subheading font-weight-thin mb-3 px-3 text-focus-in">
+                    <p class="headline font-weight-thin mx-0 mt-0 mb-3 px-3 text-focus-in">
                         Machine Learning engineer
-                    </h1>
+                    </p>
                 </v-row>
                 <v-row>
                     <v-divider/>
