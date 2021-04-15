@@ -6,6 +6,8 @@
                     <v-card-title class="px-0 py-0 secondary--text" v-if="article.tags">{{
                         article.tags.map(t => '#'+t).join(', ') }}
                     </v-card-title>
+                    <v-card-text class="px-0 py-0 grey--text">Written on: {{ formatDate(article.createdAt) }}
+                    </v-card-text>
                     <v-card-text class="px-0 py-0 grey--text">Latest update: {{ formatDate(article.updatedAt) }}
                     </v-card-text>
                 </v-card>

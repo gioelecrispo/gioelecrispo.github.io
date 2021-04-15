@@ -32,7 +32,9 @@ The following <a href="https://www.youtube.com/watch?v=BYJawbV0Y2k&t=58s">video<
 <div style="text-align:center; width: 100%">
 <iframe style="max-width:650px; height:auto;" src="https://www.youtube.com/embed/BYJawbV0Y2k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
-<br><br/>
+
+<br></br>
+
 </div>
 
 
@@ -72,7 +74,8 @@ The class of algorithms used to produce this thin trace is called **skeletonizat
 
 <span style="font-size: 12px;">Fig.1. Comparison between the the Real Image (a), the binary one (b) and the skeletonized one (c). Image from <a href="https://www.researchgate.net/publication/319443706_Recovering_Western_On-line_Signatures_From_Image-Based_Specimens"><i>
 Recovering Western On-line Signatures FromImage-Based Specimens</i></a></span>
-<br></br>
+
+<br>
 
 </div>
 
@@ -96,7 +99,8 @@ The Writing Order Recovery algorithm I proposed consists of 3 parts:
 <img src="https://i.ibb.co/SmPySCQ/algorithm.png" alt="algorithm" width="70%"/>
 
 <span style="font-size: 12px;">Fig. 2. Phases of which the algorithm is composed.</span>
-<br></br>
+
+<br>
 
 </div>
 
@@ -115,7 +119,9 @@ writing order recognition: however, there is a huge loss of information.
 <img src="https://i.imgur.com/0nTtvW8.png" alt="algorithm" width="65%"/>
 
 <span style="font-size: 12px;">Fig. 3. Point classification. It depends on the number of neighboring pixels for each pixel.</span>
-<br></br>
+
+<br>
+
 </div>
 
 ### Local Examination
@@ -137,7 +143,9 @@ to follow, I leave out the details you find in the paper <a href="https://www.re
 
 <span style="font-size: 12px;">Fig. 4. Cluster analysis. In this phase we search for anchor branch points and we compute the angles to find the 
 cluster output branches associations.</span>
-<br></br>
+
+<br>
+
 </div>
 
 Once we have rebuilt a cluster, i.e. associated its exit branches, we know how a track enters and exits 
@@ -175,7 +183,9 @@ how they were traced by our algorithm (shown by the arrows).
 
 <span style="font-size: 12px;">Fig. 5. Global reconstruction. We find all the components 
 (indicated by different colors) in the signature and then we trace them.</span>
-<br></br>
+
+<br>
+
 </div>
 
 
@@ -199,7 +209,9 @@ paired (i.e. traversed in the direction in which the writer traced them).
 
 <span style="font-size: 12px;">Table. 1. Comparison with other methods. We have added also the CPR measure since
  the core of our work is the cluster analysis.</span>
-<br></br>
+ 
+<br>
+
 </div>
 
 Experimentally, we have noticed that some signatures are more **difficult** than others. 
@@ -210,19 +222,23 @@ clusters and components in the signature: the more clusters and components there
 the more difficult it is.
 
 The good results obtained show that:
-- using an ideal skeletonization helps a lot, since there is no loss of information and a more in-depth analysis on the signature can be conducted;
-- clusters of branch points give a lot of information on how a signature has been traced, allowing to correctly 
-infer the tracing direction. We have seen that the more clusters are reconstructed correctly the more likely 
-the signature is reconstructed correctly, so they are a key point for the writing order recovery task.
+- using an ideal skeletonization helps a lot, since there is no loss of information and a more in-depth analysis on 
+  the signature can be conducted;
+
+- clusters of branch points give a lot of information on how a signature has been traced, allowing to correctly infer 
+  the tracing direction. We have seen that the more clusters are reconstructed correctly the more likely the signature 
+  is reconstructed correctly, so they are a key point for the writing order recovery task.
+
 - easy signatures, with few clusters and components, are almost always reconstructed in the right way.
-<br></br>
+<br>
 
 ## Conclusions
 This work proposes a new approach based on pattern recognition for the execution of Writing Order Recovery, 
 highlighting through the good results obtained that:
 1. **the skeletonization phase must be greatly improved** to allow the subsequent phases to work on good quality data;
+
 2. **a good point and trace analysis performed locally may be sufficient** to estimate the writing order, without 
-resorting to computationally expensive algorithms that operate globally. <br></br>
+   resorting to computationally expensive algorithms that operate globally. <br></br>
 
 In fact, the proposed algorithm works locally, compared to many algorithms, proposed in the literature, which 
 work considering the image as a whole. The latter, besides being more complicated and expensive, are also less 
