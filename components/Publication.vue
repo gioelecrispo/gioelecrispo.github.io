@@ -20,6 +20,7 @@
                         icon
                         target="_blank"
                         :href="publication.href"
+                        rel="noreferrer"
                 >
                     <v-icon>mdi-open-in-new</v-icon>
                 </v-btn>

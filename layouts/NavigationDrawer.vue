@@ -22,7 +22,7 @@
                     <v-row justify="center" class="pt-6">
                         <v-avatar size="104">
                             <img
-                                    :src="require('@/assets/img/me/me.png')"
+                                    :src="require('@/assets/img/me/me.jpg')"
                                     alt="Gioele Crispo"
                             >
                         </v-avatar>

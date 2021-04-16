@@ -105,7 +105,7 @@ export const state = () => ({
                 value: 95
             },
             {
-                avatar: require('@/assets/img/skills/js.png'),
+                avatar: require('@/assets/img/skills/javascript.png'),
                 title: '<span><strong>Javascript</strong></span>',
                 subtitle: '<span>Backend and Frontend</span> &mdash; NodeJS, VueJS; ' +
                     ' use of NodeJS to create NodeVM sandboxed microservices in javascript',
@@ -280,7 +280,7 @@ export const state = () => ({
             date: 'July 2017',
             resources: [
                 { videoId: 'nC_KHnol8jI' },
-                { img: require('@/assets/img/applications/duckietown-1.png') },
+                { img: require('@/assets/img/applications/duckietown-1.jpg') },
                 { img: require('@/assets/img/applications/duckietown-2.jpg') },
                 { img: require('@/assets/img/applications/duckietown-3.jpg') }
             ]
@@ -325,7 +325,7 @@ export const state = () => ({
             date: 'July 2017',
             resources: [
                 { videoId: '8_R36Kj4Njo' },
-                { img: require('@/assets/img/applications/mrs-pacman.png') }
+                { img: require('@/assets/img/applications/mrs-pacman.jpg') }
             ]
         },
         {
@@ -378,7 +378,7 @@ export const state = () => ({
             date: 'July 2017',
             resources: [
                 { videoId: 'cZCZZ23GLLc' },
-                { img: require('@/assets/img/applications/comau-smartsix.png') }
+                { img: require('@/assets/img/applications/comau-smartsix.jpg') }
             ]
         },
         {

@@ -78,6 +78,7 @@
                                    :key="socialMedia.href"
                                    class="mx-2"
                                    :href="socialMedia.href"
+                                   rel="noreferrer"
                                    target="_blank"
                                    icon
                             >
@@ -187,7 +188,7 @@
     .footer-content {
         margin: calc(-5%) 0 0 0;
         background-color: #2196F3 !important;
-        padding: 0px;
+        padding: 0;
     }
 
     .footer-svg {

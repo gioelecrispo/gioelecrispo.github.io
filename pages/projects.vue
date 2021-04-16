@@ -114,7 +114,7 @@
                                 size="125"
                                 tile
                         >
-                            <v-img :src="require('@/assets/img/me/me.png')"/>
+                            <v-img :src="require('@/assets/img/me/me.jpg')"/>
                         </v-avatar>
                     </v-row>
                 </div>

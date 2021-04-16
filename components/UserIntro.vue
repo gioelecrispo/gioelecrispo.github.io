@@ -11,7 +11,7 @@
                         color="grey lighten-4"
                 >
                     <img
-                            :src="require('@/assets/img/me/me.png')"
+                            :src="require('@/assets/img/me/me.jpg')"
                             alt="avatar"
                     >
                 </v-avatar>

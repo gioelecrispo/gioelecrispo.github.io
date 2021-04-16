@@ -45,6 +45,7 @@
                                         <v-list-item-subtitle class="mt-2">
                                             <a
                                                     :href="project.html_url"
+                                                    rel="noreferrer"
                                                     target="_blank"
                                             >Go to the project</a>
                                         </v-list-item-subtitle>
