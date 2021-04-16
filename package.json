@@ -11,23 +11,24 @@
     "dependencies": {
         "@nuxt/content": "^1.14.0",
         "@nuxtjs/axios": "^5.13.1",
+        "@nuxtjs/vuetify": "^1.11.3",
         "axios": "^0.21.1",
         "core-js": "^3.9.1",
         "nuxt": "^2.15.3",
-        "vue-youtube": "^1.4.0",
-        "vuetify": "^2.4.9"
+        "nuxt-webfontloader": "^1.1.0",
+        "vue-youtube": "^1.4.0"
     },
     "devDependencies": {
         "@aceforth/nuxt-optimized-images": "^1.4.0",
         "@fortawesome/fontawesome-free": "^5.15.3",
         "@mdi/font": "^5.9.55",
         "@nuxtjs/sitemap": "^2.4.0",
-        "@nuxtjs/vuetify": "^1.11.3",
         "eslint-config-prettier": "^8.1.0",
         "eslint-plugin-prettier": "^3.3.1",
         "material-design-icons-iconfont": "^6.1.0",
         "prettier": "^2.2.1",
         "responsive-loader": "^2.3.0",
-        "sharp": "^0.28.1"
+        "sharp": "^0.28.1",
+        "webp-loader": "^0.6.0"
     }
 }

@@ -53,10 +53,6 @@
     };
 </script>
 
-<style lang="scss">
-    @import "../assets/styles/scss/commons";
-
-
-
+<style lang="scss" scoped>
 </style>
 

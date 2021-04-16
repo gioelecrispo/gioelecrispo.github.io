@@ -1,9 +1,16 @@
-import { fetchSitemapRoutes } from './utils/sitemap'
+import { fetchSitemapRoutes } from './utils/sitemap';
 
 
 export default async () => {
-
     return {
+        // ** ENVIRONMENT **
+        env: {
+            HOST_BASE:
+                process.env.NODE_ENV === 'production'
+                    ? 'https://gioelecrispo.github.io'
+                    : 'http://localhost:3000/'
+        },
+
         // ** BUILDING OPTIONS **
         // Target: https://go.nuxtjs.dev/config-target
         target: 'static',
@@ -44,6 +51,7 @@ export default async () => {
 
         // Global CSS: https://go.nuxtjs.dev/config-css
         css: [
+            "~/assets/styles/scss/commons",
             'material-design-icons-iconfont/dist/material-design-icons.css', // md:
             '@mdi/font/css/materialdesignicons.css', // mdi
             '@fortawesome/fontawesome-free/css/all.css' // fa5
@@ -54,12 +62,14 @@ export default async () => {
 
         // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
         plugins: [
-            '~/plugins/youtube.js'
+            '~/plugins/youtube.js',
         ],
 
         // ** MODULES **
         // Modules: https://go.nuxtjs.dev/config-modules
         modules: [
+            // https://www.npmjs.com/package/nuxt-webfontloader
+            'nuxt-webfontloader',
             // https://go.nuxtjs.dev/axios
             '@nuxtjs/axios',
             // https://go.nuxtjs.dev/content
@@ -68,6 +78,13 @@ export default async () => {
             '@nuxtjs/sitemap'
         ],
 
+        // Nuxt webfont module configuration: https://www.npmjs.com/package/nuxt-webfontloader#setup
+        webfontloader: {
+            google: {
+                families: ['Lato&display=swap']  // Loads Lato
+            }
+        },
+
         // Axios module configuration: https://go.nuxtjs.dev/config-axios
         axios: {},
 
@@ -75,12 +92,11 @@ export default async () => {
         content: {},
 
         // Sitemap module configuration https://sitemap.nuxtjs.org/guide/configuration
-
         sitemap: {
-            hostname: 'https://gioelecrispo.github.io', //process.env.HOST_NAME,
+            hostname: 'https://gioelecrispo.github.io',
             async routes() {
-                return fetchSitemapRoutes()
-            } // all the dynamic routes
+                return fetchSitemapRoutes();  // all the dynamic routes
+            }
         },
 
         // ** BUILD MODULES **
@@ -96,9 +112,6 @@ export default async () => {
         vuetify: {
             treeShake: true,
             customVariables: ['~/assets/variables.scss'],
-            font: {
-                family: 'Lato'
-            },
             theme: {
                 dark: false,
                 themes: {
@@ -123,7 +136,8 @@ export default async () => {
                         toolbars: '#121212'
                     }
                 }
-            }
+            },
+            defaultAssets: false,
         },
 
         optimizedImages: {
@@ -155,8 +169,10 @@ export default async () => {
         build: {
             parallel: true,
             cache: true,
+            analyze: process.env.NODE_ENV !== 'production',
             extractCSS: process.env.NODE_ENV === 'production',
             optimizeCSS: process.env.NODE_ENV === 'production',
+            transpile: ['vuetify/lib'],
         }
     }
 }
