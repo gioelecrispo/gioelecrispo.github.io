@@ -14,7 +14,7 @@ export default async () => {
         // ** BUILDING OPTIONS **
         // Target: https://go.nuxtjs.dev/config-target
         target: 'static',
-        ssr: true,
+        ssr: false, // process.env.NODE_ENV === 'production',
         generate: {
             fallback: false
         },
