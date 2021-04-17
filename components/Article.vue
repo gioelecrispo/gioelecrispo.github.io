@@ -8,7 +8,7 @@
                 :height="hover ? 510 : 500"
                 :elevation="hover ? 20 : 8"
                 :class="`${hover ? 'expand' : ''}`"
-                @click="navigate(article.slug)"
+                nuxt :to="`/blog/${article.slug}`"
             >
                 <v-container fluid class="pt-0">
                     <v-row class="pb-2">
@@ -59,15 +59,6 @@
             }
         },
         methods: {
-            navigate(articleId) {
-                let path = {
-                    name: 'blog-id',
-                    params: {
-                        id: articleId
-                    }
-                }
-                this.$router.push(path);
-            },
             formatDate(date) {
                 const options = { year: 'numeric', month: 'short', day: 'numeric' };
                 return new Date(date).toLocaleDateString('en', options);

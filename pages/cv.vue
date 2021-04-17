@@ -114,20 +114,13 @@
 
     export default {
         name: "Works",
-        layout: 'AppStructure',
+        layout: 'page',
+        scrollToTop: true,
         head() {
             return createSeoMeta('Curriculum Vitae',
             'A complete Curriculum Vitae with experiences, certifications, skill and so on.',
                 this.$route.path,
                 require('@/assets/img/seo/cv.jpg'));
-        },
-        meta: {
-            appToolbarTitle: 'Curriculum Vitae',
-            showAppToolbar: true,
-            showAppToolbarImage: false,
-            showAppFooter: true,
-            showAppNavigationDrawer: true,
-            showContentHeader: false,
         },
         components: {CVBtnDownload, Experience, Skill, Certification, Publication},
         props: {},

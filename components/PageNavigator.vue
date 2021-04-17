@@ -2,13 +2,14 @@
     <v-container fluid fill-height class="py-0">
         <v-row justify="center" align="center" style="height: 100%;">
             <v-btn height="100%" class="pa-0"
-                    text large block
-                    color="primary"
-                    @click="$router.push(path)"
+                   text large block
+                   color="primary"
+                   nuxt
+                   :to="path"
             >
-               {{text}}
+                {{text}}
                 <v-icon class="ml-2" large>
-                   {{ icon }}
+                    {{ icon }}
                 </v-icon>
             </v-btn>
         </v-row>
@@ -17,21 +18,19 @@
 
 <script>
 
-    import ui from "../mixins/ui";
+    import ui from '../mixins/ui'
 
     export default {
-        name: "PageNavigator",
+        name: 'PageNavigator',
         components: {},
         mixins: [ui],
-        props: ["text", "icon", "path"],
+        props: ['text', 'icon', 'path'],
         data() {
-            return {
-            };
+            return {}
         },
         computed: {},
-        methods: {
-        }
-    };
+        methods: {}
+    }
 </script>
 
 <style lang="scss" scoped>

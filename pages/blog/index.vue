@@ -38,7 +38,19 @@
             </v-col>
         </v-row>
         <v-row class="pb-12">
-            <v-col
+            <v-col  class="pa-2"
+                    cols="12"
+                    sm="6"
+                    md="4"
+                    v-if="!blogArticles || blogArticles.length === 0">
+                <v-skeleton-loader
+                    class="mb-6"
+                    boilerplate="true"
+                    elevation="2"
+                    type="card-avatar, article"
+                ></v-skeleton-loader>
+            </v-col>
+            <v-col v-else
                     v-for="article in blogArticles"
                     :key="article.slug"
                     class="pa-2"
@@ -60,24 +72,18 @@
 <script>
     import { mapGetters } from "vuex";
     import Article from "../../components/Article";
-    import createSeoMeta from '../../utils/seo'
+    import createSeoMeta from '../../utils/seo';
+    import ui from "../../mixins/ui";
 
     export default {
         name: "ArticlesList",
-        layout: 'AppStructure',
+        layout: 'page',
+        mixins: [ui],
         head() {
             return createSeoMeta('Blog',
                 'Visit my blog section to discover all my post about machine learning and similar!',
                 this.$route.path,
                 require('@/assets/img/seo/blog.jpg'));
-        },
-        meta: {
-            appToolbarTitle: 'Blog',
-            showAppToolbar: true,
-            showAppToolbarImage: false,
-            showAppFooter: true,
-            showAppNavigationDrawer: true,
-            showContentHeader: false,
         },
         components: {Article},
         props: {},
@@ -100,14 +106,9 @@
             }),
         },
         created() {
-            this.filters.query = "";
             this.filters.topics = this.allBlogTopics;
         },
         methods: {
-            tabletAndDown() {
-                return this.$vuetify.breakpoint.name === "xs" ||
-                    this.$vuetify.breakpoint.name === "sm";
-            },
             async filterArticles(searchQuery, searchTopics) {
                 return await this.$content('blog')
                     .search(searchQuery)
@@ -119,7 +120,7 @@
         watch: {
             filters: {
                 deep: true,
-                immediate: true,
+                immediate: false,
                 async handler(value) {
                     if (!value.query) {
                         value.query = "";

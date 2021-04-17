@@ -4,17 +4,18 @@
             :elevate-on-scroll="true"
             :collapse="false"
             :short="false"
+            color="white"
             :color="setToolbarColor()"
-            :dark="$store.state.showAppToolbarImage"
-            :src="$store.state.showAppToolbarImage ? getAppToolbarImage() : ''"
-            :fade-img-on-scroll="$store.state.showAppToolbarImage"
-            :shrink-on-scroll="$store.state.showAppToolbarImage"
-            :prominent="$store.state.showAppToolbarImage"
-            :scroll-threshold="$store.state.showAppToolbarImage ? '150': ''"
-            :height="$store.state.showAppToolbarImage ? '350': ''"
+            :dark="image !== undefined"
+            :src="image !== undefined ? image : ''"
+            :fade-img-on-scroll="image !== undefined"
+            :shrink-on-scroll="image !== undefined"
+            :prominent="image !== undefined"
+            :scroll-threshold="image !== undefined ? '150': ''"
+            :height="image !== undefined ? '350': ''"
     >
         <template
-                v-if="$store.state.showAppToolbarImage"
+                v-if="image !== undefined"
                 v-slot:img="{ props }"
         >
             <v-img
@@ -30,7 +31,7 @@
             <v-icon>mdi-menu</v-icon>
         </v-btn>
         <v-toolbar-title
-                v-if="tabletAndDown() || $store.state.showAppToolbarImage"
+                v-if="tabletAndDown() || image !== undefined"
                 class="pl-1 pr-3"
         >
             <h3>{{ title }}</h3>
@@ -51,7 +52,8 @@
                 :color="$route.path === element.path ? 'primary' : ''"
                 text tile
                 large
-                @click="$router.push(element.path)"
+                nuxt
+                :to="element.path"
         >
             <v-icon class="mr-1">
                 {{ element.icon }}
@@ -70,6 +72,7 @@
         name: "AppToolbar",
         components: {},
         mixins: [ui],
+        props: ["title", "image"],
         data() {
             return {
             }
@@ -81,13 +84,11 @@
                 isLeftNavDrawer: "isLeftNavDrawer",
                 isDark: "isDark",
                 appToolbarElements: "getNavLinks",
-                appToolbarImage: "getAppToolbarImage",
             }),
             showNavigationDrawerIcon() {
-                return this.$store.state.showAppNavigationDrawer && this.tabletAndDown();
+                return this.tabletAndDown();
             },
         },
-        props: ["title"],
         methods: {
             toggleLeftNavBar(value) {
                 this.$store.dispatch("AppState/setLeftNavDrawer", value);
@@ -98,19 +99,11 @@
             },
             setToolbarColor() {
                 let color = "toolbars";
-                if (this.$store.state.showContentHeader) {
-                    color = "transparent";
-                } else if ( this.$store.state.showAppToolbarImage) {
+                if (this.image) {
                     color = '#0055DD';
                 }
                 return color;
             },
-            getAppToolbarImage() {
-                if (this.appToolbarImage) {
-                    return require('@/assets/img/blog/' + this.appToolbarImage);
-                }
-                return 'https://picsum.photos/1920/1080?random';
-            }
         },
     };
 </script>

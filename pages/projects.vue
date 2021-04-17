@@ -144,25 +144,16 @@
     import {mapGetters} from "vuex";
     import Project from "@/components/Project";
     import ui from "../mixins/ui";
-    import createSeoMeta from '../utils/seo'
-
+    import createSeoMeta from '../utils/seo';
 
     export default {
         name: "Projects",
-        layout: 'AppStructure',
+        layout: 'page',
         head() {
             return createSeoMeta('Github Projects',
                 'A complete collection of my Github projects.',
                 this.$route.path,
                 'https://unsplash.com/photos/842ofHC6MaI');
-        },
-        meta: {
-            appToolbarTitle: 'Projects',
-            showAppToolbar: true,
-            showAppToolbarImage: false,
-            showAppFooter: true,
-            showAppNavigationDrawer: true,
-            showContentHeader: false,
         },
         components: {Project},
         props: {},

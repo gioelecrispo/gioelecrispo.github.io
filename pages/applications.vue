@@ -48,16 +48,8 @@
                 require('@/assets/img/seo/applications.jpg'));
         },
         name: "Applications",
-        layout: 'AppStructure',
+        layout: 'page',
 
-        meta: {
-            appToolbarTitle: 'Applications',
-            showAppToolbar: true,
-            showAppToolbarImage: false,
-            showAppFooter: true,
-            showAppNavigationDrawer: true,
-            showContentHeader: false,
-        },
         components: {Application},
         mixins: [ui],
         props: {},

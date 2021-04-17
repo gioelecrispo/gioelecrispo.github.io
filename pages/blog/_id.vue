@@ -21,7 +21,7 @@
 </template>
 
 <script>
-    import createSeoMeta from '../../utils/seo'
+    import createSeoMeta from '../../utils/seo';
 
     export default {
         head() {
@@ -32,17 +32,9 @@
                 require('@/assets/img/blog/' + this.article.img));
         },
         name: 'ArticleDetails',
-        layout: 'AppStructure',
+        layout: 'post',
         components: {},
         props: ['articleId'],
-        meta: {
-            appToolbarTitle: "Post",
-            showAppToolbar: true,
-            showAppFooter: true,
-            showAppToolbarImage: true,
-            showAppNavigationDrawer: true,
-            showContentHeader: false
-        },
         async asyncData({ store, $content, params }) {
             // fetch our article here
             const article = await $content('blog', params.id).fetch();

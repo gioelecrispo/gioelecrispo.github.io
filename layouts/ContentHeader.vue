@@ -7,9 +7,10 @@
                     <UserIntro></UserIntro>
                 </v-col>
                 <v-col cols="auto">
-                    <v-row v-for="(navLink, idx) in visibleNavLinks"
-                           :key=idx class="pa-4" :class="getAnimationClass(idx)">
-                        <v-btn dark block text @click="$router.push(navLink.path)">
+                    <v-row v-for="(navLink, idx) in visibleNavLinks" class="pa-4"
+                           :key=idx :class="getAnimationClass(idx)">
+                        <v-btn dark block text nuxt
+                               :to="navLink.path">
                             {{ navLink.title }}
                         </v-btn>
                     </v-row>

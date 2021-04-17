@@ -20,12 +20,12 @@ export default async () => {
         },
 
         // This option lets you customize the loading component that Nuxt.js uses by default.
-        loading: { },
+        loading: {},
 
         // ** ROUTER **
         router: {
             base: '/',
-            middleware: ['routeMetaParser', 'dataFetcher']
+            middleware: ['dataFetcher']
         },
 
         // ** HEADER and SEO **

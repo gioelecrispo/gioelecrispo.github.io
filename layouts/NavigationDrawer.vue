@@ -37,7 +37,9 @@
                                     v-for="element in appNavDrawElements"
                                     :key="element.title"
                                     class="text-center"
-                                    @click="navigate(element.path)"
+                                    nuxt
+                                    :to="element.path"
+
                             >
                                 <v-row>
                                     <v-col cols="12">
@@ -84,11 +86,8 @@
             closeLeftNavBar() {
                 this.$store.dispatch("AppState/setLeftNavDrawer", false);
             },
-            navigate(path) {
-                this.$router.push(path);
-                this.closeLeftNavBar();
-            }
         },
+
     };
 </script>
 
