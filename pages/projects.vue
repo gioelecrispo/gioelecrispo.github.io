@@ -161,6 +161,9 @@
         data() {
             return {};
         },
+        created() {
+            this.$store.dispatch("AppState/setAppToolbarTitle", "Projects");
+        },
         computed: {
             ...mapGetters("DataState", {
                 githubUserInfo: "getGithubUserInfo",

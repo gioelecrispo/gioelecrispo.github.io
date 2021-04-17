@@ -2,13 +2,6 @@ export const state = () => ({
     // Initial state
     appToolbarTitle: '',
     appToolbarImage: undefined, // the app toolbar image (used for articles)
-    showAppToolbar: false,
-    showAppToolbarImage: false,
-    showAppNavigationDrawer: false,
-    showAppFooter: false,
-    showContentToolbar: false,
-    showContentHeader: false,
-    showContentFooter: false,
     leftNavDrawer: false, // Left Navigation Drawer is opened (true) or not (false)
     isDark: false, // if the dark theme has to be used
     navLinks: [ // Application navigation drawer elements
@@ -28,6 +21,9 @@ export const getters = {
     isDark: (state) => {
         return state.isDark
     },
+    getAppToolbarTitle: (state) => {
+        return state.appToolbarTitle
+    },
     getAppToolbarImage: (state) => {
         return state.appToolbarImage
     },
@@ -42,6 +38,9 @@ export const actions = {
     },
     setIsDark({ commit }, isDark) {
         commit('setIsDark', isDark)
+    },
+    setAppToolbarTitle({ commit }, appToolbarTitle) {
+        commit('setAppToolbarTitle', appToolbarTitle)
     },
     setAppToolbarImage({ commit }, appToolbarImage) {
         commit('setAppToolbarImage', appToolbarImage)
@@ -58,6 +57,9 @@ export const mutations = {
     setIsDark(state, isDark) {
         state.isDark = isDark
         // console.log('AppState -> setIsDark: ' + state.isDark);
+    },
+    setAppToolbarTitle(state, appToolbarTitle) {
+        state.appToolbarTitle = appToolbarTitle
     },
     setAppToolbarImage(state, appToolbarImage) {
         state.appToolbarImage = appToolbarImage

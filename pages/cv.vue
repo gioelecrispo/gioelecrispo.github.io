@@ -187,6 +187,9 @@
                 }
             };
         },
+        created() {
+            this.$store.dispatch("AppState/setAppToolbarTitle", "Curriculum Vitae");
+        },
         computed: {
             ...mapGetters("DataState", {
                 certifications: "getCertifications",

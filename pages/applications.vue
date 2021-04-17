@@ -49,7 +49,6 @@
         },
         name: "Applications",
         layout: 'page',
-
         components: {Application},
         mixins: [ui],
         props: {},
@@ -58,6 +57,9 @@
                 applicationTypes: ["All", "Artificial Intelligence", "Other"],
                 tab: "All",
             };
+        },
+        created() {
+            this.$store.dispatch("AppState/setAppToolbarTitle", "Applications");
         },
         computed: {
             ...mapGetters("DataState", {

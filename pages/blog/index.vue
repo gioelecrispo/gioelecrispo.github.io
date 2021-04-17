@@ -106,6 +106,7 @@
             }),
         },
         created() {
+            this.$store.dispatch("AppState/setAppToolbarTitle", "Blog");
             this.filters.topics = this.allBlogTopics;
         },
         methods: {

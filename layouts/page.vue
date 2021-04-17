@@ -10,7 +10,7 @@
         <!-- APP: TOP TOOLBAR -->
         <AppToolbar
             id="app-toolbar"
-            title="Post"
+            :title="appToolbarTitle"
         />
 
         <!-- APP: CONTENT -->
@@ -30,6 +30,7 @@
     import ContentHeader from './ContentHeader'
     import ui from '../mixins/ui'
     import postRouteNavigation from '../mixins/postRouteNavigation';
+    import { mapGetters } from "vuex";
 
     export default {
         name: 'AppStructure',
@@ -43,7 +44,11 @@
             ContentHeader
         },
         props: {},
-        computed: {},
+        computed: {
+            ...mapGetters("AppState", {
+                appToolbarTitle: "getAppToolbarTitle",
+            }),
+        },
         data() {
             return {}
         },
