@@ -1,21 +1,17 @@
 <template>
     <v-app id="app">
         <!-- APP: LEFT NAVIGATION DRAWER -->
-        <client-only>
         <NavigationDrawer
                 v-if="tabletAndDown()"
                 :right="false"
         />
-        </client-only>
 
         <!-- APP: TOP TOOLBAR -->
-        <client-only>
         <AppToolbar
                 id="app-toolbar"
                 title="Post"
                 :image="require('@/assets/img/blog/' + appToolbarImage)"
         />
-        </client-only>
         <!-- APP: CONTENT -->
         <v-main>
                 <!-- <v-img style="margin-top: -64px;" height="350px"

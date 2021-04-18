@@ -6,7 +6,6 @@
             :right="false"
         />
 
-
         <!-- APP: TOP TOOLBAR -->
         <AppToolbar
             id="app-toolbar"

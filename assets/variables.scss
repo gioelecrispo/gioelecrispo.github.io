@@ -2,7 +2,7 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
-/*@import url('https://fonts.googleapis.com/css? family=Oxygen:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css? family=Oxygen:300,400,700&display=swap');
 @import url('https://fonts.googleapis.com/css? family=Comfortaa&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
@@ -15,7 +15,7 @@ $title-font: 'Comfortaa';
     .title { // To pin point specific classes of some components
         font-family: $title-font, sans-serif !important;
     }
-}*/
+}
 
 .row {
     margin: 0 -12px!important;
