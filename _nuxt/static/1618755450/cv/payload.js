@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/cv", {data:[{}],fetch:{},mutations:[["AppState\u002FsetAppToolbarTitle","Curriculum Vitae"]]});
