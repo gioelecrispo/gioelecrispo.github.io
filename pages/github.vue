@@ -1,5 +1,7 @@
 <template>
     <v-container fluid>
+
+
         <v-row justify="center" class="scale-in-center">
             <v-card
                 class="mx-auto"
@@ -16,10 +18,9 @@
                                     class="mb-2 pl-3"
                                 >
                                     <v-icon
-                                        small
                                         class="mr-3"
                                     >
-                                        mdi-github-circle
+                                        mdi-github
                                     </v-icon>
                                     <span class="overline">Github</span>
                                 </v-row>
@@ -183,8 +184,8 @@
 </template>
 
 <script>
-    import { mapGetters } from 'vuex'
-    import GithubProject from '@/components/GithubProject'
+    import { mapGetters } from 'vuex';
+    import GithubProject from '@/components/GithubProject';
     import ui from '../mixins/ui';
     import createSeoMeta from '../utils/seo';
 
@@ -211,7 +212,7 @@
         computed: {
             ...mapGetters('DataState', {
                 githubUserInfo: 'getGithubUserInfo',
-                githubProjects: 'getGithubProjects'
+                githubProjects: 'getGithubProjects',
             })
         },
         methods: {}

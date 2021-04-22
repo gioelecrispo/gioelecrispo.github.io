@@ -336,7 +336,7 @@ export const state = () => ({
             type: 'Artificial Intelligence',
             color: 'blue',
             area: 'Computer Vision & Pattern Recognition',
-            group: '1 person',
+            group: 'Only me',
             technologies: 'Matlab, Python, OpenCV',
             date: 'February 2018',
             resources: [
@@ -397,13 +397,12 @@ export const state = () => ({
                 { img: require('@/assets/img/applications/gesture-system.png') }
             ]
         }
-
-    ]
+    ],
 })
 
 
 export const getters = {
-    getGithubUserInfo: async (state) => {
+    getGithubUserInfo: (state) => {
         return state.githubUserInfo
     },
     getGithubProjects: (state) => {
