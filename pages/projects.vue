@@ -164,20 +164,20 @@
                 this.$route.path,
                 'https://unsplash.com/photos/842ofHC6MaI');
         },
-        async fetch () {
+       /* async fetch () {
             console.log("this.$store", this.$store)
             this.githubUserInfo = this.$store.state.DataState.githubUserInfo;
             this.githubProjects = this.$store.state.DataState.githubProjects;
-        },
+        },*/
         created() {
             this.$store.dispatch("AppState/setAppToolbarTitle", "Projects");
         },
-        /*computed: {
+        computed: {
             ...mapGetters("DataState", {
                 githubUserInfo: "getGithubUserInfo",
                 githubProjects: "getGithubProjects"
             }),
-        },*/
+        },
         methods: {}
     };
 </script>

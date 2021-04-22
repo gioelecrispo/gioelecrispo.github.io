@@ -1,6 +1,7 @@
 export default async ({ store, $axios, $content }) => {
     let promises = [];
-    let dataState = store.state["DataState"]
+    console.log("MIDDLEWARE fetching");
+    let dataState = store.state["DataState"];
     if (!dataState.githubUserInfo) {
         console.log("FETCHING github userInfo");
         promises.push($axios({

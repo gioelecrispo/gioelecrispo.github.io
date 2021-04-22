@@ -38,19 +38,7 @@
             </v-col>
         </v-row>
         <v-row class="pb-12">
-            <v-col  class="pa-2"
-                    cols="12"
-                    sm="6"
-                    md="4"
-                    v-if="!blogArticles || blogArticles.length === 0">
-                <v-skeleton-loader
-                    class="mb-6"
-                    boilerplate="true"
-                    elevation="2"
-                    type="card-avatar, article"
-                ></v-skeleton-loader>
-            </v-col>
-            <v-col v-else
+            <v-col
                     v-for="article in blogArticles"
                     :key="article.slug"
                     class="pa-2"

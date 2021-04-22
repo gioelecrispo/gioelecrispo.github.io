@@ -406,9 +406,11 @@ export const state = () => ({
 
 export const getters = {
     getGithubUserInfo: (state) => {
+        console.log("GETTING githubUserInfo");
         return state.githubUserInfo
     },
     getGithubProjects: (state) => {
+        console.log("GETTING githubProjects");
         return state.githubProjects
     },
     getApplications: (state) => {
