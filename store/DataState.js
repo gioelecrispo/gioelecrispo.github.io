@@ -406,6 +406,7 @@ export const getters = {
         return state.githubUserInfo
     },
     getGithubProjects: (state) => {
+        console.log("STATE", state.githubProjects);
         return state.githubProjects
     },
     getProjects: (state) => {
