@@ -20,13 +20,13 @@ jobs:
               with:
                   node-version: ${{ matrix.node }}
             - name: Install dependencies
-              run: npm i
+              run: yarn
 
             - name: Explicit install sass dependencies
-              run: npm install --save-dev --save-exact sass@1.32.8
+              run: yarn add -D -E sass@1.32.8
 
             - name: Generate
-              run: npm run generate
+              run: yarn generate
 
             - name: Deploy
               uses: peaceiris/actions-gh-pages@v3
