@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/github", (function(a){return {data:[{}],fetch:{"Projects:0":{githubUserInfo:a,githubProjects:a}},mutations:[["AppState\u002FsetAppToolbarTitle","Github"]]}}(void 0)));
