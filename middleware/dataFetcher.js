@@ -2,6 +2,7 @@ export default async ({ store, $axios, $content }) => {
     let promises = [];
     let dataState = store.state["DataState"]
     if (!dataState.githubUserInfo) {
+        console.log("FETCHING github userInfo");
         promises.push($axios({
             url: "https://api.github.com/users/gioelecrispo",
             method: "get"
@@ -15,6 +16,7 @@ export default async ({ store, $axios, $content }) => {
         );
     }
     if (!dataState.githubProjects) {
+        console.log("FETCHING github projects");
         promises.push($axios({
             url: "https://api.github.com/users/gioelecrispo/repos",
             method: "get"

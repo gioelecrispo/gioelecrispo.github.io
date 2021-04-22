@@ -40,6 +40,7 @@
         <v-row align="center" justify="end">
         <v-btn
                 icon
+                :color="isDark ? '': 'black'"
                 @click="setTheme()"
         >
             <v-icon>{{ isDark ? "mdi-white-balance-sunny" : "far fa-moon" }}</v-icon>

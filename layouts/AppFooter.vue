@@ -82,7 +82,7 @@
                                    target="_blank"
                                    icon
                             >
-                                <v-icon size="24px">
+                                <v-icon size="26px">
                                     {{ socialMedia.icon }}
                                 </v-icon>
                             </v-btn>
@@ -158,22 +158,22 @@
                 socialMedias: [
                     {
                         name: "Facebook",
-                        icon: "fab fa-facebook",
+                        icon: "mdi-facebook",
                         href: "https://www.facebook.com/gioelecrispo",
                     },
                     {
                         name: "LinkedIn",
-                        icon: "fab fa-linkedin",
+                        icon: "mdi-linkedin",
                         href: "https://www.linkedin.com/in/gioele-crispo/",
                     },
                     {
                         name: "Instagram",
-                        icon: "fab fa-instagram",
+                        icon: "mdi-instagram",
                         href: "https://www.instagram.com/gioelecrispo",
                     },
                     {
                         name: "YouTube",
-                        icon: "fab fa-youtube",
+                        icon: "mdi-youtube",
                         href: "https://www.youtube.com/channel/UCX38YLmygw3cfwljiNlBBQw",
                     }
                 ]
