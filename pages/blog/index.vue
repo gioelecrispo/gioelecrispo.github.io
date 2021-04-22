@@ -37,8 +37,8 @@
                 </v-autocomplete>
             </v-col>
         </v-row>
-        <v-row class="pb-12">
-            <v-col
+        <v-row class="pb-12" >
+            <v-col style="align-items: center"
                     v-for="article in blogArticles"
                     :key="article.slug"
                     class="pa-2"

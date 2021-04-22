@@ -2,7 +2,7 @@
     <v-container fluid>
         <v-row
                 justify="center"
-                class="fade-in-fwd "
+                class="fade-in-fwd"
                 align="center"
                 no-gutters
         >

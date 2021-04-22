@@ -188,17 +188,23 @@
     import GithubProject from '@/components/GithubProject';
     import ui from '../mixins/ui';
     import createSeoMeta from '../utils/seo';
+    import { getGithubUserInfo, getGithubProjects} from "../utils/api";
 
     export default {
         name: 'Projects',
         layout: 'page',
         components: { GithubProject },
-        middleware: ['githubDataFetcher'],
         props: {},
         mixins: [ui],
         data() {
             return {
+                githubUserInfo: undefined,
+                githubProjects: undefined,
             }
+        },
+        async fetch () {
+            getGithubUserInfo(this.$axios).then(succ => this.githubUserInfo = succ);
+            getGithubProjects(this.$axios).then(succ => this.githubProjects = succ);
         },
         head() {
             return createSeoMeta('Github Projects',
@@ -208,13 +214,14 @@
         },
         created() {
             this.$store.dispatch('AppState/setAppToolbarTitle', 'Github');
+            this.$fetch();
         },
-        computed: {
+        /*computed: {
             ...mapGetters('DataState', {
                 githubUserInfo: 'getGithubUserInfo',
                 githubProjects: 'getGithubProjects',
             })
-        },
+        },*/
         methods: {}
     }
 </script>

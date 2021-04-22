@@ -1,7 +1,6 @@
 <template>
     <v-hover>
         <template v-slot:default="{ hover }">
-
             <v-card
                 class="flip-in-ver-right"
                 :max-width="hover ? 360 : 350"

@@ -183,14 +183,14 @@
         </v-row>
         <v-row class="py-4">
             <v-col
-                    v-for="n in 5"
-                    :key="n"
+                    v-for="project in visibleGithubProjects"
+                    :key="project.id"
                     :class="mobile() ? 'pa-0 pb-2' : 'pa-0 pr-3 pb-2'"
                     cols="12"
                     sm="6"
                     md="4"
             >
-                <GithubProject :project="githubProjects && githubProjects.length >= n ? githubProjects[n] : undefined"/>
+                <GithubProject :project="project"/>
             </v-col>
             <v-col :class="mobile() ? 'pa-0 pb-2' : 'pa-0 pr-3 pb-2'"
                    cols="12"
@@ -252,12 +252,13 @@
     import PageNavigator from "@/components/PageNavigator";
     import CVBtnDownload from "@/components/CVBtnDownload";
     import createSeoMeta from '../utils/seo';
+    import { getGithubProjects } from "../utils/api";
 
     export default {
         name: "Home",
         layout: 'home',
         mixins: [ui],
-        middleware: ['githubDataFetcher', 'blogDataFetcher'],
+        middleware: ['blogDataFetcher'],
         components: {
             CVBtnDownload,
             PageNavigator,
@@ -273,6 +274,7 @@
         props: {},
         data() {
             return {
+                githubProjects: undefined,
                 options: {
                     duration: 700,
                     offset: 0,
@@ -280,6 +282,13 @@
                 },
                 selector: "#footer",
             };
+        },
+        async fetch() {
+            getGithubProjects(this.$axios).then(succ => this.githubProjects = succ);
+            console.log("INDEX - this.githubProjects", this.githubProjects);
+        },
+        created() {
+            this.$fetch();
         },
         head() {
             return createSeoMeta('Home',
@@ -293,7 +302,7 @@
             }),
             ...mapGetters("DataState", {
                 articles: "getBlogArticles",
-                githubProjects: "getGithubProjects",
+                //githubProjects: "getGithubProjects",
                 projects: "getProjects",
                 skills: "getSkills",
                 experiences: "getExperiences",
@@ -321,8 +330,10 @@
                 return this.publications;
             },
             visibleGithubProjects() {
-                if (this.githubProjects)
+                if (this.githubProjects) {
+                    console.log(this.githubProjects.filter(gp => gp.name === "aas"));
                     return this.githubProjects.slice(0, 5);
+                }
                 return this.githubProjects;
             },
             visibleProjects() {
