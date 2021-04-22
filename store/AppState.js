@@ -7,8 +7,8 @@ export const state = () => ({
     navLinks: [ // Application navigation drawer elements
         { id: 'home', title: 'Home', icon: 'mdi-home', path: '/' },
         { id: 'cv', title: 'Curriculum Vitae', icon: 'mdi-timeline-text', path: '/cv' },
-        { id: 'applications', title: 'Applications', icon: 'mdi-briefcase-outline', path: '/applications' },
-        { id: 'projects', title: 'Projects', icon: 'mdi-github', path: '/projects' },
+        { id: 'projects', title: 'Projects', icon: 'mdi-briefcase-outline', path: '/projects' },
+        { id: 'github', title: 'Github', icon: 'mdi-github', path: '/github' },
         { id: 'blog', title: 'Blog', icon: 'mdi-file-document-outline', path: '/blog' }
     ]
 })

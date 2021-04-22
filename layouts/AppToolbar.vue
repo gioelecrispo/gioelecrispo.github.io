@@ -1,9 +1,9 @@
 <template>
     <v-app-bar
             app
-            :elevate-on-scroll="true"
-            :collapse="false"
+            elevate-on-scroll
             :short="false"
+            :dense="false"
             color="white"
             :color="setToolbarColor()"
             :dark="image !== undefined"
@@ -40,7 +40,6 @@
         <v-row align="center" justify="end">
         <v-btn
                 icon
-                :color="isDark ? '': 'black'"
                 @click="setTheme()"
         >
             <v-icon>{{ isDark ? "mdi-white-balance-sunny" : "far fa-moon" }}</v-icon>

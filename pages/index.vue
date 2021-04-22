@@ -144,22 +144,22 @@
         </v-row>
 
         <v-row class="mt-10 pt-12 pb-3" justify="center">
-            <h1>Applications</h1>
+            <h1>Projects</h1>
         </v-row>
         <v-row>
             I have built many systems, mainly focused on artificial intelligence and machine learning.
         </v-row>
         <v-row class="py-3 px-0">
             <v-col
-                    v-for="application in visibleApplications"
-                    :key="application.id"
+                    v-for="n in 5"
+                    :key="n"
                     class="pa-0"
                     cols="12"
                     sm="6"
                     md="4"
             >
-                <Application
-                        :application="application"
+                <Project
+                        :project="projects[n]"
                 />
             </v-col>
             <v-col :class="mobile() ? 'pb-2 px-0' : 'pa-0'"
@@ -167,13 +167,13 @@
                    sm="6"
                    md="4">
                 <v-card :height="mobile() ? '100px' : '100%'" class="pa-0" elevation="0" color="transparent">
-                    <PageNavigator text="Discover all" icon="mdi-briefcase" path="/applications"></PageNavigator>
+                    <PageNavigator text="Discover all" icon="mdi-briefcase" path="/projects"></PageNavigator>
                 </v-card>
             </v-col>
         </v-row>
 
         <v-row class="mt-10 pt-12 pb-3" justify="center">
-            <h1>Projects</h1>
+            <h1>Github</h1>
         </v-row>
         <v-row>
             I use Github a lot to save my efforts, make them available for me and others. I like a lot facing with
@@ -183,27 +183,27 @@
         </v-row>
         <v-row class="py-4">
             <v-col
-                    v-for="project in visibleProjects"
-                    :key="project.id"
+                    v-for="n in 5"
+                    :key="n"
                     :class="mobile() ? 'pa-0 pb-2' : 'pa-0 pr-3 pb-2'"
                     cols="12"
                     sm="6"
                     md="4"
             >
-                <Project :project="project"/>
+                <GithubProject :project="githubProjects && githubProjects.length >= n ? githubProjects[n] : undefined"/>
             </v-col>
             <v-col :class="mobile() ? 'pa-0 pb-2' : 'pa-0 pr-3 pb-2'"
                    cols="12"
                    sm="6"
                    md="4">
                 <v-card :height="mobile() ? '100px' : '100%'" class='pa-0' elevation="0" color="transparent">
-                    <PageNavigator text="Explore all my projects" icon="mdi-github-circle" path="/projects"></PageNavigator>
+                    <PageNavigator text="Explore all my projects" icon="mdi-github" path="/github"></PageNavigator>
                 </v-card>
             </v-col>
         </v-row>
 
         <v-row class="mt-10 pt-12 pb-3" justify="center">
-            <h1 class="decorated-title">Latest Post</h1>
+            <h1 class="decorated-title">Latest Posts</h1>
         </v-row>
         <v-row>
             Since childhood, I've always been very curious and eager to perfect my things.
@@ -243,26 +243,27 @@
 
     import UserIntro from "@/components/UserIntro";
     import Article from "@/components/Article";
+    import GithubProject from "@/components/GithubProject";
     import Project from "@/components/Project";
-    import Application from "@/components/Application";
     import Experience from "@/components/Experience";
     import Skill from "@/components/Skill";
     import Certification from "@/components/Certification";
     import Publication from "@/components/Publication";
     import PageNavigator from "@/components/PageNavigator";
     import CVBtnDownload from "@/components/CVBtnDownload";
-    import createSeoMeta from '../utils/seo'
+    import createSeoMeta from '../utils/seo';
 
     export default {
         name: "Home",
         layout: 'home',
         mixins: [ui],
+        middleware: ['githubDataFetcher', 'blogDataFetcher'],
         components: {
             CVBtnDownload,
             PageNavigator,
             Experience,
+            GithubProject,
             Project,
-            Application,
             UserIntro,
             Article,
             Certification,
@@ -292,8 +293,8 @@
             }),
             ...mapGetters("DataState", {
                 articles: "getBlogArticles",
-                projects: "getGithubProjects",
-                applications: "getApplications",
+                githubProjects: "getGithubProjects",
+                projects: "getProjects",
                 skills: "getSkills",
                 experiences: "getExperiences",
                 certifications: "getCertifications",
@@ -319,15 +320,15 @@
                     return this.publications.slice(0, 2);
                 return this.publications;
             },
+            visibleGithubProjects() {
+                if (this.githubProjects)
+                    return this.githubProjects.slice(0, 5);
+                return this.githubProjects;
+            },
             visibleProjects() {
                 if (this.projects)
                     return this.projects.slice(0, 5);
-                return this.projects;
-            },
-            visibleApplications() {
-                if (this.applications)
-                    return this.applications.slice(0, 5);
-                return this.applications;
+                return this.project;
             },
             visibleArticles() {
                 if (this.articles)

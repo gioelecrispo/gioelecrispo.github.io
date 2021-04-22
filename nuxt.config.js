@@ -25,7 +25,7 @@ export default async () => {
         // ** ROUTER **
         router: {
             base: '/',
-            middleware: ['dataFetcher']
+            middleware: []
         },
 
         // ** HEADER and SEO **

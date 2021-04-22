@@ -1,136 +1,28 @@
 <template>
     <v-container fluid>
-        <v-row justify="center" class="scale-in-center">
-            <v-card
-                    v-if="githubUserInfo"
-                    class="mx-auto"
-                    max-width="500"
-                    outlined
-                    shaped
-            >
-                <div class="d-flex flex-no-wrap justify-space-between">
-                    <v-list color="transparent">
-                        <v-list-item three-line>
-                            <v-list-item-content>
-                                <v-row
-                                        align="center"
-                                        class="mb-2 pl-3"
-                                >
-                                    <v-icon
-                                            small
-                                            class="mr-3"
-                                    >
-                                        mdi-github-circle
-                                    </v-icon>
-                                    <span class="overline">Github</span>
-                                </v-row>
-                                <h2 class="mb-1">
-                                    {{ githubUserInfo.login }}
-                                </h2>
-                                <v-list-item-subtitle>
-                                    <v-container class="py-1">
-                                        <v-row align="center">
-                                            <span>{{ githubUserInfo.location }}</span>
-                                            <span v-if="!mobile()" class="mx-2">|</span>
-                                            <span class="overline mt-1">
-                                                {{ githubUserInfo.company }}
-                                            </span>
-                                        </v-row>
-                                    </v-container>
-
-
-                                </v-list-item-subtitle>
-                            </v-list-item-content>
-                        </v-list-item>
-                        <v-list-item three-line>
-                            <v-list-item-content>
-                                <v-list-item-subtitle class="py-0">
-                                    <v-row
-                                            align="center"
-                                            class="pl-3"
-                                    >
-                                        <v-icon
-                                                small
-                                                class="mr-2"
-                                        >
-                                            mdi-briefcase
-                                        </v-icon>
-                                        Projects: {{ githubUserInfo.public_repos }}
-                                    </v-row>
-                                </v-list-item-subtitle>
-                                <v-list-item-subtitle class="py-0">
-                                    <v-row
-                                            align="center"
-                                            class="pl-3"
-                                    >
-                                        <v-icon
-                                                small
-                                                class="mr-2"
-                                        >
-                                            mdi-account-tie
-                                        </v-icon>
-                                        Followers: {{ githubUserInfo.followers }}
-                                    </v-row>
-                                </v-list-item-subtitle>
-                                <v-list-item-subtitle class="py-0">
-                                    <v-row
-                                            align="center"
-                                            class="pl-3"
-                                    >
-                                        <v-icon
-                                                small
-                                                class="mr-2"
-                                        >
-                                            mdi-account-tie
-                                        </v-icon>
-                                        Following: {{ githubUserInfo.following }}
-                                    </v-row>
-                                </v-list-item-subtitle>
-                                <v-list-item-subtitle class="py-0">
-                                    <v-row
-                                            align="center"
-                                            class="pl-3"
-                                    >
-                                        <v-icon
-                                                small
-                                                class="mr-2"
-                                        >
-                                            mdi-card-text-outline
-                                        </v-icon>
-                                        {{ githubUserInfo.bio }}
-                                    </v-row>
-                                </v-list-item-subtitle>
-                            </v-list-item-content>
-                        </v-list-item>
-                    </v-list>
-
-                    <v-row
-                            align="center"
-                            class="mx-3"
-                            color="transparent"
-                    >
-                        <v-avatar
-                                class="ma-3"
-                                size="125"
-                                tile
-                        >
-                            <v-img :src="require('@/assets/img/me/me.jpg')"/>
-                        </v-avatar>
-                    </v-row>
-                </div>
-            </v-card>
+        <v-row justify="center">
+            <v-btn v-for="projectType in projectTypes"
+                   :key="projectType"
+                   class="mx-1"
+                   :class="tab === projectType ? 'active-button' : ''"
+                   :color="tab === projectType ? 'primary' : ''"
+                   tile text
+                   @click="tab = projectType">
+                {{projectType}}
+            </v-btn>
         </v-row>
         <v-row>
-            <v-col cols="12">
+            <v-col cols="12" class="pa-0 mt-4">
                 <v-row
                         align="center"
                 >
                     <v-col
-                            v-for="project in githubProjects"
+                            v-for="project in selectedProjects"
                             :key="project.id"
+                            class="pa-0"
                             cols="12"
                             sm="6"
-                            md="6"
+                            md="4"
                     >
                         <Project :project="project"/>
                     </v-col>
@@ -146,38 +38,44 @@
     import ui from "../mixins/ui";
     import createSeoMeta from '../utils/seo';
 
+    const axios = require("axios");
+
     export default {
-        name: "Projects",
+        head() {
+            return createSeoMeta('Projects',
+                'Some of my projects and applications, mainly focused on Machine Learning.',
+                this.$route.path,
+                require('@/assets/img/seo/projects.jpg'));
+        },
+        name: "Proejcts",
         layout: 'page',
-        components: {Project},
-        props: {},
+        components: { Project },
         mixins: [ui],
+        props: {},
         data() {
             return {
-                githubUserInfo: undefined,
-                githubProjects: undefined,
+                projectTypes: ["All", "Artificial Intelligence", "Other"],
+                tab: "All",
             };
         },
-        head() {
-            return createSeoMeta('Github Projects',
-                'A complete collection of my Github projects.',
-                this.$route.path,
-                'https://unsplash.com/photos/842ofHC6MaI');
-        },
-       /* async fetch () {
-            console.log("this.$store", this.$store)
-            this.githubUserInfo = this.$store.state.DataState.githubUserInfo;
-            this.githubProjects = this.$store.state.DataState.githubProjects;
-        },*/
         created() {
             this.$store.dispatch("AppState/setAppToolbarTitle", "Projects");
         },
         computed: {
             ...mapGetters("DataState", {
-                githubUserInfo: "getGithubUserInfo",
-                githubProjects: "getGithubProjects"
+                projects: "getProjects"
             }),
+            selectedProjects() {
+                if (this.tab !== "All") {
+                    return this.projects.filter(project => project.type.toLowerCase() === this.tab.toLowerCase());
+                }
+                return this.projects;
+            }
         },
         methods: {}
     };
 </script>
+
+<style lang="scss" scoped>
+
+</style>

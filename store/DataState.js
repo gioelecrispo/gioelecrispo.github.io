@@ -268,7 +268,7 @@ export const state = () => ({
             }
         ]
     },
-    applications: [
+    projects: [
         {
             name: 'Self Driving model car',
             description: 'Self driving model car in style Duckietown. Features a homemade lane following algorithm as well a road sign detector and classifier based on cascade detector and HOG descriptor.',
@@ -402,19 +402,15 @@ export const state = () => ({
 })
 
 
-
-
 export const getters = {
-    getGithubUserInfo: (state) => {
-        console.log("GETTING githubUserInfo");
+    getGithubUserInfo: async (state) => {
         return state.githubUserInfo
     },
     getGithubProjects: (state) => {
-        console.log("GETTING githubProjects");
         return state.githubProjects
     },
-    getApplications: (state) => {
-        return state.applications
+    getProjects: (state) => {
+        return state.projects
     },
     getCertifications: (state) => {
         return state.certifications
@@ -442,17 +438,6 @@ export const getters = {
     },
 }
 
-export const actions = {
-    setGithubUserInfo({ commit }, githubUserInfo) {
-        commit('setGithubUserInfo', githubUserInfo)
-    },
-    setGithubProjects({ commit }, githubProjects) {
-        commit('setGithubProjects', githubProjects)
-    },
-    setBlogArticles({ commit }, blogArticles) {
-        commit('setBlogArticles', blogArticles)
-    },
-}
 
 export const mutations = {
     setGithubUserInfo(state, githubUserInfo) {
@@ -463,6 +448,18 @@ export const mutations = {
     },
     setBlogArticles(state, blogArticles) {
         state.blogArticles = blogArticles;
+    },
+}
+
+export const actions = {
+    setGithubUserInfo({ commit }, githubUserInfo) {
+        commit('setGithubUserInfo',  githubUserInfo);
+    },
+    setGithubProjects({ commit }, githubProjects) {
+        commit('setGithubProjects', githubProjects);
+    },
+    setBlogArticles({ commit }, blogArticles) {
+        commit('setBlogArticles', blogArticles);
     },
 }
 

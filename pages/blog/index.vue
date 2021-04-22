@@ -67,6 +67,7 @@
         name: "ArticlesList",
         layout: 'page',
         mixins: [ui],
+        middleware: ['blogDataFetcher'],
         head() {
             return createSeoMeta('Blog',
                 'Visit my blog section to discover all my post about machine learning and similar!',

@@ -1,8 +1,6 @@
-export default async ({ store, $axios, $content }) => {
+export default async ({ store, $axios }) => {
     let promises = []
-    console.log('MIDDLEWARE fetching')
-    let dataState = store.state['DataState']
-    console.log('FETCHING github userInfo')
+    let dataState = store.state['DataState'];
     promises.push($axios({
             url: 'https://api.github.com/users/gioelecrispo',
             method: 'get'
@@ -28,14 +26,5 @@ export default async ({ store, $axios, $content }) => {
             })
     )
 
-    if (!dataState.blogArticles) {
-        $content('blog')
-            .only(['title', 'description', 'img', 'slug', 'tags', 'createdAt', 'updatedAt'])
-            .sortBy('createdAt', 'desc')
-            .fetch()
-            .then(articles => {
-                store.dispatch('DataState/setBlogArticles', articles)
-            })
-    }
-    return Promise.all(promises)
+    return Promise.all(promises);
 }
