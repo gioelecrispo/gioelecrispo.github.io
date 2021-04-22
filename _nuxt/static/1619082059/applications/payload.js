@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/applications", {data:[{}],fetch:{},mutations:[["AppState\u002FsetAppToolbarTitle","Applications"]]});
