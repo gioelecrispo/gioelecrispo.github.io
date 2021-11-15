@@ -1,5 +1,5 @@
 {
-    "name": "me2",
+    "name": "me",
     "version": "1.0.0",
     "private": true,
     "scripts": {
@@ -15,7 +15,8 @@
         "core-js": "^3.9.1",
         "nuxt": "^2.15.3",
         "nuxt-webfontloader": "^1.1.0",
-        "vue-youtube": "^1.4.0"
+        "vue-youtube": "^1.4.0",
+        "vuelidate": "^0.7.6"
     },
     "devDependencies": {
         "@aceforth/nuxt-optimized-images": "^1.4.0",
