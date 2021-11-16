@@ -8,7 +8,7 @@ export default async () => {
             HOST_BASE:
                 process.env.NODE_ENV === 'production'
                     ? 'https://gioelecrispo.github.io'
-                    : 'http://localhost:3000/'
+                    : 'http://localhost:8080/'
         },
 
         // ** BUILDING OPTIONS **

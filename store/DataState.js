@@ -13,6 +13,14 @@ export const state = () => ({
             credential: 'https://www.youracclaim.com/badges/314500b7-2107-4355-b4c7-10f1c7972a75?source=linked_in_profile'
         },
         {
+            id: 'PSM I - Scrum.org',
+            title: 'Professional Scrum Master 1',
+            date: '13 Nov 2021',
+            color: 'green darken-2',
+            icon: 'mdi-medal',
+            credential: 'https://www.credly.com/badges/2f2ae498-ee5f-45ef-9290-e1d5172e4d21/linked_in'
+        },
+        {
             id: 'B1.1 of the CEFR',
             title: 'Trinity - Grade 5',
             date: '23 Jan 2015',
@@ -406,7 +414,6 @@ export const getters = {
         return state.githubUserInfo
     },
     getGithubProjects: (state) => {
-        console.log("STATE", state.githubProjects);
         return state.githubProjects
     },
     getProjects: (state) => {
