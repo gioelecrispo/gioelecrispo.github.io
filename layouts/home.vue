@@ -1,9 +1,9 @@
 <template>
-    <v-app id="app" >
+    <v-app id="app-home">
         <!-- APP: CONTENT -->
         <v-main>
             <ContentHeader/>
-            <AppContent/>
+            <HomeContent/>
         </v-main>
         <!-- APP: FOOTER -->
         <AppFooter/>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-    import AppContent from "./AppContent";
+    import HomeContent from "./HomeContent";
     import AppFooter from "./AppFooter";
     import ContentHeader from "./ContentHeader";
     import ui from "../mixins/ui";
@@ -22,7 +22,7 @@
         mixins: [ui, postRouteNavigation],
         scrollToTop: true,
         components: {
-            AppContent, //: () => () => import("./AppContent"),
+            HomeContent, //: () => () => import("./AppContent"),
             AppFooter,
             ContentHeader,
         },

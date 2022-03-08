@@ -17,29 +17,6 @@
 
 
         <v-row class="pt-8 pb-3 slide-in-bottom" justify="center">
-            <h1>Certifications</h1>
-        </v-row>
-        <v-row class="slide-in-bottom">
-            <div v-for="certification in certifications"
-                 :key="certification.id"
-                 class="awards-container pb-2">
-                <Certification :certification="certification"></Certification>
-            </div>
-        </v-row>
-
-        <v-row class="pt-8 pb-3 slide-in-bottom" justify="center">
-            <h1>Publications</h1>
-        </v-row>
-        <v-row class="slide-in-bottom">
-            <div v-for="publication in publications"
-                 :key="publication.title"
-                 class="awards-container pb-2">
-                <Publication :publication="publication"></Publication>
-            </div>
-        </v-row>
-
-
-        <v-row class="pt-8 pb-3 slide-in-bottom" justify="center">
             <h1>Experiences</h1>
         </v-row>
         <v-row class="slide-in-bottom">
@@ -61,6 +38,28 @@
                     <Experience :experience="experience" :forceDate="false"></Experience>
                 </v-timeline-item>
             </v-timeline>
+        </v-row>
+
+        <v-row class="pt-8 pb-3 slide-in-bottom" justify="center">
+            <h1>Certifications</h1>
+        </v-row>
+        <v-row class="slide-in-bottom">
+            <div v-for="certification in certifications"
+                 :key="certification.id"
+                 class="awards-container pb-2">
+                <Certification :certification="certification"></Certification>
+            </div>
+        </v-row>
+
+        <v-row class="pt-8 pb-3 slide-in-bottom" justify="center">
+            <h1>Publications</h1>
+        </v-row>
+        <v-row class="slide-in-bottom">
+            <div v-for="publication in publications"
+                 :key="publication.title"
+                 class="awards-container pb-2">
+                <Publication :publication="publication"></Publication>
+            </div>
         </v-row>
 
 

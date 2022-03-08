@@ -1,5 +1,5 @@
 <template>
-    <v-app id="app">
+    <v-app id="app-page">
         <!-- APP: LEFT NAVIGATION DRAWER -->
         <NavigationDrawer
             v-if="tabletAndDown()"

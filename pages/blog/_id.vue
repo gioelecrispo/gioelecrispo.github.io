@@ -1,6 +1,6 @@
 <template>
     <v-container fluid>
-        <v-row justify="center">
+        <v-row justify="center" class="mt-8">
             <v-col lg="10" xl="9">
                 <v-card color="transparent" height="30" elevation="0" class="pa-0 py-2 mb-8">
                     <v-card-title class="px-0 py-0 secondary--text" v-if="article.tags">{{
@@ -16,7 +16,6 @@
                 </article>
             </v-col>
         </v-row>
-
     </v-container>
 </template>
 

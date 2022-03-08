@@ -10,7 +10,7 @@
                 no-gutters
         >
             <v-col>
-                <v-card-title class="py-2">
+                <v-card-title style="word-break: break-word;" class="py-2">
                     {{ publication.title }}
                 </v-card-title>
             </v-col>

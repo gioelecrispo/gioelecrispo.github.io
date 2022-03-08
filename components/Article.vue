@@ -3,7 +3,6 @@
         <template v-slot:default="{ hover }">
             <v-card
                 class="flip-in-ver-right"
-                :max-width="hover ? 360 : 350"
                 :height="hover ? 510 : 500"
                 :elevation="hover ? 20 : 8"
                 :class="`${hover ? 'expand' : ''}`"
@@ -31,7 +30,7 @@
                         </v-col>
                     </v-row>
                     <v-row class="px-2 py-2">
-                        <v-card-title class="px-4 py-2" v-html="article.title"></v-card-title>
+                        <v-card-title style="word-break: break-word;" class="px-4 py-2" v-html="article.title"></v-card-title>
                     </v-row>
                     <v-row class="px-2 py-2">
                         <v-card-text class="px-4 py-2" v-html="article.description"></v-card-text>

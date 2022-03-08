@@ -11,7 +11,7 @@
             :fade-img-on-scroll="image !== undefined"
             :shrink-on-scroll="image !== undefined"
             :prominent="image !== undefined"
-            :scroll-threshold="image !== undefined ? '150': ''"
+            :scroll-threshold="image !== undefined ? '350': ''"
             :height="image !== undefined ? '350': ''"
     >
         <template
@@ -100,7 +100,7 @@
             setToolbarColor() {
                 let color = "toolbars";
                 if (this.image) {
-                    color = '#0055DD';
+                    color = 'primary';// '#0055DD';
                 }
                 return color;
             },

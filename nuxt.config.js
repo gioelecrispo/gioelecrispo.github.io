@@ -45,7 +45,7 @@ export default async () => {
                 { hid: 'og:site_name', property: 'og:site_name', content: 'Gioele Crispo' }
             ],
             link: [
-                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+                { rel: 'icon', type: 'image/png', href: '/favicon.ico' }
             ]
         },
 
@@ -123,7 +123,9 @@ export default async () => {
                         info: '#2196F3',
                         success: '#4CAF50',
                         warning: '#FFC107',
-                        toolbars: '#FFFFFF'
+                        toolbars: '#FFFFFF',
+                        homeSectionPrimary: '#FFFFFF',
+                        homeSectionSecondary: '#EFEFEF'
                     },
                     dark: {
                         primary: '#2196F3',
@@ -133,7 +135,9 @@ export default async () => {
                         warning: '#ff9800',
                         info: '#3f51b5',
                         success: '#4caf50',
-                        toolbars: '#121212'
+                        toolbars: '#121212',
+                        homeSectionPrimary: '#121212',
+                        homeSectionSecondary: '#1A1A1A'
                     }
                 }
             },

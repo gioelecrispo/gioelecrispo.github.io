@@ -23,7 +23,7 @@
                                 <v-container>
                                     <v-row justify="center" align="center"
                                            class="overline title font-weight-medium ma-2">
-                                        <h1 class="text-center" style="letter-spacing: 0px; line-height: 0.9;">
+                                        <h1 class="text-center" style="letter-spacing: 0; line-height: 0.9;">
                                             {{project.name}}
                                         </h1>
                                     </v-row>
@@ -152,6 +152,10 @@
             background(color) {
                 if (color === "blue") {
                     return "background: rgba(76, 85, 210, 0.75)";
+                } else if (color === "light blue") {
+                    return "background: rgba(0, 191, 205, 0.75)";
+                } else if (color === "dark blue") {
+                    return "background: rgba(0, 0, 55, 0.75)";
                 } else if (color === "green") {
                     return "background: rgba(56, 145, 50, 0.75)";
                 } else if (color === "red") {
@@ -192,6 +196,5 @@
     .expanded {
         transition: 0.3s all ease-in-out;
         transform: scale(1.02);
-        z-index: 2;
     }
 </style>

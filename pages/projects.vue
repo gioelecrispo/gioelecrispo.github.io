@@ -47,14 +47,14 @@
                 this.$route.path,
                 require('@/assets/img/seo/projects.jpg'));
         },
-        name: "Proejcts",
+        name: "Projects",
         layout: 'page',
         components: { Project },
         mixins: [ui],
         props: {},
         data() {
             return {
-                projectTypes: ["All", "Artificial Intelligence", "Other"],
+                projectTypes: ["All", "Artificial Intelligence", "Web and Mobile", "Other"],
                 tab: "All",
             };
         },

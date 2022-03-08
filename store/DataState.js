@@ -70,16 +70,6 @@ export const state = () => ({
                 'on Frontiers in Handwriting Recognition.'
         },
         {
-            color: 'orange darken-1',
-            icon: 'mdi-briefcase-search',
-            location: 'Fisciano, Salerno (Italy)',
-            position: 'Company Internship',
-            company: 'A.I Tech',
-            date: 'Nov 2014 - Jun 2015',
-            text: 'The work was focused on the design and implementation of a gesture recognition system ' +
-                'on a Kinect sensor. I proposed a new feature extraction method for gestures.'
-        },
-        {
             color: 'red darken-2',
             icon: 'mdi-school',
             date: 'Oct 2015 - Feb 2018',
@@ -90,6 +80,16 @@ export const state = () => ({
                 'Security, Robotics, Artificial Intelligence and Artificial Vision, Sistributed ' +
                 'programming.',
             vote: '110/110 cum laude'
+        },
+        {
+            color: 'orange darken-1',
+            icon: 'mdi-briefcase-search',
+            location: 'Fisciano, Salerno (Italy)',
+            position: 'Company Internship',
+            company: 'A.I Tech',
+            date: 'Nov 2014 - Jun 2015',
+            text: 'The work was focused on the design and implementation of a gesture recognition system ' +
+                'on a Kinect sensor. I proposed a new feature extraction method for gestures.'
         },
         {
             color: 'red darken-2',
@@ -278,6 +278,40 @@ export const state = () => ({
     },
     projects: [
         {
+            name: 'Kaboo - Word Game',
+            description: 'Android Game App built with Kivy framework, written in Python and published on Play Store. ' +
+                'It is a word game based on well-known Taboo. A CI/CD Github Action has been developed to ' +
+                'improve update and release processes.',
+            type: 'Web and Mobile',
+            color: 'gray',
+            area: 'Mobile App',
+            group: '2 people',
+            technologies: 'Python, Kivy, Buildozer',
+            date: 'February 2021',
+            resources: [
+                { videoId: 'qr9I3LjdkSw' },
+                { img: require('@/assets/img/applications/kaboo.jpg') }
+            ]
+        },
+        {
+            name: 'Emotions and Faces recognition',
+            description: 'System to recognize emotions and faces from a ' +
+                'Kinect or generic camera. A CNN was built and ' +
+                'trained on the FER 2013 dataset from scratch. ' +
+                'A hyperparameters optimization phase allowed ' +
+                'to improve the accuracy by 4%.',
+            type: 'Artificial Intelligence',
+            color: 'blue',
+            area: 'Computer Vision',
+            group: '2 people',
+            technologies: 'Python, Tensorflow, OpenCV, Kinect SDK',
+            date: 'January 2021',
+            resources: [
+                { videoId: 'kOJncJAVPng' },
+                { img: require('@/assets/img/applications/emotion-cnn.jpg') }
+            ]
+        },
+        {
             name: 'Self Driving model car',
             description: 'Self driving model car in style Duckietown. Features a homemade lane following algorithm as well a road sign detector and classifier based on cascade detector and HOG descriptor.',
             type: 'Artificial Intelligence',
@@ -308,10 +342,10 @@ export const state = () => ({
             ]
         },
         {
-            name: 'Mobile App',
+            name: 'Scientific Conference App',
             description: 'Mobile hybrid app for the attendees to a conference. The app allows to browse the attendees to the conference, to view the scientific program, to enable notifications for specific talks and to gather general information about the conference.\n' +
                 'The app interfaces with a web service to update the information, but also features a local cache to allow offline browsing. The app interfaces with the Scopus database to automatically show blbliometrics about the many speakers. The project involved developing both the server web-service and the app (released on the Google Play Store and on the Apple Store). The app was developed using the hybrid technology Ionic 2.',
-            type: 'Other',
+            type: 'Web and Mobile',
             area: 'Mobile App',
             color: 'gray',
             group: '4 people',
@@ -342,7 +376,7 @@ export const state = () => ({
                 'then a global reconstruction phase was carried out to connect all the traces. A genetic algorithm was used to optimize the hyperparameters of the pattern ' +
                 'recognition system.',
             type: 'Artificial Intelligence',
-            color: 'blue',
+            color: 'dark blue',
             area: 'Computer Vision & Pattern Recognition',
             group: 'Only me',
             technologies: 'Matlab, Python, OpenCV',
@@ -364,7 +398,7 @@ export const state = () => ({
                 '- A Smartphone with FullHD camera;\n' +
                 '- A Simulated 5G connection.',
             type: 'Artificial Intelligence',
-            color: 'blue',
+            color: 'light blue',
             area: 'Computer Vision  &  IoT',
             group: '7 people',
             technologies: 'Java',
@@ -404,7 +438,8 @@ export const state = () => ({
                 { videoId: 'w_z12qTZt-U' },
                 { img: require('@/assets/img/applications/gesture-system.png') }
             ]
-        }
+        },
+
     ],
 })
 

@@ -1,7 +1,5 @@
 <template>
     <v-container fluid>
-
-
         <v-row justify="center" class="scale-in-center">
             <v-card
                 class="mx-auto"
@@ -184,11 +182,10 @@
 </template>
 
 <script>
-    import { mapGetters } from 'vuex';
     import GithubProject from '@/components/GithubProject';
     import ui from '../mixins/ui';
     import createSeoMeta from '../utils/seo';
-    import { getGithubUserInfo, getGithubProjects} from "../utils/api";
+    import { getGithubUserInfo, getGithubProjects} from '@/utils/api';
 
     export default {
         name: 'Projects',
@@ -216,12 +213,6 @@
             this.$store.dispatch('AppState/setAppToolbarTitle', 'Github');
             this.$fetch();
         },
-        /*computed: {
-            ...mapGetters('DataState', {
-                githubUserInfo: 'getGithubUserInfo',
-                githubProjects: 'getGithubProjects',
-            })
-        },*/
         methods: {}
     }
 </script>

@@ -27,13 +27,13 @@
                             <span>{{ item }}</span>
                         </v-chip>
                         <span
-                            v-if="index > 1"
+                            v-if='index===2'
                             class="grey--text caption"
                         >
                           (+{{ filters.topics.length - 2 }} others)
                         </span>
-
                     </template>
+
                 </v-autocomplete>
             </v-col>
         </v-row>
@@ -96,7 +96,7 @@
         },
         created() {
             this.$store.dispatch("AppState/setAppToolbarTitle", "Blog");
-            this.filters.topics = this.allBlogTopics;
+            this.filters.topics = Array.from(new Set(this.allBlogTopics));
         },
         methods: {
             async filterArticles(searchQuery, searchTopics) {

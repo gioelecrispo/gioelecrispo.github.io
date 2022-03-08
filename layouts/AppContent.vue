@@ -8,9 +8,6 @@
                 <Nuxt/>
             </transition>
         </v-row>
-        <v-btn @click='openSnackbar=true'>
-            open snackbar
-        </v-btn>
     </v-container>
 </template>
 
