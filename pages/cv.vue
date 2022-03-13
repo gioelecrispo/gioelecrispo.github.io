@@ -40,27 +40,35 @@
             </v-timeline>
         </v-row>
 
-        <v-row class="pt-8 pb-3 slide-in-bottom" justify="center">
-            <h1>Certifications</h1>
-        </v-row>
-        <v-row class="slide-in-bottom">
-            <div v-for="certification in certifications"
-                 :key="certification.id"
-                 class="awards-container pb-2">
-                <Certification :certification="certification"></Certification>
-            </div>
+        <v-row class="pt-8 pb-3 slide-in-bottom">
+            <v-col cols='12' md='6'>
+                <v-row justify="center">
+                    <h1>Certifications</h1>
+                </v-row>
+                <v-row class="slide-in-bottom">
+                    <div v-for="certification in certifications"
+                         :key="certification.id"
+                         class="awards-container pb-2 mx-2">
+                        <Certification :certification="certification"></Certification>
+                    </div>
+                </v-row>
+            </v-col>
+            <v-col cols='12' md='6'>
+                <v-row justify="center">
+                    <h1>Publications</h1>
+                </v-row>
+                <v-row class="slide-in-bottom">
+                    <div v-for="publication in publications"
+                         :key="publication.title"
+                         class="awards-container pb-2 mx-2">
+                        <Publication :publication="publication"></Publication>
+                    </div>
+                </v-row>
+            </v-col>
         </v-row>
 
-        <v-row class="pt-8 pb-3 slide-in-bottom" justify="center">
-            <h1>Publications</h1>
-        </v-row>
-        <v-row class="slide-in-bottom">
-            <div v-for="publication in publications"
-                 :key="publication.title"
-                 class="awards-container pb-2">
-                <Publication :publication="publication"></Publication>
-            </div>
-        </v-row>
+
+
 
 
         <v-row class="pt-8 pb-3 slide-in-bottom" justify="center">

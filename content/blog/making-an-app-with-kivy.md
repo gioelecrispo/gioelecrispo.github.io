@@ -26,7 +26,7 @@ createdAt: 2022-02-16T13:15:20.516Z
 ## Introduction
 Recently, I helped my girlfriend to make **_Kaboo_**, a word game in which multiple 
 teams challenge each other at how many words they can guess. Yes, it is very similar 
-to the well known "Taboo", but with which it has nothing to do. The peculiarity is 
+to the well known "Taboo", but it has nothing to do with it. The peculiarity is 
 that it is an Android app entirely developed in Python, through Kivy, a very 
 interesting multi-platform framework. This post tells about our experience in using 
 this framework, highlighting its strengths and weaknesses, in relation to our needs.
@@ -70,8 +70,8 @@ year), but depend on the compatibility of the framework and some tools we used.
 One of the requirements we set ourselves was that the app has to be aesthetically pleasing and 
 that it has to be useful for bringing people together and making them feel good together after the
 pandemic period. My girlfriend and I had a lot of fun on the phone trying to make each other
-guess words and we used this method to learn new languages as well. It seemed like 
-a good idea to develop this game that gave us joy and laughter and make it free in the 
+guess words and we used this method to learn new languages as well. It seemed a good idea to 
+develop this game that gave us joy and laughter and make it free in the 
 Play Store.
 
 ### Building an Android package
@@ -83,7 +83,7 @@ how it was possible to build an Android app through Kivy.
 There is a tool, called `Buildozer`, which promises builds on all mobile platforms via a handy 
 configuration file, the `buildozer.spec`. In fact, it is a wrapper over the `python-for-android` 
 and `kivy-ios` libraries, and aims to make them easier to use. Well, to our detriment, we 
-have found that things are never that simple. In fact, for publication on the Play Store, 
+have found that things are never so simple. In fact, for the publication on the Play Store, 
 from August 2021 the .aab format is required, which is not officially supported by
 `python-for-android`.
 Through online research it emerged that the functionality has been implemented only in a
@@ -108,11 +108,11 @@ of our free time.
 As a secondary requirement, we have decided to include advertising as well. It is not 
 invasive, the goal was to familiarize with the Google AdMob platform. To do this,
 we have seen that the `Kivmob` [library](https://github.com/MichaelStott/KivMob) is simple 
-and intuitive. Works as a wrapper on Android and iOS; however currently the methods are only 
+and intuitive. It works as a wrapper on Android and iOS; however currently the methods are only 
 implemented for the Android interface.
 To test the functioning of the library it was therefore necessary to be able to test on 
-Android and again I sincerely thank the one who made it possible to do it easily through 
-GitHub Actions.
+Android.
+
 
 ### Kivy benefits
 With these issues resolved, we focused on the development of the actual game. Regarding 
@@ -142,7 +142,7 @@ succeeds perfectly in its purposes. The result we got is the following:
 
 <br>
 
-However, in other respects Kivy is still a bit immature. Let's take audio as an example.
+However, in other aspects Kivy is still a bit immature. Let's take audio as an example.
 A respectable game must have a good soundtrack and the ability to mute for anyone who 
 doesn't like it 😂.
 
@@ -153,15 +153,15 @@ implement features such as muting all audio simultaneously.
 To do this, therefore, we had to implement a rudimentary SoundManager and we built a wrapper 
 over the SoundLoader class. We also noticed that loading audio files (and all resources in 
 general) blocks the main thread and causes a significant slowdown in loading performance.
-We couldn't figure out how to avoid this behavior and make the loading asynchronous or 
+We couldn't figure out how to avoid this behaviour and make the loading asynchronous or 
 purely multithreaded. There is a library for asynchronous execution, named `asynckivy`, but 
 we don't know how to integrate it with resource loading. We are not framework experts
 and are probably ignoring something. Take a look at the [GitHub code](https://github.com/stefaniavallone/kaboo), 
 and please tell us how to do it better.
 
 ### Internationalization
-Another thing we thought of doing was providing the app in Italian as well as in English, 
-to let our friends play, who like us are passionate about this game.
+Another thing we thought of doing was providing the app in English and in Italian, as well, 
+to let our friends play, who, like us, are passionate about this game.
 We have been looking for a long time how to introduce internationalization in Kivy. We 
 found that Python does not support it natively. You have to use a GNU tool called `xgettext` 
 (and its python wrapper, `pygettext`) and then follow several manual steps before you can have 
@@ -180,7 +180,7 @@ the component, with performance drops.
 The logic of the game is all in all simple and did not cause us any particular problems. We had
 to implement a shared status to be able to pass information from one screen to another in our Kivy app.
 We were surprised that Kivy does not provide state management tools or libraries, such as 
-Redux or Vuex, as is the case with modern JavaScript frameworks.
+Redux or Vuex, as in the case with modern JavaScript frameworks.
 The version we have implemented is simple and suitable only for our purposes, it is by no 
 means comparable to those provided by the JS counterpart.
 
@@ -191,7 +191,7 @@ said we have not been able to parallelize or make the uploads asynchronous.
 
 In conclusion, designing, implementing, packaging and optimizing this app took us about 2 and a half 
 months, clearly working only in our free time (about 2 hours a day).
-All in all, we have to say that it's a great result and that, Kivy is great for prototyping apps. 
+All in all, we have to say that it's a great result and Kivy is great for prototyping apps. 
 So many things remain unexplored: we have not included any features that directly use the smartphone 
 hardware such as vibration or flashlight, however, there are examples on the internet and it seems 
 easy to implement.
@@ -203,8 +203,8 @@ and cannot be comparable to a native solution.
 <br/>
 
 ## Kivy's Pros and Cons
-For what we've done and how we've done it, we can say **Kivy is a great framework**, 
-although it's still immature. In this section, we want to focus on its advantages and 
+For what we have done and how we have done it, we can say **Kivy is a great framework**, 
+although it is still immature. In this section, we want to focus on its advantages and 
 disadvantages based on what our needs were.
 We reiterate that we have developed a simple game, and the difficulties / facilities 
 we have found using this tool may not apply to other people developing different apps.
@@ -243,7 +243,7 @@ The difficulties and shortcomings we have found are the following:
 - **Not really ready to be cross-platform**. `buildozer` and `python-for-android `
   do their job properly; it is not always easy to define the process to build an `apk` or
   `aab`, but once set up, the process works correctly in almost all cases. However, the 
-  result is not always what expected: on some smartphones and tablets there are no display 
+  result is not always the one expected: on some smartphones and tablets there are no display 
   problems, while on others a white box appears at the top of the screen. It is clearly a
   problem due to resizing, in fact after a reload of the ui, the app is rendered 
   correctly (Fig. 3). However, on all devices there are some graphical glitches in the loading 
@@ -273,7 +273,7 @@ The difficulties and shortcomings we have found are the following:
 
 ## Conclusions
 Kivy is a really nice framework, with a lot of potential.
-On modern phones, tablets and PCs, use is pleasant; with the right precautions from a 
+On modern phones, tablets and PCs, its use is pleasant; with the right precautions from a 
 software point of view, there are no drops in performance and the user experience is fluid 
 and satisfying.
 

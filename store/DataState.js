@@ -8,24 +8,27 @@ export const state = () => ({
             id: 'MLS-C01',
             title: 'AWS Machine Learning Specialty',
             date: '9 Mar 2021',
-            color: 'orange darken-2',
+            color: '#F57C00',
             icon: 'mdi-medal',
-            credential: 'https://www.youracclaim.com/badges/314500b7-2107-4355-b4c7-10f1c7972a75?source=linked_in_profile'
+            credential: 'https://www.youracclaim.com/badges/314500b7-2107-4355-b4c7-10f1c7972a75?source=linked_in_profile',
+            //imageUrl: 'https://images.unsplash.com/photo-1485796826113-174aa68fd81b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
         },
         {
             id: 'PSM I - Scrum.org',
             title: 'Professional Scrum Master 1',
             date: '13 Nov 2021',
-            color: 'green darken-2',
+            color: '#388E3C',
             icon: 'mdi-medal',
-            credential: 'https://www.credly.com/badges/2f2ae498-ee5f-45ef-9290-e1d5172e4d21/linked_in'
+            credential: 'https://www.credly.com/badges/2f2ae498-ee5f-45ef-9290-e1d5172e4d21/linked_in',
+            //imageUrl: 'https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80'
         },
         {
             id: 'B1.1 of the CEFR',
             title: 'Trinity - Grade 5',
             date: '23 Jan 2015',
-            color: 'blue darken-2',
-            icon: 'mdi-web'
+            color: '#1976D2',
+            icon: 'mdi-web',
+            imageUrl: 'https://media.istockphoto.com/vectors/united-kingdom-flag-realistic-waving-union-jack-vector-id1251660737?k=20&m=1251660737&s=612x612&w=0&h=Hd3fVDhA3KUaefIawI9jcyTFL7M_YZwO6wBxTu8bVxE='
         }
     ],
     publications: [

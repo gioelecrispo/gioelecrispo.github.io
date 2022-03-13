@@ -5,7 +5,6 @@
                    cols="12"
                    md="auto"
             >
-
                         <v-avatar class='fade-in-fwd'
                             :tile="false"
                                   :size="tabletAndDown() ? '124' : '164'"
@@ -24,17 +23,12 @@
                         Gioele Crispo
                     </h1>
                 </v-row>
-                <v-row justify="center" class="pt-2">
-                    <p class="headline font-weight-thin mx-0 mt-0 mb-3 px-3 text-focus-in">
-                        Machine Learning engineer
-                    </p>
-                </v-row>
                 <v-row>
                     <v-divider/>
                 </v-row>
                 <v-row justify="center">
-                <span class="font-weight-thin pt-1 mb-3 px-3 text-focus-in">
-                    Curious, enthusiastic and highly organized </span>
+                <span class="overline pt-1 mb-3 px-3 text-focus-in">
+                    SOFTWARE ENGINEERING, ARTIFICIAL INTELLIGENCE, WEB</span>
                 </v-row>
             </v-col>
         </v-row>
