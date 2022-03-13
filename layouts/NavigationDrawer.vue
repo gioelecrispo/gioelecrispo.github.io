@@ -6,29 +6,33 @@
             app
     >
         <v-container fluid>
+            <v-row
+                justify="end"
+                class="mr-3"
+            >
+                <v-btn
+                    icon
+                    @click="closeLeftNavBar()"
+                >
+                    <v-icon>mdi-close</v-icon>
+                </v-btn>
+            </v-row>
             <v-row>
-                <v-col cols="12">
-                    <v-row
-                            justify="end"
-                            class="mr-3"
-                    >
-                        <v-btn
-                                icon
-                                @click="closeLeftNavBar()"
-                        >
-                            <v-icon>mdi-close</v-icon>
-                        </v-btn>
-                    </v-row>
-                    <v-row justify="center" class="pt-6">
-                        <v-avatar size="104">
-                            <img
-                                    :src="require('@/assets/img/me/me.jpg')"
-                                    alt="Gioele Crispo"
-                            >
-                        </v-avatar>
-                    </v-row>
+                <v-col cols="12" sm='6'>
+                    <v-container fluid fill-height>
+                        <v-row justify="center" align="center" class="pt-6">
+                            <v-avatar size="144">
+                                <img
+                                        :src="require('@/assets/img/me/me.jpg')"
+                                        alt="Gioele Crispo"
+                                >
+                            </v-avatar>
+                        </v-row>
+                    </v-container>
+                </v-col>
+                <v-col cols='12' sm='6'>
                     <v-list
-                            class="pt-0 mt-12"
+                            class="pt-6 mt-0"
                             dense
                             rounded
                     >
