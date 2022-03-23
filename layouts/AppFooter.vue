@@ -120,9 +120,11 @@
             </v-card-text>
 
             <v-divider />
-            <v-card-text class='py-6'>
-                {{ new Date().getFullYear() }} — <span class='subtitle-1'>Gioele Crispo</span>
-                <TermsAndPolicy class='ml-8'></TermsAndPolicy>
+            <v-card-text class='py-4'>
+                <v-row>
+                    <v-col class="py-1" cols='12' sm='6'>{{ new Date().getFullYear() }} — <span class='subtitle-1'>Gioele Crispo</span></v-col>
+                    <v-col class="py-1" cols='12' sm='6'><TermsAndPolicy></TermsAndPolicy></v-col>
+                </v-row>
             </v-card-text>
         </v-card>
     </v-footer>

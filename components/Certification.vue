@@ -1,6 +1,5 @@
 <template>
     <v-alert
-
             text
             class="py-2 px-4 mb-1 imageBackground" :style='style'
             width="100%"
@@ -9,9 +8,7 @@
 
     >
         <v-row align="center" class="pa-0 pt-1">
-            <v-col cols="auto">
-                <v-icon large class='white--text' :color="certification.color">{{certification.icon}}</v-icon>
-            </v-col>
+
             <v-col class="pa-2 pt-1">
                 <h3 class="headline white--text">
                     {{ certification.title }}
@@ -20,11 +17,11 @@
                     <v-col cols="auto" class="py-0 pr-2">
                         <h5 class='white--text'>{{ certification.id }}</h5>
                     </v-col>
-                    <v-col cols="auto" class="pa-0" v-if="certification.credential">
+                    <v-col cols="auto" class="pa-0 white--text" v-if="certification.credential">
                         ·
                     </v-col>
                     <v-col cols="auto" class="py-0 pl-2" v-if="certification.credential">
-                        <span class="subtitle-2 black--text"><a :href="certification.credential">View credential</a></span>
+                        <span class="subtitle-2"><a class="white--text" :href="certification.credential">View credential</a></span>
                     </v-col>
                 </v-row>
                 <div class='white--text'>{{ certification.date }} </div>
@@ -34,11 +31,12 @@
 </template>
 
 <script>
-
+    import utils from "../mixins/utils";
     export default {
         name: "Certification",
         components: {},
         props: ["certification"],
+        mixins: [utils],
         data() {
             return {
             };
@@ -55,13 +53,7 @@
             }
         },
         methods: {
-            hexToRgb(hex) {
-                var bigint = parseInt(hex, 16);
-                var r = (bigint >> 16) & 255;
-                var g = (bigint >> 8) & 255;
-                var b = bigint & 255;
-                return r + "," + g + "," + b;
-            }
+
         }
     };
 </script>

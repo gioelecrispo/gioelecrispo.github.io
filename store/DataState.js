@@ -11,7 +11,7 @@ export const state = () => ({
             color: '#F57C00',
             icon: 'mdi-medal',
             credential: 'https://www.youracclaim.com/badges/314500b7-2107-4355-b4c7-10f1c7972a75?source=linked_in_profile',
-            //imageUrl: 'https://images.unsplash.com/photo-1485796826113-174aa68fd81b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+            imageUrl: 'https://i.ibb.co/bgK9kN1/aws.png'
         },
         {
             id: 'PSM I - Scrum.org',
@@ -20,7 +20,7 @@ export const state = () => ({
             color: '#388E3C',
             icon: 'mdi-medal',
             credential: 'https://www.credly.com/badges/2f2ae498-ee5f-45ef-9290-e1d5172e4d21/linked_in',
-            //imageUrl: 'https://images.unsplash.com/photo-1542626991-cbc4e32524cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80'
+            imageUrl: 'https://i.ibb.co/wcmtZV5/psm1.png'
         },
         {
             id: 'B1.1 of the CEFR',

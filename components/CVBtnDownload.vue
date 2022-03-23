@@ -7,7 +7,7 @@
             :outlined="!isFab"
             rounded
             download
-            style="z-index: 2;"
+            style="z-index: 2; padding: 30px!important;"
             v-scroll="onScroll"
             v-show="!isFab || (isFab && fabShow)"
             :fixed="isFab"
