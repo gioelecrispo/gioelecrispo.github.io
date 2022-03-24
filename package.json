@@ -16,7 +16,6 @@
         "core-js": "^3.9.1",
         "nuxt": "^2.15.3",
         "nuxt-webfontloader": "^1.1.0",
-        "vue-disqus": "^4.0.1",
         "vue-youtube": "^1.4.0",
         "vuelidate": "^0.7.6"
     },
