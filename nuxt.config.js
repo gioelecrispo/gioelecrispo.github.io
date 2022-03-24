@@ -62,6 +62,7 @@ export default async () => {
 
         // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
         plugins: [
+            '~/plugins/disqus.js',
             '~/plugins/youtube.js',
         ],
 

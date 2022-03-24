@@ -18,34 +18,38 @@
             </v-col>
         </v-row>
 
-        <h2 class='mt-12 mb-2'>Comments</h2>
+        <!--<h2 class='mt-12 mb-2'>Comments</h2>
         <div id='disqus_thread'></div>
         <script>
             /**
              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
 
-            var disqus_config = function () {
-            this.page.url = "https://gioelecrispo.github.io";  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = article.slug; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            /*let disqus_config = function () {
+                this.page.url = "https://gioelecrispo.github.io";  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = article.slug; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
 
             (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script')
+                let d = document, s = d.createElement('script')
                 s.src = 'https://gioelecrispo.disqus.com/embed.js'
-                s.setAttribute('data-timestamp', +new Date());
+                s.setAttribute('data-timestamp', + new Date());
                 (d.head || d.body).appendChild(s)
             })()
         </script>
         <script id='dsq-count-scr' src='//gioelecrispo.disqus.com/count.js' async></script>
         <noscript>Please enable JavaScript to view the <a href='https://disqus.com/?ref_noscript'>comments powered by
-            Disqus.</a></noscript>
+            Disqus.</a></noscript>-->
 
+        <h2 class='mt-12'>Comments</h2>
+        <div class="comments">
+            <Disqus ref="disqus" :pageConfig="pageConfig" />
+        </div>
     </v-container>
 </template>
 
 <script>
-import createSeoMeta from '../../utils/seo'
+import createSeoMeta from '../../utils/seo';
 
 export default {
     head() {
@@ -71,14 +75,38 @@ export default {
             htmlSource: ''
         }
     },
-    computed: {},
+    computed: {
+        pageConfig() {
+            console.log(this.article.slug, this.$route.path)
+            return {
+                title: this.article.slug,
+                identifier: this.$route.path,
+                category_id: 'tech'
+            }
+        }
+    },
     created() {
-
+    },
+    mounted() {
     },
     methods: {
         formatDate(date) {
             const options = { year: 'numeric', month: 'long', day: 'numeric' }
             return new Date(date).toLocaleDateString('en', options)
+        },
+        createDisqusScript() {
+            let _this = this;
+            let disqus_config = function () {
+                this.page.url = "https://gioelecrispo.github.io";  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = _this.article.slug; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+                let d = document, s = d.createElement('script')
+                s.src = 'https://gioelecrispo.disqus.com/embed.js'
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s)
+            })()
         }
     }
 }
