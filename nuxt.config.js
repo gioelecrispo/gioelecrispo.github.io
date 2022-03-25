@@ -25,7 +25,10 @@ export default async () => {
         // ** ROUTER **
         router: {
             base: '/',
-            middleware: []
+            middleware: [
+                'trailingSlashRedirect'
+            ],
+            trailingSlash: false
         },
 
         // ** HEADER and SEO **
