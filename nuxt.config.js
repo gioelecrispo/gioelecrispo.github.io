@@ -8,7 +8,7 @@ export default async () => {
             HOST_BASE:
                 process.env.NODE_ENV === 'production'
                     ? 'https://gioelecrispo.github.io'
-                    : 'http://localhost:8080/'
+                    : 'http://localhost:3000/'
         },
 
         // ** BUILDING OPTIONS **
@@ -16,6 +16,7 @@ export default async () => {
         target: 'static',
         ssr: true,
         generate: {
+            subFolders: false,
             fallback: false
         },
 
@@ -26,9 +27,7 @@ export default async () => {
         router: {
             base: '/',
             middleware: [
-                'trailingSlashRedirect'
             ],
-            trailingSlash: false
         },
 
         // ** HEADER and SEO **
