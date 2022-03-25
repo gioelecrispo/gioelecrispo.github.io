@@ -19,8 +19,7 @@
         </v-row>
         <client-only placeholder="loading..." v-if='production'>
             <h2 class='mt-12 mb-2'>Comments</h2>
-            <!--<div id='disqus_thread'></div>-->
-            <Disqus ref="$disqus" :pageConfig='{identifier: $route.path.slice(-1) === "/" ? $route.path.slice(0, -1) : $route.path}'></Disqus>
+            <div id='disqus_thread'></div>
         </client-only>
     </v-container>
 </template>
@@ -55,7 +54,7 @@ export default {
     },
     mounted() {
         if (this.production){
-            //this.createDisqusScript()
+            this.createDisqusScript()
         }
     },
     methods: {
@@ -65,7 +64,7 @@ export default {
         },
         createDisqusScript() {
             let path = this.$route.path;
-            let disqus_config = function () {
+            var disqus_config = function () {
                 this.page.url = document.baseURI;  // Replace PAGE_URL with your page's canonical URL variable
                 this.page.identifier = path.slice(-1) === '/' ? path.slice(0, -1) : path; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
@@ -80,15 +79,9 @@ export default {
     },
     watch: {
         '$vuetify.theme.dark'(oldValue, newValue) {
-            let path = this.$route.path;
-            /*DISQUS.reset({
-                reload: true,
-                config: function() {
-                    this.page.url = document.baseURI + '/#!newthread';
-                    this.page.identifier = path.slice(-1) === '/' ? path.slice(0, -1) : path;
-                }
-            })*/
-            this.$disqus.reset();
+            window.DISQUS.reset({
+                reload: true
+            })
         }
     }
 }

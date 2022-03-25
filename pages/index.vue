@@ -369,9 +369,7 @@ export default {
             return this.githubProjects;
         },
         visibleProjects() {
-            console.log("projects befor", this.projects);
             if (this.projects) {
-                console.log("projects", this.projects);
                 return this.projects.slice(0, 5);
             }
             return this.projects;
