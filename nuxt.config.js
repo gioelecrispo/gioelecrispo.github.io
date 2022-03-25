@@ -16,7 +16,6 @@ export default async () => {
         target: 'static',
         ssr: true,
         generate: {
-            subFolders: false,
             fallback: false
         },
 
