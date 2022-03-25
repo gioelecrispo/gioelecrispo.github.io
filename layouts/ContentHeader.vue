@@ -9,7 +9,8 @@
                 <v-col cols="auto">
                     <v-row v-for="(navLink, idx) in visibleNavLinks" class="pa-4"
                            :key=idx :class="getAnimationClass(idx)">
-                        <v-btn dark block text nuxt
+                        <v-btn dark block text nuxt outlined rounded
+                               style='border-width: 3px;'
                                :to="navLink.path">
                             {{ navLink.title }}
                         </v-btn>

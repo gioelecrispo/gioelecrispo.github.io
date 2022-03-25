@@ -52,11 +52,7 @@ export default {
             htmlSource: '',
         }
     },
-    created() {
-
-    },
     mounted() {
-        console.log("process.env.NODE_ENV", process.env.NODE_ENV)
         if (this.production){
             this.createDisqusScript()
         }
@@ -79,6 +75,18 @@ export default {
                 s.setAttribute('data-timestamp', + new Date());
                 (d.head || d.body).appendChild(s)
             })()
+        }
+    },
+    watch: {
+        '$vuetify.theme.dark'(oldValue, newValue) {
+            let path = this.$route.path;
+            DISQUS.reset({
+                reload: true,
+                config: function() {
+                    this.page.url = document.baseURI;
+                    this.page.identifier = path.slice(-1) === '/' ? path.slice(0, -1) : path;
+                }
+            })
         }
     }
 }

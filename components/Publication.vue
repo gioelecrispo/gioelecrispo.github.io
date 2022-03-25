@@ -10,13 +10,13 @@
                 no-gutters
         >
             <v-col>
-                <v-card-title style="word-break: break-word;" class="py-2">
-                    {{ publication.title }}
+                <v-card-title style="word-break: break-word;" class="pl-1 py-2">
+                    <b>{{ publication.title }}</b>
                 </v-card-title>
             </v-col>
             <v-col cols="auto">
                 <v-btn
-                        class="mr-3"
+                        class="mr-1"
                         icon
                         target="_blank"
                         :href="publication.href"

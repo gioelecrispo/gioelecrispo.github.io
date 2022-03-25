@@ -1,8 +1,8 @@
 <template>
     <div>
         <v-sheet color='homeSectionPrimary'>
-            <v-container>
-                <v-row class='mt-10 pt-12 pb-3' justify='center'>
+            <v-container class='py-12'>
+                <v-row class='mt-10 pb-3' justify='center'>
                     <h1>Know Me More</h1>
                 </v-row>
                 <v-row class='py-4'>
@@ -114,8 +114,8 @@
         </v-sheet>
 
         <v-sheet color='homeSectionSecondary'>
-            <v-container>
-                <v-row class='mt-10 pt-12 pb-3' justify='center'>
+            <v-container class='py-12'>
+                <v-row class='mt-10 pb-3' justify='center'>
                     <h1>Works and Experiences</h1>
                 </v-row>
                 <v-row class='px-3'>
@@ -168,15 +168,15 @@
                 </v-row>
                 <v-row class='py-3 px-0'>
                     <v-col
-                        v-for='n in 5'
-                        :key='n'
+                        v-for='project in visibleProjects'
+                        :key='project.name'
                         class='pa-0'
                         cols='12'
                         sm='6'
                         md='4'
                     >
                         <Project
-                            :project='projects[n]'
+                            :project='project'
                         />
                     </v-col>
                     <v-col :class="mobile() ? 'pb-2 px-0' : 'pa-0'"
@@ -316,8 +316,7 @@ export default {
         }
     },
     async fetch() {
-        getGithubProjects(this.$axios).then(succ => this.githubProjects = succ)
-        console.log('INDEX - this.githubProjects', this.githubProjects)
+        getGithubProjects(this.$axios).then(succ => this.githubProjects = succ);
     },
     created() {
         this.$fetch()
@@ -342,9 +341,10 @@ export default {
             publications: 'getPublications'
         }),
         visibleExperiences() {
-            if (this.experiences)
-                return this.experiences.slice(0, 1)
-            return this.experiences
+            if (this.experiences) {
+                return this.experiences.slice(0, 1);
+            }
+            return this.experiences;
         },
         visibleCertifications() {
             if (this.certifications)
@@ -354,29 +354,33 @@ export default {
         visibleSkills() {
             if (this.skills)
                 return this.skills['Programming Languages'].slice(0, 2)
-            return this.skills
+            return this.skills;
         },
         visiblePublications() {
             if (this.publications)
                 return this.publications.slice(0, 2)
-            return this.publications
+            return this.publications;
         },
         visibleGithubProjects() {
             if (this.githubProjects) {
                 console.log(this.githubProjects.filter(gp => gp.name === 'aas'))
-                return this.githubProjects.slice(0, 5)
+                return this.githubProjects.slice(0, 5);
             }
-            return this.githubProjects
+            return this.githubProjects;
         },
         visibleProjects() {
-            if (this.projects)
-                return this.projects.slice(0, 5)
-            return this.project
+            console.log("projects befor", this.projects);
+            if (this.projects) {
+                console.log("projects", this.projects);
+                return this.projects.slice(0, 5);
+            }
+            return this.projects;
         },
         visibleArticles() {
-            if (this.articles)
-                return this.articles.slice(0, 2)
-            return this.articles
+            if (this.articles) {
+                return this.articles.slice(0, 2);
+            }
+            return this.articles;
         }
     },
     methods: {}
