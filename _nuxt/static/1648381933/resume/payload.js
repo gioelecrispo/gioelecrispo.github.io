@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/resume", {data:[{}],fetch:{},mutations:[["AppState\u002FsetAppToolbarTitle","Curriculum Vitae"]]});
