@@ -6,7 +6,7 @@ export const state = () => ({
     isDark: false, // if the dark theme has to be used
     navLinks: [ // Application navigation drawer elements
         { id: 'home', title: 'Home', icon: 'mdi-home', path: '/' },
-        { id: 'cv', title: 'Curriculum Vitae', icon: 'mdi-timeline-text', path: '/cv' },
+        { id: 'resume', title: 'Resume', icon: 'mdi-timeline-text', path: '/resume' },
         { id: 'projects', title: 'Projects', icon: 'mdi-briefcase-outline', path: '/projects' },
         { id: 'github', title: 'Github', icon: 'mdi-github', path: '/github' },
         { id: 'blog', title: 'Blog', icon: 'mdi-file-document-outline', path: '/blog' }

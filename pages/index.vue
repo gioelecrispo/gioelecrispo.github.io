@@ -270,8 +270,10 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import ui from '../mixins/ui'
+import { mapGetters } from 'vuex';
+import ui from '../mixins/ui';
+
+
 
 import UserIntro from '@/components/UserIntro'
 import Article from '@/components/Article'
@@ -320,6 +322,8 @@ export default {
     },
     created() {
         this.$fetch()
+    },
+    mounted() {
     },
     head() {
         return createSeoMeta('Home',

@@ -1,16 +1,16 @@
 <template>
     <div class="parallax">
-        <div class="bg bg-overlay "></div>
+        <div class="bg bg-overlay"></div>
         <v-container fluid fill-height class="caption">
             <v-row align="center" justify="center">
                 <v-col :cols="isUiLarger ? 'auto' : '12'" md="auto">
                     <UserIntro></UserIntro>
                 </v-col>
                 <v-col cols="auto">
-                    <v-row v-for="(navLink, idx) in visibleNavLinks" class="pa-4"
+                    <v-row v-for="(navLink, idx) in visibleNavLinks" class="px-4 py-2"
                            :key=idx :class="getAnimationClass(idx)">
                         <v-btn dark block text nuxt outlined rounded
-                               style='border-width: 3px;'
+                               style='border-width: 3px; padding-left: 40px; padding-right: 40px;'
                                :to="navLink.path">
                             {{ navLink.title }}
                         </v-btn>
@@ -101,5 +101,6 @@
         width: 100%;
         text-align: center;
     }
+
 </style>
 

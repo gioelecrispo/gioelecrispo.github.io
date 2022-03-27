@@ -21,7 +21,8 @@
                 <v-col cols="12" sm='6'>
                     <v-container fluid fill-height>
                         <v-row justify="center" align="center" class="pt-6">
-                            <v-avatar size="144">
+                            <v-avatar size="144"
+                                      style='outline: 6px solid #666666;'>
                                 <img
                                         :src="require('@/assets/img/me/me.jpg')"
                                         alt="Gioele Crispo"

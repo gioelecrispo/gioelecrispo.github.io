@@ -13,9 +13,9 @@
                         cols="12"
                 >
                     <v-row class="pa-0">
-                        <p class="ma-0 title">
+                        <h3>
                             {{ experience.position }}
-                        </p>
+                        </h3>
                     </v-row>
                     <v-row
                             class="pa-0 pt-1"

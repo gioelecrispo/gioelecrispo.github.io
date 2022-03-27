@@ -6,9 +6,10 @@
                    md="auto"
             >
                         <v-avatar class='fade-in-fwd'
+                                  style='outline: 6px solid #666666;'
                             :tile="false"
                                   :size="tabletAndDown() ? '124' : '164'"
-                                  color="grey lighten-4"
+                                  color="transparent"
                         >
                             <img
                                 :src="require('@/assets/img/me/me.jpg')"
@@ -19,7 +20,7 @@
             </v-col>
             <v-col>
                 <v-row justify="center">
-                    <h1 class="display-3 font-weight-medium ma-0 px-3 text-focus-in">
+                    <h1 class="autofit-label display-2 font-weight-medium ma-0 px-3 text-focus-in">
                         Gioele Crispo
                     </h1>
                 </v-row>
@@ -27,7 +28,7 @@
                     <v-divider/>
                 </v-row>
                 <v-row justify="center">
-                <span class="overline pt-1 mb-3 px-3 text-focus-in">
+                <span class="overline pt-1 my-3 px-3 text-focus-in" style="line-height: 1.1;">
                     SOFTWARE ENGINEERING, ARTIFICIAL INTELLIGENCE, WEB</span>
                 </v-row>
             </v-col>

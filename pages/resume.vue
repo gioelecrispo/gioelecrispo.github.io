@@ -67,10 +67,6 @@
             </v-col>
         </v-row>
 
-
-
-
-
         <v-row class="pt-8 pb-3 slide-in-bottom" justify="center">
             <h1>Skills</h1>
         </v-row>
@@ -124,10 +120,10 @@
         layout: 'page',
         scrollToTop: true,
         head() {
-            return createSeoMeta('Curriculum Vitae',
-            'A complete Curriculum Vitae with experiences, certifications, skill and so on.',
+            return createSeoMeta('Resume',
+            'A complete Resume with experiences, certifications, skill and so on.',
                 this.$route.path,
-                require('@/assets/img/seo/cv.jpg'));
+                require('@/assets/img/seo/resume.jpg'));
         },
         components: {CVBtnDownload, Experience, Skill, Certification, Publication},
         props: {},
