@@ -1,5 +1,5 @@
 .active-button {
-  border-bottom: 3px solid #2196F3 !important;
+  border-bottom: 3px solid var(--v-primary-base) !important;
 }
 
 .circle-around  {
@@ -7,7 +7,7 @@
     border-radius:50%;
     -moz-border-radius:50%;
     -webkit-border-radius:50%;
-    border: 6px solid #2196F3;
+    border: 6px solid var(--v-primary-base);
     z-index: 9;
     padding: 4px;
 }

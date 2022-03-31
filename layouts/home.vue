@@ -1,43 +1,39 @@
 <template>
-    <v-app id="app-home">
-        <!-- APP: CONTENT -->
-        <v-main>
-            <ContentHeader/>
-            <HomeContent/>
-        </v-main>
-        <!-- APP: FOOTER -->
-        <AppFooter/>
-    </v-app>
+    <AbstractPage>
+        <v-app id='app-home'>
+            <!-- APP: CONTENT -->
+            <v-main>
+                <ContentHeader />
+                <AppContent />
+            </v-main>
+            <!-- APP: FOOTER -->
+            <AppFooter />
+        </v-app>
+    </AbstractPage>
 </template>
 
 <script>
-    import HomeContent from "./HomeContent";
-    import AppFooter from "./AppFooter";
-    import ContentHeader from "./ContentHeader";
-    import ui from "../mixins/ui";
-    import postRouteNavigation from '../mixins/postRouteNavigation';
+import AbstractPage from './components/AbstractPage'
+import AppContent from './components/AppContent'
+import AppFooter from './components/AppFooter'
+import ContentHeader from './components/ContentHeader'
+import postRouteNavigation from '../mixins/postRouteNavigation'
 
-    export default {
-        name: "AppStructure",
-        mixins: [ui, postRouteNavigation],
-        scrollToTop: true,
-        components: {
-            HomeContent, //: () => () => import("./AppContent"),
-            AppFooter,
-            ContentHeader,
-        },
-        props: {},
-        computed: {
 
-        },
-        data() {
-            return {}
-        },
-    };
+export default {
+    name: 'AppStructure',
+    mixins: [postRouteNavigation],
+    scrollToTop: true,
+    components: {
+        AbstractPage,
+        AppContent,
+        AppFooter,
+        ContentHeader,
+    }
+}
 </script>
 
-<style lang="scss" scoped>
-
+<style lang='scss' scoped>
 
 </style>
 

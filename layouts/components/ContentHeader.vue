@@ -19,14 +19,24 @@
             </v-row>
         </v-container>
 
-        <v-btn fab dark
-               color="secondary"
-               absolute
-               bottom
-               right
-               @click="setTheme()">
-            <v-icon>{{ isDark ? "mdi-white-balance-sunny" : "far fa-moon" }}</v-icon>
-        </v-btn>
+        <v-menu
+            v-model='colorMenu'
+            :close-on-content-click='true'
+            offset-x left
+        >
+            <template v-slot:activator='{ on, attrs }'>
+                <v-btn fab dark
+                       v-bind='attrs'
+                       v-on='on'
+                       color="primary"
+                       absolute
+                       bottom
+                       right>
+                    <v-icon>{{ isDark ? "mdi-white-balance-sunny" : "far fa-moon" }}</v-icon>
+                </v-btn>
+            </template>
+            <ThemeHandler :dark='true'></ThemeHandler>
+        </v-menu>
     </div>
 
 </template>
@@ -34,15 +44,18 @@
 <script>
     import UserIntro from "@/components/UserIntro";
     import {mapGetters} from "vuex";
-    import ui from "../mixins/ui";
+    import ui from "../../mixins/ui";
+    import ThemeHandler from '@/components/ThemeHandler'
 
     export default {
         name: "ContentHeader",
         props: [],
         mixins: [ui],
-        components: {UserIntro},
+        components: { ThemeHandler, UserIntro},
         data() {
-            return {};
+            return {
+                colorMenu: false
+            };
         },
         computed: {
             ...mapGetters("AppState", {
@@ -57,10 +70,6 @@
             }
         },
         methods: {
-            setTheme() {
-                this.$store.dispatch("AppState/setIsDark", !this.isDark);
-                this.$vuetify.theme.dark = this.isDark === true;
-            },
             getAnimationClass(idx) {
                 let multiplier = 25;
                 let baseTiming = 75;
@@ -77,17 +86,17 @@
         height: 90vh;
     }
 
-    .parallax .bg {
+    .bg {
         position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         background: linear-gradient(
-                        rgba(0, 0, 0, 0.85),
-                        rgba(0, 0, 0, 0.5)
-        ), url("../assets/img/img_parallax.jpg");
-        background-attachment: fixed;
+                        rgba(0, 0, 0, 0.90),
+                        rgba(0, 0, 0, 0.90)
+        ), url("../../assets/img/img_parallax.jpg");
+        //background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;

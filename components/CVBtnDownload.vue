@@ -3,11 +3,11 @@
             class="scale-in-center"
             :href=href
             elevation="0"
-            :color="isFab ? 'secondary' : 'primary'"
-            :outlined="!isFab"
+            :color="isFab ? 'primary darken-1' : 'primary'"
+
             rounded
             download
-            style="z-index: 2; padding: 30px!important;"
+            style="z-index: 2; padding: 25px!important;"
             v-scroll="onScroll"
             v-show="!isFab || (isFab && fabShow)"
             :fixed="isFab"
@@ -32,7 +32,7 @@
         props: ["isFab"],
         data() {
             return {
-                fabShow: false,
+                fabShow: true,
                 href: "docs/cv_eng.pdf"
             };
         },
@@ -41,12 +41,14 @@
             onScroll(e) {
                 if (typeof window === "undefined") return;
                 const top = window.pageYOffset || e.target.scrollTop || 0;
-                this.fabShow = top > 60;
+                this.fabShow = top >= 0;
             },
         }
     };
 </script>
 
 <style lang="scss" scoped>
-
+.themed-background {
+    background: var(--v-primary-base);
+}
 </style>

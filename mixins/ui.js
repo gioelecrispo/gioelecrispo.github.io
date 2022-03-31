@@ -16,6 +16,6 @@ export default {
         },
         isUiLarger () {
             return this.$vuetify.breakpoint.width > this.$vuetify.breakpoint.height;
-        }
+        },
     }
 }

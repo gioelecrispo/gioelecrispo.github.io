@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: 'HomeContent',
+    name: 'AppContent',
     components: {},
     data() {
         return {}

@@ -12,10 +12,10 @@
                         class="pa-0"
                         cols="12"
                 >
-                    <v-row class="pa-0">
-                        <h3>
-                            {{ experience.position }}
-                        </h3>
+                    <v-row class="pa-0 pt-3">
+                        <v-card-title class='pa-0 title'>
+                            <b>{{ experience.position }}</b>
+                        </v-card-title>
                     </v-row>
                     <v-row
                             class="pa-0 pt-1"

@@ -1,10 +1,9 @@
 <template>
-    <v-container fluid>
-
+    <v-container>
         <v-row justify='center' class='mt-8'>
             <v-col lg='10' xl='9'>
                 <v-card color='transparent' height='30' elevation='0' class='pa-0 py-2 mb-8'>
-                    <v-card-title class='px-0 py-0 secondary--text' v-if='article.tags'>{{
+                    <v-card-title class='px-0 py-0 primary--text' v-if='article.tags'>{{
                             article.tags.map(t => '#' + t).join(', ') }}
                     </v-card-title>
                     <v-card-text class='px-0 py-0 grey--text'>Written on: {{ formatDate(article.createdAt) }}
@@ -17,7 +16,7 @@
                 </article>
             </v-col>
         </v-row>
-        <client-only placeholder="loading..." v-if='production'>
+        <client-only placeholder='loading...' v-if='production'>
             <h2 class='mt-12 mb-2'>Comments</h2>
             <div id='disqus_thread'></div>
         </client-only>
@@ -25,7 +24,7 @@
 </template>
 
 <script>
-import createSeoMeta from '../../utils/seo';
+import createSeoMeta from '../../utils/seo'
 
 export default {
     head() {
@@ -49,11 +48,11 @@ export default {
         return {
             production: process.env.NODE_ENV === 'production',
             article: undefined,
-            htmlSource: '',
+            htmlSource: ''
         }
     },
     mounted() {
-        if (this.production){
+        if (this.production) {
             this.createDisqusScript()
         }
     },
@@ -63,25 +62,27 @@ export default {
             return new Date(date).toLocaleDateString('en', options)
         },
         createDisqusScript() {
-            let path = this.$route.path;
-            var disqus_config = function () {
-                this.page.url = document.baseURI;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = path.slice(-1) === '/' ? path.slice(0, -1) : path; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            let path = this.$route.path
+            var disqus_config = function() {
+                this.page.url = document.baseURI  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = path.slice(-1) === '/' ? path.slice(0, -1) : path // Replace PAGE_IDENTIFIER with your page's unique identifier variable
             };
 
             (function() { // DON'T EDIT BELOW THIS LINE
                 let d = document, s = d.createElement('script')
                 s.src = 'https://gioelecrispo.disqus.com/embed.js'
-                s.setAttribute('data-timestamp', + new Date());
+                s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s)
             })()
         }
     },
     watch: {
         '$vuetify.theme.dark'(oldValue, newValue) {
-            window.DISQUS.reset({
-                reload: true
-            })
+            if (this.production) {
+                window.DISQUS.reset({
+                    reload: true
+                })
+            }
         }
     }
 }

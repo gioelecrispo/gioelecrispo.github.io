@@ -20,7 +20,7 @@ export default async () => {
         },
 
         // This option lets you customize the loading component that Nuxt.js uses by default.
-        loading: {},
+        loading: false,
 
         // ** ROUTER **
         router: {
@@ -115,30 +115,31 @@ export default async () => {
             customVariables: ['~/assets/variables.scss'],
             theme: {
                 dark: false,
+                options: {
+                    customProperties: true,
+                },
                 themes: {
                     light: {
                         primary: '#2196F3',
-                        secondary: '#e91e63',
-                        accent: '#82B1FF',
+                        secondary: '#E91E63',
+                        accent: '#FFB510',
                         error: '#FF5252',
                         info: '#2196F3',
                         success: '#4CAF50',
                         warning: '#FFC107',
-                        toolbars: '#FFFFFF',
-                        homeSectionPrimary: '#FFFFFF',
-                        homeSectionSecondary: '#EFEFEF'
+                        sectionPrimary: '#FFFFFF',
+                        sectionSecondary: '#EFEFEF'
                     },
                     dark: {
                         primary: '#2196F3',
-                        secondary: '#e91e63',
-                        accent: '#673ab7',
+                        secondary: '#E91E63',
+                        accent: '#FFB510',
                         error: '#f44336',
                         warning: '#ff9800',
                         info: '#3f51b5',
                         success: '#4caf50',
-                        toolbars: '#121212',
-                        homeSectionPrimary: '#121212',
-                        homeSectionSecondary: '#1A1A1A'
+                        sectionPrimary: '#121212',
+                        sectionSecondary: '#1A1A1A'
                     }
                 }
             },

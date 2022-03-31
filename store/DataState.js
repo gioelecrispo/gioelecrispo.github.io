@@ -5,6 +5,15 @@ export const state = () => ({
     blogArticles: undefined,
     certifications: [
         {
+            id: 'AZ-900',
+            title: 'Azure Fundamentals',
+            date: '28 Mar 2022',
+            color: '#1212A9',
+            icon: 'mdi-medal',
+            credential: 'https://www.credly.com/badges/d784a3bf-cb54-4d64-9da6-c7adaa024177?source=linked_in_profile',
+            imageUrl: 'https://i.ibb.co/X5ZtgYf/az900.png'
+        },
+        {
             id: 'MLS-C01',
             title: 'AWS Machine Learning Specialty',
             date: '9 Mar 2021',
@@ -444,6 +453,24 @@ export const state = () => ({
         },
 
     ],
+    languages: [
+        {
+            language: 'English',
+            listening: 'B2',
+            reading: 'C1',
+            spokenInteraction: 'B2',
+            spokenProduction: 'B2',
+            writing: 'B2'
+        },
+        {
+            language: 'Spanish',
+            listening: 'A2',
+            reading: 'B1',
+            spokenInteraction: 'A2',
+            spokenProduction: 'A2',
+            writing: 'A2'
+        }
+    ]
 })
 
 
@@ -481,8 +508,10 @@ export const getters = {
         }
         return blogTopics;
     },
+    getLanguages: (state) => {
+        return state.languages
+    }
 }
-
 
 export const mutations = {
     setGithubUserInfo(state, githubUserInfo) {

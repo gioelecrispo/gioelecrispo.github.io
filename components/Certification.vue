@@ -10,8 +10,8 @@
         <v-row align="center" class="pa-0 pt-1">
 
             <v-col class="pa-2 pt-1">
-                <h3 class="headline white--text">
-                    {{ certification.title }}
+                <h3 class="white--text title">
+                    <b>{{ certification.title }}</b>
                 </h3>
                 <v-row align="center" class="py-0">
                     <v-col cols="auto" class="py-0 pr-2">
@@ -43,7 +43,7 @@
         },
         computed: {
             style: function() {
-                let color = this.hexToRgb(this.certification.color.slice(1));
+                let color = this.hexToRgb(this.certification.color);
                 if (this.$vuetify.theme.isDark) {
                     color = '0,0,0';
                 }

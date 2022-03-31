@@ -1,70 +1,66 @@
 <template>
-    <v-app id="app-post">
-        <!-- APP: LEFT NAVIGATION DRAWER -->
-        <NavigationDrawer
-                v-if="tabletAndDown()"
-                :right="false"
-        />
+    <AbstractPage>
+        <v-app id='app-post'>
+            <!-- APP: LEFT NAVIGATION DRAWER -->
+            <NavigationDrawer
+                v-if='tabletAndDown()'
+                :right='false'
+            />
 
-        <!-- APP: TOP TOOLBAR -->
-        <AppToolbar
-                id="app-toolbar"
-                title="Post"
+            <!-- APP: TOP TOOLBAR -->
+            <AppToolbar
+                id='app-toolbar'
+                title='Post'
                 :image="require('@/assets/img/blog/' + appToolbarImage)"
-        />
-        <!-- APP: CONTENT -->
-        <v-main>
-                <!-- <v-img style="margin-top: -64px;" height="350px"
-                        :src="require('@/assets/img/blog/' + appToolbarImage)"
-                        gradient="to top right, rgba(0,100,205,0.7), rgba(0,2,216,0.7)"
-                />-->
-            <AppContent/>
-        </v-main>
-        <!-- APP: FOOTER -->
-        <AppFooter/>
-    </v-app>
+            />
+            <!-- APP: CONTENT -->
+            <v-main>
+                <AppContent />
+            </v-main>
+            <!-- APP: FOOTER -->
+            <AppFooter />
+        </v-app>
+    </AbstractPage>
 </template>
 
 <script>
-    import { mapGetters } from "vuex";
-    import NavigationDrawer from "./NavigationDrawer";
-    import AppContent from "./AppContent";
-    import AppToolbar from "./AppToolbar";
-    import AppFooter from "./AppFooter";
-    import ui from "../mixins/ui";
-    import postRouteNavigation from '../mixins/postRouteNavigation';
+import { mapGetters } from 'vuex'
+import AbstractPage from './components/AbstractPage'
+import NavigationDrawer from './components/NavigationDrawer'
+import AppContent from './components/AppContent'
+import AppToolbar from './components/AppToolbar'
+import AppFooter from './components/AppFooter'
+import ui from '../mixins/ui'
+import postRouteNavigation from '../mixins/postRouteNavigation'
 
-    export default {
-        name: "AppStructure",
-        mixins: [ui, postRouteNavigation],
-        scrollToTop: true,
-        components: {
-            NavigationDrawer,
-            AppToolbar,
-            AppContent,
-            AppFooter,
-        },
-        props: {},
-        computed: {
-            ...mapGetters("AppState", {
-                appToolbarImage: "getAppToolbarImage",
-            }),
-        },
-        data() {
-            return {
-            };
-        },
-        mounted() {
-            window.scrollTo(0,0);
-        },
-        watch: {
-            $route() {
-                window.scrollTo(0,0);
-            }
+export default {
+    name: 'Post',
+    mixins: [ui, postRouteNavigation],
+    scrollToTop: true,
+    components: {
+        AbstractPage,
+        NavigationDrawer,
+        AppToolbar,
+        AppContent,
+        AppFooter,
+    },
+    props: {},
+    computed: {
+        ...mapGetters('AppState', {
+            appToolbarImage: 'getAppToolbarImage'
+        })
+    },
+    data() {
+        return {}
+    },
+    watch: {
+        $route() {
+            window.scrollTo(0, 0)
         }
-    };
+    }
+}
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 </style>
 

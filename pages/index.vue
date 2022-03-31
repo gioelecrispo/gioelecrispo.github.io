@@ -1,9 +1,9 @@
 <template>
     <div>
-        <v-sheet color='homeSectionPrimary'>
-            <v-container class='py-12'>
+        <v-sheet color='sectionPrimary'>
+            <v-container class='py-12 my-6'>
                 <v-row class='mt-10 pb-3' justify='center'>
-                    <h1>Know Me More</h1>
+                    <h1 class='title-underline'>Know Me More</h1>
                 </v-row>
                 <v-row class='py-4'>
                     <blockquote :class="isDark ? 'dark-theme' : 'light-theme'">
@@ -113,12 +113,12 @@
             </v-container>
         </v-sheet>
 
-        <v-sheet color='homeSectionSecondary'>
-            <v-container class='py-12'>
+        <v-sheet color='sectionSecondary'>
+            <v-container class='py-12 my-6'>
                 <v-row class='mt-10 pb-3' justify='center'>
-                    <h1>Works and Experiences</h1>
+                    <h1 class='title-underline'>Works and Experiences</h1>
                 </v-row>
-                <v-row class='px-3'>
+<!--                <v-row class='px-3'>
                     My career is mainly focused on artificial intelligence projects.
                     During my employment at NTT Data I have explored various architectural solutions (streaming, real
                     time,
@@ -126,7 +126,7 @@
                     I also achieved the AWS Machine Learning Specialty certification, with which I also projected the
                     solutions
                     into the AWS domain.
-                </v-row>
+                </v-row>-->
                 <v-row align='start' class='py-3 px-3'>
                     <v-col cols='12' sm='6' :class="mobile() ? 'pa-0 py-1' : 'pl-0 pr-2 py-1'">
                         <v-row align='center' class='py-0'>
@@ -151,21 +151,21 @@
                     </v-col>
                     <v-col cols='12' :class="mobile() ? 'pa-0 py-1' : 'px-0 py-1'">
                         <v-card height='100px' class='pa-0' elevation='0' color='transparent'>
-                            <PageNavigator text='View my CV' icon='mdi-timeline-text' path='/cv'></PageNavigator>
+                            <PageNavigator text='View my CV' icon='mdi-timeline-text' path='/resume'></PageNavigator>
                         </v-card>
                     </v-col>
                 </v-row>
             </v-container>
         </v-sheet>
 
-        <v-sheet color='homeSectionPrimary'>
-            <v-container class='py-12'>
+        <v-sheet color='sectionPrimary'>
+            <v-container class='py-12 my-6'>
                 <v-row class='mt-10 py-3' justify='center'>
-                    <h1>Projects</h1>
+                    <h1 class='title-underline'>Projects</h1>
                 </v-row>
-                <v-row class='px-3'>
+<!--                <v-row class='px-3'>
                     I have built many systems, mainly focused on artificial intelligence and machine learning.
-                </v-row>
+                </v-row>-->
                 <v-row class='py-3 px-0'>
                     <v-col
                         v-for='project in visibleProjects'
@@ -191,18 +191,18 @@
             </v-container>
         </v-sheet>
 
-        <v-sheet color='homeSectionSecondary'>
-            <v-container class='py-12'>
+        <v-sheet color='sectionSecondary'>
+            <v-container class='py-12 my-6'>
                 <v-row class='mt-10 pt-3 px-3' justify='center'>
-                    <h1>Github</h1>
+                    <h1 class='title-underline'>Github</h1>
                 </v-row>
-                <v-row class='px-3'>
+<!--                <v-row class='px-3'>
                     I use Github a lot to save my efforts, make them available for me and others. I like a lot facing
                     with
                     challenges and solve tricky problems.
                     In fact, my first development in Python was "dictipy", a library that overcomes the limitations of
                     json.dumps and __dict__ methods.
-                </v-row>
+                </v-row>-->
                 <v-row class='py-4 px-3'>
                     <v-col
                         v-for='project in visibleGithubProjects'
@@ -227,16 +227,16 @@
             </v-container>
         </v-sheet>
 
-        <v-sheet color='homeSectionPrimary'>
-            <v-container class='py-12'>
+        <v-sheet color='sectionPrimary'>
+            <v-container class='py-12 my-6'>
                 <v-row class='mt-10 py-3 px-3' justify='center'>
-                    <h1 class='decorated-title'>Latest Posts</h1>
+                    <h1 class='title-underline'>Latest Posts</h1>
                 </v-row>
-                <v-row class='px-3'>
+<!--                <v-row class='px-3'>
                     Since childhood, I've always been very curious and eager to perfect my things.
                     From here my articles are born, which are related to projects or personal insights to improve my
                     skills.
-                </v-row>
+                </v-row>-->
                 <v-row class='pt-3 pb-12 px-3'>
                     <v-col
                         v-for='article in visibleArticles'
@@ -270,10 +270,8 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import ui from '../mixins/ui';
-
-
+import { mapGetters } from 'vuex'
+import ui from '../mixins/ui'
 
 import UserIntro from '@/components/UserIntro'
 import Article from '@/components/Article'
@@ -286,7 +284,8 @@ import Publication from '@/components/Publication'
 import PageNavigator from '@/components/PageNavigator'
 import CVBtnDownload from '@/components/CVBtnDownload'
 import createSeoMeta from '../utils/seo'
-import { getGithubProjects } from '@/utils/api';
+import { getGithubProjects } from '@/utils/api'
+
 
 export default {
     name: 'Home',
@@ -400,7 +399,7 @@ export default {
 }
 
 blockquote {
-    border-left: 3px solid #00CC8F;
+    border-left: 3px solid var(--v-primary-base);
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 18px;
     font-style: italic;
@@ -410,43 +409,32 @@ blockquote {
     position: relative;
     transition: 0.2s border ease-in-out;
     z-index: 0;
+    &::before {
+        background-color: var(--v-sectionPrimary-base);
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -4px;
+        height: 2em;
+        width: 5px;
+        margin-top: -1em;
+    }
+    &::after {
+        content: "\f347";
+        position: absolute;
+        top: 50%;
+        left: -0.5em;
+        color: var(--v-primary-base);
+        font-family: "Ionicons", serif;
+        font-style: normal;
+        line-height: 1em;
+        text-align: center;
+        text-indent: -2px;
+        width: 1em;
+        transform: rotateX(180deg);
+        margin-top: -0.5em;
+        transition: 0.2s all ease-in-out, 0.4s transform ease-in-out;
+    }
 }
-
-blockquote:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -4px;
-    height: 2em;
-    width: 5px;
-    margin-top: -1em;
-}
-
-blockquote.light-theme:before {
-    background-color: #ffffff;
-}
-
-blockquote.dark-theme:before {
-    background-color: #121212;
-}
-
-
-blockquote:after {
-    content: "\f347";
-    position: absolute;
-    top: 50%;
-    left: -0.5em;
-    color: #00CC8F;
-    font-family: "Ionicons", serif;
-    font-style: normal;
-    line-height: 1em;
-    text-align: center;
-    text-indent: -2px;
-    width: 1em;
-    transform: rotateX(180deg);
-    margin-top: -0.5em;
-    transition: 0.2s all ease-in-out, 0.4s transform ease-in-out;
-}
-
 
 </style>

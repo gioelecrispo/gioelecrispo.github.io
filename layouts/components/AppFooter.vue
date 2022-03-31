@@ -1,6 +1,6 @@
 <template>
     <v-footer id='footer'
-              color='toolbars'
+              color='sectionPrimary'
               padless
               dark
               height='auto'
@@ -74,17 +74,19 @@
                             </v-row>
                             <v-row align='center' justify='center'
                                    class='my-2 py-2'>
-                                <v-btn v-for='socialMedia in socialMedias'
-                                       :key='socialMedia.href'
-                                       class='mx-2'
-                                       :href='socialMedia.href'
-                                       target='_blank'
-                                       icon
-                                >
-                                    <v-icon size='24px'>
-                                        {{ socialMedia.icon }}
-                                    </v-icon>
-                                </v-btn>
+                                <v-col v-for='socialMedia in socialMedias'
+                                       :key='socialMedia.href' cols='auto'
+                                        class='pa-0'>
+                                    <v-btn class='mx-2'
+                                           :href='socialMedia.href'
+                                           target='_blank'
+                                           icon
+                                    >
+                                        <v-icon size='24px'>
+                                            {{ socialMedia.icon }}
+                                        </v-icon>
+                                    </v-btn>
+                                </v-col>
                             </v-row>
                             <v-row align='center' justify='center'
                                    class='mt-4 pt-8'>
@@ -122,8 +124,11 @@
             <v-divider />
             <v-card-text class='py-4'>
                 <v-row>
-                    <v-col class="py-1" cols='12' sm='6'>{{ new Date().getFullYear() }} — <span class='subtitle-1'>Gioele Crispo</span></v-col>
-                    <v-col class="py-1" cols='12' sm='6'><TermsAndPolicy></TermsAndPolicy></v-col>
+                    <v-col class='py-1' cols='12' sm='6'>{{ new Date().getFullYear() }} — <span class='subtitle-1'>Gioele Crispo</span>
+                    </v-col>
+                    <v-col class='py-1' cols='12' sm='6'>
+                        <TermsAndPolicy></TermsAndPolicy>
+                    </v-col>
                 </v-row>
             </v-card-text>
         </v-card>
@@ -131,7 +136,7 @@
 </template>
 
 <script>
-import ui from '../mixins/ui'
+import ui from '../../mixins/ui'
 import TermsAndPolicy from '@/components/TermsAndPolicy'
 import EmailForm from '@/components/EmailForm'
 
@@ -144,14 +149,19 @@ export default {
             showInfoReference: false,
             socialMedias: [
                 {
-                    name: 'Facebook',
-                    icon: 'mdi-facebook',
-                    href: 'https://www.facebook.com/gioelecrispo'
+                    name: 'Github',
+                    icon: 'mdi-github',
+                    href: 'https://github.com/gioelecrispo'
                 },
                 {
                     name: 'LinkedIn',
                     icon: 'mdi-linkedin',
                     href: 'https://www.linkedin.com/in/gioele-crispo/'
+                },
+                {
+                    name: 'Facebook',
+                    icon: 'mdi-facebook',
+                    href: 'https://www.facebook.com/gioelecrispo'
                 },
                 {
                     name: 'Instagram',
@@ -174,7 +184,7 @@ export default {
 <style lang='scss' scoped>
 .footer-content {
     margin: calc(-5%) 0 0 0;
-    background-color: #2196F3 !important;
+    background-color: var(--v-primary-base) !important;
     padding: 0;
 }
 
@@ -185,7 +195,7 @@ export default {
 .wave {
     animation: wave 3s linear;
     animation-iteration-count: infinite;
-    fill: #2196F3;
+    fill: var(--v-primary-base);
 }
 
 #wave2 {
