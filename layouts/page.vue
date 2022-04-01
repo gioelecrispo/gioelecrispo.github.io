@@ -36,7 +36,7 @@ import postRouteNavigation from '../mixins/postRouteNavigation'
 
 
 export default {
-    name: 'Page',
+    name: 'page',
     mixins: [ui, postRouteNavigation],
     scrollToTop: true,
     components: {

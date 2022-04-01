@@ -16,17 +16,17 @@ export default async () => {
         target: 'static',
         ssr: true,
         generate: {
-            fallback: false
+            fallback: false,
+            crawler: true
         },
 
         // This option lets you customize the loading component that Nuxt.js uses by default.
-        loading: false,
+        loading: { },
 
         // ** ROUTER **
         router: {
             base: '/',
-            middleware: [
-            ],
+            middleware: [],
         },
 
         // ** HEADER and SEO **
@@ -174,7 +174,7 @@ export default async () => {
         // Build Configuration: https://go.nuxtjs.dev/config-build
         build: {
             parallel: true,
-            cache: true,
+            cache: false,
             analyze: process.env.NODE_ENV !== 'production',
             extractCSS: process.env.NODE_ENV === 'production',
             optimizeCSS: process.env.NODE_ENV === 'production',

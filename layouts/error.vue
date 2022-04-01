@@ -18,6 +18,7 @@
 import AbstractPage from './components/AbstractPage'
 
 export default {
+    name: 'error',
     layout: 'empty',
     components: { AbstractPage },
     props: {
