@@ -165,7 +165,6 @@ export default {
                 data: messageData
             })
                 .then(success => {
-                    console.log(success)
                     _this.emailSendResult = 'success'
                 })
                 .catch(error => {

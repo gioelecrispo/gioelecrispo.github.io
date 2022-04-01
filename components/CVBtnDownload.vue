@@ -4,7 +4,6 @@
             :href=href
             elevation="0"
             :color="isFab ? 'primary darken-1' : 'primary'"
-
             rounded
             download
             style="z-index: 2; padding: 25px!important;"

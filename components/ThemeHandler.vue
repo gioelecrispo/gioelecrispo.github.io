@@ -1,6 +1,6 @@
 <template>
 
-    <v-card max-width='200'>
+    <v-card width='200'>
         <v-container fluid>
             <v-row align='center' justify='center'>
                 <v-col cols='auto' v-if='dark'>
@@ -51,7 +51,6 @@ export default {
         ...mapGetters('AppState', {
                 isDark: 'isDark',
                 themeColors: 'getThemeColors',
-                selectedThemeColor: 'getSelectedThemeColor'
             }
         )
     },
@@ -64,6 +63,10 @@ export default {
             this.$store.dispatch('AppState/setSelectedThemeColor', color)
             this.$vuetify.theme.themes.light.primary = color
             this.$vuetify.theme.themes.dark.primary = color
+        },
+        setRandomColor() {
+            let color = this.themeColors[Math.floor(Math.random() * this.themeColors.length)]
+            this.setThemeColor(color)
         }
     }
 }

@@ -1,25 +1,27 @@
 <template>
-    <v-container>
-        <v-row justify='center' class='mt-8'>
-            <v-col lg='10' xl='9'>
-                <v-card color='transparent' height='30' elevation='0' class='pa-0 py-2 mb-8'>
-                    <v-card-title class='px-0 py-0 primary--text' v-if='article.tags'>{{
-                            article.tags.map(t => '#' + t).join(', ') }}
-                    </v-card-title>
-                    <v-card-text class='px-0 py-0 grey--text'>Written on: {{ formatDate(article.createdAt) }}
-                    </v-card-text>
-                    <v-card-text class='px-0 py-0 grey--text'>Latest update: {{ formatDate(article.updatedAt) }}
-                    </v-card-text>
-                </v-card>
-                <article class='pt-12'>
-                    <nuxt-content :document='article' />
-                </article>
-            </v-col>
-        </v-row>
-        <client-only placeholder='loading...' v-if='production'>
-            <h2 class='mt-12 mb-2'>Comments</h2>
-            <div id='disqus_thread'></div>
-        </client-only>
+    <v-container fluid>
+        <v-container>
+            <v-row justify='center' class='mt-8'>
+                <v-col lg='10' xl='9'>
+                    <v-card color='transparent' height='30' elevation='0' class='pa-0 py-2 mb-8'>
+                        <v-card-title class='px-0 py-0 primary--text' v-if='article.tags'>{{
+                                article.tags.map(t => '#' + t).join(', ') }}
+                        </v-card-title>
+                        <v-card-text class='px-0 py-0 grey--text'>Written on: {{ formatDate(article.createdAt) }}
+                        </v-card-text>
+                        <v-card-text class='px-0 py-0 grey--text'>Latest update: {{ formatDate(article.updatedAt) }}
+                        </v-card-text>
+                    </v-card>
+                    <article class='pt-12'>
+                        <nuxt-content :document='article' />
+                    </article>
+                </v-col>
+            </v-row>
+            <client-only placeholder='loading...' v-if='production'>
+                <h2 class='mt-12 mb-2'>Comments</h2>
+                <div id='disqus_thread'></div>
+            </client-only>
+        </v-container>
     </v-container>
 </template>
 
@@ -78,6 +80,13 @@ export default {
     },
     watch: {
         '$vuetify.theme.dark'(oldValue, newValue) {
+            if (this.production) {
+                window.DISQUS.reset({
+                    reload: true
+                })
+            }
+        },
+        '$vuetify.theme.themes.dark.primary'(oldValue, newValue) {
             if (this.production) {
                 window.DISQUS.reset({
                     reload: true

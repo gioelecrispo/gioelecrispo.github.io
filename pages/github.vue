@@ -195,8 +195,8 @@
             }
         },
         async fetch () {
-            getGithubUserInfo(this.$axios).then(succ => this.githubUserInfo = succ);
-            getGithubProjects(this.$axios).then(succ => this.githubProjects = succ);
+            getGithubUserInfo(this.$axios).then(succ => {this.githubUserInfo = succ; console.log(succ)});
+            getGithubProjects(this.$axios).then(succ => {this.githubProjects = succ; console.log(succ)});
         },
         head() {
             return createSeoMeta('Github Projects',

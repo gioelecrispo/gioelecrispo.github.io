@@ -44,7 +44,10 @@ export const getters = {
     },
     getSelectedThemeColor: (state) => {
         if (state.selectedThemeColor === undefined) {
-            return state.themeColors[0]
+            let color = Math.floor(Math.random() *state.themeColors.length)
+            this.$vuetify.theme.themes.light.primary = color
+            this.$vuetify.theme.themes.dark.primary = color
+            return color
         }
         return state.selectedThemeColor
     }

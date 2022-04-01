@@ -25,7 +25,6 @@
             }
         },
         created() {
-          console.log(this.tile, this.size)
         },
         data() {
             return {}

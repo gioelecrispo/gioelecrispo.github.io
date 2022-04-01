@@ -21,7 +21,7 @@ import postRouteNavigation from '../mixins/postRouteNavigation'
 
 
 export default {
-    name: 'AppStructure',
+    name: 'home',
     mixins: [postRouteNavigation],
     scrollToTop: true,
     components: {

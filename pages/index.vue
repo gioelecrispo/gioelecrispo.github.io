@@ -118,21 +118,12 @@
                 <v-row class='mt-10 pb-3' justify='center'>
                     <h1 class='title-underline'>Works and Experiences</h1>
                 </v-row>
-<!--                <v-row class='px-3'>
-                    My career is mainly focused on artificial intelligence projects.
-                    During my employment at NTT Data I have explored various architectural solutions (streaming, real
-                    time,
-                    batch, and others) based on microservices for complex artificial intelligence problems.
-                    I also achieved the AWS Machine Learning Specialty certification, with which I also projected the
-                    solutions
-                    into the AWS domain.
-                </v-row>-->
                 <v-row align='start' class='py-3 px-3'>
                     <v-col cols='12' sm='6' :class="mobile() ? 'pa-0 py-1' : 'pl-0 pr-2 py-1'">
                         <v-row align='center' class='py-0'>
                             <v-col cols='auto' class='py-0'><h3 class='pt-3 py-1'>Current job</h3></v-col>
                             <v-spacer></v-spacer>
-                            <!--                    <v-col cols="auto" class="py-0 mt-2">View more</v-col>-->
+                            <!-- <v-col cols="auto" class="py-0 mt-2">View more</v-col>-->
                         </v-row>
 
                         <div v-for='experience in visibleExperiences'>
@@ -163,9 +154,6 @@
                 <v-row class='mt-10 py-3' justify='center'>
                     <h1 class='title-underline'>Projects</h1>
                 </v-row>
-<!--                <v-row class='px-3'>
-                    I have built many systems, mainly focused on artificial intelligence and machine learning.
-                </v-row>-->
                 <v-row class='py-3 px-0'>
                     <v-col
                         v-for='project in visibleProjects'
@@ -196,13 +184,6 @@
                 <v-row class='mt-10 pt-3 px-3' justify='center'>
                     <h1 class='title-underline'>Github</h1>
                 </v-row>
-<!--                <v-row class='px-3'>
-                    I use Github a lot to save my efforts, make them available for me and others. I like a lot facing
-                    with
-                    challenges and solve tricky problems.
-                    In fact, my first development in Python was "dictipy", a library that overcomes the limitations of
-                    json.dumps and __dict__ methods.
-                </v-row>-->
                 <v-row class='py-4 px-3'>
                     <v-col
                         v-for='project in visibleGithubProjects'
@@ -232,11 +213,6 @@
                 <v-row class='mt-10 py-3 px-3' justify='center'>
                     <h1 class='title-underline'>Latest Posts</h1>
                 </v-row>
-<!--                <v-row class='px-3'>
-                    Since childhood, I've always been very curious and eager to perfect my things.
-                    From here my articles are born, which are related to projects or personal insights to improve my
-                    skills.
-                </v-row>-->
                 <v-row class='pt-3 pb-12 px-3'>
                     <v-col
                         v-for='article in visibleArticles'
@@ -321,6 +297,7 @@ export default {
     },
     created() {
         this.$fetch()
+        //this.$refs.themeEngine.setRandomColor()
     },
     mounted() {
     },

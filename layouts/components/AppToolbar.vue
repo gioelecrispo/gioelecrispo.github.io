@@ -9,7 +9,7 @@
         :src="image !== undefined ? image : ''"
         :fade-img-on-scroll='image !== undefined'
         :shrink-on-scroll='image !== undefined'
-        :scroll-threshold="image !== undefined ? '150': ''"
+        :scroll-threshold="image !== undefined ? '450': ''"
         :height="image !== undefined ? '450': ''"
     >
         <template
@@ -37,23 +37,25 @@
         </v-toolbar-title>
         <v-spacer />
         <v-row align='center' justify='end'>
-            <v-menu
-                v-model='colorMenu'
-                :close-on-content-click='true'
-                offset-y
-            >
-                <template v-slot:activator='{ on, attrs }'>
-                    <v-btn icon color='sectionPrimary'
-                           v-bind='attrs'
-                           v-on='on'>
-                        <v-avatar :size='28' :color="image ? 'white' : 'sectionPrimary'">
-                            <v-avatar :size='22' color='primary'>
+            <client-only>
+                <v-menu
+                    v-model='colorMenu'
+                    :close-on-content-click='true'
+                    offset-y
+                >
+                    <template v-slot:activator='{ on, attrs }'>
+                        <v-btn icon color='sectionPrimary'
+                               v-bind='attrs'
+                               v-on='on'>
+                            <v-avatar :size='28' :color="image ? 'white' : 'sectionPrimary'">
+                                <v-avatar :size='22' color='primary'>
+                                </v-avatar>
                             </v-avatar>
-                        </v-avatar>
-                    </v-btn>
-                </template>
-                <ThemeHandler :dark='false'></ThemeHandler>
-            </v-menu>
+                        </v-btn>
+                    </template>
+                    <ThemeHandler :dark='false'></ThemeHandler>
+                </v-menu>
+            </client-only>
 
             <v-btn
                 icon
@@ -103,7 +105,7 @@ export default {
         ...mapGetters('AppState', {
             isDark: 'isDark',
             isLeftNavDrawer: 'isLeftNavDrawer',
-            appToolbarElements: 'getNavLinks',
+            appToolbarElements: 'getNavLinks'
         }),
         showNavigationDrawerIcon() {
             return this.tabletAndDown()
@@ -128,7 +130,7 @@ export default {
         setDarkTheme() {
             this.$store.dispatch('AppState/setIsDark', !this.isDark)
             this.$vuetify.theme.dark = this.isDark === true
-        },
+        }
     }
 }
 </script>
