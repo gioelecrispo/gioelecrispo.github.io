@@ -1,19 +1,18 @@
 <template>
-    <AbstractPage>
-        <v-app id='app-home'>
-            <!-- APP: CONTENT -->
-            <v-main>
-                <ContentHeader />
-                <AppContent />
-            </v-main>
-            <!-- APP: FOOTER -->
-            <AppFooter />
-        </v-app>
-    </AbstractPage>
+    <v-app id='app-home'>
+        <!-- APP: CONTENT -->
+        <v-main>
+            <ContentHeader />
+            <AppContent />
+        </v-main>
+        <!-- APP: FOOTER -->
+        <AppFooter />
+    </v-app>
 </template>
 
 <script>
-import AbstractPage from './components/AbstractPage'
+import loader from '../mixins/loader'
+import PageLoader from './components/PageLoader'
 import AppContent from './components/AppContent'
 import AppFooter from './components/AppFooter'
 import ContentHeader from './components/ContentHeader'
@@ -22,13 +21,13 @@ import postRouteNavigation from '../mixins/postRouteNavigation'
 
 export default {
     name: 'home',
-    mixins: [postRouteNavigation],
+    mixins: [loader, postRouteNavigation],
     scrollToTop: true,
     components: {
-        AbstractPage,
+        PageLoader,
         AppContent,
         AppFooter,
-        ContentHeader,
+        ContentHeader
     }
 }
 </script>

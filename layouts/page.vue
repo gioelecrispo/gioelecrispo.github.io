@@ -1,46 +1,45 @@
 <template>
-    <AbstractPage>
-        <v-app id='app-page'>
-            <!-- APP: LEFT NAVIGATION DRAWER -->
-            <NavigationDrawer
-                v-if='tabletAndDown()'
-                :right='false'
-            />
+    <v-app id='app-page'>
+        <!-- APP: LEFT NAVIGATION DRAWER -->
+        <NavigationDrawer
+            v-if='tabletAndDown()'
+            :right='false'
+        />
 
-            <!-- APP: TOP TOOLBAR -->
-            <AppToolbar
-                id='app-toolbar'
-                :title='appToolbarTitle'
-            />
+        <!-- APP: TOP TOOLBAR -->
+        <AppToolbar
+            id='app-toolbar'
+            :title='appToolbarTitle'
+        />
 
-            <!-- APP: CONTENT -->
-            <v-main>
-                <AppContent />
-            </v-main>
-            <!-- APP: FOOTER -->
-            <AppFooter />
-        </v-app>
-    </AbstractPage>
+        <!-- APP: CONTENT -->
+        <v-main>
+            <AppContent />
+        </v-main>
+        <!-- APP: FOOTER -->
+        <AppFooter />
+    </v-app>
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import AbstractPage from './components/AbstractPage'
+import { mapGetters } from 'vuex'
+import PageLoader from './components/PageLoader'
 import NavigationDrawer from './components/NavigationDrawer'
 import AppContent from './components/AppContent'
 import AppToolbar from './components/AppToolbar'
 import AppFooter from './components/AppFooter'
 import ContentHeader from './components/ContentHeader'
 import ui from '../mixins/ui'
+import loader from '../mixins/loader'
 import postRouteNavigation from '../mixins/postRouteNavigation'
 
 
 export default {
     name: 'page',
-    mixins: [ui, postRouteNavigation],
+    mixins: [ui, loader, postRouteNavigation],
     scrollToTop: true,
     components: {
-        AbstractPage,
+        PageLoader,
         NavigationDrawer,
         AppToolbar,
         AppContent,

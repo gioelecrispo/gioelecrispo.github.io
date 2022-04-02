@@ -1,48 +1,47 @@
 <template>
-    <AbstractPage>
-        <v-app id='app-post'>
-            <!-- APP: LEFT NAVIGATION DRAWER -->
-            <NavigationDrawer
-                v-if='tabletAndDown()'
-                :right='false'
-            />
+    <v-app id='app-post'>
+        <!-- APP: LEFT NAVIGATION DRAWER -->
+        <NavigationDrawer
+            v-if='tabletAndDown()'
+            :right='false'
+        />
 
-            <!-- APP: TOP TOOLBAR -->
-            <AppToolbar
-                id='app-toolbar'
-                title='Post'
-                :image="require('@/assets/img/blog/' + appToolbarImage)"
-            />
-            <!-- APP: CONTENT -->
-            <v-main>
-                <AppContent />
-            </v-main>
-            <!-- APP: FOOTER -->
-            <AppFooter />
-        </v-app>
-    </AbstractPage>
+        <!-- APP: TOP TOOLBAR -->
+        <AppToolbar
+            id='app-toolbar'
+            title='Post'
+            :image="require('@/assets/img/blog/' + appToolbarImage)"
+        />
+        <!-- APP: CONTENT -->
+        <v-main>
+            <AppContent />
+        </v-main>
+        <!-- APP: FOOTER -->
+        <AppFooter />
+    </v-app>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
-import AbstractPage from './components/AbstractPage'
+import PageLoader from './components/PageLoader'
 import NavigationDrawer from './components/NavigationDrawer'
 import AppContent from './components/AppContent'
 import AppToolbar from './components/AppToolbar'
 import AppFooter from './components/AppFooter'
 import ui from '../mixins/ui'
+import loader from '../mixins/loader'
 import postRouteNavigation from '../mixins/postRouteNavigation'
 
 export default {
     name: 'post',
-    mixins: [ui, postRouteNavigation],
+    mixins: [ui, loader, postRouteNavigation],
     scrollToTop: true,
     components: {
-        AbstractPage,
+        PageLoader,
         NavigationDrawer,
         AppToolbar,
         AppContent,
-        AppFooter,
+        AppFooter
     },
     props: {},
     computed: {

@@ -14,7 +14,7 @@
                 <v-col cols='auto'>
                     <v-sheet max-width='150px' color='transparent'>
                         <v-row align='center' justify='center'>
-                            <v-col cols='auto' v-for='color in themeColors' class='pa-2'>
+                            <v-col cols='auto' v-for='color in themeColors' :key='color' class='pa-2'>
                                 <v-btn icon @click='setThemeColor(color)'>
                                     <v-avatar :size='24' :color='color'></v-avatar>
                                 </v-btn>

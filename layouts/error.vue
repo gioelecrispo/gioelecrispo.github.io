@@ -1,26 +1,24 @@
 <template>
-    <AbstractPage>
-        <v-app dark>
-            <h1 v-if='error.statusCode === 404'>
-                {{ pageNotFound }}
-            </h1>
-            <h1 v-else>
-                {{ otherError }}, {{ error }}
-            </h1>
-            <NuxtLink to='/'>
-                Home page
-            </NuxtLink>
-        </v-app>
-    </AbstractPage>
+    <v-app dark>
+        <h1 v-if='error.statusCode === 404'>
+            {{ pageNotFound }}
+        </h1>
+        <h1 v-else>
+            {{ otherError }}, {{ error }}
+        </h1>
+        <NuxtLink to='/'>
+            Home page
+        </NuxtLink>
+    </v-app>
+    <client-only><PageLoader v-else></PageLoader></client-only>
 </template>
 
 <script>
-import AbstractPage from './components/AbstractPage'
 
 export default {
     name: 'error',
     layout: 'empty',
-    components: { AbstractPage },
+    components: { },
     props: {
         error: {
             type: Object,
