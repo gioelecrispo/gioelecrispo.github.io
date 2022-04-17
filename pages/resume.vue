@@ -1,44 +1,31 @@
 <template>
     <v-container fluid>
         <v-container>
-            <!--<v-row
-                justify='center'
-                class='fade-in-fwd'
-                align='center'
-                no-gutters
-            >
-                <v-col
-                    class='pa-1'
-                    cols='auto'
-                >
-                    <CVBtnDownload :isFab=false></CVBtnDownload>
-                </v-col>
-            </v-row>-->
             <CVBtnDownload :isFab=true></CVBtnDownload>
-
 
             <v-row class='pt-2 pb-3 slide-in-bottom' justify='center'>
                 <h1 class='title-underline my-6'>Experiences</h1>
             </v-row>
             <v-row class='slide-in-bottom'>
-                <v-timeline :dense='tabletAndDown()'>
-                    <v-timeline-item
-                        v-for='(experience, i) in experiences'
-                        :key='i'
-                        :color='experience.color'
-                        :icon='experience.icon'
-                        fill-dot
-                    >
-                        <template v-slot:opposite>
-            <span
-                v-if='!tabletAndDown()'
-                :class='`body-1 font-weight-bold`'
-                v-text='experience.date'
-            />
-                        </template>
-                        <Experience :experience='experience' :forceDate='false'></Experience>
-                    </v-timeline-item>
-                </v-timeline>
+                    <v-timeline :dense='tabletAndDown()'>
+                        <v-timeline-item
+                            v-for='(experience, i) in experiences'
+                            :key='i'
+                            :color='experience.color'
+                            :icon='experience.icon'
+                            fill-dot
+                        >
+                            <template v-slot:opposite>
+                <span
+                    v-if='!tabletAndDown()'
+                    :class='`body-1 font-weight-bold`'
+                    v-text='experience.date'
+                />
+                            </template>
+                            <Experience :experience='experience'
+                                        :forceDate='false'></Experience>
+                        </v-timeline-item>
+                    </v-timeline>
             </v-row>
 
             <v-row class='pt-8 pb-3 slide-in-bottom'>

@@ -11,7 +11,7 @@
                             <v-list>
                                 <v-list-item three-line>
                                     <v-list-item-content>
-                                        <h2 class='mb-1'>{{ project.name }}</h2>
+                                        <h2 class='mb-1 primary--text text--darken-2'>{{ project.name }}</h2>
                                         <v-list-item-subtitle>
                                             <v-row
                                                 align='center'

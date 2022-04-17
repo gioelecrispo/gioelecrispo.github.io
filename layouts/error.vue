@@ -10,7 +10,6 @@
             Home page
         </NuxtLink>
     </v-app>
-    <client-only><PageLoader v-else></PageLoader></client-only>
 </template>
 
 <script>

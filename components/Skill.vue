@@ -46,13 +46,6 @@
         props: ["skill"],
         data() {
             return {
-                colors: {
-                    "DEEP ORANGE": "#FF5722",
-                    "ORANGE": "#FF9800",
-                    "LIME": "#CDDC39",
-                    "LIGHT GREEN": "#8BC34A",
-                    "GREEN": "#4CAF50"
-                }
 
             };
         },
@@ -60,15 +53,15 @@
         methods: {
             getColor(value) {
                 if (value >= 0 && value < 20) {
-                    return this.colors["DEEP ORANGE"];
+                    return "primary lighten-2";
                 } else if (value >= 20 && value < 40) {
-                    return this.colors["ORANGE"];
+                    return "primary lighten-1";
                 } else if (value >= 40 && value < 60) {
-                    return this.colors["LIME"];
+                    return "primary";
                 } else if (value >= 60 && value < 80) {
-                    return this.colors["LIGHT GREEN"];
+                    return "primary darken-1";
                 } else {
-                    return this.colors["GREEN"];
+                    return "primary darken-2";
                 }
             }
         }

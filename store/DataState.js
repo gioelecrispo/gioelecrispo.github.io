@@ -58,7 +58,8 @@ export const state = () => ({
     ],
     experiences: [
         {
-            color: 'blue darken-2',
+            color: 'primary darken-2',
+            type: 'job',
             icon: 'mdi-briefcase',
             date: 'May 2018 - now',
             location: 'Naples (Italy)',
@@ -70,7 +71,8 @@ export const state = () => ({
                 'reusability of the models;  team coordination in various projects.'
         },
         {
-            color: 'orange darken-1',
+            color: 'primary darken-1',
+            type: 'internship',
             icon: 'mdi-briefcase-search',
             date: 'Nov 2017 - Feb 2018',
             location: 'Las Palmas de Gran Canaria (Spain)',
@@ -82,7 +84,8 @@ export const state = () => ({
                 'on Frontiers in Handwriting Recognition.'
         },
         {
-            color: 'red darken-2',
+            color: 'primary darken-3',
+            type: 'instruction',
             icon: 'mdi-school',
             date: 'Oct 2015 - Feb 2018',
             location: 'Fisciano, Salerno (Italy)',
@@ -94,7 +97,8 @@ export const state = () => ({
             vote: '110/110 cum laude'
         },
         {
-            color: 'orange darken-1',
+            color: 'primary darken-1',
+            type: 'internship',
             icon: 'mdi-briefcase-search',
             location: 'Fisciano, Salerno (Italy)',
             position: 'Company Internship',
@@ -104,7 +108,8 @@ export const state = () => ({
                 'on a Kinect sensor. I proposed a new feature extraction method for gestures.'
         },
         {
-            color: 'red darken-2',
+            color: 'primary darken-3',
+            type: 'instruction',
             icon: 'mdi-school',
             date: 'Oct 2011 - Jun 2015',
             location: 'Fisciano, Salerno (Italy)',
