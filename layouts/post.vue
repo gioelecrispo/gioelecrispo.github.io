@@ -10,7 +10,7 @@
         <AppToolbar
             id='app-toolbar'
             title='Post'
-            :image="require('@/assets/img/blog/' + appToolbarImage)"
+            :image="appToolbarImage"
         />
         <!-- APP: CONTENT -->
         <v-main>

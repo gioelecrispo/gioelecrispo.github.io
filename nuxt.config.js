@@ -52,7 +52,7 @@ export default async () => {
 
         // Global CSS: https://go.nuxtjs.dev/config-css
         css: [
-            "~/assets/styles/scss/commons",
+            "~/assets/styles/commons",
             'material-design-icons-iconfont/dist/material-design-icons.css', // md:
             '@mdi/font/css/materialdesignicons.css', // mdi
             '@fortawesome/fontawesome-free/css/all.css' // fa5
@@ -81,11 +81,11 @@ export default async () => {
         ],
 
         // Nuxt webfont module configuration: https://www.npmjs.com/package/nuxt-webfontloader#setup
-        webfontloader: {
+        /*webfontloader: {
             google: {
                 families: ['Lato&display=swap']  // Loads Lato
             }
-        },
+        },*/
 
         // Axios module configuration: https://go.nuxtjs.dev/config-axios
         axios: {},
@@ -175,7 +175,7 @@ export default async () => {
         // Build Configuration: https://go.nuxtjs.dev/config-build
         build: {
             parallel: true,
-            cache: false,
+            cache: true,
             analyze: process.env.NODE_ENV !== 'production',
             extractCSS: process.env.NODE_ENV === 'production',
             optimizeCSS: process.env.NODE_ENV === 'production',

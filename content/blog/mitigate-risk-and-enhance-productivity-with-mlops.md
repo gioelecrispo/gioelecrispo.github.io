@@ -2,7 +2,7 @@
 title: <span>Mitigate risk and enhance productivity with <strong>MLOps</strong></span>
 description: MLOps is important to mitigate operational risks by using DevOps principles. MLFlow is a open-source platform for building MLOps pipelines also in the cloud.
 author: Gioele Crispo
-img: mitigate-risk-and-enhance-productivity-with-mlops.jpg
+img: /blog/mitigate-risk-and-enhance-productivity-with-mlops/_index.jpg
 alt: mlops
 tags: 
   - mlops
@@ -46,7 +46,7 @@ There are several key points in the challenges that MLOps tries to solve:
 
 <div style="text-align:center">
 <br>
-<img src="https://i.ibb.co/M1BH6Lz/mlops-phases.png" alt="ml-phases" width="85%"/> 
+<img src="/blog/mitigate-risk-and-enhance-productivity-with-mlops/mlops-phases.png" alt="mlops-phases" width="85%"/> 
 
 <p style="font-size: 12px;white-space: pre-wrap">Fig. 1. The life cycle of a machine learning application. There are six stages: PLAN, BUILD, TEST, DEPLOY, MONITOR and FEEDBACK.
 It is a cyclical process that involves different teams and requires different skills.</p>
@@ -82,7 +82,7 @@ used in ways that were not foreseen initially.
 
 <div style="text-align:center">
 <br>
-<img src="https://i.ibb.co/HKLvVR7/risk-matrix.png" alt="risk-matrix" width="80%"/> 
+<img src="/blog/mitigate-risk-and-enhance-productivity-with-mlops/risk-matrix.png" alt="risk-matrix" width="80%"/> 
 
 <p style="font-size: 12px;white-space: pre-wrap">Fig. 2. The risk matrix is fundamental to understand how critical are some requirements and so how important is addressing them with MLOps.</p>
 
@@ -185,7 +185,7 @@ Finally, the devops team is left with the task of monitoring the application in 
 
 <div style="text-align:center">
 <br>
-<img src="https://i.ibb.co/Tv42V3x/mlops-manual-implementation.png" alt="risk-matrix" width="95%"/> 
+<img src="/blog/mitigate-risk-and-enhance-productivity-with-mlops/mlops-manual-implementation.png" alt="mlops-manual-implementation" width="95%"/> 
 
 <p style="font-size: 12px;white-space: pre-wrap">Fig. 3. The setup with no automation strategies.</p>
 
@@ -230,7 +230,7 @@ This setup includes very important elements:
 
 <div style="text-align:center">
 <br>
-<img src="https://i.ibb.co/6HvpGKQ/mlops-cmd.png" alt="risk-matrix" width="95%"/> 
+<img src="/blog/mitigate-risk-and-enhance-productivity-with-mlops/mlops-cmd.png" alt="mlops-cmd" width="95%"/> 
 
 <p style="font-size: 12px;white-space: pre-wrap">Fig. 4. The setup with Continuous Model Delivery.</p>
 
@@ -273,7 +273,7 @@ This setup introduces other improvements:
 
 <div style="text-align:center">
 <br>
-<img src="https://i.ibb.co/BZPsZ20/mlops-ci-cmd.png" alt="risk-matrix" width="95%"/> 
+<img src="/blog/mitigate-risk-and-enhance-productivity-with-mlops/mlops-ci-cmd.png" alt="mlops-ci-cmd" width="95%"/> 
 
 <p style="font-size: 12px;white-space: pre-wrap">Fig. 5. The setup with Continuous Integration / Continuous Delivery of pipelines.</p>
 

@@ -54,7 +54,8 @@ export default {
     },
     computed: {
         img() {
-            return require(`@/assets/img/blog/${this.article.img}`)
+            //return require(`@/assets/img/blog/${this.article.img}`)
+            return this.article.img;
         }
     },
     methods: {

@@ -34,7 +34,7 @@ export default {
         return createSeoMeta(title,
             this.article.description,
             this.$route.path,
-            require('@/assets/img/blog/' + this.article.img))
+            '/static' + this.article.img)
     },
     name: 'ArticleDetails',
     layout: 'post',

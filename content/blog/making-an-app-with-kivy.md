@@ -2,7 +2,7 @@
 title: <span>Making an app with <strong>Kivy</strong></span>
 description: We tried to make an Android app with Kivy and we describe our experience, highlighting the strengths and weaknesses of the framework.
 author: Gioele Crispo, Stefania Avallone
-img: making-an-app-with-kivy.jpg
+img: /blog/making-an-app-with-kivy/_index.jpg
 alt: Android App with Kivy 
 tags: 
   - android
@@ -134,7 +134,7 @@ We can confirm that kv language is very powerful, allows hot-reloading and it
 succeeds perfectly in its purposes. The result we got is the following:
 
 <div style="text-align:center">
-<img src="https://i.ibb.co/74GM6RJ/kaboo.png" alt="kaboo" width="80%"/> 
+<img src="/blog/making-an-app-with-kivy/kaboo.png" alt="kaboo" width="80%"/> 
 
 <span style="font-size: 12px;">Fig. 1. Screenshots of the main pages of the app.</i></a></span>
 <br>
@@ -253,13 +253,13 @@ The difficulties and shortcomings we have found are the following:
 
 <br/>
 <div class='row' style="text-align:center;">
-<div class='column'>
-<img src="https://i.ibb.co/svyHj1Q/glitches.gif" alt="skeletonization" width="50%"/> 
+<div class='two-column'>
+<img src="/blog/making-an-app-with-kivy/glitches.gif" alt="glitches" width="50%"/> 
 
 <span style="font-size: 12px;  margin: 10px;">Fig.2. Window resizing glitches in app loading on Android.</span>
 </div>
-<div class='column'>
-<img src="https://i.ibb.co/xmyXxRv/resize-glitch.gif" alt="skeletonization" width="65%"/> 
+<div class='two-column'>
+<img src="/blog/making-an-app-with-kivy/resize-glitch.gif" alt="resize-glitch" width="65%"/> 
 
 <span style="font-size: 12px; margin: 10px;">Fig.3. Screen sizing problems. At the first loading the app has a white box on the top of the screen; however, forcing a reload (by going to the app overview and returning to Kaboo) a screen resizing is performed and the box disappears.</span>
 <br>

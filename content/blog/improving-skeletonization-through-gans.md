@@ -2,7 +2,7 @@
 title: <span>Improving Skeletonization through <strong>GANs</strong></span>
 description: An innovative method for skeletonization concerns the use of GANs, to overcome the limitations of traditional approaches.
 author: Gioele Crispo
-img: improving-skeletonization-through-gans.jpeg
+img: /blog/improving-skeletonization-through-gans/_index.jpeg
 alt: Android App with Kivy 
 tags: 
   - deep-learning
@@ -40,7 +40,7 @@ I thought I'd train a Pix2Pix GAN to do the stroke-to-pen-to-skeleton conversion
 Below is an image showing the result:
 
 <div style="text-align:center">
-<img src="https://i.ibb.co/RcQW499/EX.png" alt="results" width="90%"/>
+<img src="/blog/improving-skeletonization-through-gans/example.png" alt="example" width="90%"/>
 
 <span style="font-size: 12px;">Fig. 1. Images related to skeletonization. Above those of reference: 
 in particular, on the left we find the original one, on which the skeletonization algorithms operate; 
@@ -96,7 +96,7 @@ and presented at CVPR in 2017.
 In particular, the aim was to obtain stylized images of Google maps from satellite ones.
 
 <div style="text-align:center">
-<img src="https://i.ibb.co/H79zxFm/pix2pix.png" alt="results" width="100%"/>
+<img src="/blog/improving-skeletonization-through-gans/pix2pix.png" alt="pix2pix" width="100%"/>
 
 <span style="font-size: 12px;">Fig. 2. Output described in the "Image-to-Image Translation with Conditional Adversarial Networks" paper, operating on satellite images.
 </span>
@@ -148,7 +148,7 @@ managed by adding white padding and breaking the image into patches of 256x256 p
 The output is obtained by converting each patch individually and recomposing the image.
 
 <div style="text-align:center">
-<img src="https://i.ibb.co/3pYztZk/transform.png" alt="transformation" width="100%"/>
+<img src="/blog/improving-skeletonization-through-gans/transform.png" alt="transform" width="100%"/>
 
 <span style="font-size: 12px;">Fig. 3. An example of a signature larger than 256x256 pixels, 
 to which padding has been added and split into patches of the required size. </span>
@@ -178,7 +178,7 @@ and focus on intersections,  where the `>--<` pattern, tipical of traditional sk
 is not created.
 
 <div style="text-align:center">
-<img src="https://i.ibb.co/KGLdmGQ/zoom.png" alt="results" width="100%"/>
+<img src="/blog/improving-skeletonization-through-gans/zoom.png" alt="zoom" width="100%"/>
 
 <span style="font-size: 12px;">Fig. 4. Comparison between traditional skeletonization (left) and
 GAN based one (right). It could be seen that the latter better identifies how the intersections
@@ -211,7 +211,7 @@ The value obtained can give us a general idea of how the generator model is perf
 Also, the same function can be used to set up a hyperparameter optimization study.
 
 <div style="text-align:center">
-<img src="https://i.ibb.co/8KMH9G0/funzione-ottimiz.png" alt="funz_ottimiz" width="90%"/>
+<img src="/blog/improving-skeletonization-through-gans/ottimiz-function.png" alt="ottimiz-function" width="90%"/>
 
 <span style="font-size: 12px;">Fig. 5. A possible function to evaluate the GAN generation results 
 and understand which of the many can be the best model. The evaluation function is simply represented 

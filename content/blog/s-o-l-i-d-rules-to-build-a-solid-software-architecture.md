@@ -2,7 +2,7 @@
 title: <span><strong>S.O.L.I.D.</strong> rules to build a <strong>solid</strong> software architecture</span>
 description: S.O.L.I.D. principles and their consequences are analyzed in depth.
 author: Gioele Crispo
-img: s-o-l-i-d-rules-to-build-a-solid-software-architecture.png
+img: /blog/s-o-l-i-d-rules-to-build-a-solid-software-architecture/_index.png
 alt: solid rules
 tags: 
   - architectures

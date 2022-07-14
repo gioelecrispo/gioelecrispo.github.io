@@ -2,7 +2,7 @@
 title: <span>A novel <strong>Writing Order Recovery</strong> approach for handwriting specimens</span>
 description: A pattern-recognition based approach for recovering the writing order trajectory of a signature is shown.
 author: Gioele Crispo
-img: a-novel-writing-order-recovery-approach-for-handwriting-specimens.png
+img: /blog/a-novel-writing-order-recovery-approach-for-handwriting-specimens/_index.png
 alt: wor-talk
 tags: 
   - pattern-recognition
@@ -41,7 +41,7 @@ The following <a href="https://www.youtube.com/watch?v=BYJawbV0Y2k&t=58s">video<
 ## Why Writing Order Recovery?
 Before clarifying what Writing Order Recovery is, let's give some context.
 
-In the area of ​digital signature verification, there is the problem of evaluating the authenticity
+In the area of digital signature verification, there is the problem of evaluating the authenticity
 of a writer based on the writing. Now, if the signature is digitally acquired (**online writing**), 
 we have access to a lot of information, as it is possible to record all the movements that the writer makes. 
 If the signature has been acquired analogically (**offline writing**), i.e. on paper using a pen, the task becomes 
@@ -70,7 +70,7 @@ the pen is a dirty, double trace, and reconstructing the writing order is more d
 The class of algorithms used to produce this thin trace is called **skeletonization**. 
 
 <div style="text-align:center">
-<img src="https://i.ibb.co/y4t7B1z/skeletonization.png" alt="skeletonization" width="100%"/> 
+<img src="/blog/a-novel-writing-order-recovery-approach-for-handwriting-specimens/skeletonization.png" alt="skeletonization" width="100%"/> 
 
 <span style="font-size: 12px;">Fig.1. Comparison between the the Real Image (a), the binary one (b) and the skeletonized one (c). Image from <a href="https://www.researchgate.net/publication/319443706_Recovering_Western_On-line_Signatures_From_Image-Based_Specimens"><i>
 Recovering Western On-line Signatures FromImage-Based Specimens</i></a></span>
@@ -96,7 +96,7 @@ The Writing Order Recovery algorithm I proposed consists of 3 parts:
 <br>
 
 <div style="text-align:center">
-<img src="https://i.ibb.co/SmPySCQ/algorithm.png" alt="algorithm" width="70%"/>
+<img src="/blog/a-novel-writing-order-recovery-approach-for-handwriting-specimens/algorithm.png" alt="algorithm" width="70%"/>
 
 <span style="font-size: 12px;">Fig. 2. Phases of which the algorithm is composed.</span>
 
@@ -116,7 +116,7 @@ skeletonization algorithms, which never produce lines thicker than 1 pixel, in o
 writing order recognition: however, there is a huge loss of information.
 
 <div style="text-align:center">
-<img src="https://i.imgur.com/0nTtvW8.png" alt="algorithm" width="65%"/>
+<img src="/blog/a-novel-writing-order-recovery-approach-for-handwriting-specimens/point-classification.png" alt="point-classification" width="65%"/>
 
 <span style="font-size: 12px;">Fig. 3. Point classification. It depends on the number of neighboring pixels for each pixel.</span>
 
@@ -139,7 +139,7 @@ finally we calculate the matching through pattern-recognition algorithms. To mak
 to follow, I leave out the details you find in the paper <a href="https://www.researchgate.net/publication/327405064_Tracking_the_Ballistic_Trajectory_in_Complex_and_Long_Handwritten_Signatures">at this link</a>.
 
 <div style="text-align:center">
-<img src="https://i.imgur.com/U2hzrMG.png" alt="algorithm" width="75%"/>
+<img src="/blog/a-novel-writing-order-recovery-approach-for-handwriting-specimens/cluster-point-classification.png" alt="clustes-point-classification" width="75%"/>
 
 <span style="font-size: 12px;">Fig. 4. Cluster analysis. In this phase we search for anchor branch points and we compute the angles to find the 
 cluster output branches associations.</span>
@@ -179,7 +179,7 @@ Below, an image that clarify what are the components (indicated by different col
 how they were traced by our algorithm (shown by the arrows).
 
 <div style="text-align:center">
-<img src="https://i.imgur.com/u7pvRp4.png" alt="results" width="100%"/>
+<img src="/blog/a-novel-writing-order-recovery-approach-for-handwriting-specimens/global-reconstruction.png" alt="global-reconstruction" width="100%"/>
 
 <span style="font-size: 12px;">Fig. 5. Global reconstruction. We find all the components 
 (indicated by different colors) in the signature and then we trace them.</span>
@@ -205,7 +205,7 @@ A correctly rebuilt cluster is a cluster for which all branches outgoing from it
 paired (i.e. traversed in the direction in which the writer traced them).
 
 <div style="text-align:center">
-<img src="https://i.ibb.co/zXxrb44/wor-result0.png" alt="results" width="100%"/>
+<img src="/blog/a-novel-writing-order-recovery-approach-for-handwriting-specimens/wor-result.png" alt="wor-results" width="100%"/>
 
 <span style="font-size: 12px;">Table. 1. Comparison with other methods. We have added also the CPR measure since
  the core of our work is the cluster analysis.</span>

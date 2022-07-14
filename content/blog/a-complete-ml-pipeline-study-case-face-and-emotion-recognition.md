@@ -2,7 +2,7 @@
 title: <span>A complete <strong>ML Pipeline</strong> study case&#58; Face and Emotion Recognition</span>
 description: A journey through the phases of data exploration and training of a CNN model from scratch. A particular focus on optimization for production with Optuna and ONNX is carried out.
 author: Gioele Crispo, Stefania Avallone
-img: a-complete-ml-pipeline-study-case-face-and-emotion-recognition.jpg
+img: /blog/a-complete-ml-pipeline-study-case-face-and-emotion-recognition/_index.jpg
 alt: emotion-recognition
 tags: 
   - computer-vision
@@ -79,14 +79,14 @@ We noticed that it is a very difficult dataset, since it has 3 main issues:
    classified as "surprise"). Refer to images contoured by green rectangles in Fig. 2.
 
 <div style="text-align:center">
-<img src="https://i.ibb.co/dMWP6QX/data-distribution.png" alt="distribution" width="80%"/> 
+<img src="/blog/a-complete-ml-pipeline-study-case-face-and-emotion-recognition/data-distribution.png" alt="data-distribution" width="80%"/> 
 
 <span style="font-size: 12px;">Fig. 1. Distribution of the dataset. There is a predominance of "Happy" and "Neutral"</i></a></span>
 <br>
 </div>
 
 <div style="text-align:center">
-<img src="https://i.ibb.co/3hSp7dM/dataset-angry.png" alt="distribution" width="80%"/> 
+<img src="/blog/a-complete-ml-pipeline-study-case-face-and-emotion-recognition/dataset-angry.png" alt="dataset-angry" width="80%"/> 
 
 <span style="font-size: 12px;">Fig. 2. Some examples of images belonging to "Angry" emotion.
 The red rectangle indicates an image taken from a cartoon. The blue rectangles are around images soiled by writing.
@@ -128,7 +128,7 @@ strong polarization towards the most populous classes and an average error sprea
 all them. In fact, the performance mirrors the challenges of the dataset.
 
 <div style="text-align:center">
-<img src="https://i.ibb.co/L6M3SkQ/evaluate.png" alt="evaluate" width="80%"/> 
+<img src="/blog/a-complete-ml-pipeline-study-case-face-and-emotion-recognition/evaluate.png" alt="evaluate" width="80%"/> 
 
 <span style="font-size: 12px;">Fig. 3. Confusion matrix after the optimization phase.</i></a></span>
 <br>
