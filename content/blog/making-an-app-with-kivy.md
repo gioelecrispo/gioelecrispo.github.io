@@ -33,8 +33,8 @@ this framework, highlighting its strengths and weaknesses, in relation to our ne
 It is published on the <a href="https://play.google.com/store/apps/details?id=org.kames.kaboo&hl=en_US&gl=US">Play Store</a> 
 (give us good reviews! 😉) and below you will find a presentation video.
 
-<div style="text-align:center; width: 100%">
-<iframe style="max-width:650px; height:auto;" src="https://www.youtube.com/embed/qr9I3LjdkSw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<div class="blog-video-container" style="text-align:center">
+<iframe class="blog-video" src="https://www.youtube.com/embed/qr9I3LjdkSw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 
 <br></br>
@@ -252,13 +252,13 @@ The difficulties and shortcomings we have found are the following:
   as discussed above.
 
 <br/>
-<div class='row' style="text-align:center;">
-<div class='two-column'>
+<div class='blog-row' style="text-align:center;">
+<div class='blog-two-column'>
 <img src="/blog/making-an-app-with-kivy/glitches.gif" alt="glitches" width="50%"/> 
 
 <span style="font-size: 12px;  margin: 10px;">Fig.2. Window resizing glitches in app loading on Android.</span>
 </div>
-<div class='two-column'>
+<div class='blog-two-column'>
 <img src="/blog/making-an-app-with-kivy/resize-glitch.gif" alt="resize-glitch" width="65%"/> 
 
 <span style="font-size: 12px; margin: 10px;">Fig.3. Screen sizing problems. At the first loading the app has a white box on the top of the screen; however, forcing a reload (by going to the app overview and returning to Kaboo) a screen resizing is performed and the box disappears.</span>

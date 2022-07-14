@@ -29,8 +29,8 @@ and another journal article is in the works.
 
 The following <a href="https://www.youtube.com/watch?v=BYJawbV0Y2k&t=58s">video</a> shows the results of my work.
 
-<div style="text-align:center; width: 100%">
-<iframe style="max-width:650px; height:auto;" src="https://www.youtube.com/embed/BYJawbV0Y2k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<div class="blog-video-container" style="text-align:center">
+<iframe class="blog-video" src="https://www.youtube.com/embed/BYJawbV0Y2k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 
 <br></br>

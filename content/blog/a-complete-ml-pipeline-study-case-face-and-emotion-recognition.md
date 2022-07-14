@@ -36,8 +36,8 @@ optimization phase has been performed to obtain the best hyperparameters.
 The following <a href="https://www.youtube.com/watch?v=kOJncJAVPng">video</a> shows 
 the results of our work.
 
-<div style="text-align:center; width: 100%">
-<iframe style="max-width:650px; height:auto;" src="https://www.youtube.com/embed/kOJncJAVPng" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<div class="blog-video-container" style="text-align:center">
+<iframe class="blog-video" src="https://www.youtube.com/embed/kOJncJAVPng" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 </iframe>
 
 <br></br>
