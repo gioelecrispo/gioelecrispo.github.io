@@ -42,6 +42,13 @@ export const state = () => ({
     ],
     publications: [
         {
+            title: 'Impact of Writing Order Recovery in Automatic Signature Verification',
+            authors: 'Moises Diaz · Gioele Crispo · Antonio Parziale · Angelo Marcelli · Miguel A. Ferrer',
+            //href: 'https://www.researchgate.net/publication/349988795_Writing_Order_Recovery_in_Complex_and_Long_Static_Handwriting',
+            date: 'June 2022',
+            location: 'Conference: 20th Conference of the International Graphonomics Society (IGS2021) At: Las Palmas De Gran Canaria, Spain'
+        },
+        {
             title: 'Writing Order Recovery in Complex and Long Static Handwriting',
             authors: 'Moises Diaz · Gioele Crispo · Antonio Parziale · Angelo Marcelli · Miguel A. Ferrer',
             href: 'https://www.researchgate.net/publication/349988795_Writing_Order_Recovery_in_Complex_and_Long_Static_Handwriting',

@@ -144,7 +144,7 @@ export default {
             } else if (this.emailSendResult === 'success') {
                 return 'Email sent correctly'
             } else {
-                return 'An error has occured. Try later, please'
+                return 'An error has occurred. Try later, please'
             }
         }
     },
@@ -165,11 +165,14 @@ export default {
                 data: messageData
             })
                 .then(success => {
-                    _this.emailSendResult = 'success'
+                    _this.emailSendResult = 'success';
+                    _this.name = '';
+                    _this.message = '';
+                    _this.fromAddress = '';
                 })
                 .catch(error => {
                     console.error(error)
-                    _this.emailSendResult = 'error'
+                    _this.emailSendResult = 'error';
                 })
                 .then(() => {
                     setTimeout(function() {

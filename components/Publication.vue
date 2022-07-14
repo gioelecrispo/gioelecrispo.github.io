@@ -14,7 +14,7 @@
                     <b>{{ publication.title }}</b>
                 </v-card-title>
             </v-col>
-            <v-col cols="auto">
+            <v-col cols="auto" v-if='publication.href'>
                 <v-btn
                         class="mr-1"
                         icon
