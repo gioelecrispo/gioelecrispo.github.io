@@ -343,7 +343,6 @@ export default {
         },
         visibleGithubProjects() {
             if (this.githubProjects) {
-                console.log(this.githubProjects.filter(gp => gp.name === 'aas'))
                 return this.githubProjects.slice(0, 5);
             }
             return this.githubProjects;

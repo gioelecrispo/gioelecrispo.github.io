@@ -7,6 +7,7 @@ alt: wor-talk
 tags: 
   - pattern-recognition
 createdAt: 2019-03-16T12:15:20.516Z
+updatedAt: 2019-03-16T12:15:20.516Z
 ---
 
 # A novel Writing Order Recovery approach for handwriting specimens

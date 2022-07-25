@@ -8,6 +8,7 @@ tags:
   - deep-learning
   - computer-vision
 createdAt: 2022-01-11T18:26:20.516Z
+updatedAt: 2022-01-11T18:26:20.516Z
 ---
 
 # Improving Skeletonization through GANs

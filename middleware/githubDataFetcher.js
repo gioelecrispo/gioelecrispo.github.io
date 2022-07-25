@@ -7,7 +7,7 @@ export default async ({ store, $axios }) => {
         })
             .then(success => {
                 store.dispatch('DataState/setGithubUserInfo', success.data)
-                console.log("user info", store.state.DataState.githubUserInfo);
+                //console.log("user info", store.state.DataState.githubUserInfo);
             })
             .catch(err => {
                 console.error('setGithubUserInfo - Too Much Requests', err)
@@ -19,7 +19,7 @@ export default async ({ store, $axios }) => {
         })
             .then(success => {
                 store.dispatch('DataState/setGithubProjects', success.data)
-                console.log("projects", store.state.DataState.githubProjects);
+                //console.log("projects", store.state.DataState.githubProjects);
             })
             .catch(err => {
                 console.error('setGithubProjects - Too Much Requests', err)

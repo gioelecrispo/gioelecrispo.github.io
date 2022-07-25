@@ -9,6 +9,7 @@ tags:
   - python
   - devops
 createdAt: 2022-02-16T13:15:20.516Z
+updatedAt: 2022-02-16T13:15:20.516Z
 ---
 
 # Making an App with Kivy

@@ -7,6 +7,7 @@ alt: mlops
 tags: 
   - mlops
 createdAt: 2021-04-09T12:15:20.516Z
+updatedAt: 2021-04-09T12:15:20.516Z    
 ---
 
 # Mitigate risk and enhance productivity with MLOps

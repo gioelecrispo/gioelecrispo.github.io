@@ -103,6 +103,7 @@ export default async () => {
         },
 
         // Sitemap module configuration: https://sitemap.nuxtjs.org/guide/configuration
+        // No Google Indexing (duplicate path) https://www.danidean.co.uk/blog/how-to-stop-google-excluding-pages-in-your-nuxtjs-app-when-using-the-sitemap-module/
         sitemap: {
             hostname: 'https://gioelecrispo.github.io',
             routes() {

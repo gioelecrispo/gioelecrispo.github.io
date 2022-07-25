@@ -19,4 +19,4 @@ export default (title, description, routePath, image) => {
         ]
     }
 };
-a
+

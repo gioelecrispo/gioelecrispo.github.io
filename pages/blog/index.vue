@@ -84,29 +84,48 @@ export default {
                 query: '',
                 topics: ''
             },
-            blogArticles: []
+            blogArticles: [],
+            allBlogTopics: []
         }
     },
     async fetch() {
-        this.blogArticles = await this.filterArticles('', this.allBlogTopics)
+        this.blogArticles = await this.filterArticles('');
+        console.log(this.blogArticles );
+        this.allBlogTopics = this.getAllBlogTopics(this.blogArticles);
+        this.filters.topics = Array.from(new Set(this.allBlogTopics))
     },
     computed: {
-        ...mapGetters('DataState', {
+        /*...mapGetters('DataState', {
             allBlogArticles: 'getBlogArticles',
             allBlogTopics: 'getBlogTopics'
-        })
+        })*/
     },
     created() {
         this.$store.dispatch('AppState/setAppToolbarTitle', 'Blog')
-        this.filters.topics = Array.from(new Set(this.allBlogTopics))
+
     },
     methods: {
-        async filterArticles(searchQuery, searchTopics) {
+        async filterArticles(searchQuery, searchTopics=undefined) {
+            if (searchTopics === undefined) {
+                return await this.$content('blog')
+                    .search(searchQuery)
+                    .sortBy('createdAt', 'desc')
+                    .fetch()
+            }
             return await this.$content('blog')
                 .search(searchQuery)
                 .sortBy('createdAt', 'desc')
                 .where({ tags: { $containsAny: searchTopics } })
                 .fetch()
+        },
+        getAllBlogTopics(blogArticles) {
+            let blogTopics = [];
+            for (let article of blogArticles) {
+                for (let tag of article.tags) {
+                    blogTopics.push(tag);
+                }
+            }
+            return blogTopics;
         }
     },
     watch: {

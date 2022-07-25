@@ -8,6 +8,7 @@ tags:
   - computer-vision
   - mlops
 createdAt: 2021-12-27T21:51:10.516Z
+updatedAt: 2021-12-27T21:51:10.516Z    
 ---
 
 # A complete ML Pipeline study case: Face and Emotion recognition

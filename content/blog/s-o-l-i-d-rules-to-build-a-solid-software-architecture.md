@@ -7,6 +7,7 @@ alt: solid rules
 tags: 
   - architectures
 createdAt: 2020-11-11T12:15:20.516Z
+updatedAt: 2021-04-09T12:15:20.516Z
 ---
 
 
