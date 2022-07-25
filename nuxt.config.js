@@ -71,11 +71,13 @@ export default async () => {
         // Modules: https://go.nuxtjs.dev/config-modules
         modules: [
             // https://www.npmjs.com/package/nuxt-webfontloader
-            'nuxt-webfontloader',
+            //'nuxt-webfontloader',
             // https://go.nuxtjs.dev/axios
             '@nuxtjs/axios',
             // https://go.nuxtjs.dev/content
             '@nuxt/content',
+            //
+            '@nuxtjs/robots',
             // https://sitemap.nuxtjs.org/ - ** It has to be the last
             '@nuxtjs/sitemap'
         ],
@@ -93,10 +95,17 @@ export default async () => {
         // Content module configuration: https://go.nuxtjs.dev/config-content
         content: {},
 
-        // Sitemap module configuration https://sitemap.nuxtjs.org/guide/configuration
+        // Robots module configuration: https://github.com/nuxt-community/robots-module
+        robots: {
+            Host: 'https://gioelecrispo.github.io',
+            UserAgent: '*',
+            Sitemap: `https://gioelecrispo.github.io/sitemap.xml`,
+        },
+
+        // Sitemap module configuration: https://sitemap.nuxtjs.org/guide/configuration
         sitemap: {
             hostname: 'https://gioelecrispo.github.io',
-            async routes() {
+            routes() {
                 return fetchSitemapRoutes();  // all the dynamic routes
             }
         },

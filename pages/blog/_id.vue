@@ -31,10 +31,19 @@ import createSeoMeta from '../../utils/seo'
 export default {
     head() {
         let title = this.article.title.replace(/<[^>]*>?/gm, '')  // strip HTML for compatibility
-        return createSeoMeta(title,
+        let metadata = createSeoMeta(title,
             this.article.description,
             this.$route.path,
-            '/static' + this.article.img)
+            '/static' + this.article.img);
+        let tags = this.article.tags.toString();
+        metadata.meta.push({ hid: "article:published_time", property: "article:published_time", content: this.article.createdAt });
+        metadata.meta.push({ hid: "article:modified_time", property: "article:modified_time", content: this.article.updatedAt });
+        metadata.meta.push({ hid: "article:tag", property: "article:tag", content: tags});
+        metadata.meta.push({ hid: "twitter:label1", property:"twitter:label1", content: "Written by" });
+        metadata.meta.push({ hid: "twitter:data1", property:"twitter:data1", content: this.article.author });
+        metadata.meta.push({ hid: "twitter:label2", property:"twitter:label2", content: "Filed under"});
+        metadata.meta.push({ hid: "twitter:data2", property: "twitter:data2", content: tags});
+        return metadata;
     },
     name: 'ArticleDetails',
     layout: 'post',
