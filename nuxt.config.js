@@ -107,7 +107,8 @@ export default async () => {
             hostname: 'https://gioelecrispo.github.io',
             routes() {
                 return fetchSitemapRoutes();  // all the dynamic routes
-            }
+            },
+            trailingSlash: true
         },
 
         // ** BUILD MODULES **
