@@ -262,7 +262,6 @@ import CVBtnDownload from '@/components/CVBtnDownload'
 import createSeoMeta from '../utils/seo'
 import { getGithubProjects } from '@/utils/api'
 
-
 export default {
     name: 'Home',
     layout: 'home',
@@ -297,7 +296,6 @@ export default {
     },
     created() {
         this.$fetch()
-        //this.$refs.themeEngine.setRandomColor()
     },
     mounted() {
     },
@@ -313,7 +311,6 @@ export default {
         }),
         ...mapGetters('DataState', {
             articles: 'getBlogArticles',
-            //githubProjects: "getGithubProjects",
             projects: 'getProjects',
             skills: 'getSkills',
             experiences: 'getExperiences',

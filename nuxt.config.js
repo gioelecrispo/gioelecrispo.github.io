@@ -76,10 +76,10 @@ export default async () => {
             '@nuxtjs/axios',
             // https://go.nuxtjs.dev/content
             '@nuxt/content',
-            //
+            // https://github.com/nuxt-community/robots-module
             '@nuxtjs/robots',
             // https://sitemap.nuxtjs.org/ - ** It has to be the last
-            '@nuxtjs/sitemap'
+            '@nuxtjs/sitemap',
         ],
 
         // Nuxt webfont module configuration: https://www.npmjs.com/package/nuxt-webfontloader#setup
@@ -158,6 +158,7 @@ export default async () => {
             defaultAssets: false,
         },
 
+        // nuxt-optimized-images module configuration
         optimizedImages: {
             inlineImageLimit: 1000,
             handleImages: ['jpeg', 'jpg', 'png', 'svg', 'webp', 'gif'],
@@ -182,6 +183,16 @@ export default async () => {
                 quality: 80,
             },
         },
+
+        // nuxt-use-sounds module configuration
+        /*sound: {
+            back: {
+                src: "/back.wav",
+                options: {
+                    volume: 0.25
+                }
+            }
+        },*/
 
         // Build Configuration: https://go.nuxtjs.dev/config-build
         build: {

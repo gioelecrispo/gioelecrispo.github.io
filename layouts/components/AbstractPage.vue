@@ -1,4 +1,5 @@
 <template>
+
     <div v-if='isLoaded'>
         <slot></slot>
     </div>
@@ -8,6 +9,9 @@
 <script>
 import loader from '../../mixins/loader'
 import PageLoader from './PageLoader'
+
+
+
 
 export default {
     name: 'AbstractPage',

@@ -302,6 +302,23 @@ export const state = () => ({
     },
     projects: [
         {
+            name: 'Bed Fall Detection for Video Surveillance System',
+            description: 'Design of a bed fall detection system based on computer vision for a home video surveillance ' +
+                'system. Three TPLink Tapo C-200s are used and the video stream from the camera positioned above the bed ' +
+                'is sent to a Raspberry Pi 3 to perform real-time computation. Accuracy achieved is approximately 85%.',
+            type: 'Artificial Intelligence',
+            color: 'blue',
+            area: 'Computer Vision',
+            group: 'Only me',
+            technologies: 'Python, OpenCV, YOLOv5, Tapo C-200, Raspberry Pi',
+            date: 'April 2022',
+            resources: [
+                { img: require('@/assets/img/applications/bedfall_adjusted_with_roi.jpg') },
+                { img: require('@/assets/img/applications/bedfall_isolation_and_detection.jpg') },
+                { img: require('@/assets/img/applications/bedfall_elderly_house.jpg') }
+            ]
+        },
+        {
             name: 'Kaboo - Word Game',
             description: 'Android Game App built with Kivy framework, written in Python and published on Play Store. ' +
                 'It is a word game based on well-known Taboo. A CI/CD Github Action has been developed to ' +
@@ -510,15 +527,6 @@ export const getters = {
     },
     getBlogArticles: (state) => {
         return state.blogArticles
-    },
-    getBlogTopics: (state) => {
-        let blogTopics = [];
-        for (let article of state.blogArticles) {
-            for (let tag of article.tags) {
-                blogTopics.push(tag);
-            }
-        }
-        return blogTopics;
     },
     getLanguages: (state) => {
         return state.languages
