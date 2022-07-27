@@ -34,8 +34,7 @@ export default {
         let metadata = createSeoMeta(title,
             this.article.description,
             this.$route.path,
-            //require('@/static' + this.article.img));
-            require('@/assets/img/seo' + this.article.img));
+            require('@/static' + this.article.img));
         let tags = this.article.tags.toString();
         metadata.meta.push({ hid: "article:published_time", property: "article:published_time", content: this.article.createdAt });
         metadata.meta.push({ hid: "article:modified_time", property: "article:modified_time", content: this.article.updatedAt });

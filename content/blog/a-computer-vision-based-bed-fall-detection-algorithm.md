@@ -190,7 +190,7 @@ def adjust_perspective(img):
 ```
 
 ### Identification of the Region of Interest (RoI)
-This way, I was able to draw the Region of Intestest (RoI) to be monitored aside to the bed, 
+In this way, I was able to draw the Region of Intestest (RoI) to be monitored aside to the bed, 
 as shown in Fig. 3.
 
 <br>
