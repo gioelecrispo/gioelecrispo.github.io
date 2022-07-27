@@ -33,11 +33,11 @@ intelligence feature, the **Bed Fall Detection**, not natively supported by the 
 
 
 ## System setup
-After a thorough research on the web, I decided to buy three TP-Link Tapo C200 and arrange 
+After a thorough research on the web, I decided to buy three TP-Link Tapo C200s and arrange 
 them in three strategic points of the house:
-- one in front of the entrance door (overlooking the living room);
-- one in the kitchen, the most lived-in area of the house;
-- and the last one right above the bed, so to monitor them even while sleeping.
+- in front of the entrance door (overlooking the living room);
+- in the kitchen, the most lived-in area of the house;
+- in the bedroom, right above the bed, so to monitor them even while sleeping.
   
 <br>
 <div class='blog-row' style="text-align:center;">
