@@ -90,7 +90,6 @@ export default {
     },
     async fetch() {
         this.blogArticles = await this.filterArticles('');
-        console.log(this.blogArticles );
         this.allBlogTopics = this.getAllBlogTopics(this.blogArticles);
         this.filters.topics = Array.from(new Set(this.allBlogTopics))
     },

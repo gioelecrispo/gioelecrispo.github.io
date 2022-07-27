@@ -8,7 +8,7 @@ tags:
   - computer-vision
   - python
 createdAt: 2022-07-17T11:26:40.123Z
-updatedAt: 2022-07-17T11:26:40.123Z
+updatedAt: 2022-07-27T11:26:40.123Z
 ---
 
 # A Computer Vision based Bed Fall Detection algorithm
@@ -91,9 +91,9 @@ that allows to interact with the webcams, take the video stream and process it.
 
 Through a brief configuration from the dedicated app, I connected the three webcams to the
 Wi-Fi network. I set up a **Raspberry Pi 3** near the modem (exactly in the center of the house) 
-to capture and process the video stream of the three webcams in real-time.
+to capture and process the video stream of the webcams in real-time.
 So I wrote a program in Python which runs on the Raspberry and, through the PyTapo library, 
-connects to the three webcams, then performs operations on the video streams.
+connects to the webcams, then performs operations on the video streams.
 
 Well, let's go on to describe why I implemented a custom Fall Bed Detection and how I did it.
 
@@ -138,8 +138,8 @@ Hassani and Emmanuel Andres, tracks well the state-of-the-art of this kind of sy
 
 
 ## How I implemented it
-The Bed Fall Detection algorithm I created is based solely on video images.
-Its final version is based on six main macro steps:
+The Bed Fall Detection algorithm I developed is based solely on video images.
+Its final version is composed of six main macro steps:
 1. **Correct positioning of the camera** with respect to the bed;
 2. **_Normalization_ of the image** with respect to the focus point and lens parameters;
 3. **Identification of the Region of Interest (RoI)** next to the bed to be monitored;

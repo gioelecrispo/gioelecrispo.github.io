@@ -7,7 +7,6 @@ export default async ({ store, $axios }) => {
         })
             .then(success => {
                 store.dispatch('DataState/setGithubUserInfo', success.data)
-                //console.log("user info", store.state.DataState.githubUserInfo);
             })
             .catch(err => {
                 console.error('setGithubUserInfo - Too Much Requests', err)
