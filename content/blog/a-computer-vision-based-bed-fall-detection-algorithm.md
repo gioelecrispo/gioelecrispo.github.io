@@ -197,7 +197,7 @@ as shown in Fig. 3.
 
 <div class='blog-row' style="text-align:center; justify-content: center">
 <div class='blog-three-column'>
-<img src="blog/a-computer-vision-based-bed-fall-detection-algorithm/bedfall_original.jpg" alt="bedfall_original" width="95%"/>
+<img src="blog/a-computer-vision-based-bed-fall-detection-algorithm/bedfall_original2.jpg" alt="bedfall_original" width="95%"/>
 <span style="font-size: 12px;  margin: 10px;">a. Original image.</span>
 </div>
 
