@@ -33,7 +33,7 @@ intelligence feature, the **Bed Fall Detection**, not natively supported by the 
 
 
 ## System setup
-After a thorough research on the web, I decided to buy three TP-Link Tapo C200s and arrange 
+After a thorough research on the web, I decided to buy three TP-Link Tapo C200 and arrange 
 them in three strategic points of the house:
 - in front of the entrance door (overlooking the living room);
 - in the kitchen, the most lived-in area of the house;
@@ -112,7 +112,7 @@ In particular, the most important need was to be able to go home to sleep while 
 the status and be notified instantly in case of falling out of bed.
 
 ### The Challenge and other implementations 
-The TP-Link Tapo C200 have different alerting capabilities, mainly related to motion detection.
+TP-Link Tapo C200 have different alerting capabilities, mainly related to motion detection.
 More expensive cameras offer other more complex automatic detection and alerting features, but 
 generally finding an implementation of Bed Fall Detection is rare, because it must be customized 
 in relation to the environment and the bed on which it has to work.

@@ -70,14 +70,34 @@ export const state = () => ({
             icon: 'mdi-briefcase',
             date: 'May 2018 - now',
             location: 'Naples (Italy)',
-            position: 'AI Software Engineer',
+            position: 'Machine Learning Engineer',
             company: 'NTT Data Italia',
-            text: 'Software engineer focused on issues of Artificial Intelligence and Natural Language ' +
-                'Processing. Main duties:  design of software architectures in AI projects; design and' +
-                ' implementation of the AI and NLP functionalities with an eye on the efficiency and ' +
-                'reusability of the models;  team coordination in various projects.'
+            text: 'Machine Learning Engineer focused on Artificial Intelligence and NLP.<br>' +
+            'I designed and developed AI products and innovative solutions, taking care of the software engineering and the architectural part.<br>' +
+            'Team lead on several projects, interacting with customers and business partners.' +
+            'Participation to fairs and expositions launch',
+            achievements: [
+                'I design and implemented a microservices architecture for two internal assets which are used by 15+ customers.',
+                'I designed a Table-of-Content comparison algorithm through linear optimization model and string similarity.',
+                'I designed an innovative NLP pipeline based on sentiment and generative models to improve user experience in chatbots & voicebots.',
+            ],
         },
         {
+            color: 'primary darken-2',
+            type: 'job',
+            icon: 'mdi-briefcase',
+            date: 'March 2020 - now',
+            location: 'Salerno (Italy)',
+            position: 'Software Development Engineer',
+            company: 'Freelance',
+            text: 'Development of websites for professionals (portfolios and blogs);<br>' +
+                'Design of a in-house video surveillance system, with some AI contributions.',
+            achievements: [
+                'I designed a generic website layout template to reduce website prototyping time by 50%.',
+                'I designed a custom bed fall detection algorithm (~85% accuracy) to improve the alerting capability of the video surveillance system.',
+            ],
+        },
+        /*{
             color: 'primary darken-1',
             type: 'internship',
             icon: 'mdi-briefcase-search',
@@ -88,10 +108,12 @@ export const state = () => ({
             text: 'The work was focused on pattern recognition and pattern prediction on signatures. The ' +
                 'result was a conference paper, Tracking the Ballistic Trajectory in Complex and Long ' +
                 'Handwritten Signatures, was written and published at the 16th International Conference ' +
-                'on Frontiers in Handwriting Recognition.'
-        },
+                'on Frontiers in Handwriting Recognition.',
+            achievements: [
+            ],
+        },*/
         {
-            color: 'primary darken-3',
+            color: 'primary darken-1',
             type: 'instruction',
             icon: 'mdi-school',
             date: 'Oct 2015 - Feb 2018',
@@ -99,23 +121,19 @@ export const state = () => ({
             position: 'Master\'s Degree - Computer Engineering',
             company: 'Università degli Studi di Salerno',
             text: 'Skills acquired: Semantic technologies, Data Mining and Machine Learning, Network ' +
-                'Security, Robotics, Artificial Intelligence and Artificial Vision, Sistributed ' +
-                'programming.',
+            'Security, Robotics, Artificial Intelligence and Artificial Vision, Sistributed ' +
+            'programming.<br>' +
+            'Thesis work: The work was focused on pattern recognition and pattern prediction on signatures. ' +
+            'I proposed a new approach to estimate the writing order of signatures.',
+            activities: [],
+            achievements: [
+                'Thesis published as a conference and journal paper',
+                'Grade Point Average: 29.62 / 30'
+            ],
             vote: '110/110 cum laude'
         },
         {
             color: 'primary darken-1',
-            type: 'internship',
-            icon: 'mdi-briefcase-search',
-            location: 'Fisciano, Salerno (Italy)',
-            position: 'Company Internship',
-            company: 'A.I Tech',
-            date: 'Nov 2014 - Jun 2015',
-            text: 'The work was focused on the design and implementation of a gesture recognition system ' +
-                'on a Kinect sensor. I proposed a new feature extraction method for gestures.'
-        },
-        {
-            color: 'primary darken-3',
             type: 'instruction',
             icon: 'mdi-school',
             date: 'Oct 2011 - Jun 2015',
@@ -123,7 +141,10 @@ export const state = () => ({
             position: 'Bachelor\'s Degree - Computer Engineering',
             company: 'Università degli Studi di Salerno',
             text: 'Skills acquired: Object Oriented Programming; Automatic Controls; Internet and Network' +
-                ' stacks; Mathematics, Statistics,Telecommunications and Physics fundamentals.',
+            ' stacks; Mathematics, Statistics,Telecommunications and Physics fundamentals.<br>' +
+            'Thesis work: The work was focused on the design and implementation of a gesture recognition system ' +
+            'on a Kinect sensor. I proposed a new feature extraction method for gestures.',
+            achievements: [],
             vote: '103/110'
         }
     ],

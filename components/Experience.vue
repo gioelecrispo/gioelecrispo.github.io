@@ -44,9 +44,13 @@
                     {{ experience.date }}
                 </p>
             </v-row>
-            <p class="py-2 ma-0">
-                {{ experience.text }}
-            </p>
+            <p class="py-2 ma-0" v-html='experience.text'></p>
+            <div class="py-2 ma-0" v-if='experience.achievements !== undefined && experience.achievements.length !== 0'>
+                <p class='mb-1'><b>Main achievements:</b></p>
+                <p class="mb-1 list-point" v-for='achievement in experience.achievements'>
+                    • {{ achievement }}
+                </p>
+            </div>
         </v-card-text>
     </v-card>
 </template>
@@ -68,5 +72,13 @@
 </script>
 
 <style lang="scss" scoped>
-
+.v-application .overline {
+    letter-spacing: 0.1em!important;
+}
+.list-point {
+    display: inline-block;
+    margin-left: 15px;
+    line-height: 100%;
+    font-size: small;
+}
 </style>

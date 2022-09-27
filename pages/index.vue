@@ -1,32 +1,25 @@
 <template>
     <div>
-        <v-sheet color='sectionPrimary'>
-            <v-container class='py-12 my-6'>
+        <v-sheet color='sectionPrimary' class='py-8'>
+            <v-container class='py-12'>
                 <v-row class='mt-10 pb-3' justify='center'>
                     <h1 class='title-underline'>Know Me More</h1>
                 </v-row>
                 <v-row class='py-4'>
                     <blockquote :class="isDark ? 'dark-theme' : 'light-theme'">
-                        I was born in 1993 in Salerno, Italy. Passionate about technology and electronics since
-                        childhood,
-                        I always want to experiment and learn.
-                        I graduated with honors in Computer Engineering and I am continuously learning on topics related
-                        to
-                        <b>Deep Learning</b> and <b>Artificial Intelligence</b> in general.
-                        <br></br>
-                        Today, I work as a <b>Machine Learning Engineer</b>, focused on Natural Language Processing
-                        topics.
-                        As a team leader on several projects, I have always demonstrated discrete leadership and
-                        coordination
-                        skills and also excellent analytical, design and team working capabilities.
-                        I consider myself attentive to details and precise in meeting deadlines.
-                        Looking for stimulating activities related to artificial intelligence that allow me to expand my
-                        current
-                        knowledge and soft skills.
-                        <br></br>
-                        I pursue a number of personal <b>projects</b>, participate to hackathons and contribute to open
-                        source software.
-                        My other hobbies include electronics, photography, graphics, videogames and music.
+                        <h2>Hi! I'm <span class='my-name primary--text'>Gioele Crispo</span>,</h2><br>
+
+                        <p class='mb-2'>a computer engineer, technology enthusiast and electronic expert since childhood.</p>
+
+                        <p class='mb-2'>I graduated with honors in Computer Engineering and I am actively collaborating with
+                            my University on interesting topics.</p>
+
+                        <p class='mb-2'>Today I work as <b> Software Development </b> and <b> Machine Learning Engineer</b>; I am team leader
+                        and I also design innovative solutions and architectures, addressing them at 360 degrees, with an eye to DevOps,
+                        Cloud Architecting and Web technologies.</p>
+
+                        <p class='mb-2'>I pursue a number of personal <b>projects</b>, participate to hackathons and contribute to open
+                        source software. My other hobbies include electronics, photography, graphics, videogames and music.</p>
                     </blockquote>
                 </v-row>
                 <v-row class='pt-4' align='center'>
@@ -113,8 +106,8 @@
             </v-container>
         </v-sheet>
 
-        <v-sheet color='sectionSecondary'>
-            <v-container class='py-12 my-6'>
+        <v-sheet color='sectionSecondary' class='py-8'>
+            <v-container class='py-12'>
                 <v-row class='mt-10 pb-3' justify='center'>
                     <h1 class='title-underline'>Works and Experiences</h1>
                 </v-row>
@@ -149,8 +142,8 @@
             </v-container>
         </v-sheet>
 
-        <v-sheet color='sectionPrimary'>
-            <v-container class='py-12 my-6'>
+        <v-sheet color='sectionPrimary' class='py-8'>
+            <v-container class='py-12'>
                 <v-row class='mt-10 py-3' justify='center'>
                     <h1 class='title-underline'>Projects</h1>
                 </v-row>
@@ -179,8 +172,8 @@
             </v-container>
         </v-sheet>
 
-        <v-sheet color='sectionSecondary'>
-            <v-container class='py-12 my-6'>
+        <v-sheet color='sectionSecondary' class='py-8'>
+            <v-container class='py-12'>
                 <v-row class='mt-10 pt-3 px-3' justify='center'>
                     <h1 class='title-underline'>Github</h1>
                 </v-row>
@@ -208,8 +201,8 @@
             </v-container>
         </v-sheet>
 
-        <v-sheet color='sectionPrimary'>
-            <v-container class='py-12 my-6'>
+        <v-sheet color='sectionPrimary' class='py-8'>
+            <v-container class='py-12'>
                 <v-row class='mt-10 py-3 px-3' justify='center'>
                     <h1 class='title-underline'>Latest Posts</h1>
                 </v-row>
@@ -409,5 +402,6 @@ blockquote {
         transition: 0.2s all ease-in-out, 0.4s transform ease-in-out;
     }
 }
+
 
 </style>
