@@ -39,6 +39,7 @@ export default async () => {
                 amp: true
             },
             meta: [
+                { name: 'google-site-verification', content: 'Zl4VaEbx38uOgJQ-eJiMHGMevYjbzG2L2COfzfyRPcE'},
                 { charset: 'utf-8' },
                 { name: 'robots', content: 'index,follow' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
