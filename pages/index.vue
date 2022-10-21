@@ -116,19 +116,37 @@
                         <v-row align='center' class='py-0'>
                             <v-col cols='auto' class='py-0'><h3 class='pt-3 py-1'>Current job</h3></v-col>
                             <v-spacer></v-spacer>
-                            <!-- <v-col cols="auto" class="py-0 mt-2">View more</v-col>-->
+                            <v-col cols="auto" class="py-0 mt-2">
+                                <router-link class='pt-2 pb-4' :to="{path:'/resume', hash:'#publications'}">
+                                    View other experiences</router-link>
+                            </v-col>
                         </v-row>
 
                         <div v-for='experience in visibleExperiences'>
                             <Experience :experience='experience' :forceDate='true'></Experience>
                         </div>
-                        <h3 class='pt-3 py-1'>Certifications</h3>
+                        <v-spacer></v-spacer>
+                        <v-row align='center' class='py-0'>
+                            <v-col cols='auto' class='py-0'><h3 class='pt-3 py-1'>Certifications</h3></v-col>
+                            <v-spacer></v-spacer>
+                            <v-col cols="auto" class="py-0 mt-2">
+                                <router-link class='pt-2 pb-4' :to="{path:'/resume', hash:'#certifications'}">
+                                    View other {{ certifications.length - visibleCertifications.length }} certifications</router-link>
+                            </v-col>
+                        </v-row>
                         <div v-for='certification in visibleCertifications'>
                             <Certification :certification='certification'></Certification>
                         </div>
                     </v-col>
                     <v-col cols='12' sm='6' :class="mobile() ? 'pa-0 py-1' : 'pr-0 pl-2 py-1'">
-                        <h3 class='pt-3 py-1'>Publications</h3>
+                        <v-row align='center' class='py-0'>
+                            <v-col cols='auto' class='py-0'><h3 class='pt-3 py-1'>Publications</h3></v-col>
+                            <v-spacer></v-spacer>
+                            <v-col cols="auto" class="py-0 mt-2">
+                                <router-link class='pt-2 pb-4' :to="{path:'/resume', hash:'#publications'}">
+                                    View other publications</router-link>
+                            </v-col>
+                        </v-row>
                         <div v-for='publication in visiblePublications' class='pb-1'>
                             <Publication :publication='publication'></Publication>
                         </div>

@@ -3,7 +3,7 @@
         <v-container>
             <CVBtnDownload :isFab=true></CVBtnDownload>
 
-            <v-row class='pt-2 pb-3 slide-in-bottom' justify='center'>
+            <v-row class='pt-2 pb-3 slide-in-bottom' justify='center' id='experiences'>
                 <h1 class='title-underline my-6'>Experiences</h1>
             </v-row>
             <v-row class='slide-in-bottom'>
@@ -29,7 +29,7 @@
             </v-row>
 
             <v-row class='pt-8 pb-3 slide-in-bottom'>
-                <v-col cols='12' md='6'>
+                <v-col cols='12' md='6' id="certifications">
                     <v-row justify='center'>
                         <h1 class='title-underline my-6'>Certifications</h1>
                     </v-row>
@@ -41,7 +41,7 @@
                         </div>
                     </v-row>
                 </v-col>
-                <v-col cols='12' md='6'>
+                <v-col cols='12' md='6' id="publications" >
                     <v-row justify='center'>
                         <h1 class='title-underline my-6'>Publications</h1>
                     </v-row>
@@ -103,6 +103,8 @@ import Publication from '../components/Publication'
 import CVBtnDownload from '../components/CVBtnDownload'
 import createSeoMeta from '../utils/seo'
 import ui from '~/mixins/ui'
+//import Vue from 'vue'
+//import VueScrollTo from 'vue-scrollto'
 
 export default {
     name: 'Works',
@@ -161,6 +163,12 @@ export default {
                 ]
             }
         }
+    },
+    mounted() {
+        /*if(this.$router.currentRoute['hash']) {
+            Vue.use(VueScrollTo);
+            VueScrollTo.scrollTo(this.$router.currentRoute['hash'], 500);
+        }*/
     },
     created() {
         this.$store.dispatch('AppState/setAppToolbarTitle', 'Resume')
