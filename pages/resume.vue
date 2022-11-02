@@ -41,7 +41,7 @@
                         </div>
                     </v-row>
                 </v-col>
-                <v-col cols='12' md='6' id="publications" >
+                <v-col cols='12' md='6' id="publications">
                     <v-row justify='center'>
                         <h1 class='title-underline my-6'>Publications</h1>
                     </v-row>
@@ -55,7 +55,7 @@
                 </v-col>
             </v-row>
 
-            <v-row class='pt-8 pb-3 slide-in-bottom' justify='center'>
+            <v-row class='pt-8 pb-3 slide-in-bottom' justify='center' id='skills'>
                 <h1 class='title-underline my-6'>Skills</h1>
             </v-row>
             <div

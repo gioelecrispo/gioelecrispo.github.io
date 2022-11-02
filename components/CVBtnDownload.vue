@@ -32,7 +32,7 @@
         data() {
             return {
                 fabShow: true,
-                href: "docs/cv_eng.pdf"
+                href: "docs/cv_en.pdf"
             };
         },
         computed: {},

@@ -160,7 +160,7 @@ export default {
             _this.openEmailResultDialog = true
             _this.emailSendResult = 'loading'
             axios({
-                url: 'https://email-sender-protected.herokuapp.com/send',
+                url: 'https://93u9s5.deta.dev/send',
                 method: 'post',
                 data: messageData
             })

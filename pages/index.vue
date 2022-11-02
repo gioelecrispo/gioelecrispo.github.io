@@ -117,15 +117,16 @@
                             <v-col cols='auto' class='py-0'><h3 class='pt-3 py-1'>Current job</h3></v-col>
                             <v-spacer></v-spacer>
                             <v-col cols="auto" class="py-0 mt-2">
-                                <router-link class='pt-2 pb-4' :to="{path:'/resume', hash:'#publications'}">
+                                <router-link class='pt-2 pb-4' :to="{path:'/resume', hash:'#experiences'}">
                                     View other experiences</router-link>
                             </v-col>
                         </v-row>
-
                         <div v-for='experience in visibleExperiences'>
                             <Experience :experience='experience' :forceDate='true'></Experience>
                         </div>
+
                         <v-spacer></v-spacer>
+
                         <v-row align='center' class='py-0'>
                             <v-col cols='auto' class='py-0'><h3 class='pt-3 py-1'>Certifications</h3></v-col>
                             <v-spacer></v-spacer>
@@ -149,6 +150,20 @@
                         </v-row>
                         <div v-for='publication in visiblePublications' class='pb-1'>
                             <Publication :publication='publication'></Publication>
+                        </div>
+
+                        <v-spacer></v-spacer>
+
+                        <v-row align='center' class='py-0'>
+                            <v-col cols='auto' class='py-0'><h3 class='pt-3 py-1'>Main Skills</h3></v-col>
+                            <v-spacer></v-spacer>
+                            <v-col cols="auto" class="py-0 mt-2">
+                                <router-link class='pt-2 pb-4' :to="{path:'/resume', hash:'#skills'}">
+                                    View other Skills</router-link>
+                            </v-col>
+                        </v-row>
+                        <div v-for='skill in visibleSkills' class='pb-1'>
+                            <Skill :skill='skill'></Skill>
                         </div>
                     </v-col>
                     <v-col cols='12' :class="mobile() ? 'pa-0 py-1' : 'px-0 py-1'">
