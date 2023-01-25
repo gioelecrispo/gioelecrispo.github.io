@@ -34,7 +34,7 @@ export default {
         return createSeoMeta('Books',
             'Visit my books section to discover all my books!',
             this.$route.path,
-            require('@/assets/img/seo/books.jpg'))
+            `${process.env.HOST_BASE}/seo/books.jpg`)
     },
     components: { Book },
     props: {},

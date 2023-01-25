@@ -5,7 +5,7 @@
             <v-container fluid>
                 <v-row align='center'>
                     <v-col sm='6' md='5'>
-                        <v-img :src="require('@/assets/img/books/' + book.img)"  :class='!mobile() ? "book-img" : ""'></v-img>
+                        <v-img :src="require('@/assets/img' + book.img)"  :class='!mobile() ? "book-img" : ""'></v-img>
                     </v-col>
                     <v-col sm='6' md='7' class='px-4 py-2'>
                         <v-container fluid>
@@ -114,7 +114,7 @@ export default {
         let metadata = createSeoMeta(title,
             description,
             this.$route.path,
-            require('@/static/books/' + this.book.img));
+            `${process.env.HOST_BASE}${this.book.img}`);// require('@/static' + this.book.img));
         let tags = this.book.tags.toString();
         metadata.meta.push({ hid: "article:published_time", property: "article:published_time", content: this.book.createdAt });
         metadata.meta.push({ hid: "article:tag", property: "article:tag", content: tags});
@@ -122,7 +122,7 @@ export default {
         metadata.meta.push({ hid: "twitter:data1", property:"twitter:data1", content: this.book.author });
         metadata.meta.push({ hid: "twitter:label2", property:"twitter:label2", content: "Filed under"});
         metadata.meta.push({ hid: "twitter:data2", property: "twitter:data2", content: tags});
-        return {}
+        return metadata
     },
     name: 'BookDetails',
     layout: 'book',

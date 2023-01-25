@@ -202,8 +202,7 @@
             return createSeoMeta('Github Projects',
                 'A complete collection of my Github projects.',
                 this.$route.path,
-                require('@/assets/img/seo/github.jpg'))
-                //'https://unsplash.com/photos/842ofHC6MaI')
+                `${process.env.HOST_BASE}/seo/github.jpg`)
         },
         created() {
             this.$store.dispatch('AppState/setAppToolbarTitle', 'Github');

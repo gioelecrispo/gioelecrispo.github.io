@@ -15,7 +15,7 @@ export default (title, description, routePath, image) => {
             { hid: 'twitter:image', property: 'twitter:image', content: image },
         ],
         link: [
-            { rel: "canonical", href: process.env.HOST_BASE + pathWithSlash },
+            { hid: "canonical", rel: "canonical", href: process.env.HOST_BASE + pathWithSlash },
         ]
     }
 };

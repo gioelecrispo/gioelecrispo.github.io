@@ -60,7 +60,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import Article from '../../components/Article'
 import createSeoMeta from '../../utils/seo'
 import ui from '../../mixins/ui'
@@ -74,7 +73,7 @@ export default {
         return createSeoMeta('Blog',
             'Visit my blog section to discover all my post about machine learning and similar!',
             this.$route.path,
-            require('@/assets/img/seo/blog.jpg'))
+            `${process.env.HOST_BASE}/seo/blog.jpg`)
     },
     components: { Article },
     props: {},
@@ -94,10 +93,6 @@ export default {
         this.filters.topics = Array.from(new Set(this.allBlogTopics))
     },
     computed: {
-        /*...mapGetters('DataState', {
-            allBlogArticles: 'getBlogArticles',
-            allBlogTopics: 'getBlogTopics'
-        })*/
     },
     created() {
         this.$store.dispatch('AppState/setAppToolbarTitle', 'Blog')

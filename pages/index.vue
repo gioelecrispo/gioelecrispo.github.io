@@ -320,8 +320,10 @@ export default {
     async fetch() {
         getGithubProjects(this.$axios).then(succ => this.githubProjects = succ);
     },
-    created() {
-        this.$fetch()
+    async created() {
+        this.$fetch();
+        //let routes = fetchSitemapRoutes();
+        //console.log(routes)
     },
     mounted() {
     },
@@ -329,7 +331,7 @@ export default {
         return createSeoMeta('Home',
             'Check out my website for Machine Learning blog and ideas!',
             this.$route.path,
-            require('@/assets/img/me/me.jpg'))
+            `${process.env.HOST_BASE}/seo/me.jpg`)
     },
     computed: {
         ...mapGetters('AppState', {

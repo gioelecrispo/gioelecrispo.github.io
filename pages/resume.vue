@@ -114,7 +114,7 @@ export default {
         return createSeoMeta('Resume',
             'A complete Resume with experiences, certifications, skill and so on.',
             this.$route.path,
-            require('@/assets/img/seo/resume.jpg'))
+            `${process.env.HOST_BASE}/seo/resume.jpg`)
     },
     components: { CVBtnDownload, Experience, Skill, Certification, Publication },
     mixins: [ui],

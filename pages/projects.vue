@@ -47,7 +47,7 @@ export default {
         return createSeoMeta('Projects',
             'Some of my projects and applications, mainly focused on Machine Learning.',
             this.$route.path,
-            require('@/assets/img/seo/projects.jpg'))
+            `${process.env.HOST_BASE}/seo/projects.jpg`)
     },
     name: 'Projects',
     layout: 'page',

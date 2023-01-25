@@ -1,4 +1,5 @@
 import { fetchSitemapRoutes } from './utils/sitemap';
+//import { mapGetters } from 'vuex';
 
 
 export default async () => {
@@ -8,7 +9,7 @@ export default async () => {
             HOST_BASE:
                 process.env.NODE_ENV === 'production'
                     ? 'https://gioelecrispo.github.io'
-                    : 'http://localhost:3000/'
+                    : 'http://localhost:3000'
         },
 
         // ** BUILDING OPTIONS **
@@ -107,8 +108,9 @@ export default async () => {
         // No Google Indexing (duplicate path) https://www.danidean.co.uk/blog/how-to-stop-google-excluding-pages-in-your-nuxtjs-app-when-using-the-sitemap-module/
         sitemap: {
             hostname: 'https://gioelecrispo.github.io',
-            routes() {
-                return fetchSitemapRoutes();  // all the dynamic routes
+            async routes() {
+                const dynamicRoutes = await fetchSitemapRoutes();  // all the dynamic routes
+                return dynamicRoutes.concat(['/books/discover-chatgpt-by-asking-it']);
             },
             trailingSlash: true
         },
