@@ -22,12 +22,6 @@
                         </div>
                     </div>
                 </v-row>
-                <!--<div id=flip>
-                    <div><div>SOFTWARE ENGINEERING</div></div>
-                    <div><div>ARTIFICIAL INTELLIGENCE</div></div>
-                    <div><div>WEB DEVELOPMENT</div></div>
-                </div>-->
-                <!--</v-row>-->
             </v-col>
         </v-row>
     </v-card>
@@ -89,9 +83,6 @@
     99.99% {margin-top:0px;}
     100% {margin-top:-270px;}
 }
-
-
-
 
 .container {
     width: 100%;

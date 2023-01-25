@@ -520,7 +520,40 @@ export const state = () => ({
             spokenProduction: 'A2',
             writing: 'A2'
         }
-    ]
+    ],
+    books: {
+        "discover-chatgpt-by-asking-it": {
+            id: "discover-chatgpt-by-asking-it",
+            title: "<b>Discover ChatGPT by asking it</b>: </br> Advantages, Disadvantages and Secrets",
+            subtitle: "The first book about <b>ChatGPT</b> written by <b>ChatGPT</b>",
+            description: "Welcome to the first-ever <i>autobiographical account of a neural network</i>! </br>" +
+                "In these pages, <b>written by ChatGPT</b>, you will learn about the history, capabilities, advantages and disadvantages of ChatGPT, a powerful language model developed by OpenAI that is able to generate coherent and logical responses based on input data. You will also explore the ethical considerations and potential for misuse or abuse of this technology, and learn about the limitations of ChatGPT and the importance of human oversight. </br> </br>" +
+                "Through a series of chapters and examples, you will gain a deeper understanding of ChatGPT and its place in the field of natural language processing. Whether you are a machine learning enthusiast, a writer, or simply curious about artificial intelligence, this book will provide you with valuable insights and knowledge about ChatGPT and its capabilities.",
+            publishedAt: "2023-01-25T21:51:10.516Z",
+            img: "discover-chatgpt-by-asking-it/cover.png",
+            author: "Gioele Crispo",
+            tags: ["Generative AI", "Deep Learning", "ChatGPT"],
+            preview: [
+                require('@/assets/img/books/discover-chatgpt-by-asking-it/preview1.png'),
+                require('@/assets/img/books/discover-chatgpt-by-asking-it/preview2.png'),
+            ],
+            authorDescription: "<p>My name is Gioele Crispo and I am a software development engineer focused on machine learning. I have a passion for experimentation and I am always looking for new and interesting ways to explore the capabilities and potential of artificial intelligence and machine learning.</p></br>" +
+                "<p>This book, <i><b>Discover ChatGPT by asking it</b>: Advantages, Disadvantages and Secrets</i>, is the result of one such experiment. It is a <b>technical experiment</b>, as I aim to evaluate whether a neural network (ChatGPT) is capable of writing an entire book and how much human intervention is required to produce a readable and enjoyable final product. It is also an experiment in empathy and the ability of ChatGPT to convey emotions through its writing.</p>" +
+                "<p>However, this work is also a <b>social experiment</b>, as I seek to gauge the level of interest in reading an \"autobiographical\" work written by a machine. I am curious to see how people respond to this unique and groundbreaking work, and I hope that it sparks discussions and debates about the role and potential of artificial intelligence in society.</p>",
+            ebook: {
+                price: "€ 5,00",
+                purchaseLink: "https://www.amazon.it/dp/B0BT25N51X",
+            },
+            paperback: {
+                price: "€ 16,90",
+                purchaseLink: "",
+            },
+            hardcover: {
+                price: "€ 16,90",
+                purchaseLink: "",
+            }
+        },
+    }
 })
 
 
@@ -551,6 +584,9 @@ export const getters = {
     },
     getLanguages: (state) => {
         return state.languages
+    },
+    getBooks: (state) => {
+        return state.books
     }
 }
 

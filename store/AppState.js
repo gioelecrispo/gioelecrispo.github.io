@@ -18,7 +18,8 @@ export const state = () => ({
         { id: 'resume', title: 'Resume', icon: 'mdi-timeline-text', path: '/resume' },
         { id: 'projects', title: 'Projects', icon: 'mdi-briefcase-outline', path: '/projects' },
         { id: 'github', title: 'Github', icon: 'mdi-github', path: '/github' },
-        { id: 'blog', title: 'Blog', icon: 'mdi-file-document-outline', path: '/blog' }
+        { id: 'blog', title: 'Blog', icon: 'mdi-file-document-outline', path: '/blog' },
+        { id: 'books', title: 'Book', icon: 'mdi-book', path: '/books' }
     ]
 })
 
