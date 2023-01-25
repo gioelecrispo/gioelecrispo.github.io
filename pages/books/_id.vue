@@ -33,27 +33,28 @@
                 </v-row>
             </v-container>
         </v-sheet>
-        <v-sheet class='pt-4 pb-12 px-6'>
+        <v-sheet class='pt-4 pb-12 px-4'>
             <v-container class='py-8'>
                 <v-row justify='center' class='py-4'>
                     <h1 class='display-2'><b>About the Author</b></h1>
                 </v-row>
-                <v-row align='center'>
+                <v-row align='center' no-gutters>
                     <v-col cols="12" md='auto' class='px-4'>
                         <v-row align='center' justify='center'>
-                        <v-avatar :tile='false'
-                                  :size='168'
-                                  style='outline: 6px solid gray;'
-                        >
-                            <img
-                                :src="require('@/assets/img/me/me.jpg')"
-                                alt='avatar'
+                            <v-avatar :tile='false'
+                                      :size='168'
+                                      style='outline: 6px solid gray;'
+                                      class='mx-6'
                             >
-                        </v-avatar>
+                                <img
+                                    :src="require('@/assets/img/me/me.jpg')"
+                                    alt='avatar'
+                                >
+                            </v-avatar>
                         </v-row>
                     </v-col>
-                    <v-col>
-                        <p class='px-6 py-2 title' style='line-height: 1.2;'
+                    <v-col class='px-0'>
+                        <p class='px-0 py-2 title' style='line-height: 1.2;'
                            v-html='book.authorDescription'></p>
                     </v-col>
                 </v-row>
@@ -63,16 +64,16 @@
                     <h1 class='display-2'><b>Book preview</b></h1>
                 </v-row>
                 <v-row>
-                    <v-col sm="12" md='4'>
-                        <v-row >
+                    <v-col class='px-4' sm="12" md='4'>
+                        <v-row>
                             <v-col v-for='(p, idx) in book.preview' :key='idx'
                             class='pa-1'>
                                 <v-img @click='expandImage(p)' :src='p'></v-img>
                             </v-col>
                         </v-row>
                     </v-col>
-                    <v-col sm="12" md='8'>
-                        <p class='px-4 py-2 title' style='line-height: 1.2;'
+                    <v-col class='px-0' sm="12" md='8'>
+                        <p class='px-0 py-2 title' style='line-height: 1.2;'
                            v-html='book.description'></p>
                     </v-col>
                 </v-row>

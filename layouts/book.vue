@@ -40,8 +40,12 @@
                     justify='center'
                     no-gutters
                 >
-                    <v-card-title class='white--text text-center'>
-                        <strong class='subheading px-4'>Get connected with me on social networks!</strong>
+                    <v-col cols='auto'>
+                        <v-card-title class='white--text text-center'>
+                            <strong class='subheading px-4' style='word-break: break-word;'>Get connected with me on social networks!</strong>
+                        </v-card-title>
+                    </v-col>
+                    <v-col cols='auto'>
                         <v-btn
                             v-for='socialMedia in socialMedias'
                             :key='socialMedia.name'
@@ -54,13 +58,13 @@
                                 {{ socialMedia.icon }}
                             </v-icon>
                         </v-btn>
-                    </v-card-title>
+                    </v-col>
                 </v-row>
                 <v-row
                     justify='center'
                     no-gutters
                 >
-                    <v-card-text class='py-4 white--text text-center'>
+                    <v-card-text class='pt-6 pb-4 white--text text-center'>
                         {{ new Date().getFullYear() }} — <strong>Gioele Crispo</strong>
                     </v-card-text>
                 </v-row>
