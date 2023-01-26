@@ -551,11 +551,11 @@ export const state = () => ({
             },
             paperback: {
                 price: "€ 16,90",
-                purchaseLink: "",
+                purchaseLink: "https://www.amazon.it/dp/B0BSWV4J9S",
             },
             hardcover: {
                 price: "€ 16,90",
-                purchaseLink: "",
+                purchaseLink: "https://www.amazon.it/dp/B0BT16G597",
             }
         },
     }
