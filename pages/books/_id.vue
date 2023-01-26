@@ -24,9 +24,9 @@
                                 <span style='word-break: break-word;' class='title'>PURCHASE NOW!</span>
                             </v-row>
                             <v-row class='px-0 pt-0 pb-0'>
-                                <v-btn class="mr-2 my-2 book-purchase" :href="book.ebook.purchaseLink" light color='white'>Ebook</v-btn>
-                                <v-btn class="mr-2 my-2 book-purchase" :href="book.paperback.purchaseLink" light color='white'>Paperback</v-btn>
-                                <v-btn class="mr-2 my-2 book-purchase" :href="book.hardcover.purchaseLink" light color='white'>Hardcover</v-btn>
+                                <v-btn class="mr-2 my-2 book-purchase" target="_blank" :href="book.ebook.purchaseLink" light color='white'>Ebook</v-btn>
+                                <v-btn class="mr-2 my-2 book-purchase" target="_blank" :href="book.paperback.purchaseLink" light color='white'>Paperback</v-btn>
+                                <v-btn class="mr-2 my-2 book-purchase" target="_blank" :href="book.hardcover.purchaseLink" light color='white'>Hardcover</v-btn>
                             </v-row>
                         </v-container>
                     </v-col>
