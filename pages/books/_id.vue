@@ -63,16 +63,19 @@
                 <v-row justify='center' class='py-4'>
                     <h1 class='display-2'><b>Book preview</b></h1>
                 </v-row>
-                <v-row>
-                    <v-col class='px-4' sm="12" md='4'>
-                        <v-row>
-                            <v-col v-for='(p, idx) in book.preview' :key='idx'
-                            class='pa-1'>
-                                <v-img @click='expandImage(p)' :src='p'></v-img>
-                            </v-col>
-                        </v-row>
+                <v-row justify='center' class='py-4'>
+                    <span>Click the pages to see the preview</span>
+                </v-row>
+                <v-row justify='center' align='center' class='py-4'>
+                    <v-col v-for='(p, idx) in book.preview' :key='idx'
+                           class='pa-1' cols='6' sm='4' md='2' >
+                        <v-card elevation='0' outlined @click='expandImage(p)'>
+                            <v-img :src='p'></v-img>
+                        </v-card>
                     </v-col>
-                    <v-col class='px-0' sm="12" md='8'>
+                </v-row>
+                <v-row>
+                    <v-col class='px-0' cols='12'>
                         <p class='px-0 py-2 title' style='line-height: 1.2;'
                            v-html='book.description'></p>
                     </v-col>
@@ -82,12 +85,12 @@
 
         <v-dialog
             v-model="imageDialog"
-            width="600px"
+            width="90%"
         >
             <v-card>
                 <v-container>
-                    <v-row no-gutters align='center'>
-                        <strong class='title'>Preview</strong>
+                    <v-row no-gutters align='center' class='py-3'>
+                        <strong class='display-1'><b>Preview</b></strong>
                         <v-spacer></v-spacer>
                         <v-btn icon elevation='0'
                                @click='collapseImage()'>
@@ -95,7 +98,9 @@
                         </v-btn>
                     </v-row>
                     <v-row>
-                        <v-img :src='currentImage'></v-img>
+                        <v-card elevation='0' outlined>
+                            <v-img :src='currentImage'></v-img>
+                        </v-card>
                     </v-row>
                 </v-container>
             </v-card>

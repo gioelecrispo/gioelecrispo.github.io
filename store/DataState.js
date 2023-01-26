@@ -534,8 +534,12 @@ export const state = () => ({
             author: "Gioele Crispo",
             tags: ["Generative AI", "Deep Learning", "ChatGPT"],
             preview: [
-                require('@/assets/img/books/discover-chatgpt-by-asking-it/preview1.png'),
-                require('@/assets/img/books/discover-chatgpt-by-asking-it/preview2.png'),
+                require('@/assets/img/books/discover-chatgpt-by-asking-it/chapter1.png'),
+                require('@/assets/img/books/discover-chatgpt-by-asking-it/chapter2.png'),
+                require('@/assets/img/books/discover-chatgpt-by-asking-it/chapter3.png'),
+                require('@/assets/img/books/discover-chatgpt-by-asking-it/chapter4.png'),
+                require('@/assets/img/books/discover-chatgpt-by-asking-it/chapter5.png'),
+                require('@/assets/img/books/discover-chatgpt-by-asking-it/chapter6.png'),
             ],
             authorDescription: "<p>My name is Gioele Crispo and I am a software development engineer focused on machine learning. I have a passion for experimentation and I am always looking for new and interesting ways to explore the capabilities and potential of artificial intelligence and machine learning.</p></br>" +
                 "<p>This book, <i><b>Discover ChatGPT by asking it</b>: Advantages, Disadvantages and Secrets</i>, is the result of one such experiment. It is a <b>technical experiment</b>, as I aim to evaluate whether a neural network (ChatGPT) is capable of writing an entire book and how much human intervention is required to produce a readable and enjoyable final product. It is also an experiment in empathy and the ability of ChatGPT to convey emotions through its writing.</p>" +

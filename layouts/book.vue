@@ -37,7 +37,7 @@
                     </v-btn>
                 </v-row>
                 <v-row
-                    justify='center'
+                    justify='center' align='center'
                     no-gutters
                 >
                     <v-col cols='auto'>
