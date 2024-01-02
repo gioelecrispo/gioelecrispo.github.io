@@ -1,6 +1,6 @@
 ---
 title: <span>Making an app with <strong>Kivy</strong></span>
-description: We tried to make an Android app with Kivy and we describe our experience, highlighting the strengths and weaknesses of the framework.
+description: We tried to make an Android app with Kivy and we describe our experience, highlighting the <b>strengths and weaknesses of the framework</b>.
 author: Gioele Crispo, Stefania Avallone
 img: /blog/making-an-app-with-kivy/_index.jpg
 alt: Android App with Kivy 

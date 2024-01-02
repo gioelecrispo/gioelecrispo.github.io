@@ -68,7 +68,26 @@ export const state = () => ({
             color: 'primary darken-2',
             type: 'job',
             icon: 'mdi-briefcase',
-            date: 'May 2018 - now',
+            date: 'May 2023 - now',
+            location: 'Zurich (Switzerland)',
+            position: 'Cloud & Data Engineer',
+            company: 'UBS',
+            text: 'Cloud and Data Engineer focused on NLP.<br>' +
+                'I developed with a team of 10+ people a Search Engine and an AI Assistant for lawyers and legal experts. ' +
+                'I take care of the software engineering and the architectural part on Azure (cloud).<br>' +
+                'I take care of the release managament of the product, ensuring security and compliance policies.<br>' +
+                'Interaction with customers and business partners; participation to Hackathon and innovation workshops.',
+            achievements: [
+                'I designed and implemented a custom text chunker to improve text segmentation and accuracy on the search engine.',
+                'I designed and implemented a custom Langchain Memory class for an improved semantic context management of the AI Assistant',
+                'One of the 10 finalists (out of 237 teams) participating in the Internal Hackathon',
+            ],
+        },
+        {
+            color: 'primary darken-2',
+            type: 'job',
+            icon: 'mdi-briefcase',
+            date: 'May 2018 - April 2023',
             location: 'Naples (Italy)',
             position: 'Machine Learning Engineer',
             company: 'NTT Data Italia',
@@ -77,7 +96,7 @@ export const state = () => ({
             'Team lead on several projects, interacting with customers and business partners.' +
             'Participation to fairs and expositions launch',
             achievements: [
-                'I design and implemented a microservices architecture for two internal assets which are used by 15+ customers.',
+                'I designed and implemented a microservices architecture for two internal assets which are used by 15+ customers.',
                 'I designed a Table-of-Content comparison algorithm through linear optimization model and string similarity.',
                 'I designed an innovative NLP pipeline based on sentiment and generative models to improve user experience in chatbots & voicebots.',
             ],
@@ -323,6 +342,38 @@ export const state = () => ({
     },
     projects: [
         {
+            name: 'Splitway: a redesigned Expense Management app',
+            description: 'Design of an  Expense Management app, for personal expense tracking and collaboration. ' +
+                'Implemented in Ionic 7 and VueJS 3 to support both Android and iOS. It has advanced filtering and charts.' ,
+            type: 'Web and Mobile',
+            color: 'gray',
+            area: 'Mobile App',
+            group: '2 people',
+            technologies: 'Javascript, VueJS, Ionic',
+            date: 'February 2024',
+            resources: [
+                { img: require('@/assets/img/applications/splitway-intro.jpg') },
+            ]
+        },
+        {
+            name: 'Fake News Detection in browser',
+            description: 'Design of a Fake News Detection system that runs completely in browser, without external services or backends. ' +
+                'It is based MobileBERT neural network running on ONNX.js for improved inference time. ' +
+                'The model has been trained on the Kaggle\'s WELFake dataset, with more than 72000 news.' ,
+            type: 'Artificial Intelligence',
+            color: 'blue',
+            area: 'Natural Language Processing & Web',
+            group: '2 people',
+            technologies: 'Javascript, Chrome Extension Framework, ONNX.js, BERT',
+            date: 'April 2023',
+            resources: [
+                { img: require('@/assets/img/applications/fakenews-intro.png') },
+                { img: require('@/assets/img/applications/fakenews-main-panel.png') },
+                { img: require('@/assets/img/applications/fakenews-positive-prediction.jpg') },
+                { img: require('@/assets/img/applications/fakenews-negative-prediction.jpg') }
+            ]
+        },
+        {
             name: 'Bed Fall Detection for Video Surveillance System',
             description: 'Design of a bed fall detection system based on computer vision for a home video surveillance ' +
                 'system. Three TPLink Tapo C-200s are used and the video stream from the camera positioned above the bed ' +
@@ -524,7 +575,7 @@ export const state = () => ({
     books: {
         "discover-chatgpt-by-asking-it": {
             id: "discover-chatgpt-by-asking-it",
-            title: "<b>Discover ChatGPT by asking it</b>: </br> Advantages, Disadvantages and Secrets",
+            title: "<b>Discover ChatGPT by asking it:</b> Advantages, Disadvantages and Secrets",
             subtitle: "The first book about <b>ChatGPT</b> written by <b>ChatGPT</b>",
             description: "Welcome to the first-ever <i>autobiographical account of a neural network</i>! </br>" +
                 "In these pages, <b>written by ChatGPT</b>, you will learn about the history, capabilities, advantages and disadvantages of ChatGPT, a powerful language model developed by OpenAI that is able to generate coherent and logical responses based on input data. You will also explore the ethical considerations and potential for misuse or abuse of this technology, and learn about the limitations of ChatGPT and the importance of human oversight. </br> </br>" +
@@ -532,7 +583,7 @@ export const state = () => ({
             publishedAt: "2023-01-25T21:51:10.516Z",
             img: "/books/discover-chatgpt-by-asking-it/cover.png",
             author: "Gioele Crispo",
-            tags: ["Generative AI", "Deep Learning", "ChatGPT"],
+            tags: ["generativeAI", "deepLearning", "chatGPT"],
             preview: [
                 require('@/assets/img/books/discover-chatgpt-by-asking-it/chapter1.png'),
                 require('@/assets/img/books/discover-chatgpt-by-asking-it/chapter2.png'),

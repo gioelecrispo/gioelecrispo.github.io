@@ -47,7 +47,7 @@ export default {
         this.$store.dispatch('AppState/setAppToolbarTitle', 'Books');
     },
     mounted() {
-        this.$router.push('/books/discover-chatgpt-by-asking-it');
+        //this.$router.push('/books/discover-chatgpt-by-asking-it');
     },
     computed: {
         ...mapGetters('DataState', {

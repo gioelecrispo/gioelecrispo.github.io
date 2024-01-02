@@ -1,6 +1,6 @@
 ---
 title: <span>A novel <strong>Writing Order Recovery</strong> approach for handwriting specimens</span>
-description: A pattern-recognition based approach for recovering the writing order trajectory of a signature is shown.
+description: Analyzing signatures has many consequences, and correct identification several advantages. A <b>pattern-recognition based approach</b> for recovering the <b>writing order trajectory</b> of a signature is shown.
 author: Gioele Crispo
 img: /blog/a-novel-writing-order-recovery-approach-for-handwriting-specimens/_index.png
 alt: wor-talk

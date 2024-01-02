@@ -1,6 +1,6 @@
 ---
 title: <span>A complete <strong>ML Pipeline</strong> study case&#58; Face and Emotion Recognition</span>
-description: A journey through the phases of data exploration and training of a CNN model from scratch. A particular focus on optimization for production with Optuna and ONNX is carried out.
+description: A journey through the phases of data exploration and training of a CNN model from scratch. A particular focus on optimization for production with <b>Optuna</b> and <b>ONNX</b> is carried out.
 author: Gioele Crispo, Stefania Avallone
 img: /blog/a-complete-ml-pipeline-study-case-face-and-emotion-recognition/_index.jpg
 alt: emotion-recognition

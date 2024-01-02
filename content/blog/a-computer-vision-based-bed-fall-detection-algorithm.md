@@ -1,6 +1,6 @@
 ---
 title: <span>A Computer Vision based<strong> Bed Fall Detection</strong> algorithm</span>
-description: I designed a home video surveillance system and a CV based Bed Fall Detection feature. I used a Raspberry Pi 3 as a computation and orchestration module.
+description: I designed a <b>Home Video surveillance system</b> and a CV based Bed Fall Detection feature. I used a Raspberry Pi 3 as a computation and orchestration module.
 author: Gioele Crispo
 img: /blog/a-computer-vision-based-bed-fall-detection-algorithm/_index.jpg
 alt: bed-fall-detection

@@ -1,6 +1,6 @@
 ---
 title: <span>Improving Skeletonization through <strong>GANs</strong></span>
-description: An innovative method for skeletonization concerns the use of GANs, to overcome the limitations of traditional approaches.
+description: An innovative method for skeletonization concerns the use of <b>Generative Adversarial Networks (GANs)</b>, to overcome the limitations of traditional approaches.
 author: Gioele Crispo
 img: /blog/improving-skeletonization-through-gans/_index.jpeg
 alt: Android App with Kivy 

@@ -25,7 +25,7 @@
                     </v-row>
                     <v-row class='pb-2'>
                         <v-col cols='auto' class='pa-0'>
-                            <v-card-subtitle class='px-4 py-0'>{{ formatDate(article.createdAt) }}</v-card-subtitle>
+                            <v-card-subtitle class='px-4 py-0'>{{ formatDate(article.updatedAt) }}</v-card-subtitle>
                         </v-col>
                     </v-row>
                     <v-row class='px-2 py-2'>

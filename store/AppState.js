@@ -19,7 +19,7 @@ export const state = () => ({
         { id: 'projects', title: 'Projects', icon: 'mdi-briefcase-outline', path: '/projects' },
         { id: 'github', title: 'Github', icon: 'mdi-github', path: '/github' },
         { id: 'blog', title: 'Blog', icon: 'mdi-file-document-outline', path: '/blog' },
-        { id: 'books', title: 'Book', icon: 'mdi-book', path: '/books' }
+        { id: 'books', title: 'Book', icon: 'mdi-book', path: '/books/discover-chatgpt-by-asking-it' }
     ]
 })
 

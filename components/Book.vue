@@ -13,6 +13,7 @@
                         <v-col cols='6' class='pa-0'>
                             <v-img
                                 class='white--text'
+                                :height='hover ? 470 : 460'
                                 :src='img'
                             />
                         </v-col>
